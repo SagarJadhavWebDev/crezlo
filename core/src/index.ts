@@ -1,18 +1,19 @@
 // Styles - Import this in your app
-import './styles/index.css';
+import "./styles/index.css";
 
 // Export components
-export * from './components';
+export * from "./components";
 
 // Export contexts and providers
-export * from './contexts';
+export * from "./contexts";
 
 // Export hooks
-export * from './hooks';
+export * from "./hooks";
 
 // Export utilities
-export * from './utils';
+export * from "./utils";
 
 // Export types
-export * from './types';
+export * from "./types";
 
+export * from "./providers";
