@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect, useCallback, ReactNode } from "react";
-import { ApiClient, createApiClient } from "../utils/apiClient";
-import { cookieManager, CookieManager, createCookieManager } from "../utils/cookieManager";
+import { createApiClient } from "../utils/apiClient";
+import { createCookieManager } from "../utils/cookieManager";
 import { User, AuthTokens, AuthState, AuthContextValue, AuthProviderConfig, AuthAction, LoginCredentials, RegisterData } from "../types/auth";
 
 // Default configuration
