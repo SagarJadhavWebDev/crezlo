@@ -1,6 +1,6 @@
 "use client";
 import { AppProvider, RootLayout } from "@core";
-// import "@core/src/styles/index.css"
+import "@core/dist/index.css"
 export default function RootPreviewLayout({
   children,
 }: Readonly<{

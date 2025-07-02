@@ -11,8 +11,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css & rollup -c ",
+    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"rollup -c -w\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -51,6 +51,7 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.11"
   }
