@@ -5,7 +5,7 @@ interface ContextProps {
     sidebarExpanded: boolean;
     setSidebarExpanded: Dispatch<SetStateAction<boolean>>;
 }
-export default function AppProvider({ children, }: {
+export declare function AppProvider({ children, }: {
     children: React.ReactNode;
 }): import("react/jsx-runtime").JSX.Element;
 export declare const useAppProvider: () => ContextProps;

@@ -1,5 +1,5 @@
 {
-  "name": "crezlo-theme-components",
+  "name": "crezlo-core",
   "version": "2.0.0",
   "type": "module",
   "description": "A comprehensive React component library with TypeScript, Tailwind CSS, and theme support for reusable UI components",
@@ -10,9 +10,41 @@
     "dist",
     "README.md"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components": {
+      "import": "./dist/components/index.esm.js",
+      "require": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./hooks": {
+      "import": "./dist/hooks/index.esm.js",
+      "require": "./dist/hooks/index.js",
+      "types": "./dist/hooks/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.esm.js",
+      "require": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    },
+    "./context-providers": {
+      "import": "./dist/context-providers/index.esm.js",
+      "require": "./dist/context-providers/index.js",
+      "types": "./dist/context-providers/index.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants/index.esm.js",
+      "require": "./dist/constants/index.js",
+      "types": "./dist/constants/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css & rollup -c ",
-    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"rollup -c -w\"",
+    "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css & rollup -c && tsc -p tsconfig.build.json ",
+    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"rollup -c -w\" \"tsc -p tsconfig.build.json --watch\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -51,8 +83,10 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.1.11"
+    "@tailwindcss/postcss": "^4.1.11",
+    "concurrently": "^9.2.0"
   }
 }

@@ -5,7 +5,7 @@ import "./styles/index.css";
 export * from "./components";
 
 // Export contexts and providers
-export * from "./contexts";
+export * from "./context-providers";
 
 // Export hooks
 export * from "./hooks";
@@ -16,4 +16,3 @@ export * from "./utils";
 // Export types
 export * from "./types";
 
-export * from "./providers";

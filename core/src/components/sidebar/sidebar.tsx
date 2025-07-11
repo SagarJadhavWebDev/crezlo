@@ -5,7 +5,7 @@ import SidebarLinkGroup from "./sidebar-link-group";
 import Link from "next/link";
 import { useWindowWidth } from "../../utils/use-window-width";
 import Logo from "./logo";
-import { useAppProvider } from "../../providers/app-provider";
+import { useAppProvider } from "../../context-providers/AppProvider";
 
 interface SubMenu {
   label: string;

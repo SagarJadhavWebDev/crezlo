@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useAppProvider } from '../../providers/app-provider';
+import { useAppProvider } from '../../context-providers/AppProvider';
 
 interface SidebarLinkProps {
   children: React.ReactNode

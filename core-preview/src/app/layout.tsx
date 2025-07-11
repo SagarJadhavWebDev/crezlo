@@ -1,6 +1,7 @@
 "use client";
-import { AppProvider, RootLayout } from "@core";
-import "@core/dist/index.css"
+import { RootLayout } from "core/components";
+import { AppProvider, AuthProvider } from "core/context-providers";
+import "@core/dist/index.css";
 export default function RootPreviewLayout({
   children,
 }: Readonly<{
@@ -8,7 +9,9 @@ export default function RootPreviewLayout({
 }>) {
   return (
     <RootLayout>
-      <AppProvider >{children}</AppProvider>
+      <AppProvider>
+        <AuthProvider>{children}</AuthProvider>
+      </AppProvider>
     </RootLayout>
   );
 }

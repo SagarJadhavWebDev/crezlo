@@ -22,7 +22,7 @@ const AppContext = createContext<ContextProps>({
   setSidebarExpanded: (): boolean => false,
 });
 
-export default function AppProvider({
+export function AppProvider({
   children,
 }: {
   children: React.ReactNode;

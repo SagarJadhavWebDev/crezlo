@@ -575,6 +575,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .pt-0 {
+    padding-top: calc(var(--spacing) * 0);
+  }
   .pt-0\.5 {
     padding-top: calc(var(--spacing) * 0.5);
   }

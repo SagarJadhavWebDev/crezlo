@@ -67,7 +67,3 @@ export const useToggle = (initialValue: boolean = false) => {
   return [value, toggle, setTrue, setFalse] as const;
 };
 
-
-// Export auth hooks
-export * from './useAuthGuard';
-
