@@ -9,11 +9,11 @@ export default function RootPreviewLayout({
 }>) {
   return (
     <RootLayout>
-      <AppProvider>
+      {/* <AppProvider> */}
         <AuthProvider>
           {children}
           </AuthProvider>
-      </AppProvider>
+      {/* </AppProvider> */}
     </RootLayout>
   );
 }

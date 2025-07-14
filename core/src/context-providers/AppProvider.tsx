@@ -1,32 +1,20 @@
-
-
-import {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useState,
-} from "react";
+import { createContext, Dispatch, SetStateAction, useContext, useState } from "react";
 
 interface ContextProps {
   sidebarOpen: boolean;
-  setSidebarOpen: Dispatch<SetStateAction<boolean>>;
+  setSidebarOpen: (value: boolean) => void;
   sidebarExpanded: boolean;
-  setSidebarExpanded: Dispatch<SetStateAction<boolean>>;
+  setSidebarExpanded: (value: boolean) => void;
 }
 
 const AppContext = createContext<ContextProps>({
   sidebarOpen: true,
-  setSidebarOpen: (): boolean => false,
+  setSidebarOpen: (value: boolean) => {},
   sidebarExpanded: true,
-  setSidebarExpanded: (): boolean => false,
+  setSidebarExpanded: (value: boolean) => {},
 });
 
-export function AppProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export function AppProvider({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [sidebarExpanded, setSidebarExpanded] = useState<boolean>(true);
   return (

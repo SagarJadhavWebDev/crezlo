@@ -1,11 +1,10 @@
-import { Dispatch, SetStateAction } from "react";
 interface ContextProps {
     sidebarOpen: boolean;
-    setSidebarOpen: Dispatch<SetStateAction<boolean>>;
+    setSidebarOpen: (value: boolean) => void;
     sidebarExpanded: boolean;
-    setSidebarExpanded: Dispatch<SetStateAction<boolean>>;
+    setSidebarExpanded: (value: boolean) => void;
 }
-export declare function AppProvider({ children, }: {
+export declare function AppProvider({ children }: {
     children: React.ReactNode;
 }): import("react/jsx-runtime").JSX.Element;
 export declare const useAppProvider: () => ContextProps;

@@ -1,6 +1,6 @@
-import require$$1, { jsxs, jsx, Fragment } from 'react/jsx-runtime';
+import require$$1, { jsx, jsxs, Fragment } from 'react/jsx-runtime';
 import * as React from 'react';
-import React__default, { createContext, useContext, useState, useEffect, useRef, useReducer, useCallback, useMemo, useLayoutEffect, forwardRef, Fragment as Fragment$1, isValidElement, cloneElement, createElement, useId as useId$1, useSyncExternalStore } from 'react';
+import React__default, { useState, useEffect, createContext, useReducer, useCallback, useContext, useRef, useMemo, useLayoutEffect, forwardRef, Fragment as Fragment$1, isValidElement, cloneElement, createElement, useId as useId$1, useSyncExternalStore } from 'react';
 import * as ReactDOM from 'react-dom';
 import { createPortal, flushSync } from 'react-dom';
 
@@ -31,13 +31,3637 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = "/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback\");@import url(\"https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap\");@layer theme, base, components, utilities;@layer theme{:host,:root{--font-sans:ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";--font-serif:ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace;--color-red-50:#ffe8e8;--color-red-300:#ff9494;--color-red-400:#ff7474;--color-red-500:#ff5656;--color-red-600:#fa4949;--color-indigo-500:#9b49ff;--color-indigo-600:#6a2dba;--color-violet-100:#e6e1ff;--color-violet-400:#9c8cff;--color-violet-500:#8470ff;--color-violet-600:#755ff8;--color-violet-700:#5d47de;--color-violet-800:#4634b1;--color-violet-900:#2f227c;--color-violet-950:#1c1357;--color-slate-900:oklch(20.8% 0.042 265.755);--color-gray-50:#f9fafb;--color-gray-100:#f3f4f6;--color-gray-200:#e5e7eb;--color-gray-300:#bfc4cd;--color-gray-400:#9ca3af;--color-gray-500:#6b7280;--color-gray-600:#4b5563;--color-gray-700:#374151;--color-gray-800:#1f2937;--color-gray-900:#111827;--color-gray-950:#030712;--color-black:#000;--color-white:#fff;--spacing:0.25rem;--container-sm:24rem;--container-lg:32rem;--text-xs:0.75rem;--text-xs--line-height:1.5;--text-sm:0.875rem;--text-sm--line-height:1.5715;--text-lg:1.125rem;--text-lg--line-height:1.5;--text-2xl:1.5rem;--text-2xl--line-height:1.33;--text-3xl:1.88rem;--text-3xl--line-height:1.33;--text-4xl:2.25rem;--text-4xl--line-height:1.25;--text-5xl:3rem;--text-5xl--line-height:1.25;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--tracking-tighter:-0.05em;--tracking-tight:-0.025em;--tracking-normal:0em;--tracking-widest:0.1em;--leading-relaxed:1.625;--radius-sm:0.25rem;--radius-md:0.375rem;--radius-lg:0.5rem;--radius-2xl:1rem;--shadow-2xs:0 1px rgba(0,0,0,.05);--shadow-xs:0 1px 2px 0 rgba(0,0,0,.05);--shadow-sm:0 1px 1px 0 rgba(0,0,0,.05),0 1px 2px 0 rgba(0,0,0,.02);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--shadow-xl:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--shadow-2xl:0 25px 50px -12px rgba(0,0,0,.25);--ease-out:cubic-bezier(0,0,0.2,1);--ease-in-out:cubic-bezier(0.4,0,0.2,1);--animate-pulse:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;--blur-sm:8px;--blur-md:12px;--aspect-video:16/9;--default-transition-duration:150ms;--default-transition-timing-function:cubic-bezier(0.4,0,0.2,1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--font-inter:\"Inter\",\"sans-serif\";--font-reddit:\"Reddit Sans\",\"sans-serif\";--text-lg--letter-spacing:-0.01em;--text-2xl--letter-spacing:-0.01em;--text-3xl--letter-spacing:-0.01em;--text-4xl--letter-spacing:-0.02em;--text-5xl--letter-spacing:-0.02em}}@layer base{*,::backdrop,::file-selector-button,:after,:before{border:0 solid;box-sizing:border-box;margin:0;padding:0}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:var(--default-font-feature-settings,normal);-webkit-tap-highlight-color:transparent;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\");font-variation-settings:var(--default-font-variation-settings,normal);line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:var(--default-mono-font-feature-settings,normal);font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace);font-size:1em;font-variation-settings:var(--default-mono-font-variation-settings,normal)}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}menu,ol,ul{list-style:none}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}::file-selector-button,button,input,optgroup,select,textarea{font-feature-settings:inherit;background-color:transparent;border-radius:0;color:inherit;font:inherit;font-variation-settings:inherit;letter-spacing:inherit;opacity:1}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::-moz-placeholder{opacity:1}::placeholder{opacity:1}@supports (not (-webkit-appearance:-apple-pay-button)) or (contain-intrinsic-size:1px){::-moz-placeholder{color:currentcolor;@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,currentcolor 50%,transparent)}}::placeholder{color:currentcolor;@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-meridiem-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-year-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}::file-selector-button,button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer utilities{.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.invisible{visibility:hidden}.visible{visibility:visible}.sr-only{clip:rect(0,0,0,0);border-width:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.not-sr-only{clip:auto;height:auto;margin:0;overflow:visible;padding:0;position:static;white-space:normal;width:auto}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.sticky{position:sticky}.-inset-1{inset:calc(var(--spacing)*-1)}.inset-0{inset:calc(var(--spacing)*0)}.inset-x-0{inset-inline:calc(var(--spacing)*0)}.inset-y-0{inset-block:calc(var(--spacing)*0)}.-top-12{top:calc(var(--spacing)*-12)}.top-0{top:calc(var(--spacing)*0)}.top-1{top:calc(var(--spacing)*1)}.top-1\\/2{top:50%}.top-2{top:calc(var(--spacing)*2)}.top-4{top:calc(var(--spacing)*4)}.top-\\[1px\\]{top:1px}.top-\\[50\\%\\]{top:50%}.top-\\[60\\%\\]{top:60%}.top-full{top:100%}.-right-12{right:calc(var(--spacing)*-12)}.right-0{right:calc(var(--spacing)*0)}.right-1{right:calc(var(--spacing)*1)}.right-2{right:calc(var(--spacing)*2)}.right-4{right:calc(var(--spacing)*4)}.-bottom-12{bottom:calc(var(--spacing)*-12)}.bottom-0{bottom:calc(var(--spacing)*0)}.-left-12{left:calc(var(--spacing)*-12)}.left-0{left:calc(var(--spacing)*0)}.left-1{left:calc(var(--spacing)*1)}.left-1\\/2{left:50%}.left-2{left:calc(var(--spacing)*2)}.left-\\[50\\%\\]{left:50%}.isolate{isolation:isolate}.isolation-auto{isolation:auto}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.z-\\[1\\]{z-index:1}.z-\\[100\\]{z-index:100}.container{width:100%;@media (width >= 480px){max-width:480px}@media (width >= 40rem){max-width:40rem}@media (width >= 48rem){max-width:48rem}@media (width >= 64rem){max-width:64rem}@media (width >= 80rem){max-width:80rem}@media (width >= 96rem){max-width:96rem}}.-mx-1{margin-inline:calc(var(--spacing)*-1)}.mx-auto{margin-inline:auto}.my-0{margin-block:calc(var(--spacing)*0)}.my-0\\.5{margin-block:calc(var(--spacing)*.5)}.my-1{margin-block:calc(var(--spacing)*1)}.-mt-4{margin-top:calc(var(--spacing)*-4)}.mt-1{margin-top:calc(var(--spacing)*1)}.mt-1\\.5{margin-top:calc(var(--spacing)*1.5)}.mt-2{margin-top:calc(var(--spacing)*2)}.mt-3{margin-top:calc(var(--spacing)*3)}.mt-4{margin-top:calc(var(--spacing)*4)}.mt-24{margin-top:calc(var(--spacing)*24)}.mt-auto{margin-top:auto}.mr-2{margin-right:calc(var(--spacing)*2)}.mb-0{margin-bottom:calc(var(--spacing)*0)}.mb-0\\.5{margin-bottom:calc(var(--spacing)*.5)}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.mb-5{margin-bottom:calc(var(--spacing)*5)}.-ml-4{margin-left:calc(var(--spacing)*-4)}.ml-1{margin-left:calc(var(--spacing)*1)}.ml-2{margin-left:calc(var(--spacing)*2)}.ml-3{margin-left:calc(var(--spacing)*3)}.ml-4{margin-left:calc(var(--spacing)*4)}.ml-auto{margin-left:auto}.block{display:block}.contents{display:contents}.flex{display:flex}.flow-root{display:flow-root}.grid{display:grid}.hidden{display:none}.inline{display:inline}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.inline-grid{display:inline-grid}.inline-table{display:inline-table}.list-item{display:list-item}.table{display:table}.table-caption{display:table-caption}.table-cell{display:table-cell}.table-column{display:table-column}.table-column-group{display:table-column-group}.table-footer-group{display:table-footer-group}.table-header-group{display:table-header-group}.table-row{display:table-row}.table-row-group{display:table-row-group}.aspect-square{aspect-ratio:1/1}.aspect-video{aspect-ratio:var(--aspect-video)}.h-1{height:calc(var(--spacing)*1)}.h-1\\.5{height:calc(var(--spacing)*1.5)}.h-2{height:calc(var(--spacing)*2)}.h-2\\.5{height:calc(var(--spacing)*2.5)}.h-3{height:calc(var(--spacing)*3)}.h-3\\.5{height:calc(var(--spacing)*3.5)}.h-4{height:calc(var(--spacing)*4)}.h-5{height:calc(var(--spacing)*5)}.h-6{height:calc(var(--spacing)*6)}.h-7{height:calc(var(--spacing)*7)}.h-8{height:calc(var(--spacing)*8)}.h-9{height:calc(var(--spacing)*9)}.h-10{height:calc(var(--spacing)*10)}.h-11{height:calc(var(--spacing)*11)}.h-12{height:calc(var(--spacing)*12)}.h-16{height:calc(var(--spacing)*16)}.h-\\[1px\\]{height:1px}.h-\\[100dvh\\]{height:100dvh}.h-\\[100vh\\]{height:100vh}.h-\\[var\\(--radix-navigation-menu-viewport-height\\)\\]{height:var(--radix-navigation-menu-viewport-height)}.h-\\[var\\(--radix-select-trigger-height\\)\\]{height:var(--radix-select-trigger-height)}.h-auto{height:auto}.h-full{height:100%}.h-px{height:1px}.max-h-96{max-height:calc(var(--spacing)*96)}.max-h-\\[300px\\]{max-height:300px}.max-h-screen{max-height:100vh}.min-h-\\[80px\\]{min-height:80px}.w-0{width:calc(var(--spacing)*0)}.w-1{width:calc(var(--spacing)*1)}.w-2{width:calc(var(--spacing)*2)}.w-2\\.5{width:calc(var(--spacing)*2.5)}.w-3{width:calc(var(--spacing)*3)}.w-3\\.5{width:calc(var(--spacing)*3.5)}.w-3\\/4{width:75%}.w-4{width:calc(var(--spacing)*4)}.w-5{width:calc(var(--spacing)*5)}.w-6{width:calc(var(--spacing)*6)}.w-7{width:calc(var(--spacing)*7)}.w-8{width:calc(var(--spacing)*8)}.w-9{width:calc(var(--spacing)*9)}.w-10{width:calc(var(--spacing)*10)}.w-11{width:calc(var(--spacing)*11)}.w-12{width:calc(var(--spacing)*12)}.w-64{width:calc(var(--spacing)*64)}.w-72{width:calc(var(--spacing)*72)}.w-\\[1px\\]{width:1px}.w-\\[100px\\]{width:100px}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.w-px{width:1px}.max-w-lg{max-width:var(--container-lg)}.max-w-max{max-width:-moz-max-content;max-width:max-content}.min-w-0{min-width:calc(var(--spacing)*0)}.min-w-\\[8rem\\]{min-width:8rem}.min-w-\\[11rem\\]{min-width:11rem}.min-w-\\[12rem\\]{min-width:12rem}.min-w-\\[var\\(--radix-select-trigger-width\\)\\]{min-width:var(--radix-select-trigger-width)}.min-w-fit{min-width:-moz-fit-content;min-width:fit-content}.flex-1{flex:1}.shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.grow{flex-grow:1}.grow-0{flex-grow:0}.basis-full{flex-basis:100%}.caption-bottom{caption-side:bottom}.border-collapse{border-collapse:collapse}.origin-top-right{transform-origin:top right}.-translate-x-1{--tw-translate-x:calc(var(--spacing)*-1)}.-translate-x-1,.-translate-x-1\\/2{translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-x-1\\/2{--tw-translate-x:-50%}.-translate-x-64{--tw-translate-x:calc(var(--spacing)*-64)}.-translate-x-64,.translate-x-0{translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-x-0{--tw-translate-x:calc(var(--spacing)*0)}.translate-x-\\[-50\\%\\]{--tw-translate-x:-50%}.-translate-y-1,.translate-x-\\[-50\\%\\]{translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-1{--tw-translate-y:calc(var(--spacing)*-1)}.-translate-y-1\\/2{--tw-translate-y:-50%}.-translate-y-1\\/2,.-translate-y-2{translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-2{--tw-translate-y:calc(var(--spacing)*-2)}.translate-y-0{--tw-translate-y:calc(var(--spacing)*0)}.translate-y-0,.translate-y-\\[-50\\%\\]{translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-y-\\[-50\\%\\]{--tw-translate-y:-50%}.translate-none{translate:none}.scale-3d{scale:var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z)}.rotate-45{rotate:45deg}.rotate-90{rotate:90deg}.rotate-180{rotate:180deg}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.animate-pulse{animation:var(--animate-pulse)}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}.touch-pinch-zoom{--tw-pinch-zoom:pinch-zoom;touch-action:var(--tw-pan-x,) var(--tw-pan-y,) var(--tw-pinch-zoom,)}.touch-none{touch-action:none}.resize{resize:both}.list-none{list-style-type:none}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-row{flex-direction:row}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.items-stretch{align-items:stretch}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-1{gap:calc(var(--spacing)*1)}.gap-1\\.5{gap:calc(var(--spacing)*1.5)}.gap-2{gap:calc(var(--spacing)*2)}.gap-4{gap:calc(var(--spacing)*4)}.space-y-0{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*0*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*0*var(--tw-space-y-reverse))}}.space-y-1{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*1*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*1*var(--tw-space-y-reverse))}}.space-y-1\\.5{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*1.5*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*1.5*var(--tw-space-y-reverse))}}.space-y-2{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*2*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*2*var(--tw-space-y-reverse))}}.space-y-4{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*4*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*4*var(--tw-space-y-reverse))}}.space-y-reverse{:where(&>:not(:last-child)){--tw-space-y-reverse:1}}.space-x-1{:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*1*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*1*var(--tw-space-x-reverse))}}.space-x-3{:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*3*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*3*var(--tw-space-x-reverse))}}.space-x-4{:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*4*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*4*var(--tw-space-x-reverse))}}.space-x-reverse{:where(&>:not(:last-child)){--tw-space-x-reverse:1}}.divide-x{:where(&>:not(:last-child)){--tw-divide-x-reverse:0;border-inline-end-width:calc(1px*(1 - var(--tw-divide-x-reverse)));border-inline-start-width:calc(1px*var(--tw-divide-x-reverse));border-inline-style:var(--tw-border-style)}}.divide-y{:where(&>:not(:last-child)){--tw-divide-y-reverse:0;border-bottom-style:var(--tw-border-style);border-bottom-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-top-style:var(--tw-border-style);border-top-width:calc(1px*var(--tw-divide-y-reverse))}}.divide-y-reverse{:where(&>:not(:last-child)){--tw-divide-y-reverse:1}}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.overflow-y-auto{overflow-y:auto}.overflow-y-scroll{overflow-y:scroll}.rounded{border-radius:.25rem}.rounded-\\[2px\\]{border-radius:2px}.rounded-\\[inherit\\]{border-radius:inherit}.rounded-full{border-radius:calc(infinity * 1px)}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-sm{border-radius:var(--radius-sm)}.rounded-s{border-end-start-radius:.25rem}.rounded-s,.rounded-ss{border-start-start-radius:.25rem}.rounded-e{border-end-end-radius:.25rem}.rounded-e,.rounded-se{border-start-end-radius:.25rem}.rounded-ee{border-end-end-radius:.25rem}.rounded-es{border-end-start-radius:.25rem}.rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.rounded-t-\\[10px\\]{border-top-left-radius:10px;border-top-right-radius:10px}.rounded-l{border-bottom-left-radius:.25rem}.rounded-l,.rounded-tl{border-top-left-radius:.25rem}.rounded-tl-sm{border-top-left-radius:var(--radius-sm)}.rounded-r{border-bottom-right-radius:.25rem;border-top-right-radius:.25rem}.rounded-r-2xl{border-bottom-right-radius:var(--radius-2xl);border-top-right-radius:var(--radius-2xl)}.rounded-tr{border-top-right-radius:.25rem}.rounded-b{border-bottom-left-radius:.25rem}.rounded-b,.rounded-br{border-bottom-right-radius:.25rem}.rounded-bl{border-bottom-left-radius:.25rem}.border{border-style:var(--tw-border-style);border-width:1px}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-\\[1\\.5px\\]{border-style:var(--tw-border-style);border-width:1.5px}.border-x{border-inline-style:var(--tw-border-style);border-inline-width:1px}.border-y{border-block-style:var(--tw-border-style);border-block-width:1px}.border-s{border-inline-start-style:var(--tw-border-style);border-inline-start-width:1px}.border-e{border-inline-end-style:var(--tw-border-style);border-inline-end-width:1px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-l{border-left-style:var(--tw-border-style);border-left-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.border-none{--tw-border-style:none;border-style:none}.border-\\[--color-border\\]{border-color:--color-border}.border-gray-200{border-color:var(--color-gray-200)}.border-indigo-500{border-color:var(--color-indigo-500)}.border-transparent{border-color:transparent}.border-t-transparent{border-top-color:transparent}.border-l-transparent{border-left-color:transparent}.bg-\\[--color-bg\\]{background-color:--color-bg}.bg-black{background-color:var(--color-black)}.bg-black\\/80{background-color:color-mix(in srgb,#000 80%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-black) 80%,transparent)}}.bg-gray-100{background-color:var(--color-gray-100)}.bg-gray-200{background-color:var(--color-gray-200)}.bg-gray-900{background-color:var(--color-gray-900)}.bg-gray-900\\/30{background-color:color-mix(in srgb,#111827 30%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-900) 30%,transparent)}}.bg-indigo-500{background-color:var(--color-indigo-500)}.bg-transparent{background-color:transparent}.bg-white{background-color:var(--color-white)}.bg-linear-to-r{--tw-gradient-position:to right;@supports (background-image:linear-gradient(in lab,red,red)){--tw-gradient-position:to right in oklab}background-image:linear-gradient(var(--tw-gradient-stops))}.from-indigo-500{--tw-gradient-from:var(--color-indigo-500);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.from-indigo-500\\/\\[0\\.12\\]{--tw-gradient-from:color-mix(in srgb,#9b49ff 12%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-gradient-from:color-mix(in oklab,var(--color-indigo-500) 12%,transparent)}--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.to-indigo-500{--tw-gradient-to:var(--color-indigo-500);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.to-indigo-500\\/\\[0\\.04\\]{--tw-gradient-to:color-mix(in srgb,#9b49ff 4%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-gradient-to:color-mix(in oklab,var(--color-indigo-500) 4%,transparent)}--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.bg-repeat{background-repeat:repeat}.mask-no-clip{-webkit-mask-clip:no-clip;mask-clip:no-clip}.mask-repeat{-webkit-mask-repeat:repeat;mask-repeat:repeat}.fill-current{fill:currentcolor}.p-0{padding:calc(var(--spacing)*0)}.p-1{padding:calc(var(--spacing)*1)}.p-3{padding:calc(var(--spacing)*3)}.p-4{padding:calc(var(--spacing)*4)}.p-6{padding:calc(var(--spacing)*6)}.p-\\[1px\\]{padding:1px}.px-2{padding-inline:calc(var(--spacing)*2)}.px-2\\.5{padding-inline:calc(var(--spacing)*2.5)}.px-3{padding-inline:calc(var(--spacing)*3)}.px-4{padding-inline:calc(var(--spacing)*4)}.px-5{padding-inline:calc(var(--spacing)*5)}.px-8{padding-inline:calc(var(--spacing)*8)}.py-0{padding-block:calc(var(--spacing)*0)}.py-0\\.5{padding-block:calc(var(--spacing)*.5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.py-3{padding-block:calc(var(--spacing)*3)}.py-4{padding-block:calc(var(--spacing)*4)}.py-6{padding-block:calc(var(--spacing)*6)}.pt-0{padding-top:calc(var(--spacing)*0)}.pt-0\\.5{padding-top:calc(var(--spacing)*.5)}.pt-1{padding-top:calc(var(--spacing)*1)}.pt-3{padding-top:calc(var(--spacing)*3)}.pt-4{padding-top:calc(var(--spacing)*4)}.pr-2{padding-right:calc(var(--spacing)*2)}.pr-2\\.5{padding-right:calc(var(--spacing)*2.5)}.pr-3{padding-right:calc(var(--spacing)*3)}.pr-8{padding-right:calc(var(--spacing)*8)}.pb-2{padding-bottom:calc(var(--spacing)*2)}.pb-3{padding-bottom:calc(var(--spacing)*3)}.pb-4{padding-bottom:calc(var(--spacing)*4)}.pl-2{padding-left:calc(var(--spacing)*2)}.pl-2\\.5{padding-left:calc(var(--spacing)*2.5)}.pl-3{padding-left:calc(var(--spacing)*3)}.pl-4{padding-left:calc(var(--spacing)*4)}.pl-5{padding-left:calc(var(--spacing)*5)}.pl-8{padding-left:calc(var(--spacing)*8)}.text-center{text-align:center}.text-left{text-align:left}.align-middle{vertical-align:middle}.font-mono{font-family:var(--font-mono)}.font-reddit{font-family:var(--font-reddit)}.text-2xl{font-size:var(--text-2xl);letter-spacing:var(--tw-tracking,var(--text-2xl--letter-spacing));line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-lg{font-size:var(--text-lg);letter-spacing:var(--tw-tracking,var(--text-lg--letter-spacing));line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\\[0\\.8rem\\]{font-size:.8rem}.leading-5{--tw-leading:calc(var(--spacing)*5);line-height:calc(var(--spacing)*5)}.leading-none{--tw-leading:1;line-height:1}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-widest{--tw-tracking:var(--tracking-widest);letter-spacing:var(--tracking-widest)}.text-wrap{text-wrap:wrap}.break-words{overflow-wrap:break-word}.text-clip{text-overflow:clip}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}.text-black{color:var(--color-black)}.text-current{color:currentcolor}.text-gray-400{color:var(--color-gray-400)}.text-gray-500{color:var(--color-gray-500)}.text-gray-500\\/80{color:color-mix(in srgb,#6b7280 80%,transparent);@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,var(--color-gray-500) 80%,transparent)}}.text-gray-600{color:var(--color-gray-600)}.text-gray-800{color:var(--color-gray-800)}.text-indigo-500{color:var(--color-indigo-500)}.text-violet-500{color:var(--color-violet-500)}.text-violet-600{color:var(--color-violet-600)}.text-white{color:var(--color-white)}.capitalize{text-transform:capitalize}.lowercase{text-transform:lowercase}.normal-case{text-transform:none}.uppercase{text-transform:uppercase}.italic{font-style:italic}.not-italic{font-style:normal}.diagonal-fractions{--tw-numeric-fraction:diagonal-fractions}.diagonal-fractions,.lining-nums{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.lining-nums{--tw-numeric-figure:lining-nums}.oldstyle-nums{--tw-numeric-figure:oldstyle-nums}.oldstyle-nums,.ordinal{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.ordinal{--tw-ordinal:ordinal}.proportional-nums{--tw-numeric-spacing:proportional-nums}.proportional-nums,.slashed-zero{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.slashed-zero{--tw-slashed-zero:slashed-zero}.stacked-fractions{--tw-numeric-fraction:stacked-fractions}.stacked-fractions,.tabular-nums{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.tabular-nums{--tw-numeric-spacing:tabular-nums}.normal-nums{font-variant-numeric:normal}.line-through{text-decoration-line:line-through}.no-underline{text-decoration-line:none}.overline{text-decoration-line:overline}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.subpixel-antialiased{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto}.opacity-0{opacity:0}.opacity-50{opacity:50%}.opacity-60{opacity:60%}.opacity-70{opacity:70%}.opacity-90{opacity:90%}.opacity-100{opacity:100%}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,rgba(0,0,0,.1)),0 1px 2px -1px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow,.shadow-lg{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,rgba(0,0,0,.1)),0 4px 6px -4px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,rgba(0,0,0,.1)),0 2px 4px -2px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow-md,.shadow-sm{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02))}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,rgba(0,0,0,.1)),0 8px 10px -6px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow-xl,.shadow-xs{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-xs{--tw-shadow:0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.05))}.ring{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor)}.ring,.ring-0{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ring-0{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor)}.ring-2{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor)}.inset-ring,.ring-2{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.inset-ring{--tw-inset-ring-shadow:inset 0 0 0 1px var(--tw-inset-ring-color,currentcolor)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.blur{--tw-blur:blur(8px)}.blur,.blur-sm{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.blur-sm{--tw-blur:blur(var(--blur-sm))}.drop-shadow{--tw-drop-shadow-size:drop-shadow(0 1px 2px var(--tw-drop-shadow-color,rgba(0,0,0,.1))) drop-shadow(0 1px 1px var(--tw-drop-shadow-color,rgba(0,0,0,.06)));--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.drop-shadow,.grayscale{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.grayscale{--tw-grayscale:grayscale(100%)}.invert{--tw-invert:invert(100%)}.invert,.sepia{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.sepia{--tw-sepia:sepia(100%)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-grayscale{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.backdrop-grayscale{--tw-backdrop-grayscale:grayscale(100%)}.backdrop-invert{--tw-backdrop-invert:invert(100%)}.backdrop-invert,.backdrop-sepia{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.backdrop-sepia{--tw-backdrop-sepia:sepia(100%)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.transition{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-all{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-colors{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-opacity{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-shadow{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-transform{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.duration-200{--tw-duration:200ms;transition-duration:.2s}.duration-1000{--tw-duration:1000ms;transition-duration:1s}.ease-in-out{--tw-ease:var(--ease-in-out);transition-timing-function:var(--ease-in-out)}.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}.outline-none{--tw-outline-style:none;outline-style:none}.outline-solid{--tw-outline-style:solid;outline-style:solid}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.divide-x-reverse{:where(&>:not(:last-child)){--tw-divide-x-reverse:1}}.ring-inset{--tw-ring-inset:inset}.group-hover\\:text-gray-800{&:is(:where(.group):hover *){@media (hover:hover){color:var(--color-gray-800)}}}.group-hover\\:opacity-100{&:is(:where(.group):hover *){@media (hover:hover){opacity:100%}}}.group-data-\\[state\\=open\\]\\:rotate-180{&:is(:where(.group)[data-state=open] *){rotate:180deg}}.group-\\[\\.destructive\\]\\:text-red-300{&:is(:where(.group):is(.destructive) *){color:var(--color-red-300)}}.group-\\[\\.is-link-group\\]\\:text-gray-500\\/90{&:is(:where(.group):is(.is-link-group) *){color:color-mix(in srgb,#6b7280 90%,transparent);@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,var(--color-gray-500) 90%,transparent)}}}.group-\\[\\.is-link-group\\]\\:text-indigo-500{&:is(:where(.group):is(.is-link-group) *){color:var(--color-indigo-500)}}.group-\\[\\.toaster\\]\\:shadow-lg{&:is(:where(.group):is(.toaster) *){--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,rgba(0,0,0,.1)),0 4px 6px -4px var(--tw-shadow-color,rgba(0,0,0,.1));box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.peer-disabled\\:cursor-not-allowed{&:is(:where(.peer):disabled~*){cursor:not-allowed}}.peer-disabled\\:opacity-70{&:is(:where(.peer):disabled~*){opacity:70%}}.file\\:border-0{&::file-selector-button{border-style:var(--tw-border-style);border-width:0}}.file\\:bg-transparent{&::file-selector-button{background-color:transparent}}.file\\:text-sm{&::file-selector-button{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}}.file\\:font-medium{&::file-selector-button{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}}.before\\:absolute{&:before{content:var(--tw-content);position:absolute}}.before\\:inset-0{&:before{content:var(--tw-content);inset:calc(var(--spacing)*0)}}.before\\:-z-10{&:before{content:var(--tw-content);z-index:-10}}.before\\:bg-white{&:before{background-color:var(--color-white);content:var(--tw-content)}}.before\\:backdrop-blur-md{&:before{--tw-backdrop-blur:blur(var(--blur-md));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);content:var(--tw-content)}}.after\\:absolute{&:after{content:var(--tw-content);position:absolute}}.after\\:inset-x-0{&:after{content:var(--tw-content);inset-inline:calc(var(--spacing)*0)}}.after\\:inset-y-0{&:after{content:var(--tw-content);inset-block:calc(var(--spacing)*0)}}.after\\:top-full{&:after{content:var(--tw-content);top:100%}}.after\\:left-1\\/2{&:after{content:var(--tw-content);left:50%}}.after\\:-z-10{&:after{content:var(--tw-content);z-index:-10}}.after\\:h-px{&:after{content:var(--tw-content);height:1px}}.after\\:w-1{&:after{content:var(--tw-content);width:calc(var(--spacing)*1)}}.after\\:-translate-x-1\\/2{&:after{--tw-translate-x:-50%;content:var(--tw-content);translate:var(--tw-translate-x) var(--tw-translate-y)}}.after\\:bg-gray-200{&:after{background-color:var(--color-gray-200);content:var(--tw-content)}}.first\\:rounded-l-md{&:first-child{border-bottom-left-radius:var(--radius-md);border-top-left-radius:var(--radius-md)}}.first\\:border-l{&:first-child{border-left-style:var(--tw-border-style);border-left-width:1px}}.last\\:mb-0{&:last-child{margin-bottom:calc(var(--spacing)*0)}}.last\\:rounded-r-md{&:last-child{border-bottom-right-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}}.focus-within\\:relative{&:focus-within{position:relative}}.focus-within\\:z-20{&:focus-within{z-index:20}}.hover\\:border-gray-800{&:hover{@media (hover:hover){border-color:var(--color-gray-800)}}}.hover\\:bg-gray-100{&:hover{@media (hover:hover){background-color:var(--color-gray-100)}}}.hover\\:text-gray-400{&:hover{@media (hover:hover){color:var(--color-gray-400)}}}.hover\\:text-gray-500{&:hover{@media (hover:hover){color:var(--color-gray-500)}}}.hover\\:text-gray-600{&:hover{@media (hover:hover){color:var(--color-gray-600)}}}.hover\\:text-gray-800{&:hover{@media (hover:hover){color:var(--color-gray-800)}}}.hover\\:text-gray-900{&:hover{@media (hover:hover){color:var(--color-gray-900)}}}.hover\\:underline{&:hover{@media (hover:hover){text-decoration-line:underline}}}.hover\\:opacity-100{&:hover{@media (hover:hover){opacity:100%}}}.hover\\:shadow-xl{&:hover{@media (hover:hover){--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,rgba(0,0,0,.1)),0 8px 10px -6px var(--tw-shadow-color,rgba(0,0,0,.1));box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}}.group-\\[\\.destructive\\]\\:hover\\:text-red-50{&:is(:where(.group):is(.destructive) *){&:hover{@media (hover:hover){color:var(--color-red-50)}}}}.hover\\:group-\\[\\.is-link-group\\]\\:text-gray-700{&:hover{@media (hover:hover){&:is(:where(.group):is(.is-link-group) *){color:var(--color-gray-700)}}}}.focus\\:opacity-100{&:focus{opacity:100%}}.focus\\:ring-2{&:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus\\:ring-offset-2{&:focus{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}}.focus\\:outline-hidden{&:focus{--tw-outline-style:none;outline-style:none;@media (forced-colors:active){outline:2px solid transparent;outline-offset:2px}}}.focus\\:outline-none{&:focus{--tw-outline-style:none;outline-style:none}}.group-\\[\\.destructive\\]\\:focus\\:ring-red-400{&:is(:where(.group):is(.destructive) *){&:focus{--tw-ring-color:var(--color-red-400)}}}.group-\\[\\.destructive\\]\\:focus\\:ring-offset-red-600{&:is(:where(.group):is(.destructive) *){&:focus{--tw-ring-offset-color:var(--color-red-600)}}}.focus-visible\\:ring-1{&:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus-visible\\:ring-2{&:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus-visible\\:ring-offset-1{&:focus-visible{--tw-ring-offset-width:1px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}}.focus-visible\\:ring-offset-2{&:focus-visible{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}}.focus-visible\\:outline-none{&:focus-visible{--tw-outline-style:none;outline-style:none}}.disabled\\:pointer-events-none{&:disabled{pointer-events:none}}.disabled\\:cursor-not-allowed{&:disabled{cursor:not-allowed}}.disabled\\:opacity-50{&:disabled{opacity:50%}}.has-\\[\\:disabled\\]\\:opacity-50{&:has(:is(:disabled)){opacity:50%}}.aria-selected\\:opacity-30{&[aria-selected=true]{opacity:30%}}.aria-selected\\:opacity-100{&[aria-selected=true]{opacity:100%}}.data-\\[disabled\\]\\:pointer-events-none{&[data-disabled]{pointer-events:none}}.data-\\[disabled\\]\\:opacity-50{&[data-disabled]{opacity:50%}}.data-\\[disabled\\=true\\]\\:pointer-events-none{&[data-disabled=true]{pointer-events:none}}.data-\\[disabled\\=true\\]\\:opacity-50{&[data-disabled=true]{opacity:50%}}.data-\\[panel-group-direction\\=vertical\\]\\:h-px{&[data-panel-group-direction=vertical]{height:1px}}.data-\\[panel-group-direction\\=vertical\\]\\:w-full{&[data-panel-group-direction=vertical]{width:100%}}.data-\\[panel-group-direction\\=vertical\\]\\:flex-col{&[data-panel-group-direction=vertical]{flex-direction:column}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:left-0{&[data-panel-group-direction=vertical]{&:after{content:var(--tw-content);left:calc(var(--spacing)*0)}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:h-1{&[data-panel-group-direction=vertical]{&:after{content:var(--tw-content);height:calc(var(--spacing)*1)}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:w-full{&[data-panel-group-direction=vertical]{&:after{content:var(--tw-content);width:100%}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:translate-x-0{&[data-panel-group-direction=vertical]{&:after{--tw-translate-x:calc(var(--spacing)*0);content:var(--tw-content);translate:var(--tw-translate-x) var(--tw-translate-y)}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:-translate-y-1\\/2{&[data-panel-group-direction=vertical]{&:after{--tw-translate-y:-50%;content:var(--tw-content);translate:var(--tw-translate-x) var(--tw-translate-y)}}}.data-\\[selected\\=true\\]\\:font-bold{&[data-selected=true]{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}}.data-\\[selected\\=true\\]\\:text-white{&[data-selected=true]{color:var(--color-white)}}.data-\\[side\\=bottom\\]\\:translate-y-1{&[data-side=bottom]{--tw-translate-y:calc(var(--spacing)*1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[side\\=left\\]\\:-translate-x-1{&[data-side=left]{--tw-translate-x:calc(var(--spacing)*-1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[side\\=right\\]\\:translate-x-1{&[data-side=right]{--tw-translate-x:calc(var(--spacing)*1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[side\\=top\\]\\:-translate-y-1{&[data-side=top]{--tw-translate-y:calc(var(--spacing)*-1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[state\\=active\\]\\:shadow-sm{&[data-state=active]{--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02));box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.data-\\[state\\=checked\\]\\:translate-x-5{&[data-state=checked]{--tw-translate-x:calc(var(--spacing)*5);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[state\\=closed\\]\\:duration-300{&[data-state=closed]{--tw-duration:300ms;transition-duration:.3s}}.data-\\[state\\=open\\]\\:duration-500{&[data-state=open]{--tw-duration:500ms;transition-duration:.5s}}.data-\\[state\\=unchecked\\]\\:translate-x-0{&[data-state=unchecked]{--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=cancel\\]\\:translate-x-0{&[data-swipe=cancel]{--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=end\\]\\:translate-x-\\[var\\(--radix-toast-swipe-end-x\\)\\]{&[data-swipe=end]{--tw-translate-x:var(--radix-toast-swipe-end-x);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=move\\]\\:translate-x-\\[var\\(--radix-toast-swipe-move-x\\)\\]{&[data-swipe=move]{--tw-translate-x:var(--radix-toast-swipe-move-x);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=move\\]\\:transition-none{&[data-swipe=move]{transition-property:none}}.max-lg\\:before\\:bg-white\\/90,.max-lg\\:shadow-sm{@media (width < 64rem){&:before{background-color:color-mix(in srgb,#fff 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-white) 90%,transparent)}}}}.sm\\:bottom-0,.sm\\:flex-col,.sm\\:flex-row,.sm\\:gap-2\\.5,.sm\\:justify-end,.sm\\:max-w-sm,.sm\\:mt-0,.sm\\:right-0,.sm\\:space-y-0,.sm\\:top-auto{@media (width >= 40rem){:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*0*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*0*var(--tw-space-y-reverse))}}}.sm\\:space-x-2{@media (width >= 40rem){:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*2*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*2*var(--tw-space-x-reverse))}}}.sm\\:space-x-4{@media (width >= 40rem){:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*4*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*4*var(--tw-space-x-reverse))}}}.lg\\:before\\:bg-gray-100\\/90,.lg\\:block,.lg\\:border-b,.lg\\:flex\\!,.lg\\:hidden,.lg\\:inline-flex,.lg\\:left-auto,.lg\\:opacity-0,.lg\\:overflow-y-auto,.lg\\:px-8,.lg\\:static,.lg\\:top-auto,.lg\\:translate-x-0,.lg\\:w-20,.lg\\:z-auto,.md\\:absolute,.md\\:max-w-\\[420px\\],.md\\:w-\\[var\\(--radix-navigation-menu-viewport-width\\)\\],.md\\:w-auto,.sm\\:px-2,.sm\\:px-6,.sm\\:rounded-lg,.sm\\:text-left{@media (width >= 64rem){&:before{background-color:color-mix(in srgb,#f3f4f6 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-100) 90%,transparent)}}}}.lg\\:hover\\:bg-gray-200{@media (width >= 64rem){&:hover{@media (hover:hover){background-color:var(--color-gray-200)}}}}.\\32 xl\\:block,.\\32 xl\\:hidden,.\\32 xl\\:opacity-100,.\\32 xl\\:w-64\\!,.dark\\:block{&:is(.dark *){display:block}}.dark\\:hidden{&:is(.dark *){display:none}}.dark\\:border-gray-700\\/60{&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}}.dark\\:bg-gray-700\\/60{&:is(.dark *){background-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}}.dark\\:bg-gray-800{&:is(.dark *){background-color:var(--color-gray-800)}}.dark\\:bg-gray-900{&:is(.dark *){background-color:var(--color-gray-900)}}.dark\\:bg-slate-900{&:is(.dark *){background-color:var(--color-slate-900)}}.dark\\:from-indigo-500\\/\\[0\\.24\\]{&:is(.dark *){--tw-gradient-from:color-mix(in srgb,#9b49ff 24%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-gradient-from:color-mix(in oklab,var(--color-indigo-500) 24%,transparent)}--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}}.dark\\:text-gray-100{&:is(.dark *){color:var(--color-gray-100)}}.dark\\:text-gray-400{&:is(.dark *){color:var(--color-gray-400)}}.dark\\:text-gray-400\\/80{&:is(.dark *){color:color-mix(in srgb,#9ca3af 80%,transparent);@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,var(--color-gray-400) 80%,transparent)}}}.dark\\:text-gray-500{&:is(.dark *){color:var(--color-gray-500)}}.dark\\:text-violet-400{&:is(.dark *){color:var(--color-violet-400)}}.dark\\:text-white{&:is(.dark *){color:var(--color-white)}}.dark\\:group-hover\\:text-white{&:is(.dark *){&:is(:where(.group):hover *){@media (hover:hover){color:var(--color-white)}}}}.dark\\:group-\\[\\.is-link-group\\]\\:text-gray-400{&:is(.dark *){&:is(:where(.group):is(.is-link-group) *){color:var(--color-gray-400)}}}.dark\\:before\\:bg-gray-800{&:is(.dark *){&:before{background-color:var(--color-gray-800);content:var(--tw-content)}}}.dark\\:before\\:bg-gray-900{&:is(.dark *){&:before{background-color:var(--color-gray-900);content:var(--tw-content)}}}.dark\\:after\\:bg-gray-700\\/60{&:is(.dark *){&:after{background-color:color-mix(in srgb,#374151 60%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}}}.dark\\:hover\\:bg-gray-700\\/50{&:is(.dark *){&:hover{@media (hover:hover){background-color:color-mix(in srgb,#374151 50%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 50%,transparent)}}}}}.dark\\:hover\\:text-gray-400{&:is(.dark *){&:hover{@media (hover:hover){color:var(--color-gray-400)}}}}.dark\\:hover\\:text-white{&:is(.dark *){&:hover{@media (hover:hover){color:var(--color-white)}}}}.dark\\:hover\\:group-\\[\\.is-link-group\\]\\:text-gray-200{&:is(.dark *){&:hover{@media (hover:hover){&:is(:where(.group):is(.is-link-group) *){color:var(--color-gray-200)}}}}}.dark\\:max-lg\\:before\\:bg-gray-800\\/90{&:is(.dark *){@media (width < 64rem){&:before{background-color:color-mix(in srgb,#1f2937 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-800) 90%,transparent)}}}}}.dark\\:lg\\:before\\:bg-gray-900\\/90{&:is(.dark *){@media (width >= 64rem){&:before{background-color:color-mix(in srgb,#111827 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-900) 90%,transparent)}}}}}.dark\\:lg\\:hover\\:bg-gray-800{&:is(.dark *){@media (width >= 64rem){&:hover{@media (hover:hover){background-color:var(--color-gray-800)}}}}}.sidebar-expanded\\:rotate-180{&:is(.sidebar-expanded *){rotate:180deg}}.lg\\:sidebar-expanded\\:block{@media (width >= 64rem){&:is(.sidebar-expanded *){display:block}}}.lg\\:sidebar-expanded\\:hidden{@media (width >= 64rem){&:is(.sidebar-expanded *){display:none}}}.lg\\:sidebar-expanded\\:\\!w-64{@media (width >= 64rem){&:is(.sidebar-expanded *){width:calc(var(--spacing)*64)!important}}}.lg\\:sidebar-expanded\\:opacity-100{@media (width >= 64rem){&:is(.sidebar-expanded *){opacity:100%}}}.\\[\\&_\\.recharts-dot\\[stroke\\=\\'\\#fff\\'\\]\\]\\:stroke-transparent{& .recharts-dot[stroke=\"#fff\"]{stroke:transparent}}.\\[\\&_\\.recharts-layer\\]\\:outline-none{& .recharts-layer{--tw-outline-style:none;outline-style:none}}.\\[\\&_\\.recharts-sector\\]\\:outline-none{& .recharts-sector{--tw-outline-style:none;outline-style:none}}.\\[\\&_\\.recharts-sector\\[stroke\\=\\'\\#fff\\'\\]\\]\\:stroke-transparent{& .recharts-sector[stroke=\"#fff\"]{stroke:transparent}}.\\[\\&_\\.recharts-surface\\]\\:outline-none{& .recharts-surface{--tw-outline-style:none;outline-style:none}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:px-2{& [cmdk-group-heading]{padding-inline:calc(var(--spacing)*2)}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:py-1\\.5{& [cmdk-group-heading]{padding-block:calc(var(--spacing)*1.5)}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:text-xs{& [cmdk-group-heading]{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:font-medium{& [cmdk-group-heading]{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}}.\\[\\&_\\[cmdk-group\\]\\]\\:px-2{& [cmdk-group]{padding-inline:calc(var(--spacing)*2)}}.\\[\\&_\\[cmdk-group\\]\\:not\\(\\[hidden\\]\\)_\\~\\[cmdk-group\\]\\]\\:pt-0{& [cmdk-group]:not([hidden])~[cmdk-group]{padding-top:calc(var(--spacing)*0)}}.\\[\\&_\\[cmdk-input-wrapper\\]_svg\\]\\:h-5{& [cmdk-input-wrapper] svg{height:calc(var(--spacing)*5)}}.\\[\\&_\\[cmdk-input-wrapper\\]_svg\\]\\:w-5{& [cmdk-input-wrapper] svg{width:calc(var(--spacing)*5)}}.\\[\\&_\\[cmdk-input\\]\\]\\:h-12{& [cmdk-input]{height:calc(var(--spacing)*12)}}.\\[\\&_\\[cmdk-item\\]\\]\\:px-2{& [cmdk-item]{padding-inline:calc(var(--spacing)*2)}}.\\[\\&_\\[cmdk-item\\]\\]\\:py-3{& [cmdk-item]{padding-block:calc(var(--spacing)*3)}}.\\[\\&_\\[cmdk-item\\]_svg\\]\\:h-5{& [cmdk-item] svg{height:calc(var(--spacing)*5)}}.\\[\\&_\\[cmdk-item\\]_svg\\]\\:w-5{& [cmdk-item] svg{width:calc(var(--spacing)*5)}}.\\[\\&_p\\]\\:leading-relaxed{& p{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}}.\\[\\&_tr\\]\\:border-b{& tr{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}}.\\[\\&_tr\\:last-child\\]\\:border-0{& tr:last-child{border-style:var(--tw-border-style);border-width:0}}.first\\:\\[\\&\\:has\\(\\[aria-selected\\]\\)\\]\\:rounded-l-md{&:first-child{&:has([aria-selected]){border-bottom-left-radius:var(--radius-md);border-top-left-radius:var(--radius-md)}}}.last\\:\\[\\&\\:has\\(\\[aria-selected\\]\\)\\]\\:rounded-r-md{&:last-child{&:has([aria-selected]){border-bottom-right-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}}}.\\[\\&\\:has\\(\\[aria-selected\\]\\.day-range-end\\)\\]\\:rounded-r-md{&:has([aria-selected].day-range-end){border-bottom-right-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}}.\\[\\&\\:has\\(\\[role\\=checkbox\\]\\)\\]\\:pr-0{&:has([role=checkbox]){padding-right:calc(var(--spacing)*0)}}.\\[\\&\\>span\\]\\:line-clamp-1{&>span{-webkit-box-orient:vertical;-webkit-line-clamp:1;display:-webkit-box;overflow:hidden}}.\\[\\&\\>svg\\]\\:absolute{&>svg{position:absolute}}.\\[\\&\\>svg\\]\\:top-4{&>svg{top:calc(var(--spacing)*4)}}.\\[\\&\\>svg\\]\\:left-4{&>svg{left:calc(var(--spacing)*4)}}.\\[\\&\\>svg\\]\\:size-3\\.5{&>svg{height:calc(var(--spacing)*3.5);width:calc(var(--spacing)*3.5)}}.\\[\\&\\>svg\\]\\:h-2\\.5{&>svg{height:calc(var(--spacing)*2.5)}}.\\[\\&\\>svg\\]\\:h-3{&>svg{height:calc(var(--spacing)*3)}}.\\[\\&\\>svg\\]\\:w-2\\.5{&>svg{width:calc(var(--spacing)*2.5)}}.\\[\\&\\>svg\\]\\:w-3{&>svg{width:calc(var(--spacing)*3)}}.\\[\\&\\>svg\\+div\\]\\:translate-y-\\[-3px\\]{&>svg+div{--tw-translate-y:-3px;translate:var(--tw-translate-x) var(--tw-translate-y)}}.\\[\\&\\>svg\\~\\*\\]\\:pl-7{&>svg~*{padding-left:calc(var(--spacing)*7)}}.\\[\\&\\>tr\\]\\:last\\:border-b-0{&>tr{&:last-child{border-bottom-style:var(--tw-border-style);border-bottom-width:0}}}.\\[\\&\\[data-panel-group-direction\\=vertical\\]\\>div\\]\\:rotate-90{&[data-panel-group-direction=vertical]>div{rotate:90deg}}.\\[\\&\\[data-state\\=open\\]\\>svg\\]\\:rotate-180{&[data-state=open]>svg{rotate:180deg}}}@layer components{.h1{--tw-font-weight:var(--font-weight-extrabold);--tw-tracking:var(--tracking-tighter);font-size:var(--text-4xl);font-weight:var(--font-weight-extrabold);letter-spacing:var(--tw-tracking,var(--text-4xl--letter-spacing));letter-spacing:var(--tracking-tighter);line-height:var(--tw-leading,var(--text-4xl--line-height))}.h2{--tw-font-weight:var(--font-weight-extrabold);--tw-tracking:var(--tracking-tighter);letter-spacing:var(--tw-tracking,var(--text-3xl--letter-spacing));letter-spacing:var(--tracking-tighter)}.h2,.h3{font-size:var(--text-3xl);font-weight:var(--font-weight-extrabold);line-height:var(--tw-leading,var(--text-3xl--line-height))}.h3{letter-spacing:var(--tw-tracking,var(--text-3xl--letter-spacing))}.h3,.h4{--tw-font-weight:var(--font-weight-extrabold)}.h4{--tw-tracking:var(--tracking-tight);font-size:var(--text-2xl);font-weight:var(--font-weight-extrabold);letter-spacing:var(--tw-tracking,var(--text-2xl--letter-spacing));letter-spacing:var(--tracking-tight);line-height:var(--tw-leading,var(--text-2xl--line-height))}@media (width >= 48rem){.h1{font-size:var(--text-5xl);letter-spacing:var(--tw-tracking,var(--text-5xl--letter-spacing));line-height:var(--tw-leading,var(--text-5xl--line-height))}.h2{font-size:var(--text-4xl);letter-spacing:var(--tw-tracking,var(--text-4xl--letter-spacing));line-height:var(--tw-leading,var(--text-4xl--line-height))}}.btn,.btn-lg,.btn-sm,.btn-xs{--tw-leading:calc(var(--spacing)*5);--tw-font-weight:var(--font-weight-medium);--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02));align-items:center;border-color:transparent;border-radius:var(--radius-lg);border-style:var(--tw-border-style);border-width:1px;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);display:inline-flex;font-size:var(--text-sm);font-weight:var(--font-weight-medium);justify-content:center;line-height:var(--tw-leading,var(--text-sm--line-height));line-height:calc(var(--spacing)*5);transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.btn-primary{background-color:var(--color-indigo-500);border-radius:var(--radius-md);color:var(--color-white);cursor:pointer;padding-block:calc(var(--spacing)*2)!important;padding-inline:calc(var(--spacing)*4)!important;&:hover{@media (hover:hover){background-color:var(--color-indigo-600)}}}.btn-secondary{background-color:var(--color-white);border-color:var(--color-gray-200);border-radius:var(--radius-md);border-style:var(--tw-border-style);border-width:1px;color:var(--color-gray-600);cursor:pointer;padding-block:calc(var(--spacing)*2)!important;padding-inline:calc(var(--spacing)*4)!important;&:hover{@media (hover:hover){background-color:var(--color-gray-50)}}&:is(.dark *){border-color:var(--color-gray-600)}&:is(.dark *){background-color:var(--color-gray-700)}&:is(.dark *){color:var(--color-gray-200)}&:is(.dark *){&:hover{@media (hover:hover){background-color:var(--color-gray-600)}}}}.btn-option{--tw-font-weight:var(--font-weight-semibold);background-color:var(--color-gray-100);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-xs);font-weight:var(--font-weight-semibold);line-height:var(--tw-leading,var(--text-xs--line-height));padding-block:calc(var(--spacing)*2);transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));&:hover{@media (hover:hover){background-color:var(--color-gray-200)}}&:is(.dark *){background-color:var(--color-gray-700)}&:is(.dark *){&:hover{@media (hover:hover){background-color:var(--color-gray-900)}}}}.btn-black{background-color:var(--color-gray-900);color:var(--color-gray-100);cursor:pointer;&:hover{@media (hover:hover){background-color:var(--color-gray-800)}}&:is(.dark *){background-color:var(--color-gray-100)}&:is(.dark *){color:var(--color-gray-800)}&:is(.dark *){&:hover{@media (hover:hover){background-color:var(--color-white)}}}}.btn{padding-block:calc(var(--spacing)*2);padding-inline:calc(var(--spacing)*3)}.btn-lg{padding-block:calc(var(--spacing)*3);padding-inline:calc(var(--spacing)*4)}.btn-sm{padding-block:calc(var(--spacing)*1)}.btn-sm,.btn-xs{padding-inline:calc(var(--spacing)*2)}.btn-xs{padding-block:calc(var(--spacing)*.5)}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}.form-checkbox,.form-input,.form-multiselect,.form-radio,.form-select,.form-textarea{background-color:var(--color-white);border-style:var(--tw-border-style);border-width:1px;&:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);--tw-ring-offset-width:0px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}&:is(.dark *){background-color:color-mix(in srgb,#111827 30%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-900) 30%,transparent)}}&:is(.dark *){&:disabled{border-color:var(--color-gray-700)}}&:is(.dark *){&:disabled{background-color:color-mix(in srgb,#374151 30%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 30%,transparent)}}}&:is(.dark *){&:disabled{&:hover{@media (hover:hover){border-color:var(--color-gray-700)}}}}}.form-checkbox{border-radius:var(--radius-sm)}.form-input,.form-multiselect,.form-select,.form-textarea{--tw-leading:calc(var(--spacing)*5);--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02));border-color:var(--color-gray-200);border-radius:var(--radius-lg);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);color:var(--color-gray-800);font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height));line-height:calc(var(--spacing)*5);padding-block:calc(var(--spacing)*2);padding-inline:calc(var(--spacing)*3);&:hover{@media (hover:hover){border-color:var(--color-gray-300)}}&:focus{border-color:var(--color-gray-300)}&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}&:is(.dark *){color:var(--color-gray-100)}&:is(.dark *){&:hover{@media (hover:hover){border-color:var(--color-gray-600)}}}&:is(.dark *){&:focus{border-color:var(--color-gray-600)}}}.form-input,.form-textarea{&::-moz-placeholder{color:var(--color-gray-400)}&::placeholder{color:var(--color-gray-400)}&:is(.dark *){&::-moz-placeholder{color:var(--color-gray-500)}&::placeholder{color:var(--color-gray-500)}}}.form-select{padding-right:calc(var(--spacing)*10)}.form-checkbox,.form-radio{border-color:var(--color-gray-300);border-style:var(--tw-border-style);border-width:1px;color:var(--color-violet-500);&:checked{background-color:var(--color-violet-500);border-color:transparent}&:focus-visible{&:not(:checked){--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}&:focus-visible{&:not(:checked){--tw-ring-color:color-mix(in srgb,#8470ff 50%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-ring-color:color-mix(in oklab,var(--color-violet-500) 50%,transparent)}}}&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}&:is(.dark *){&:checked{border-color:transparent}}}.form-switch{position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;width:44px}.form-switch label{cursor:pointer;height:calc(var(--spacing)*6);overflow:hidden}.form-switch label,.form-switch label>span:first-child{border-radius:calc(infinity * 1px);display:block}.form-switch label>span:first-child{height:20px;left:2px;position:absolute;right:50%;top:2px;transition:all .15s ease-out;width:20px}.form-switch input[type=checkbox]+label{background-color:var(--color-gray-400);&:is(.dark *){background-color:var(--color-gray-700)}}.form-switch input[type=checkbox]:checked+label{background-color:var(--color-violet-500)}.form-switch input[type=checkbox]:checked+label>span:first-child{left:22px}.form-switch input[type=checkbox]:disabled+label{background-color:var(--color-gray-100);border-color:var(--color-gray-200);border-style:var(--tw-border-style);border-width:1px;cursor:not-allowed;&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}&:is(.dark *){background-color:color-mix(in srgb,#374151 20%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 20%,transparent)}}}.form-switch input[type=checkbox]:disabled+label>span:first-child{background-color:var(--color-gray-400);&:is(.dark *){background-color:var(--color-gray-600)}}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.video-js{height:100%!important;-o-object-fit:contain!important;object-fit:contain!important;width:100%!important}}.la,.lab,.lad,.lal,.lar,.las{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}.la-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.la-xs{font-size:.75em}.la-sm{font-size:.875em}.la-1x{font-size:1em}.la-2x{font-size:2em}.la-3x{font-size:3em}.la-4x{font-size:4em}.la-5x{font-size:5em}.la-6x{font-size:6em}.la-7x{font-size:7em}.la-8x{font-size:8em}.la-9x{font-size:9em}.la-10x{font-size:10em}.la-fw{text-align:center;width:1.25em}.la-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.la-ul>li{position:relative}.la-li{left:-2em;line-height:inherit;position:absolute;text-align:center;width:2em}.la-border{border:.08em solid #eee;border-radius:.1em;padding:.2em .25em .15em}.la-pull-left{float:left}.la-pull-right{float:right}.la.la-pull-left,.lab.la-pull-left,.lal.la-pull-left,.lar.la-pull-left,.las.la-pull-left{margin-right:.3em}.la.la-pull-right,.lab.la-pull-right,.lal.la-pull-right,.lar.la-pull-right,.las.la-pull-right{margin-left:.3em}.la-spin{animation:la-spin 2s linear infinite}.la-pulse{animation:la-spin 1s steps(8) infinite}@keyframes la-spin{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.la-rotate-90{transform:rotate(90deg)}.la-rotate-180{transform:rotate(180deg)}.la-rotate-270{transform:rotate(270deg)}.la-flip-horizontal{transform:scaleX(-1)}.la-flip-vertical{transform:scaleY(-1)}.la-flip-both,.la-flip-horizontal.la-flip-vertical{transform:scale(-1)}:root .la-flip-both,:root .la-flip-horizontal,:root .la-flip-vertical,:root .la-rotate-180,:root .la-rotate-270,:root .la-rotate-90{filter:none}.la-stack{display:inline-block;height:2em;line-height:2em;position:relative;vertical-align:middle;width:2.5em}.la-stack-1x,.la-stack-2x{left:0;position:absolute;text-align:center;width:100%}.la-stack-1x{line-height:inherit}.la-stack-2x{font-size:2em}.la-inverse{color:#fff}.la-500px:before{content:\"\\f26e\"}.la-accessible-icon:before{content:\"\\f368\"}.la-accusoft:before{content:\"\\f369\"}.la-acquisitions-incorporated:before{content:\"\\f6af\"}.la-ad:before{content:\"\\f641\"}.la-address-book:before{content:\"\\f2b9\"}.la-address-card:before{content:\"\\f2bb\"}.la-adjust:before{content:\"\\f042\"}.la-adn:before{content:\"\\f170\"}.la-adobe:before{content:\"\\f778\"}.la-adversal:before{content:\"\\f36a\"}.la-affiliatetheme:before{content:\"\\f36b\"}.la-air-freshener:before{content:\"\\f5d0\"}.la-airbnb:before{content:\"\\f834\"}.la-algolia:before{content:\"\\f36c\"}.la-align-center:before{content:\"\\f037\"}.la-align-justify:before{content:\"\\f039\"}.la-align-left:before{content:\"\\f036\"}.la-align-right:before{content:\"\\f038\"}.la-alipay:before{content:\"\\f642\"}.la-allergies:before{content:\"\\f461\"}.la-amazon:before{content:\"\\f270\"}.la-amazon-pay:before{content:\"\\f42c\"}.la-ambulance:before{content:\"\\f0f9\"}.la-american-sign-language-interpreting:before{content:\"\\f2a3\"}.la-amilia:before{content:\"\\f36d\"}.la-anchor:before{content:\"\\f13d\"}.la-android:before{content:\"\\f17b\"}.la-angellist:before{content:\"\\f209\"}.la-angle-double-down:before{content:\"\\f103\"}.la-angle-double-left:before{content:\"\\f100\"}.la-angle-double-right:before{content:\"\\f101\"}.la-angle-double-up:before{content:\"\\f102\"}.la-angle-down:before{content:\"\\f107\"}.la-angle-left:before{content:\"\\f104\"}.la-angle-right:before{content:\"\\f105\"}.la-angle-up:before{content:\"\\f106\"}.la-angry:before{content:\"\\f556\"}.la-angrycreative:before{content:\"\\f36e\"}.la-angular:before{content:\"\\f420\"}.la-ankh:before{content:\"\\f644\"}.la-app-store:before{content:\"\\f36f\"}.la-app-store-ios:before{content:\"\\f370\"}.la-apper:before{content:\"\\f371\"}.la-apple:before{content:\"\\f179\"}.la-apple-alt:before{content:\"\\f5d1\"}.la-apple-pay:before{content:\"\\f415\"}.la-archive:before{content:\"\\f187\"}.la-archway:before{content:\"\\f557\"}.la-arrow-alt-circle-down:before{content:\"\\f358\"}.la-arrow-alt-circle-left:before{content:\"\\f359\"}.la-arrow-alt-circle-right:before{content:\"\\f35a\"}.la-arrow-alt-circle-up:before{content:\"\\f35b\"}.la-arrow-circle-down:before{content:\"\\f0ab\"}.la-arrow-circle-left:before{content:\"\\f0a8\"}.la-arrow-circle-right:before{content:\"\\f0a9\"}.la-arrow-circle-up:before{content:\"\\f0aa\"}.la-arrow-down:before{content:\"\\f063\"}.la-arrow-left:before{content:\"\\f060\"}.la-arrow-right:before{content:\"\\f061\"}.la-arrow-up:before{content:\"\\f062\"}.la-arrows-alt:before{content:\"\\f0b2\"}.la-arrows-alt-h:before{content:\"\\f337\"}.la-arrows-alt-v:before{content:\"\\f338\"}.la-artstation:before{content:\"\\f77a\"}.la-assistive-listening-systems:before{content:\"\\f2a2\"}.la-asterisk:before{content:\"\\f069\"}.la-asymmetrik:before{content:\"\\f372\"}.la-at:before{content:\"\\f1fa\"}.la-atlas:before{content:\"\\f558\"}.la-atlassian:before{content:\"\\f77b\"}.la-atom:before{content:\"\\f5d2\"}.la-audible:before{content:\"\\f373\"}.la-audio-description:before{content:\"\\f29e\"}.la-autoprefixer:before{content:\"\\f41c\"}.la-avianex:before{content:\"\\f374\"}.la-aviato:before{content:\"\\f421\"}.la-award:before{content:\"\\f559\"}.la-aws:before{content:\"\\f375\"}.la-baby:before{content:\"\\f77c\"}.la-baby-carriage:before{content:\"\\f77d\"}.la-backspace:before{content:\"\\f55a\"}.la-backward:before{content:\"\\f04a\"}.la-bacon:before{content:\"\\f7e5\"}.la-balance-scale:before{content:\"\\f24e\"}.la-balance-scale-left:before{content:\"\\f515\"}.la-balance-scale-right:before{content:\"\\f516\"}.la-ban:before{content:\"\\f05e\"}.la-band-aid:before{content:\"\\f462\"}.la-bandcamp:before{content:\"\\f2d5\"}.la-barcode:before{content:\"\\f02a\"}.la-bars:before{content:\"\\f0c9\"}.la-baseball-ball:before{content:\"\\f433\"}.la-basketball-ball:before{content:\"\\f434\"}.la-bath:before{content:\"\\f2cd\"}.la-battery-empty:before{content:\"\\f244\"}.la-battery-full:before{content:\"\\f240\"}.la-battery-half:before{content:\"\\f242\"}.la-battery-quarter:before{content:\"\\f243\"}.la-battery-three-quarters:before{content:\"\\f241\"}.la-battle-net:before{content:\"\\f835\"}.la-bed:before{content:\"\\f236\"}.la-beer:before{content:\"\\f0fc\"}.la-behance:before{content:\"\\f1b4\"}.la-behance-square:before{content:\"\\f1b5\"}.la-bell:before{content:\"\\f0f3\"}.la-bell-slash:before{content:\"\\f1f6\"}.la-bezier-curve:before{content:\"\\f55b\"}.la-bible:before{content:\"\\f647\"}.la-bicycle:before{content:\"\\f206\"}.la-biking:before{content:\"\\f84a\"}.la-bimobject:before{content:\"\\f378\"}.la-binoculars:before{content:\"\\f1e5\"}.la-biohazard:before{content:\"\\f780\"}.la-birthday-cake:before{content:\"\\f1fd\"}.la-bitbucket:before{content:\"\\f171\"}.la-bitcoin:before{content:\"\\f379\"}.la-bity:before{content:\"\\f37a\"}.la-black-tie:before{content:\"\\f27e\"}.la-blackberry:before{content:\"\\f37b\"}.la-blender:before{content:\"\\f517\"}.la-blender-phone:before{content:\"\\f6b6\"}.la-blind:before{content:\"\\f29d\"}.la-blog:before{content:\"\\f781\"}.la-blogger:before{content:\"\\f37c\"}.la-blogger-b:before{content:\"\\f37d\"}.la-bluetooth:before{content:\"\\f293\"}.la-bluetooth-b:before{content:\"\\f294\"}.la-bold:before{content:\"\\f032\"}.la-bolt:before{content:\"\\f0e7\"}.la-bomb:before{content:\"\\f1e2\"}.la-bone:before{content:\"\\f5d7\"}.la-bong:before{content:\"\\f55c\"}.la-book:before{content:\"\\f02d\"}.la-book-dead:before{content:\"\\f6b7\"}.la-book-medical:before{content:\"\\f7e6\"}.la-book-open:before{content:\"\\f518\"}.la-book-reader:before{content:\"\\f5da\"}.la-bookmark:before{content:\"\\f02e\"}.la-bootstrap:before{content:\"\\f836\"}.la-border-all:before{content:\"\\f84c\"}.la-border-none:before{content:\"\\f850\"}.la-border-style:before{content:\"\\f853\"}.la-bowling-ball:before{content:\"\\f436\"}.la-box:before{content:\"\\f466\"}.la-box-open:before{content:\"\\f49e\"}.la-boxes:before{content:\"\\f468\"}.la-braille:before{content:\"\\f2a1\"}.la-brain:before{content:\"\\f5dc\"}.la-bread-slice:before{content:\"\\f7ec\"}.la-briefcase:before{content:\"\\f0b1\"}.la-briefcase-medical:before{content:\"\\f469\"}.la-broadcast-tower:before{content:\"\\f519\"}.la-broom:before{content:\"\\f51a\"}.la-brush:before{content:\"\\f55d\"}.la-btc:before{content:\"\\f15a\"}.la-buffer:before{content:\"\\f837\"}.la-bug:before{content:\"\\f188\"}.la-building:before{content:\"\\f1ad\"}.la-bullhorn:before{content:\"\\f0a1\"}.la-bullseye:before{content:\"\\f140\"}.la-burn:before{content:\"\\f46a\"}.la-buromobelexperte:before{content:\"\\f37f\"}.la-bus:before{content:\"\\f207\"}.la-bus-alt:before{content:\"\\f55e\"}.la-business-time:before{content:\"\\f64a\"}.la-buy-n-large:before{content:\"\\f8a6\"}.la-buysellads:before{content:\"\\f20d\"}.la-calculator:before{content:\"\\f1ec\"}.la-calendar:before{content:\"\\f133\"}.la-calendar-alt:before{content:\"\\f073\"}.la-calendar-check:before{content:\"\\f274\"}.la-calendar-day:before{content:\"\\f783\"}.la-calendar-minus:before{content:\"\\f272\"}.la-calendar-plus:before{content:\"\\f271\"}.la-calendar-times:before{content:\"\\f273\"}.la-calendar-week:before{content:\"\\f784\"}.la-camera:before{content:\"\\f030\"}.la-camera-retro:before{content:\"\\f083\"}.la-campground:before{content:\"\\f6bb\"}.la-canadian-maple-leaf:before{content:\"\\f785\"}.la-candy-cane:before{content:\"\\f786\"}.la-cannabis:before{content:\"\\f55f\"}.la-capsules:before{content:\"\\f46b\"}.la-car:before{content:\"\\f1b9\"}.la-car-alt:before{content:\"\\f5de\"}.la-car-battery:before{content:\"\\f5df\"}.la-car-crash:before{content:\"\\f5e1\"}.la-car-side:before{content:\"\\f5e4\"}.la-caret-down:before{content:\"\\f0d7\"}.la-caret-left:before{content:\"\\f0d9\"}.la-caret-right:before{content:\"\\f0da\"}.la-caret-square-down:before{content:\"\\f150\"}.la-caret-square-left:before{content:\"\\f191\"}.la-caret-square-right:before{content:\"\\f152\"}.la-caret-square-up:before{content:\"\\f151\"}.la-caret-up:before{content:\"\\f0d8\"}.la-carrot:before{content:\"\\f787\"}.la-cart-arrow-down:before{content:\"\\f218\"}.la-cart-plus:before{content:\"\\f217\"}.la-cash-register:before{content:\"\\f788\"}.la-cat:before{content:\"\\f6be\"}.la-cc-amazon-pay:before{content:\"\\f42d\"}.la-cc-amex:before{content:\"\\f1f3\"}.la-cc-apple-pay:before{content:\"\\f416\"}.la-cc-diners-club:before{content:\"\\f24c\"}.la-cc-discover:before{content:\"\\f1f2\"}.la-cc-jcb:before{content:\"\\f24b\"}.la-cc-mastercard:before{content:\"\\f1f1\"}.la-cc-paypal:before{content:\"\\f1f4\"}.la-cc-stripe:before{content:\"\\f1f5\"}.la-cc-visa:before{content:\"\\f1f0\"}.la-centercode:before{content:\"\\f380\"}.la-centos:before{content:\"\\f789\"}.la-certificate:before{content:\"\\f0a3\"}.la-chair:before{content:\"\\f6c0\"}.la-chalkboard:before{content:\"\\f51b\"}.la-chalkboard-teacher:before{content:\"\\f51c\"}.la-charging-station:before{content:\"\\f5e7\"}.la-chart-area:before{content:\"\\f1fe\"}.la-chart-bar:before{content:\"\\f080\"}.la-chart-line:before{content:\"\\f201\"}.la-chart-pie:before{content:\"\\f200\"}.la-check:before{content:\"\\f00c\"}.la-check-circle:before{content:\"\\f058\"}.la-check-double:before{content:\"\\f560\"}.la-check-square:before{content:\"\\f14a\"}.la-cheese:before{content:\"\\f7ef\"}.la-chess:before{content:\"\\f439\"}.la-chess-bishop:before{content:\"\\f43a\"}.la-chess-board:before{content:\"\\f43c\"}.la-chess-king:before{content:\"\\f43f\"}.la-chess-knight:before{content:\"\\f441\"}.la-chess-pawn:before{content:\"\\f443\"}.la-chess-queen:before{content:\"\\f445\"}.la-chess-rook:before{content:\"\\f447\"}.la-chevron-circle-down:before{content:\"\\f13a\"}.la-chevron-circle-left:before{content:\"\\f137\"}.la-chevron-circle-right:before{content:\"\\f138\"}.la-chevron-circle-up:before{content:\"\\f139\"}.la-chevron-down:before{content:\"\\f078\"}.la-chevron-left:before{content:\"\\f053\"}.la-chevron-right:before{content:\"\\f054\"}.la-chevron-up:before{content:\"\\f077\"}.la-child:before{content:\"\\f1ae\"}.la-chrome:before{content:\"\\f268\"}.la-chromecast:before{content:\"\\f838\"}.la-church:before{content:\"\\f51d\"}.la-circle:before{content:\"\\f111\"}.la-circle-notch:before{content:\"\\f1ce\"}.la-city:before{content:\"\\f64f\"}.la-clinic-medical:before{content:\"\\f7f2\"}.la-clipboard:before{content:\"\\f328\"}.la-clipboard-check:before{content:\"\\f46c\"}.la-clipboard-list:before{content:\"\\f46d\"}.la-clock:before{content:\"\\f017\"}.la-clone:before{content:\"\\f24d\"}.la-closed-captioning:before{content:\"\\f20a\"}.la-cloud:before{content:\"\\f0c2\"}.la-cloud-download-alt:before{content:\"\\f381\"}.la-cloud-meatball:before{content:\"\\f73b\"}.la-cloud-moon:before{content:\"\\f6c3\"}.la-cloud-moon-rain:before{content:\"\\f73c\"}.la-cloud-rain:before{content:\"\\f73d\"}.la-cloud-showers-heavy:before{content:\"\\f740\"}.la-cloud-sun:before{content:\"\\f6c4\"}.la-cloud-sun-rain:before{content:\"\\f743\"}.la-cloud-upload-alt:before{content:\"\\f382\"}.la-cloudscale:before{content:\"\\f383\"}.la-cloudsmith:before{content:\"\\f384\"}.la-cloudversify:before{content:\"\\f385\"}.la-cocktail:before{content:\"\\f561\"}.la-code:before{content:\"\\f121\"}.la-code-branch:before{content:\"\\f126\"}.la-codepen:before{content:\"\\f1cb\"}.la-codiepie:before{content:\"\\f284\"}.la-coffee:before{content:\"\\f0f4\"}.la-cog:before{content:\"\\f013\"}.la-cogs:before{content:\"\\f085\"}.la-coins:before{content:\"\\f51e\"}.la-columns:before{content:\"\\f0db\"}.la-comment:before{content:\"\\f075\"}.la-comment-alt:before{content:\"\\f27a\"}.la-comment-dollar:before{content:\"\\f651\"}.la-comment-dots:before{content:\"\\f4ad\"}.la-comment-medical:before{content:\"\\f7f5\"}.la-comment-slash:before{content:\"\\f4b3\"}.la-comments:before{content:\"\\f086\"}.la-comments-dollar:before{content:\"\\f653\"}.la-compact-disc:before{content:\"\\f51f\"}.la-compass:before{content:\"\\f14e\"}.la-compress:before{content:\"\\f066\"}.la-compress-arrows-alt:before{content:\"\\f78c\"}.la-concierge-bell:before{content:\"\\f562\"}.la-confluence:before{content:\"\\f78d\"}.la-connectdevelop:before{content:\"\\f20e\"}.la-contao:before{content:\"\\f26d\"}.la-cookie:before{content:\"\\f563\"}.la-cookie-bite:before{content:\"\\f564\"}.la-copy:before{content:\"\\f0c5\"}.la-copyright:before{content:\"\\f1f9\"}.la-cotton-bureau:before{content:\"\\f89e\"}.la-couch:before{content:\"\\f4b8\"}.la-cpanel:before{content:\"\\f388\"}.la-creative-commons:before{content:\"\\f25e\"}.la-creative-commons-by:before{content:\"\\f4e7\"}.la-creative-commons-nc:before{content:\"\\f4e8\"}.la-creative-commons-nc-eu:before{content:\"\\f4e9\"}.la-creative-commons-nc-jp:before{content:\"\\f4ea\"}.la-creative-commons-nd:before{content:\"\\f4eb\"}.la-creative-commons-pd:before{content:\"\\f4ec\"}.la-creative-commons-pd-alt:before{content:\"\\f4ed\"}.la-creative-commons-remix:before{content:\"\\f4ee\"}.la-creative-commons-sa:before{content:\"\\f4ef\"}.la-creative-commons-sampling:before{content:\"\\f4f0\"}.la-creative-commons-sampling-plus:before{content:\"\\f4f1\"}.la-creative-commons-share:before{content:\"\\f4f2\"}.la-creative-commons-zero:before{content:\"\\f4f3\"}.la-credit-card:before{content:\"\\f09d\"}.la-critical-role:before{content:\"\\f6c9\"}.la-crop:before{content:\"\\f125\"}.la-crop-alt:before{content:\"\\f565\"}.la-cross:before{content:\"\\f654\"}.la-crosshairs:before{content:\"\\f05b\"}.la-crow:before{content:\"\\f520\"}.la-crown:before{content:\"\\f521\"}.la-crutch:before{content:\"\\f7f7\"}.la-css3:before{content:\"\\f13c\"}.la-css3-alt:before{content:\"\\f38b\"}.la-cube:before{content:\"\\f1b2\"}.la-cubes:before{content:\"\\f1b3\"}.la-cut:before{content:\"\\f0c4\"}.la-cuttlefish:before{content:\"\\f38c\"}.la-d-and-d:before{content:\"\\f38d\"}.la-d-and-d-beyond:before{content:\"\\f6ca\"}.la-dashcube:before{content:\"\\f210\"}.la-database:before{content:\"\\f1c0\"}.la-deaf:before{content:\"\\f2a4\"}.la-delicious:before{content:\"\\f1a5\"}.la-democrat:before{content:\"\\f747\"}.la-deploydog:before{content:\"\\f38e\"}.la-deskpro:before{content:\"\\f38f\"}.la-desktop:before{content:\"\\f108\"}.la-dev:before{content:\"\\f6cc\"}.la-deviantart:before{content:\"\\f1bd\"}.la-dharmachakra:before{content:\"\\f655\"}.la-dhl:before{content:\"\\f790\"}.la-diagnoses:before{content:\"\\f470\"}.la-diaspora:before{content:\"\\f791\"}.la-dice:before{content:\"\\f522\"}.la-dice-d20:before{content:\"\\f6cf\"}.la-dice-d6:before{content:\"\\f6d1\"}.la-dice-five:before{content:\"\\f523\"}.la-dice-four:before{content:\"\\f524\"}.la-dice-one:before{content:\"\\f525\"}.la-dice-six:before{content:\"\\f526\"}.la-dice-three:before{content:\"\\f527\"}.la-dice-two:before{content:\"\\f528\"}.la-digg:before{content:\"\\f1a6\"}.la-digital-ocean:before{content:\"\\f391\"}.la-digital-tachograph:before{content:\"\\f566\"}.la-directions:before{content:\"\\f5eb\"}.la-discord:before{content:\"\\f392\"}.la-discourse:before{content:\"\\f393\"}.la-divide:before{content:\"\\f529\"}.la-dizzy:before{content:\"\\f567\"}.la-dna:before{content:\"\\f471\"}.la-dochub:before{content:\"\\f394\"}.la-docker:before{content:\"\\f395\"}.la-dog:before{content:\"\\f6d3\"}.la-dollar-sign:before{content:\"\\f155\"}.la-dolly:before{content:\"\\f472\"}.la-dolly-flatbed:before{content:\"\\f474\"}.la-donate:before{content:\"\\f4b9\"}.la-door-closed:before{content:\"\\f52a\"}.la-door-open:before{content:\"\\f52b\"}.la-dot-circle:before{content:\"\\f192\"}.la-dove:before{content:\"\\f4ba\"}.la-download:before{content:\"\\f019\"}.la-draft2digital:before{content:\"\\f396\"}.la-drafting-compass:before{content:\"\\f568\"}.la-dragon:before{content:\"\\f6d5\"}.la-draw-polygon:before{content:\"\\f5ee\"}.la-dribbble:before{content:\"\\f17d\"}.la-dribbble-square:before{content:\"\\f397\"}.la-dropbox:before{content:\"\\f16b\"}.la-drum:before{content:\"\\f569\"}.la-drum-steelpan:before{content:\"\\f56a\"}.la-drumstick-bite:before{content:\"\\f6d7\"}.la-drupal:before{content:\"\\f1a9\"}.la-dumbbell:before{content:\"\\f44b\"}.la-dumpster:before{content:\"\\f793\"}.la-dumpster-fire:before{content:\"\\f794\"}.la-dungeon:before{content:\"\\f6d9\"}.la-dyalog:before{content:\"\\f399\"}.la-earlybirds:before{content:\"\\f39a\"}.la-ebay:before{content:\"\\f4f4\"}.la-edge:before{content:\"\\f282\"}.la-edit:before{content:\"\\f044\"}.la-egg:before{content:\"\\f7fb\"}.la-eject:before{content:\"\\f052\"}.la-elementor:before{content:\"\\f430\"}.la-ellipsis-h:before{content:\"\\f141\"}.la-ellipsis-v:before{content:\"\\f142\"}.la-ello:before{content:\"\\f5f1\"}.la-ember:before{content:\"\\f423\"}.la-empire:before{content:\"\\f1d1\"}.la-envelope:before{content:\"\\f0e0\"}.la-envelope-open:before{content:\"\\f2b6\"}.la-envelope-open-text:before{content:\"\\f658\"}.la-envelope-square:before{content:\"\\f199\"}.la-envira:before{content:\"\\f299\"}.la-equals:before{content:\"\\f52c\"}.la-eraser:before{content:\"\\f12d\"}.la-erlang:before{content:\"\\f39d\"}.la-ethereum:before{content:\"\\f42e\"}.la-ethernet:before{content:\"\\f796\"}.la-etsy:before{content:\"\\f2d7\"}.la-euro-sign:before{content:\"\\f153\"}.la-evernote:before{content:\"\\f839\"}.la-exchange-alt:before{content:\"\\f362\"}.la-exclamation:before{content:\"\\f12a\"}.la-exclamation-circle:before{content:\"\\f06a\"}.la-exclamation-triangle:before{content:\"\\f071\"}.la-expand:before{content:\"\\f065\"}.la-expand-arrows-alt:before{content:\"\\f31e\"}.la-expeditedssl:before{content:\"\\f23e\"}.la-external-link-alt:before{content:\"\\f35d\"}.la-external-link-square-alt:before{content:\"\\f360\"}.la-eye:before{content:\"\\f06e\"}.la-eye-dropper:before{content:\"\\f1fb\"}.la-eye-slash:before{content:\"\\f070\"}.la-facebook:before{content:\"\\f09a\"}.la-facebook-f:before{content:\"\\f39e\"}.la-facebook-messenger:before{content:\"\\f39f\"}.la-facebook-square:before{content:\"\\f082\"}.la-fan:before{content:\"\\f863\"}.la-fantasy-flight-games:before{content:\"\\f6dc\"}.la-fast-backward:before{content:\"\\f049\"}.la-fast-forward:before{content:\"\\f050\"}.la-fax:before{content:\"\\f1ac\"}.la-feather:before{content:\"\\f52d\"}.la-feather-alt:before{content:\"\\f56b\"}.la-fedex:before{content:\"\\f797\"}.la-fedora:before{content:\"\\f798\"}.la-female:before{content:\"\\f182\"}.la-fighter-jet:before{content:\"\\f0fb\"}.la-figma:before{content:\"\\f799\"}.la-file:before{content:\"\\f15b\"}.la-file-alt:before{content:\"\\f15c\"}.la-file-archive:before{content:\"\\f1c6\"}.la-file-audio:before{content:\"\\f1c7\"}.la-file-code:before{content:\"\\f1c9\"}.la-file-contract:before{content:\"\\f56c\"}.la-file-csv:before{content:\"\\f6dd\"}.la-file-download:before{content:\"\\f56d\"}.la-file-excel:before{content:\"\\f1c3\"}.la-file-export:before{content:\"\\f56e\"}.la-file-image:before{content:\"\\f1c5\"}.la-file-import:before{content:\"\\f56f\"}.la-file-invoice:before{content:\"\\f570\"}.la-file-invoice-dollar:before{content:\"\\f571\"}.la-file-medical:before{content:\"\\f477\"}.la-file-medical-alt:before{content:\"\\f478\"}.la-file-pdf:before{content:\"\\f1c1\"}.la-file-powerpoint:before{content:\"\\f1c4\"}.la-file-prescription:before{content:\"\\f572\"}.la-file-signature:before{content:\"\\f573\"}.la-file-upload:before{content:\"\\f574\"}.la-file-video:before{content:\"\\f1c8\"}.la-file-word:before{content:\"\\f1c2\"}.la-fill:before{content:\"\\f575\"}.la-fill-drip:before{content:\"\\f576\"}.la-film:before{content:\"\\f008\"}.la-filter:before{content:\"\\f0b0\"}.la-fingerprint:before{content:\"\\f577\"}.la-fire:before{content:\"\\f06d\"}.la-fire-alt:before{content:\"\\f7e4\"}.la-fire-extinguisher:before{content:\"\\f134\"}.la-firefox:before{content:\"\\f269\"}.la-first-aid:before{content:\"\\f479\"}.la-first-order:before{content:\"\\f2b0\"}.la-first-order-alt:before{content:\"\\f50a\"}.la-firstdraft:before{content:\"\\f3a1\"}.la-fish:before{content:\"\\f578\"}.la-fist-raised:before{content:\"\\f6de\"}.la-flag:before{content:\"\\f024\"}.la-flag-checkered:before{content:\"\\f11e\"}.la-flag-usa:before{content:\"\\f74d\"}.la-flask:before{content:\"\\f0c3\"}.la-flickr:before{content:\"\\f16e\"}.la-flipboard:before{content:\"\\f44d\"}.la-flushed:before{content:\"\\f579\"}.la-fly:before{content:\"\\f417\"}.la-folder:before{content:\"\\f07b\"}.la-folder-minus:before{content:\"\\f65d\"}.la-folder-open:before{content:\"\\f07c\"}.la-folder-plus:before{content:\"\\f65e\"}.la-font:before{content:\"\\f031\"}.la-font-awesome:before{content:\"\\f2b4\"}.la-font-awesome-alt:before{content:\"\\f35c\"}.la-font-awesome-flag:before{content:\"\\f425\"}.la-font-awesome-logo-full:before{content:\"\\f4e6\"}.la-fonticons:before{content:\"\\f280\"}.la-fonticons-fi:before{content:\"\\f3a2\"}.la-football-ball:before{content:\"\\f44e\"}.la-fort-awesome:before{content:\"\\f286\"}.la-fort-awesome-alt:before{content:\"\\f3a3\"}.la-forumbee:before{content:\"\\f211\"}.la-forward:before{content:\"\\f04e\"}.la-foursquare:before{content:\"\\f180\"}.la-free-code-camp:before{content:\"\\f2c5\"}.la-freebsd:before{content:\"\\f3a4\"}.la-frog:before{content:\"\\f52e\"}.la-frown:before{content:\"\\f119\"}.la-frown-open:before{content:\"\\f57a\"}.la-fulcrum:before{content:\"\\f50b\"}.la-funnel-dollar:before{content:\"\\f662\"}.la-futbol:before{content:\"\\f1e3\"}.la-galactic-republic:before{content:\"\\f50c\"}.la-galactic-senate:before{content:\"\\f50d\"}.la-gamepad:before{content:\"\\f11b\"}.la-gas-pump:before{content:\"\\f52f\"}.la-gavel:before{content:\"\\f0e3\"}.la-gem:before{content:\"\\f3a5\"}.la-genderless:before{content:\"\\f22d\"}.la-get-pocket:before{content:\"\\f265\"}.la-gg:before{content:\"\\f260\"}.la-gg-circle:before{content:\"\\f261\"}.la-ghost:before{content:\"\\f6e2\"}.la-gift:before{content:\"\\f06b\"}.la-gifts:before{content:\"\\f79c\"}.la-git:before{content:\"\\f1d3\"}.la-git-alt:before{content:\"\\f841\"}.la-git-square:before{content:\"\\f1d2\"}.la-github:before{content:\"\\f09b\"}.la-github-alt:before{content:\"\\f113\"}.la-github-square:before{content:\"\\f092\"}.la-gitkraken:before{content:\"\\f3a6\"}.la-gitlab:before{content:\"\\f296\"}.la-gitter:before{content:\"\\f426\"}.la-glass-cheers:before{content:\"\\f79f\"}.la-glass-martini:before{content:\"\\f000\"}.la-glass-martini-alt:before{content:\"\\f57b\"}.la-glass-whiskey:before{content:\"\\f7a0\"}.la-glasses:before{content:\"\\f530\"}.la-glide:before{content:\"\\f2a5\"}.la-glide-g:before{content:\"\\f2a6\"}.la-globe:before{content:\"\\f0ac\"}.la-globe-africa:before{content:\"\\f57c\"}.la-globe-americas:before{content:\"\\f57d\"}.la-globe-asia:before{content:\"\\f57e\"}.la-globe-europe:before{content:\"\\f7a2\"}.la-gofore:before{content:\"\\f3a7\"}.la-golf-ball:before{content:\"\\f450\"}.la-goodreads:before{content:\"\\f3a8\"}.la-goodreads-g:before{content:\"\\f3a9\"}.la-google:before{content:\"\\f1a0\"}.la-google-drive:before{content:\"\\f3aa\"}.la-google-play:before{content:\"\\f3ab\"}.la-google-plus:before{content:\"\\f2b3\"}.la-google-plus-g:before{content:\"\\f0d5\"}.la-google-plus-square:before{content:\"\\f0d4\"}.la-google-wallet:before{content:\"\\f1ee\"}.la-gopuram:before{content:\"\\f664\"}.la-graduation-cap:before{content:\"\\f19d\"}.la-gratipay:before{content:\"\\f184\"}.la-grav:before{content:\"\\f2d6\"}.la-greater-than:before{content:\"\\f531\"}.la-greater-than-equal:before{content:\"\\f532\"}.la-grimace:before{content:\"\\f57f\"}.la-grin:before{content:\"\\f580\"}.la-grin-alt:before{content:\"\\f581\"}.la-grin-beam:before{content:\"\\f582\"}.la-grin-beam-sweat:before{content:\"\\f583\"}.la-grin-hearts:before{content:\"\\f584\"}.la-grin-squint:before{content:\"\\f585\"}.la-grin-squint-tears:before{content:\"\\f586\"}.la-grin-stars:before{content:\"\\f587\"}.la-grin-tears:before{content:\"\\f588\"}.la-grin-tongue:before{content:\"\\f589\"}.la-grin-tongue-squint:before{content:\"\\f58a\"}.la-grin-tongue-wink:before{content:\"\\f58b\"}.la-grin-wink:before{content:\"\\f58c\"}.la-grip-horizontal:before{content:\"\\f58d\"}.la-grip-lines:before{content:\"\\f7a4\"}.la-grip-lines-vertical:before{content:\"\\f7a5\"}.la-grip-vertical:before{content:\"\\f58e\"}.la-gripfire:before{content:\"\\f3ac\"}.la-grunt:before{content:\"\\f3ad\"}.la-guitar:before{content:\"\\f7a6\"}.la-gulp:before{content:\"\\f3ae\"}.la-h-square:before{content:\"\\f0fd\"}.la-hacker-news:before{content:\"\\f1d4\"}.la-hacker-news-square:before{content:\"\\f3af\"}.la-hackerrank:before{content:\"\\f5f7\"}.la-hamburger:before{content:\"\\f805\"}.la-hammer:before{content:\"\\f6e3\"}.la-hamsa:before{content:\"\\f665\"}.la-hand-holding:before{content:\"\\f4bd\"}.la-hand-holding-heart:before{content:\"\\f4be\"}.la-hand-holding-usd:before{content:\"\\f4c0\"}.la-hand-lizard:before{content:\"\\f258\"}.la-hand-middle-finger:before{content:\"\\f806\"}.la-hand-paper:before{content:\"\\f256\"}.la-hand-peace:before{content:\"\\f25b\"}.la-hand-point-down:before{content:\"\\f0a7\"}.la-hand-point-left:before{content:\"\\f0a5\"}.la-hand-point-right:before{content:\"\\f0a4\"}.la-hand-point-up:before{content:\"\\f0a6\"}.la-hand-pointer:before{content:\"\\f25a\"}.la-hand-rock:before{content:\"\\f255\"}.la-hand-scissors:before{content:\"\\f257\"}.la-hand-spock:before{content:\"\\f259\"}.la-hands:before{content:\"\\f4c2\"}.la-hands-helping:before{content:\"\\f4c4\"}.la-handshake:before{content:\"\\f2b5\"}.la-hanukiah:before{content:\"\\f6e6\"}.la-hard-hat:before{content:\"\\f807\"}.la-hashtag:before{content:\"\\f292\"}.la-hat-cowboy:before{content:\"\\f8c0\"}.la-hat-cowboy-side:before{content:\"\\f8c1\"}.la-hat-wizard:before{content:\"\\f6e8\"}.la-haykal:before{content:\"\\f666\"}.la-hdd:before{content:\"\\f0a0\"}.la-heading:before{content:\"\\f1dc\"}.la-headphones:before{content:\"\\f025\"}.la-headphones-alt:before{content:\"\\f58f\"}.la-headset:before{content:\"\\f590\"}.la-heart:before{content:\"\\f004\"}.la-heart-broken:before{content:\"\\f7a9\"}.la-heartbeat:before{content:\"\\f21e\"}.la-helicopter:before{content:\"\\f533\"}.la-highlighter:before{content:\"\\f591\"}.la-hiking:before{content:\"\\f6ec\"}.la-hippo:before{content:\"\\f6ed\"}.la-hips:before{content:\"\\f452\"}.la-hire-a-helper:before{content:\"\\f3b0\"}.la-history:before{content:\"\\f1da\"}.la-hockey-puck:before{content:\"\\f453\"}.la-holly-berry:before{content:\"\\f7aa\"}.la-home:before{content:\"\\f015\"}.la-hooli:before{content:\"\\f427\"}.la-hornbill:before{content:\"\\f592\"}.la-horse:before{content:\"\\f6f0\"}.la-horse-head:before{content:\"\\f7ab\"}.la-hospital:before{content:\"\\f0f8\"}.la-hospital-alt:before{content:\"\\f47d\"}.la-hospital-symbol:before{content:\"\\f47e\"}.la-hot-tub:before{content:\"\\f593\"}.la-hotdog:before{content:\"\\f80f\"}.la-hotel:before{content:\"\\f594\"}.la-hotjar:before{content:\"\\f3b1\"}.la-hourglass:before{content:\"\\f254\"}.la-hourglass-end:before{content:\"\\f253\"}.la-hourglass-half:before{content:\"\\f252\"}.la-hourglass-start:before{content:\"\\f251\"}.la-house-damage:before{content:\"\\f6f1\"}.la-houzz:before{content:\"\\f27c\"}.la-hryvnia:before{content:\"\\f6f2\"}.la-html5:before{content:\"\\f13b\"}.la-hubspot:before{content:\"\\f3b2\"}.la-i-cursor:before{content:\"\\f246\"}.la-ice-cream:before{content:\"\\f810\"}.la-icicles:before{content:\"\\f7ad\"}.la-icons:before{content:\"\\f86d\"}.la-id-badge:before{content:\"\\f2c1\"}.la-id-card:before{content:\"\\f2c2\"}.la-id-card-alt:before{content:\"\\f47f\"}.la-igloo:before{content:\"\\f7ae\"}.la-image:before{content:\"\\f03e\"}.la-images:before{content:\"\\f302\"}.la-imdb:before{content:\"\\f2d8\"}.la-inbox:before{content:\"\\f01c\"}.la-indent:before{content:\"\\f03c\"}.la-industry:before{content:\"\\f275\"}.la-infinity:before{content:\"\\f534\"}.la-info:before{content:\"\\f129\"}.la-info-circle:before{content:\"\\f05a\"}.la-instagram:before{content:\"\\f16d\"}.la-intercom:before{content:\"\\f7af\"}.la-internet-explorer:before{content:\"\\f26b\"}.la-invision:before{content:\"\\f7b0\"}.la-ioxhost:before{content:\"\\f208\"}.la-italic:before{content:\"\\f033\"}.la-itch-io:before{content:\"\\f83a\"}.la-itunes:before{content:\"\\f3b4\"}.la-itunes-note:before{content:\"\\f3b5\"}.la-java:before{content:\"\\f4e4\"}.la-jedi:before{content:\"\\f669\"}.la-jedi-order:before{content:\"\\f50e\"}.la-jenkins:before{content:\"\\f3b6\"}.la-jira:before{content:\"\\f7b1\"}.la-joget:before{content:\"\\f3b7\"}.la-joint:before{content:\"\\f595\"}.la-joomla:before{content:\"\\f1aa\"}.la-journal-whills:before{content:\"\\f66a\"}.la-js:before{content:\"\\f3b8\"}.la-js-square:before{content:\"\\f3b9\"}.la-jsfiddle:before{content:\"\\f1cc\"}.la-kaaba:before{content:\"\\f66b\"}.la-kaggle:before{content:\"\\f5fa\"}.la-key:before{content:\"\\f084\"}.la-keybase:before{content:\"\\f4f5\"}.la-keyboard:before{content:\"\\f11c\"}.la-keycdn:before{content:\"\\f3ba\"}.la-khanda:before{content:\"\\f66d\"}.la-kickstarter:before{content:\"\\f3bb\"}.la-kickstarter-k:before{content:\"\\f3bc\"}.la-kiss:before{content:\"\\f596\"}.la-kiss-beam:before{content:\"\\f597\"}.la-kiss-wink-heart:before{content:\"\\f598\"}.la-kiwi-bird:before{content:\"\\f535\"}.la-korvue:before{content:\"\\f42f\"}.la-landmark:before{content:\"\\f66f\"}.la-language:before{content:\"\\f1ab\"}.la-laptop:before{content:\"\\f109\"}.la-laptop-code:before{content:\"\\f5fc\"}.la-laptop-medical:before{content:\"\\f812\"}.la-laravel:before{content:\"\\f3bd\"}.la-lastfm:before{content:\"\\f202\"}.la-lastfm-square:before{content:\"\\f203\"}.la-laugh:before{content:\"\\f599\"}.la-laugh-beam:before{content:\"\\f59a\"}.la-laugh-squint:before{content:\"\\f59b\"}.la-laugh-wink:before{content:\"\\f59c\"}.la-layer-group:before{content:\"\\f5fd\"}.la-leaf:before{content:\"\\f06c\"}.la-leanpub:before{content:\"\\f212\"}.la-lemon:before{content:\"\\f094\"}.la-less:before{content:\"\\f41d\"}.la-less-than:before{content:\"\\f536\"}.la-less-than-equal:before{content:\"\\f537\"}.la-level-down-alt:before{content:\"\\f3be\"}.la-level-up-alt:before{content:\"\\f3bf\"}.la-life-ring:before{content:\"\\f1cd\"}.la-lightbulb:before{content:\"\\f0eb\"}.la-line:before{content:\"\\f3c0\"}.la-link:before{content:\"\\f0c1\"}.la-linkedin:before{content:\"\\f08c\"}.la-linkedin-in:before{content:\"\\f0e1\"}.la-linode:before{content:\"\\f2b8\"}.la-linux:before{content:\"\\f17c\"}.la-lira-sign:before{content:\"\\f195\"}.la-list:before{content:\"\\f03a\"}.la-list-alt:before{content:\"\\f022\"}.la-list-ol:before{content:\"\\f0cb\"}.la-list-ul:before{content:\"\\f0ca\"}.la-location-arrow:before{content:\"\\f124\"}.la-lock:before{content:\"\\f023\"}.la-lock-open:before{content:\"\\f3c1\"}.la-long-arrow-alt-down:before{content:\"\\f309\"}.la-long-arrow-alt-left:before{content:\"\\f30a\"}.la-long-arrow-alt-right:before{content:\"\\f30b\"}.la-long-arrow-alt-up:before{content:\"\\f30c\"}.la-low-vision:before{content:\"\\f2a8\"}.la-luggage-cart:before{content:\"\\f59d\"}.la-lyft:before{content:\"\\f3c3\"}.la-magento:before{content:\"\\f3c4\"}.la-magic:before{content:\"\\f0d0\"}.la-magnet:before{content:\"\\f076\"}.la-mail-bulk:before{content:\"\\f674\"}.la-mailchimp:before{content:\"\\f59e\"}.la-male:before{content:\"\\f183\"}.la-mandalorian:before{content:\"\\f50f\"}.la-map:before{content:\"\\f279\"}.la-map-marked:before{content:\"\\f59f\"}.la-map-marked-alt:before{content:\"\\f5a0\"}.la-map-marker:before{content:\"\\f041\"}.la-map-marker-alt:before{content:\"\\f3c5\"}.la-map-pin:before{content:\"\\f276\"}.la-map-signs:before{content:\"\\f277\"}.la-markdown:before{content:\"\\f60f\"}.la-marker:before{content:\"\\f5a1\"}.la-mars:before{content:\"\\f222\"}.la-mars-double:before{content:\"\\f227\"}.la-mars-stroke:before{content:\"\\f229\"}.la-mars-stroke-h:before{content:\"\\f22b\"}.la-mars-stroke-v:before{content:\"\\f22a\"}.la-mask:before{content:\"\\f6fa\"}.la-mastodon:before{content:\"\\f4f6\"}.la-maxcdn:before{content:\"\\f136\"}.la-mdb:before{content:\"\\f8ca\"}.la-medal:before{content:\"\\f5a2\"}.la-medapps:before{content:\"\\f3c6\"}.la-medium:before{content:\"\\f23a\"}.la-medium-m:before{content:\"\\f3c7\"}.la-medkit:before{content:\"\\f0fa\"}.la-medrt:before{content:\"\\f3c8\"}.la-meetup:before{content:\"\\f2e0\"}.la-megaport:before{content:\"\\f5a3\"}.la-meh:before{content:\"\\f11a\"}.la-meh-blank:before{content:\"\\f5a4\"}.la-meh-rolling-eyes:before{content:\"\\f5a5\"}.la-memory:before{content:\"\\f538\"}.la-mendeley:before{content:\"\\f7b3\"}.la-menorah:before{content:\"\\f676\"}.la-mercury:before{content:\"\\f223\"}.la-meteor:before{content:\"\\f753\"}.la-microchip:before{content:\"\\f2db\"}.la-microphone:before{content:\"\\f130\"}.la-microphone-alt:before{content:\"\\f3c9\"}.la-microphone-alt-slash:before{content:\"\\f539\"}.la-microphone-slash:before{content:\"\\f131\"}.la-microscope:before{content:\"\\f610\"}.la-microsoft:before{content:\"\\f3ca\"}.la-minus:before{content:\"\\f068\"}.la-minus-circle:before{content:\"\\f056\"}.la-minus-square:before{content:\"\\f146\"}.la-mitten:before{content:\"\\f7b5\"}.la-mix:before{content:\"\\f3cb\"}.la-mixcloud:before{content:\"\\f289\"}.la-mizuni:before{content:\"\\f3cc\"}.la-mobile:before{content:\"\\f10b\"}.la-mobile-alt:before{content:\"\\f3cd\"}.la-modx:before{content:\"\\f285\"}.la-monero:before{content:\"\\f3d0\"}.la-money-bill:before{content:\"\\f0d6\"}.la-money-bill-alt:before{content:\"\\f3d1\"}.la-money-bill-wave:before{content:\"\\f53a\"}.la-money-bill-wave-alt:before{content:\"\\f53b\"}.la-money-check:before{content:\"\\f53c\"}.la-money-check-alt:before{content:\"\\f53d\"}.la-monument:before{content:\"\\f5a6\"}.la-moon:before{content:\"\\f186\"}.la-mortar-pestle:before{content:\"\\f5a7\"}.la-mosque:before{content:\"\\f678\"}.la-motorcycle:before{content:\"\\f21c\"}.la-mountain:before{content:\"\\f6fc\"}.la-mouse:before{content:\"\\f8cc\"}.la-mouse-pointer:before{content:\"\\f245\"}.la-mug-hot:before{content:\"\\f7b6\"}.la-music:before{content:\"\\f001\"}.la-napster:before{content:\"\\f3d2\"}.la-neos:before{content:\"\\f612\"}.la-network-wired:before{content:\"\\f6ff\"}.la-neuter:before{content:\"\\f22c\"}.la-newspaper:before{content:\"\\f1ea\"}.la-nimblr:before{content:\"\\f5a8\"}.la-node:before{content:\"\\f419\"}.la-node-js:before{content:\"\\f3d3\"}.la-not-equal:before{content:\"\\f53e\"}.la-notes-medical:before{content:\"\\f481\"}.la-npm:before{content:\"\\f3d4\"}.la-ns8:before{content:\"\\f3d5\"}.la-nutritionix:before{content:\"\\f3d6\"}.la-object-group:before{content:\"\\f247\"}.la-object-ungroup:before{content:\"\\f248\"}.la-odnoklassniki:before{content:\"\\f263\"}.la-odnoklassniki-square:before{content:\"\\f264\"}.la-oil-can:before{content:\"\\f613\"}.la-old-republic:before{content:\"\\f510\"}.la-om:before{content:\"\\f679\"}.la-opencart:before{content:\"\\f23d\"}.la-openid:before{content:\"\\f19b\"}.la-opera:before{content:\"\\f26a\"}.la-optin-monster:before{content:\"\\f23c\"}.la-orcid:before{content:\"\\f8d2\"}.la-osi:before{content:\"\\f41a\"}.la-otter:before{content:\"\\f700\"}.la-outdent:before{content:\"\\f03b\"}.la-page4:before{content:\"\\f3d7\"}.la-pagelines:before{content:\"\\f18c\"}.la-pager:before{content:\"\\f815\"}.la-paint-brush:before{content:\"\\f1fc\"}.la-paint-roller:before{content:\"\\f5aa\"}.la-palette:before{content:\"\\f53f\"}.la-palfed:before{content:\"\\f3d8\"}.la-pallet:before{content:\"\\f482\"}.la-paper-plane:before{content:\"\\f1d8\"}.la-paperclip:before{content:\"\\f0c6\"}.la-parachute-box:before{content:\"\\f4cd\"}.la-paragraph:before{content:\"\\f1dd\"}.la-parking:before{content:\"\\f540\"}.la-passport:before{content:\"\\f5ab\"}.la-pastafarianism:before{content:\"\\f67b\"}.la-paste:before{content:\"\\f0ea\"}.la-patreon:before{content:\"\\f3d9\"}.la-pause:before{content:\"\\f04c\"}.la-pause-circle:before{content:\"\\f28b\"}.la-paw:before{content:\"\\f1b0\"}.la-paypal:before{content:\"\\f1ed\"}.la-peace:before{content:\"\\f67c\"}.la-pen:before{content:\"\\f304\"}.la-pen-alt:before{content:\"\\f305\"}.la-pen-fancy:before{content:\"\\f5ac\"}.la-pen-nib:before{content:\"\\f5ad\"}.la-pen-square:before{content:\"\\f14b\"}.la-pencil-alt:before{content:\"\\f303\"}.la-pencil-ruler:before{content:\"\\f5ae\"}.la-penny-arcade:before{content:\"\\f704\"}.la-people-carry:before{content:\"\\f4ce\"}.la-pepper-hot:before{content:\"\\f816\"}.la-percent:before{content:\"\\f295\"}.la-percentage:before{content:\"\\f541\"}.la-periscope:before{content:\"\\f3da\"}.la-person-booth:before{content:\"\\f756\"}.la-phabricator:before{content:\"\\f3db\"}.la-phoenix-framework:before{content:\"\\f3dc\"}.la-phoenix-squadron:before{content:\"\\f511\"}.la-phone:before{content:\"\\f095\"}.la-phone-alt:before{content:\"\\f879\"}.la-phone-slash:before{content:\"\\f3dd\"}.la-phone-square:before{content:\"\\f098\"}.la-phone-square-alt:before{content:\"\\f87b\"}.la-phone-volume:before{content:\"\\f2a0\"}.la-photo-video:before{content:\"\\f87c\"}.la-php:before{content:\"\\f457\"}.la-pied-piper:before{content:\"\\f2ae\"}.la-pied-piper-alt:before{content:\"\\f1a8\"}.la-pied-piper-hat:before{content:\"\\f4e5\"}.la-pied-piper-pp:before{content:\"\\f1a7\"}.la-piggy-bank:before{content:\"\\f4d3\"}.la-pills:before{content:\"\\f484\"}.la-pinterest:before{content:\"\\f0d2\"}.la-pinterest-p:before{content:\"\\f231\"}.la-pinterest-square:before{content:\"\\f0d3\"}.la-pizza-slice:before{content:\"\\f818\"}.la-place-of-worship:before{content:\"\\f67f\"}.la-plane:before{content:\"\\f072\"}.la-plane-arrival:before{content:\"\\f5af\"}.la-plane-departure:before{content:\"\\f5b0\"}.la-play:before{content:\"\\f04b\"}.la-play-circle:before{content:\"\\f144\"}.la-playstation:before{content:\"\\f3df\"}.la-plug:before{content:\"\\f1e6\"}.la-plus:before{content:\"\\f067\"}.la-plus-circle:before{content:\"\\f055\"}.la-plus-square:before{content:\"\\f0fe\"}.la-podcast:before{content:\"\\f2ce\"}.la-poll:before{content:\"\\f681\"}.la-poll-h:before{content:\"\\f682\"}.la-poo:before{content:\"\\f2fe\"}.la-poo-storm:before{content:\"\\f75a\"}.la-poop:before{content:\"\\f619\"}.la-portrait:before{content:\"\\f3e0\"}.la-pound-sign:before{content:\"\\f154\"}.la-power-off:before{content:\"\\f011\"}.la-pray:before{content:\"\\f683\"}.la-praying-hands:before{content:\"\\f684\"}.la-prescription:before{content:\"\\f5b1\"}.la-prescription-bottle:before{content:\"\\f485\"}.la-prescription-bottle-alt:before{content:\"\\f486\"}.la-print:before{content:\"\\f02f\"}.la-procedures:before{content:\"\\f487\"}.la-product-hunt:before{content:\"\\f288\"}.la-project-diagram:before{content:\"\\f542\"}.la-pushed:before{content:\"\\f3e1\"}.la-puzzle-piece:before{content:\"\\f12e\"}.la-python:before{content:\"\\f3e2\"}.la-qq:before{content:\"\\f1d6\"}.la-qrcode:before{content:\"\\f029\"}.la-question:before{content:\"\\f128\"}.la-question-circle:before{content:\"\\f059\"}.la-quidditch:before{content:\"\\f458\"}.la-quinscape:before{content:\"\\f459\"}.la-quora:before{content:\"\\f2c4\"}.la-quote-left:before{content:\"\\f10d\"}.la-quote-right:before{content:\"\\f10e\"}.la-quran:before{content:\"\\f687\"}.la-r-project:before{content:\"\\f4f7\"}.la-radiation:before{content:\"\\f7b9\"}.la-radiation-alt:before{content:\"\\f7ba\"}.la-rainbow:before{content:\"\\f75b\"}.la-random:before{content:\"\\f074\"}.la-raspberry-pi:before{content:\"\\f7bb\"}.la-ravelry:before{content:\"\\f2d9\"}.la-react:before{content:\"\\f41b\"}.la-reacteurope:before{content:\"\\f75d\"}.la-readme:before{content:\"\\f4d5\"}.la-rebel:before{content:\"\\f1d0\"}.la-receipt:before{content:\"\\f543\"}.la-record-vinyl:before{content:\"\\f8d9\"}.la-recycle:before{content:\"\\f1b8\"}.la-red-river:before{content:\"\\f3e3\"}.la-reddit:before{content:\"\\f1a1\"}.la-reddit-alien:before{content:\"\\f281\"}.la-reddit-square:before{content:\"\\f1a2\"}.la-redhat:before{content:\"\\f7bc\"}.la-redo:before{content:\"\\f01e\"}.la-redo-alt:before{content:\"\\f2f9\"}.la-registered:before{content:\"\\f25d\"}.la-remove-format:before{content:\"\\f87d\"}.la-renren:before{content:\"\\f18b\"}.la-reply:before{content:\"\\f3e5\"}.la-reply-all:before{content:\"\\f122\"}.la-replyd:before{content:\"\\f3e6\"}.la-republican:before{content:\"\\f75e\"}.la-researchgate:before{content:\"\\f4f8\"}.la-resolving:before{content:\"\\f3e7\"}.la-restroom:before{content:\"\\f7bd\"}.la-retweet:before{content:\"\\f079\"}.la-rev:before{content:\"\\f5b2\"}.la-ribbon:before{content:\"\\f4d6\"}.la-ring:before{content:\"\\f70b\"}.la-road:before{content:\"\\f018\"}.la-robot:before{content:\"\\f544\"}.la-rocket:before{content:\"\\f135\"}.la-rocketchat:before{content:\"\\f3e8\"}.la-rockrms:before{content:\"\\f3e9\"}.la-route:before{content:\"\\f4d7\"}.la-rss:before{content:\"\\f09e\"}.la-rss-square:before{content:\"\\f143\"}.la-ruble-sign:before{content:\"\\f158\"}.la-ruler:before{content:\"\\f545\"}.la-ruler-combined:before{content:\"\\f546\"}.la-ruler-horizontal:before{content:\"\\f547\"}.la-ruler-vertical:before{content:\"\\f548\"}.la-running:before{content:\"\\f70c\"}.la-rupee-sign:before{content:\"\\f156\"}.la-sad-cry:before{content:\"\\f5b3\"}.la-sad-tear:before{content:\"\\f5b4\"}.la-safari:before{content:\"\\f267\"}.la-salesforce:before{content:\"\\f83b\"}.la-sass:before{content:\"\\f41e\"}.la-satellite:before{content:\"\\f7bf\"}.la-satellite-dish:before{content:\"\\f7c0\"}.la-save:before{content:\"\\f0c7\"}.la-schlix:before{content:\"\\f3ea\"}.la-school:before{content:\"\\f549\"}.la-screwdriver:before{content:\"\\f54a\"}.la-scribd:before{content:\"\\f28a\"}.la-scroll:before{content:\"\\f70e\"}.la-sd-card:before{content:\"\\f7c2\"}.la-search:before{content:\"\\f002\"}.la-search-dollar:before{content:\"\\f688\"}.la-search-location:before{content:\"\\f689\"}.la-search-minus:before{content:\"\\f010\"}.la-search-plus:before{content:\"\\f00e\"}.la-searchengin:before{content:\"\\f3eb\"}.la-seedling:before{content:\"\\f4d8\"}.la-sellcast:before{content:\"\\f2da\"}.la-sellsy:before{content:\"\\f213\"}.la-server:before{content:\"\\f233\"}.la-servicestack:before{content:\"\\f3ec\"}.la-shapes:before{content:\"\\f61f\"}.la-share:before{content:\"\\f064\"}.la-share-alt:before{content:\"\\f1e0\"}.la-share-alt-square:before{content:\"\\f1e1\"}.la-share-square:before{content:\"\\f14d\"}.la-shekel-sign:before{content:\"\\f20b\"}.la-shield-alt:before{content:\"\\f3ed\"}.la-ship:before{content:\"\\f21a\"}.la-shipping-fast:before{content:\"\\f48b\"}.la-shirtsinbulk:before{content:\"\\f214\"}.la-shoe-prints:before{content:\"\\f54b\"}.la-shopping-bag:before{content:\"\\f290\"}.la-shopping-basket:before{content:\"\\f291\"}.la-shopping-cart:before{content:\"\\f07a\"}.la-shopware:before{content:\"\\f5b5\"}.la-shower:before{content:\"\\f2cc\"}.la-shuttle-van:before{content:\"\\f5b6\"}.la-sign:before{content:\"\\f4d9\"}.la-sign-in-alt:before{content:\"\\f2f6\"}.la-sign-language:before{content:\"\\f2a7\"}.la-sign-out-alt:before{content:\"\\f2f5\"}.la-signal:before{content:\"\\f012\"}.la-signature:before{content:\"\\f5b7\"}.la-sim-card:before{content:\"\\f7c4\"}.la-simplybuilt:before{content:\"\\f215\"}.la-sistrix:before{content:\"\\f3ee\"}.la-sitemap:before{content:\"\\f0e8\"}.la-sith:before{content:\"\\f512\"}.la-skating:before{content:\"\\f7c5\"}.la-sketch:before{content:\"\\f7c6\"}.la-skiing:before{content:\"\\f7c9\"}.la-skiing-nordic:before{content:\"\\f7ca\"}.la-skull:before{content:\"\\f54c\"}.la-skull-crossbones:before{content:\"\\f714\"}.la-skyatlas:before{content:\"\\f216\"}.la-skype:before{content:\"\\f17e\"}.la-slack:before{content:\"\\f198\"}.la-slack-hash:before{content:\"\\f3ef\"}.la-slash:before{content:\"\\f715\"}.la-sleigh:before{content:\"\\f7cc\"}.la-sliders-h:before{content:\"\\f1de\"}.la-slideshare:before{content:\"\\f1e7\"}.la-smile:before{content:\"\\f118\"}.la-smile-beam:before{content:\"\\f5b8\"}.la-smile-wink:before{content:\"\\f4da\"}.la-smog:before{content:\"\\f75f\"}.la-smoking:before{content:\"\\f48d\"}.la-smoking-ban:before{content:\"\\f54d\"}.la-sms:before{content:\"\\f7cd\"}.la-snapchat:before{content:\"\\f2ab\"}.la-snapchat-ghost:before{content:\"\\f2ac\"}.la-snapchat-square:before{content:\"\\f2ad\"}.la-snowboarding:before{content:\"\\f7ce\"}.la-snowflake:before{content:\"\\f2dc\"}.la-snowman:before{content:\"\\f7d0\"}.la-snowplow:before{content:\"\\f7d2\"}.la-socks:before{content:\"\\f696\"}.la-solar-panel:before{content:\"\\f5ba\"}.la-sort:before{content:\"\\f0dc\"}.la-sort-alpha-down:before{content:\"\\f15d\"}.la-sort-alpha-down-alt:before{content:\"\\f881\"}.la-sort-alpha-up:before{content:\"\\f15e\"}.la-sort-alpha-up-alt:before{content:\"\\f882\"}.la-sort-amount-down:before{content:\"\\f160\"}.la-sort-amount-down-alt:before{content:\"\\f884\"}.la-sort-amount-up:before{content:\"\\f161\"}.la-sort-amount-up-alt:before{content:\"\\f885\"}.la-sort-down:before{content:\"\\f0dd\"}.la-sort-numeric-down:before{content:\"\\f162\"}.la-sort-numeric-down-alt:before{content:\"\\f886\"}.la-sort-numeric-up:before{content:\"\\f163\"}.la-sort-numeric-up-alt:before{content:\"\\f887\"}.la-sort-up:before{content:\"\\f0de\"}.la-soundcloud:before{content:\"\\f1be\"}.la-sourcetree:before{content:\"\\f7d3\"}.la-spa:before{content:\"\\f5bb\"}.la-space-shuttle:before{content:\"\\f197\"}.la-speakap:before{content:\"\\f3f3\"}.la-speaker-deck:before{content:\"\\f83c\"}.la-spell-check:before{content:\"\\f891\"}.la-spider:before{content:\"\\f717\"}.la-spinner:before{content:\"\\f110\"}.la-splotch:before{content:\"\\f5bc\"}.la-spotify:before{content:\"\\f1bc\"}.la-spray-can:before{content:\"\\f5bd\"}.la-square:before{content:\"\\f0c8\"}.la-square-full:before{content:\"\\f45c\"}.la-square-root-alt:before{content:\"\\f698\"}.la-squarespace:before{content:\"\\f5be\"}.la-stack-exchange:before{content:\"\\f18d\"}.la-stack-overflow:before{content:\"\\f16c\"}.la-stackpath:before{content:\"\\f842\"}.la-stamp:before{content:\"\\f5bf\"}.la-star:before{content:\"\\f005\"}.la-star-and-crescent:before{content:\"\\f699\"}.la-star-half:before{content:\"\\f089\"}.la-star-half-alt:before{content:\"\\f5c0\"}.la-star-of-david:before{content:\"\\f69a\"}.la-star-of-life:before{content:\"\\f621\"}.la-staylinked:before{content:\"\\f3f5\"}.la-steam:before{content:\"\\f1b6\"}.la-steam-square:before{content:\"\\f1b7\"}.la-steam-symbol:before{content:\"\\f3f6\"}.la-step-backward:before{content:\"\\f048\"}.la-step-forward:before{content:\"\\f051\"}.la-stethoscope:before{content:\"\\f0f1\"}.la-sticker-mule:before{content:\"\\f3f7\"}.la-sticky-note:before{content:\"\\f249\"}.la-stop:before{content:\"\\f04d\"}.la-stop-circle:before{content:\"\\f28d\"}.la-stopwatch:before{content:\"\\f2f2\"}.la-store:before{content:\"\\f54e\"}.la-store-alt:before{content:\"\\f54f\"}.la-strava:before{content:\"\\f428\"}.la-stream:before{content:\"\\f550\"}.la-street-view:before{content:\"\\f21d\"}.la-strikethrough:before{content:\"\\f0cc\"}.la-stripe:before{content:\"\\f429\"}.la-stripe-s:before{content:\"\\f42a\"}.la-stroopwafel:before{content:\"\\f551\"}.la-studiovinari:before{content:\"\\f3f8\"}.la-stumbleupon:before{content:\"\\f1a4\"}.la-stumbleupon-circle:before{content:\"\\f1a3\"}.la-subscript:before{content:\"\\f12c\"}.la-subway:before{content:\"\\f239\"}.la-suitcase:before{content:\"\\f0f2\"}.la-suitcase-rolling:before{content:\"\\f5c1\"}.la-sun:before{content:\"\\f185\"}.la-superpowers:before{content:\"\\f2dd\"}.la-superscript:before{content:\"\\f12b\"}.la-supple:before{content:\"\\f3f9\"}.la-surprise:before{content:\"\\f5c2\"}.la-suse:before{content:\"\\f7d6\"}.la-swatchbook:before{content:\"\\f5c3\"}.la-swift:before{content:\"\\f8e1\"}.la-swimmer:before{content:\"\\f5c4\"}.la-swimming-pool:before{content:\"\\f5c5\"}.la-symfony:before{content:\"\\f83d\"}.la-synagogue:before{content:\"\\f69b\"}.la-sync:before{content:\"\\f021\"}.la-sync-alt:before{content:\"\\f2f1\"}.la-syringe:before{content:\"\\f48e\"}.la-table:before{content:\"\\f0ce\"}.la-table-tennis:before{content:\"\\f45d\"}.la-tablet:before{content:\"\\f10a\"}.la-tablet-alt:before{content:\"\\f3fa\"}.la-tablets:before{content:\"\\f490\"}.la-tachometer-alt:before{content:\"\\f3fd\"}.la-tag:before{content:\"\\f02b\"}.la-tags:before{content:\"\\f02c\"}.la-tape:before{content:\"\\f4db\"}.la-tasks:before{content:\"\\f0ae\"}.la-taxi:before{content:\"\\f1ba\"}.la-teamspeak:before{content:\"\\f4f9\"}.la-teeth:before{content:\"\\f62e\"}.la-teeth-open:before{content:\"\\f62f\"}.la-telegram:before{content:\"\\f2c6\"}.la-telegram-plane:before{content:\"\\f3fe\"}.la-temperature-high:before{content:\"\\f769\"}.la-temperature-low:before{content:\"\\f76b\"}.la-tencent-weibo:before{content:\"\\f1d5\"}.la-tenge:before{content:\"\\f7d7\"}.la-terminal:before{content:\"\\f120\"}.la-text-height:before{content:\"\\f034\"}.la-text-width:before{content:\"\\f035\"}.la-th:before{content:\"\\f00a\"}.la-th-large:before{content:\"\\f009\"}.la-th-list:before{content:\"\\f00b\"}.la-the-red-yeti:before{content:\"\\f69d\"}.la-theater-masks:before{content:\"\\f630\"}.la-themeco:before{content:\"\\f5c6\"}.la-themeisle:before{content:\"\\f2b2\"}.la-thermometer:before{content:\"\\f491\"}.la-thermometer-empty:before{content:\"\\f2cb\"}.la-thermometer-full:before{content:\"\\f2c7\"}.la-thermometer-half:before{content:\"\\f2c9\"}.la-thermometer-quarter:before{content:\"\\f2ca\"}.la-thermometer-three-quarters:before{content:\"\\f2c8\"}.la-think-peaks:before{content:\"\\f731\"}.la-thumbs-down:before{content:\"\\f165\"}.la-thumbs-up:before{content:\"\\f164\"}.la-thumbtack:before{content:\"\\f08d\"}.la-ticket-alt:before{content:\"\\f3ff\"}.la-times:before{content:\"\\f00d\"}.la-times-circle:before{content:\"\\f057\"}.la-tint:before{content:\"\\f043\"}.la-tint-slash:before{content:\"\\f5c7\"}.la-tired:before{content:\"\\f5c8\"}.la-toggle-off:before{content:\"\\f204\"}.la-toggle-on:before{content:\"\\f205\"}.la-toilet:before{content:\"\\f7d8\"}.la-toilet-paper:before{content:\"\\f71e\"}.la-toolbox:before{content:\"\\f552\"}.la-tools:before{content:\"\\f7d9\"}.la-tooth:before{content:\"\\f5c9\"}.la-torah:before{content:\"\\f6a0\"}.la-torii-gate:before{content:\"\\f6a1\"}.la-tractor:before{content:\"\\f722\"}.la-trade-federation:before{content:\"\\f513\"}.la-trademark:before{content:\"\\f25c\"}.la-traffic-light:before{content:\"\\f637\"}.la-train:before{content:\"\\f238\"}.la-tram:before{content:\"\\f7da\"}.la-transgender:before{content:\"\\f224\"}.la-transgender-alt:before{content:\"\\f225\"}.la-trash:before{content:\"\\f1f8\"}.la-trash-alt:before{content:\"\\f2ed\"}.la-trash-restore:before{content:\"\\f829\"}.la-trash-restore-alt:before{content:\"\\f82a\"}.la-tree:before{content:\"\\f1bb\"}.la-trello:before{content:\"\\f181\"}.la-tripadvisor:before{content:\"\\f262\"}.la-trophy:before{content:\"\\f091\"}.la-truck:before{content:\"\\f0d1\"}.la-truck-loading:before{content:\"\\f4de\"}.la-truck-monster:before{content:\"\\f63b\"}.la-truck-moving:before{content:\"\\f4df\"}.la-truck-pickup:before{content:\"\\f63c\"}.la-tshirt:before{content:\"\\f553\"}.la-tty:before{content:\"\\f1e4\"}.la-tumblr:before{content:\"\\f173\"}.la-tumblr-square:before{content:\"\\f174\"}.la-tv:before{content:\"\\f26c\"}.la-twitch:before{content:\"\\f1e8\"}.la-twitter:before{content:\"\\f099\"}.la-twitter-square:before{content:\"\\f081\"}.la-typo3:before{content:\"\\f42b\"}.la-uber:before{content:\"\\f402\"}.la-ubuntu:before{content:\"\\f7df\"}.la-uikit:before{content:\"\\f403\"}.la-umbraco:before{content:\"\\f8e8\"}.la-umbrella:before{content:\"\\f0e9\"}.la-umbrella-beach:before{content:\"\\f5ca\"}.la-underline:before{content:\"\\f0cd\"}.la-undo:before{content:\"\\f0e2\"}.la-undo-alt:before{content:\"\\f2ea\"}.la-uniregistry:before{content:\"\\f404\"}.la-universal-access:before{content:\"\\f29a\"}.la-university:before{content:\"\\f19c\"}.la-unlink:before{content:\"\\f127\"}.la-unlock:before{content:\"\\f09c\"}.la-unlock-alt:before{content:\"\\f13e\"}.la-untappd:before{content:\"\\f405\"}.la-upload:before{content:\"\\f093\"}.la-ups:before{content:\"\\f7e0\"}.la-usb:before{content:\"\\f287\"}.la-user:before{content:\"\\f007\"}.la-user-alt:before{content:\"\\f406\"}.la-user-alt-slash:before{content:\"\\f4fa\"}.la-user-astronaut:before{content:\"\\f4fb\"}.la-user-check:before{content:\"\\f4fc\"}.la-user-circle:before{content:\"\\f2bd\"}.la-user-clock:before{content:\"\\f4fd\"}.la-user-cog:before{content:\"\\f4fe\"}.la-user-edit:before{content:\"\\f4ff\"}.la-user-friends:before{content:\"\\f500\"}.la-user-graduate:before{content:\"\\f501\"}.la-user-injured:before{content:\"\\f728\"}.la-user-lock:before{content:\"\\f502\"}.la-user-md:before{content:\"\\f0f0\"}.la-user-minus:before{content:\"\\f503\"}.la-user-ninja:before{content:\"\\f504\"}.la-user-nurse:before{content:\"\\f82f\"}.la-user-plus:before{content:\"\\f234\"}.la-user-secret:before{content:\"\\f21b\"}.la-user-shield:before{content:\"\\f505\"}.la-user-slash:before{content:\"\\f506\"}.la-user-tag:before{content:\"\\f507\"}.la-user-tie:before{content:\"\\f508\"}.la-user-times:before{content:\"\\f235\"}.la-users:before{content:\"\\f0c0\"}.la-users-cog:before{content:\"\\f509\"}.la-usps:before{content:\"\\f7e1\"}.la-ussunnah:before{content:\"\\f407\"}.la-utensil-spoon:before{content:\"\\f2e5\"}.la-utensils:before{content:\"\\f2e7\"}.la-vaadin:before{content:\"\\f408\"}.la-vector-square:before{content:\"\\f5cb\"}.la-venus:before{content:\"\\f221\"}.la-venus-double:before{content:\"\\f226\"}.la-venus-mars:before{content:\"\\f228\"}.la-viacoin:before{content:\"\\f237\"}.la-viadeo:before{content:\"\\f2a9\"}.la-viadeo-square:before{content:\"\\f2aa\"}.la-vial:before{content:\"\\f492\"}.la-vials:before{content:\"\\f493\"}.la-viber:before{content:\"\\f409\"}.la-video:before{content:\"\\f03d\"}.la-video-slash:before{content:\"\\f4e2\"}.la-vihara:before{content:\"\\f6a7\"}.la-vimeo:before{content:\"\\f40a\"}.la-vimeo-square:before{content:\"\\f194\"}.la-vimeo-v:before{content:\"\\f27d\"}.la-vine:before{content:\"\\f1ca\"}.la-vk:before{content:\"\\f189\"}.la-vnv:before{content:\"\\f40b\"}.la-voicemail:before{content:\"\\f897\"}.la-volleyball-ball:before{content:\"\\f45f\"}.la-volume-down:before{content:\"\\f027\"}.la-volume-mute:before{content:\"\\f6a9\"}.la-volume-off:before{content:\"\\f026\"}.la-volume-up:before{content:\"\\f028\"}.la-vote-yea:before{content:\"\\f772\"}.la-vr-cardboard:before{content:\"\\f729\"}.la-vuejs:before{content:\"\\f41f\"}.la-walking:before{content:\"\\f554\"}.la-wallet:before{content:\"\\f555\"}.la-warehouse:before{content:\"\\f494\"}.la-water:before{content:\"\\f773\"}.la-wave-square:before{content:\"\\f83e\"}.la-waze:before{content:\"\\f83f\"}.la-weebly:before{content:\"\\f5cc\"}.la-weibo:before{content:\"\\f18a\"}.la-weight:before{content:\"\\f496\"}.la-weight-hanging:before{content:\"\\f5cd\"}.la-weixin:before{content:\"\\f1d7\"}.la-whatsapp:before{content:\"\\f232\"}.la-whatsapp-square:before{content:\"\\f40c\"}.la-wheelchair:before{content:\"\\f193\"}.la-whmcs:before{content:\"\\f40d\"}.la-wifi:before{content:\"\\f1eb\"}.la-wikipedia-w:before{content:\"\\f266\"}.la-wind:before{content:\"\\f72e\"}.la-window-close:before{content:\"\\f410\"}.la-window-maximize:before{content:\"\\f2d0\"}.la-window-minimize:before{content:\"\\f2d1\"}.la-window-restore:before{content:\"\\f2d2\"}.la-windows:before{content:\"\\f17a\"}.la-wine-bottle:before{content:\"\\f72f\"}.la-wine-glass:before{content:\"\\f4e3\"}.la-wine-glass-alt:before{content:\"\\f5ce\"}.la-wix:before{content:\"\\f5cf\"}.la-wizards-of-the-coast:before{content:\"\\f730\"}.la-wolf-pack-battalion:before{content:\"\\f514\"}.la-won-sign:before{content:\"\\f159\"}.la-wordpress:before{content:\"\\f19a\"}.la-wordpress-simple:before{content:\"\\f411\"}.la-wpbeginner:before{content:\"\\f297\"}.la-wpexplorer:before{content:\"\\f2de\"}.la-wpforms:before{content:\"\\f298\"}.la-wpressr:before{content:\"\\f3e4\"}.la-wrench:before{content:\"\\f0ad\"}.la-x-ray:before{content:\"\\f497\"}.la-xbox:before{content:\"\\f412\"}.la-xing:before{content:\"\\f168\"}.la-xing-square:before{content:\"\\f169\"}.la-y-combinator:before{content:\"\\f23b\"}.la-yahoo:before{content:\"\\f19e\"}.la-yammer:before{content:\"\\f840\"}.la-yandex:before{content:\"\\f413\"}.la-yandex-international:before{content:\"\\f414\"}.la-yarn:before{content:\"\\f7e3\"}.la-yelp:before{content:\"\\f1e9\"}.la-yen-sign:before{content:\"\\f157\"}.la-yin-yang:before{content:\"\\f6ad\"}.la-yoast:before{content:\"\\f2b1\"}.la-youtube:before{content:\"\\f167\"}.la-youtube-square:before{content:\"\\f431\"}.la-zhihu:before{content:\"\\f63f\"}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}@font-face{font-display:auto;font-family:Line Awesome Brands;font-style:normal;font-weight:400;src:url(/fonts/la-brands-400.eot);src:url(/fonts/la-brands-400.eot?#iefix) format(\"embedded-opentype\"),url(/fonts/la-brands-400.woff2) format(\"woff2\"),url(/fonts/la-brands-400.woff) format(\"woff\"),url(/fonts/la-brands-400.ttf) format(\"truetype\"),url(/fonts/la-brands-400.svg#lineawesome) format(\"svg\")}.lab{font-family:Line Awesome Brands}@font-face{font-display:auto;font-family:Line Awesome Free;font-style:normal;font-weight:400;src:url(/fonts/la-regular-400.eot);src:url(/fonts/la-regular-400.eot?#iefix) format(\"embedded-opentype\"),url(/fonts/la-regular-400.woff2) format(\"woff2\"),url(/fonts/la-regular-400.woff) format(\"woff\"),url(/fonts/la-regular-400.ttf) format(\"truetype\"),url(/fonts/la-regular-400.svg#lineawesome) format(\"svg\")}.lar{font-weight:400}@font-face{font-display:auto;font-family:Line Awesome Free;font-style:normal;font-weight:900;src:url(/fonts/la-solid-900.eot);src:url(/fonts/la-solid-900.eot?#iefix) format(\"embedded-opentype\"),url(/fonts/la-solid-900.woff2) format(\"woff2\"),url(/fonts/la-solid-900.woff) format(\"woff\"),url(/fonts/la-solid-900.ttf) format(\"truetype\"),url(/fonts/la-solid-900.svg#lineawesome) format(\"svg\")}.la,.lar,.las{font-family:Line Awesome Free}.la,.las{font-weight:900}.la.la-glass:before{content:\"\\f000\"}.la.la-meetup{font-family:Line Awesome Brands;font-weight:400}.la.la-star-o{font-family:Line Awesome Free;font-weight:400}.la.la-star-o:before{content:\"\\f005\"}.la.la-close:before,.la.la-remove:before{content:\"\\f00d\"}.la.la-gear:before{content:\"\\f013\"}.la.la-trash-o{font-family:Line Awesome Free;font-weight:400}.la.la-trash-o:before{content:\"\\f2ed\"}.la.la-file-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-o:before{content:\"\\f15b\"}.la.la-clock-o{font-family:Line Awesome Free;font-weight:400}.la.la-clock-o:before{content:\"\\f017\"}.la.la-arrow-circle-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-down:before{content:\"\\f358\"}.la.la-arrow-circle-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-up:before{content:\"\\f35b\"}.la.la-play-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-play-circle-o:before{content:\"\\f144\"}.la.la-repeat:before,.la.la-rotate-right:before{content:\"\\f01e\"}.la.la-refresh:before{content:\"\\f021\"}.la.la-list-alt{font-family:Line Awesome Free;font-weight:400}.la.la-dedent:before{content:\"\\f03b\"}.la.la-video-camera:before{content:\"\\f03d\"}.la.la-picture-o{font-family:Line Awesome Free;font-weight:400}.la.la-picture-o:before{content:\"\\f03e\"}.la.la-photo{font-family:Line Awesome Free;font-weight:400}.la.la-photo:before{content:\"\\f03e\"}.la.la-image{font-family:Line Awesome Free;font-weight:400}.la.la-image:before{content:\"\\f03e\"}.la.la-pencil:before{content:\"\\f303\"}.la.la-map-marker:before{content:\"\\f3c5\"}.la.la-pencil-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-pencil-square-o:before{content:\"\\f044\"}.la.la-share-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-share-square-o:before{content:\"\\f14d\"}.la.la-check-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-check-square-o:before{content:\"\\f14a\"}.la.la-arrows:before{content:\"\\f0b2\"}.la.la-times-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-times-circle-o:before{content:\"\\f057\"}.la.la-check-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-check-circle-o:before{content:\"\\f058\"}.la.la-mail-forward:before{content:\"\\f064\"}.la.la-eye,.la.la-eye-slash{font-family:Line Awesome Free;font-weight:400}.la.la-warning:before{content:\"\\f071\"}.la.la-calendar:before{content:\"\\f073\"}.la.la-arrows-v:before{content:\"\\f338\"}.la.la-arrows-h:before{content:\"\\f337\"}.la.la-bar-chart{font-family:Line Awesome Free;font-weight:400}.la.la-bar-chart:before{content:\"\\f080\"}.la.la-bar-chart-o{font-family:Line Awesome Free;font-weight:400}.la.la-bar-chart-o:before{content:\"\\f080\"}.la.la-facebook-square,.la.la-twitter-square{font-family:Line Awesome Brands;font-weight:400}.la.la-gears:before{content:\"\\f085\"}.la.la-thumbs-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-thumbs-o-up:before{content:\"\\f164\"}.la.la-thumbs-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-thumbs-o-down:before{content:\"\\f165\"}.la.la-heart-o{font-family:Line Awesome Free;font-weight:400}.la.la-heart-o:before{content:\"\\f004\"}.la.la-sign-out:before{content:\"\\f2f5\"}.la.la-linkedin-square{font-family:Line Awesome Brands;font-weight:400}.la.la-linkedin-square:before{content:\"\\f08c\"}.la.la-thumb-tack:before{content:\"\\f08d\"}.la.la-external-link:before{content:\"\\f35d\"}.la.la-sign-in:before{content:\"\\f2f6\"}.la.la-github-square{font-family:Line Awesome Brands;font-weight:400}.la.la-lemon-o{font-family:Line Awesome Free;font-weight:400}.la.la-lemon-o:before{content:\"\\f094\"}.la.la-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-square-o:before{content:\"\\f0c8\"}.la.la-bookmark-o{font-family:Line Awesome Free;font-weight:400}.la.la-bookmark-o:before{content:\"\\f02e\"}.la.la-facebook,.la.la-twitter{font-family:Line Awesome Brands;font-weight:400}.la.la-facebook:before{content:\"\\f39e\"}.la.la-facebook-f{font-family:Line Awesome Brands;font-weight:400}.la.la-facebook-f:before{content:\"\\f39e\"}.la.la-github{font-family:Line Awesome Brands;font-weight:400}.la.la-credit-card{font-family:Line Awesome Free;font-weight:400}.la.la-feed:before{content:\"\\f09e\"}.la.la-hdd-o{font-family:Line Awesome Free;font-weight:400}.la.la-hdd-o:before{content:\"\\f0a0\"}.la.la-hand-o-right{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-right:before{content:\"\\f0a4\"}.la.la-hand-o-left{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-left:before{content:\"\\f0a5\"}.la.la-hand-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-up:before{content:\"\\f0a6\"}.la.la-hand-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-down:before{content:\"\\f0a7\"}.la.la-arrows-alt:before{content:\"\\f31e\"}.la.la-group:before{content:\"\\f0c0\"}.la.la-chain:before{content:\"\\f0c1\"}.la.la-scissors:before{content:\"\\f0c4\"}.la.la-files-o{font-family:Line Awesome Free;font-weight:400}.la.la-files-o:before{content:\"\\f0c5\"}.la.la-floppy-o{font-family:Line Awesome Free;font-weight:400}.la.la-floppy-o:before{content:\"\\f0c7\"}.la.la-navicon:before,.la.la-reorder:before{content:\"\\f0c9\"}.la.la-google-plus,.la.la-google-plus-square,.la.la-pinterest,.la.la-pinterest-square{font-family:Line Awesome Brands;font-weight:400}.la.la-google-plus:before{content:\"\\f0d5\"}.la.la-money{font-family:Line Awesome Free;font-weight:400}.la.la-money:before{content:\"\\f3d1\"}.la.la-unsorted:before{content:\"\\f0dc\"}.la.la-sort-desc:before{content:\"\\f0dd\"}.la.la-sort-asc:before{content:\"\\f0de\"}.la.la-linkedin{font-family:Line Awesome Brands;font-weight:400}.la.la-linkedin:before{content:\"\\f0e1\"}.la.la-rotate-left:before{content:\"\\f0e2\"}.la.la-legal:before{content:\"\\f0e3\"}.la.la-dashboard:before,.la.la-tachometer:before{content:\"\\f3fd\"}.la.la-comment-o{font-family:Line Awesome Free;font-weight:400}.la.la-comment-o:before{content:\"\\f075\"}.la.la-comments-o{font-family:Line Awesome Free;font-weight:400}.la.la-comments-o:before{content:\"\\f086\"}.la.la-flash:before{content:\"\\f0e7\"}.la.la-clipboard,.la.la-paste{font-family:Line Awesome Free;font-weight:400}.la.la-paste:before{content:\"\\f328\"}.la.la-lightbulb-o{font-family:Line Awesome Free;font-weight:400}.la.la-lightbulb-o:before{content:\"\\f0eb\"}.la.la-exchange:before{content:\"\\f362\"}.la.la-cloud-download:before{content:\"\\f381\"}.la.la-cloud-upload:before{content:\"\\f382\"}.la.la-bell-o{font-family:Line Awesome Free;font-weight:400}.la.la-bell-o:before{content:\"\\f0f3\"}.la.la-cutlery:before{content:\"\\f2e7\"}.la.la-file-text-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-text-o:before{content:\"\\f15c\"}.la.la-building-o{font-family:Line Awesome Free;font-weight:400}.la.la-building-o:before{content:\"\\f1ad\"}.la.la-hospital-o{font-family:Line Awesome Free;font-weight:400}.la.la-hospital-o:before{content:\"\\f0f8\"}.la.la-tablet:before{content:\"\\f3fa\"}.la.la-mobile-phone:before,.la.la-mobile:before{content:\"\\f3cd\"}.la.la-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-circle-o:before{content:\"\\f111\"}.la.la-mail-reply:before{content:\"\\f3e5\"}.la.la-github-alt{font-family:Line Awesome Brands;font-weight:400}.la.la-folder-o{font-family:Line Awesome Free;font-weight:400}.la.la-folder-o:before{content:\"\\f07b\"}.la.la-folder-open-o{font-family:Line Awesome Free;font-weight:400}.la.la-folder-open-o:before{content:\"\\f07c\"}.la.la-smile-o{font-family:Line Awesome Free;font-weight:400}.la.la-smile-o:before{content:\"\\f118\"}.la.la-frown-o{font-family:Line Awesome Free;font-weight:400}.la.la-frown-o:before{content:\"\\f119\"}.la.la-meh-o{font-family:Line Awesome Free;font-weight:400}.la.la-meh-o:before{content:\"\\f11a\"}.la.la-keyboard-o{font-family:Line Awesome Free;font-weight:400}.la.la-keyboard-o:before{content:\"\\f11c\"}.la.la-flag-o{font-family:Line Awesome Free;font-weight:400}.la.la-flag-o:before{content:\"\\f024\"}.la.la-mail-reply-all:before{content:\"\\f122\"}.la.la-star-half-o{font-family:Line Awesome Free;font-weight:400}.la.la-star-half-o:before{content:\"\\f089\"}.la.la-star-half-empty{font-family:Line Awesome Free;font-weight:400}.la.la-star-half-empty:before{content:\"\\f089\"}.la.la-star-half-full{font-family:Line Awesome Free;font-weight:400}.la.la-star-half-full:before{content:\"\\f089\"}.la.la-code-fork:before{content:\"\\f126\"}.la.la-chain-broken:before{content:\"\\f127\"}.la.la-shield:before{content:\"\\f3ed\"}.la.la-calendar-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-o:before{content:\"\\f133\"}.la.la-css3,.la.la-html5,.la.la-maxcdn{font-family:Line Awesome Brands;font-weight:400}.la.la-ticket:before{content:\"\\f3ff\"}.la.la-minus-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-minus-square-o:before{content:\"\\f146\"}.la.la-level-up:before{content:\"\\f3bf\"}.la.la-level-down:before{content:\"\\f3be\"}.la.la-pencil-square:before{content:\"\\f14b\"}.la.la-external-link-square:before{content:\"\\f360\"}.la.la-compass{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-down:before{content:\"\\f150\"}.la.la-toggle-down{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-down:before{content:\"\\f150\"}.la.la-caret-square-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-up:before{content:\"\\f151\"}.la.la-toggle-up{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-up:before{content:\"\\f151\"}.la.la-caret-square-o-right{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-right:before{content:\"\\f152\"}.la.la-toggle-right{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-right:before{content:\"\\f152\"}.la.la-eur:before,.la.la-euro:before{content:\"\\f153\"}.la.la-gbp:before{content:\"\\f154\"}.la.la-dollar:before,.la.la-usd:before{content:\"\\f155\"}.la.la-inr:before,.la.la-rupee:before{content:\"\\f156\"}.la.la-cny:before,.la.la-jpy:before,.la.la-rmb:before,.la.la-yen:before{content:\"\\f157\"}.la.la-rouble:before,.la.la-rub:before,.la.la-ruble:before{content:\"\\f158\"}.la.la-krw:before,.la.la-won:before{content:\"\\f159\"}.la.la-bitcoin,.la.la-btc{font-family:Line Awesome Brands;font-weight:400}.la.la-bitcoin:before{content:\"\\f15a\"}.la.la-file-text:before{content:\"\\f15c\"}.la.la-sort-alpha-asc:before{content:\"\\f15d\"}.la.la-sort-alpha-desc:before{content:\"\\f881\"}.la.la-sort-amount-asc:before{content:\"\\f160\"}.la.la-sort-amount-desc:before{content:\"\\f884\"}.la.la-sort-numeric-asc:before{content:\"\\f162\"}.la.la-sort-numeric-desc:before{content:\"\\f886\"}.la.la-xing,.la.la-xing-square,.la.la-youtube,.la.la-youtube-play,.la.la-youtube-square{font-family:Line Awesome Brands;font-weight:400}.la.la-youtube-play:before{content:\"\\f167\"}.la.la-adn,.la.la-bitbucket,.la.la-bitbucket-square,.la.la-dropbox,.la.la-flickr,.la.la-instagram,.la.la-stack-overflow{font-family:Line Awesome Brands;font-weight:400}.la.la-bitbucket-square:before{content:\"\\f171\"}.la.la-tumblr,.la.la-tumblr-square{font-family:Line Awesome Brands;font-weight:400}.la.la-long-arrow-down:before{content:\"\\f309\"}.la.la-long-arrow-up:before{content:\"\\f30c\"}.la.la-long-arrow-left:before{content:\"\\f30a\"}.la.la-long-arrow-right:before{content:\"\\f30b\"}.la.la-android,.la.la-apple,.la.la-dribbble,.la.la-foursquare,.la.la-gittip,.la.la-gratipay,.la.la-linux,.la.la-skype,.la.la-trello,.la.la-windows{font-family:Line Awesome Brands;font-weight:400}.la.la-gittip:before{content:\"\\f184\"}.la.la-sun-o{font-family:Line Awesome Free;font-weight:400}.la.la-sun-o:before{content:\"\\f185\"}.la.la-moon-o{font-family:Line Awesome Free;font-weight:400}.la.la-moon-o:before{content:\"\\f186\"}.la.la-pagelines,.la.la-renren,.la.la-stack-exchange,.la.la-vk,.la.la-weibo{font-family:Line Awesome Brands;font-weight:400}.la.la-arrow-circle-o-right{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-right:before{content:\"\\f35a\"}.la.la-arrow-circle-o-left{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-left:before{content:\"\\f359\"}.la.la-caret-square-o-left{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-left:before{content:\"\\f191\"}.la.la-toggle-left{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-left:before{content:\"\\f191\"}.la.la-dot-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-dot-circle-o:before{content:\"\\f192\"}.la.la-vimeo-square{font-family:Line Awesome Brands;font-weight:400}.la.la-try:before,.la.la-turkish-lira:before{content:\"\\f195\"}.la.la-plus-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-plus-square-o:before{content:\"\\f0fe\"}.la.la-openid,.la.la-slack,.la.la-wordpress{font-family:Line Awesome Brands;font-weight:400}.la.la-bank:before,.la.la-institution:before{content:\"\\f19c\"}.la.la-mortar-board:before{content:\"\\f19d\"}.la.la-delicious,.la.la-digg,.la.la-drupal,.la.la-google,.la.la-joomla,.la.la-pied-piper-alt,.la.la-pied-piper-pp,.la.la-reddit,.la.la-reddit-square,.la.la-stumbleupon,.la.la-stumbleupon-circle,.la.la-yahoo{font-family:Line Awesome Brands;font-weight:400}.la.la-spoon:before{content:\"\\f2e5\"}.la.la-behance,.la.la-behance-square,.la.la-steam,.la.la-steam-square{font-family:Line Awesome Brands;font-weight:400}.la.la-automobile:before{content:\"\\f1b9\"}.la.la-cab:before{content:\"\\f1ba\"}.la.la-envelope-o{font-family:Line Awesome Free;font-weight:400}.la.la-envelope-o:before{content:\"\\f0e0\"}.la.la-deviantart,.la.la-soundcloud{font-family:Line Awesome Brands;font-weight:400}.la.la-file-pdf-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-pdf-o:before{content:\"\\f1c1\"}.la.la-file-word-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-word-o:before{content:\"\\f1c2\"}.la.la-file-excel-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-excel-o:before{content:\"\\f1c3\"}.la.la-file-powerpoint-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-powerpoint-o:before{content:\"\\f1c4\"}.la.la-file-image-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-image-o:before{content:\"\\f1c5\"}.la.la-file-photo-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-photo-o:before{content:\"\\f1c5\"}.la.la-file-picture-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-picture-o:before{content:\"\\f1c5\"}.la.la-file-archive-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-archive-o:before{content:\"\\f1c6\"}.la.la-file-zip-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-zip-o:before{content:\"\\f1c6\"}.la.la-file-audio-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-audio-o:before{content:\"\\f1c7\"}.la.la-file-sound-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-sound-o:before{content:\"\\f1c7\"}.la.la-file-video-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-video-o:before{content:\"\\f1c8\"}.la.la-file-movie-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-movie-o:before{content:\"\\f1c8\"}.la.la-file-code-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-code-o:before{content:\"\\f1c9\"}.la.la-codepen,.la.la-jsfiddle,.la.la-vine{font-family:Line Awesome Brands;font-weight:400}.la.la-life-bouy,.la.la-life-ring{font-family:Line Awesome Free;font-weight:400}.la.la-life-bouy:before{content:\"\\f1cd\"}.la.la-life-buoy{font-family:Line Awesome Free;font-weight:400}.la.la-life-buoy:before{content:\"\\f1cd\"}.la.la-life-saver{font-family:Line Awesome Free;font-weight:400}.la.la-life-saver:before{content:\"\\f1cd\"}.la.la-support{font-family:Line Awesome Free;font-weight:400}.la.la-support:before{content:\"\\f1cd\"}.la.la-circle-o-notch:before{content:\"\\f1ce\"}.la.la-ra,.la.la-rebel{font-family:Line Awesome Brands;font-weight:400}.la.la-ra:before{content:\"\\f1d0\"}.la.la-resistance{font-family:Line Awesome Brands;font-weight:400}.la.la-resistance:before{content:\"\\f1d0\"}.la.la-empire,.la.la-ge{font-family:Line Awesome Brands;font-weight:400}.la.la-ge:before{content:\"\\f1d1\"}.la.la-git,.la.la-git-square,.la.la-hacker-news,.la.la-y-combinator-square{font-family:Line Awesome Brands;font-weight:400}.la.la-y-combinator-square:before{content:\"\\f1d4\"}.la.la-yc-square{font-family:Line Awesome Brands;font-weight:400}.la.la-yc-square:before{content:\"\\f1d4\"}.la.la-qq,.la.la-tencent-weibo,.la.la-wechat,.la.la-weixin{font-family:Line Awesome Brands;font-weight:400}.la.la-wechat:before{content:\"\\f1d7\"}.la.la-send:before{content:\"\\f1d8\"}.la.la-paper-plane-o{font-family:Line Awesome Free;font-weight:400}.la.la-paper-plane-o:before{content:\"\\f1d8\"}.la.la-send-o{font-family:Line Awesome Free;font-weight:400}.la.la-send-o:before{content:\"\\f1d8\"}.la.la-circle-thin{font-family:Line Awesome Free;font-weight:400}.la.la-circle-thin:before{content:\"\\f111\"}.la.la-header:before{content:\"\\f1dc\"}.la.la-sliders:before{content:\"\\f1de\"}.la.la-futbol-o{font-family:Line Awesome Free;font-weight:400}.la.la-futbol-o:before{content:\"\\f1e3\"}.la.la-soccer-ball-o{font-family:Line Awesome Free;font-weight:400}.la.la-soccer-ball-o:before{content:\"\\f1e3\"}.la.la-slideshare,.la.la-twitch,.la.la-yelp{font-family:Line Awesome Brands;font-weight:400}.la.la-newspaper-o{font-family:Line Awesome Free;font-weight:400}.la.la-newspaper-o:before{content:\"\\f1ea\"}.la.la-cc-amex,.la.la-cc-discover,.la.la-cc-mastercard,.la.la-cc-paypal,.la.la-cc-stripe,.la.la-cc-visa,.la.la-google-wallet,.la.la-paypal{font-family:Line Awesome Brands;font-weight:400}.la.la-bell-slash-o{font-family:Line Awesome Free;font-weight:400}.la.la-bell-slash-o:before{content:\"\\f1f6\"}.la.la-trash:before{content:\"\\f2ed\"}.la.la-copyright{font-family:Line Awesome Free;font-weight:400}.la.la-eyedropper:before{content:\"\\f1fb\"}.la.la-area-chart:before{content:\"\\f1fe\"}.la.la-pie-chart:before{content:\"\\f200\"}.la.la-line-chart:before{content:\"\\f201\"}.la.la-angellist,.la.la-ioxhost,.la.la-lastfm,.la.la-lastfm-square{font-family:Line Awesome Brands;font-weight:400}.la.la-cc{font-family:Line Awesome Free;font-weight:400}.la.la-cc:before{content:\"\\f20a\"}.la.la-ils:before,.la.la-shekel:before,.la.la-sheqel:before{content:\"\\f20b\"}.la.la-meanpath{font-family:Line Awesome Brands;font-weight:400}.la.la-meanpath:before{content:\"\\f2b4\"}.la.la-buysellads,.la.la-connectdevelop,.la.la-dashcube,.la.la-forumbee,.la.la-leanpub,.la.la-sellsy,.la.la-shirtsinbulk,.la.la-simplybuilt,.la.la-skyatlas{font-family:Line Awesome Brands;font-weight:400}.la.la-diamond{font-family:Line Awesome Free;font-weight:400}.la.la-diamond:before{content:\"\\f3a5\"}.la.la-intersex:before{content:\"\\f224\"}.la.la-facebook-official{font-family:Line Awesome Brands;font-weight:400}.la.la-facebook-official:before{content:\"\\f09a\"}.la.la-pinterest-p,.la.la-whatsapp{font-family:Line Awesome Brands;font-weight:400}.la.la-hotel:before{content:\"\\f236\"}.la.la-medium,.la.la-viacoin,.la.la-y-combinator,.la.la-yc{font-family:Line Awesome Brands;font-weight:400}.la.la-yc:before{content:\"\\f23b\"}.la.la-expeditedssl,.la.la-opencart,.la.la-optin-monster{font-family:Line Awesome Brands;font-weight:400}.la.la-battery-4:before,.la.la-battery:before{content:\"\\f240\"}.la.la-battery-3:before{content:\"\\f241\"}.la.la-battery-2:before{content:\"\\f242\"}.la.la-battery-1:before{content:\"\\f243\"}.la.la-battery-0:before{content:\"\\f244\"}.la.la-object-group,.la.la-object-ungroup,.la.la-sticky-note-o{font-family:Line Awesome Free;font-weight:400}.la.la-sticky-note-o:before{content:\"\\f249\"}.la.la-cc-diners-club,.la.la-cc-jcb{font-family:Line Awesome Brands;font-weight:400}.la.la-clone,.la.la-hourglass-o{font-family:Line Awesome Free;font-weight:400}.la.la-hourglass-o:before{content:\"\\f254\"}.la.la-hourglass-1:before{content:\"\\f251\"}.la.la-hourglass-2:before{content:\"\\f252\"}.la.la-hourglass-3:before{content:\"\\f253\"}.la.la-hand-rock-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-rock-o:before{content:\"\\f255\"}.la.la-hand-grab-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-grab-o:before{content:\"\\f255\"}.la.la-hand-paper-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-paper-o:before{content:\"\\f256\"}.la.la-hand-stop-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-stop-o:before{content:\"\\f256\"}.la.la-hand-scissors-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-scissors-o:before{content:\"\\f257\"}.la.la-hand-lizard-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-lizard-o:before{content:\"\\f258\"}.la.la-hand-spock-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-spock-o:before{content:\"\\f259\"}.la.la-hand-pointer-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-pointer-o:before{content:\"\\f25a\"}.la.la-hand-peace-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-peace-o:before{content:\"\\f25b\"}.la.la-registered{font-family:Line Awesome Free;font-weight:400}.la.la-chrome,.la.la-creative-commons,.la.la-firefox,.la.la-get-pocket,.la.la-gg,.la.la-gg-circle,.la.la-internet-explorer,.la.la-odnoklassniki,.la.la-odnoklassniki-square,.la.la-opera,.la.la-safari,.la.la-tripadvisor,.la.la-wikipedia-w{font-family:Line Awesome Brands;font-weight:400}.la.la-television:before{content:\"\\f26c\"}.la.la-500px,.la.la-amazon,.la.la-contao{font-family:Line Awesome Brands;font-weight:400}.la.la-calendar-plus-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-plus-o:before{content:\"\\f271\"}.la.la-calendar-minus-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-minus-o:before{content:\"\\f272\"}.la.la-calendar-times-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-times-o:before{content:\"\\f273\"}.la.la-calendar-check-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-check-o:before{content:\"\\f274\"}.la.la-map-o{font-family:Line Awesome Free;font-weight:400}.la.la-map-o:before{content:\"\\f279\"}.la.la-commenting:before{content:\"\\f4ad\"}.la.la-commenting-o{font-family:Line Awesome Free;font-weight:400}.la.la-commenting-o:before{content:\"\\f4ad\"}.la.la-houzz,.la.la-vimeo{font-family:Line Awesome Brands;font-weight:400}.la.la-vimeo:before{content:\"\\f27d\"}.la.la-black-tie,.la.la-edge,.la.la-fonticons,.la.la-reddit-alien{font-family:Line Awesome Brands;font-weight:400}.la.la-credit-card-alt:before{content:\"\\f09d\"}.la.la-codiepie,.la.la-fort-awesome,.la.la-mixcloud,.la.la-modx,.la.la-product-hunt,.la.la-scribd,.la.la-usb{font-family:Line Awesome Brands;font-weight:400}.la.la-pause-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-pause-circle-o:before{content:\"\\f28b\"}.la.la-stop-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-stop-circle-o:before{content:\"\\f28d\"}.la.la-bluetooth,.la.la-bluetooth-b,.la.la-envira,.la.la-gitlab,.la.la-wheelchair-alt,.la.la-wpbeginner,.la.la-wpforms{font-family:Line Awesome Brands;font-weight:400}.la.la-wheelchair-alt:before{content:\"\\f368\"}.la.la-question-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-question-circle-o:before{content:\"\\f059\"}.la.la-volume-control-phone:before{content:\"\\f2a0\"}.la.la-asl-interpreting:before{content:\"\\f2a3\"}.la.la-deafness:before,.la.la-hard-of-hearing:before{content:\"\\f2a4\"}.la.la-glide,.la.la-glide-g{font-family:Line Awesome Brands;font-weight:400}.la.la-signing:before{content:\"\\f2a7\"}.la.la-first-order,.la.la-google-plus-official,.la.la-pied-piper,.la.la-snapchat,.la.la-snapchat-ghost,.la.la-snapchat-square,.la.la-themeisle,.la.la-viadeo,.la.la-viadeo-square,.la.la-yoast{font-family:Line Awesome Brands;font-weight:400}.la.la-google-plus-official:before{content:\"\\f2b3\"}.la.la-google-plus-circle{font-family:Line Awesome Brands;font-weight:400}.la.la-google-plus-circle:before{content:\"\\f2b3\"}.la.la-fa,.la.la-font-awesome{font-family:Line Awesome Brands;font-weight:400}.la.la-fa:before{content:\"\\f2b4\"}.la.la-handshake-o{font-family:Line Awesome Free;font-weight:400}.la.la-handshake-o:before{content:\"\\f2b5\"}.la.la-envelope-open-o{font-family:Line Awesome Free;font-weight:400}.la.la-envelope-open-o:before{content:\"\\f2b6\"}.la.la-linode{font-family:Line Awesome Brands;font-weight:400}.la.la-address-book-o{font-family:Line Awesome Free;font-weight:400}.la.la-address-book-o:before{content:\"\\f2b9\"}.la.la-vcard:before{content:\"\\f2bb\"}.la.la-address-card-o{font-family:Line Awesome Free;font-weight:400}.la.la-address-card-o:before{content:\"\\f2bb\"}.la.la-vcard-o{font-family:Line Awesome Free;font-weight:400}.la.la-vcard-o:before{content:\"\\f2bb\"}.la.la-user-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-user-circle-o:before{content:\"\\f2bd\"}.la.la-user-o{font-family:Line Awesome Free;font-weight:400}.la.la-user-o:before{content:\"\\f007\"}.la.la-id-badge{font-family:Line Awesome Free;font-weight:400}.la.la-drivers-license:before{content:\"\\f2c2\"}.la.la-id-card-o{font-family:Line Awesome Free;font-weight:400}.la.la-id-card-o:before{content:\"\\f2c2\"}.la.la-drivers-license-o{font-family:Line Awesome Free;font-weight:400}.la.la-drivers-license-o:before{content:\"\\f2c2\"}.la.la-free-code-camp,.la.la-quora,.la.la-telegram{font-family:Line Awesome Brands;font-weight:400}.la.la-thermometer-4:before,.la.la-thermometer:before{content:\"\\f2c7\"}.la.la-thermometer-3:before{content:\"\\f2c8\"}.la.la-thermometer-2:before{content:\"\\f2c9\"}.la.la-thermometer-1:before{content:\"\\f2ca\"}.la.la-thermometer-0:before{content:\"\\f2cb\"}.la.la-bathtub:before,.la.la-s15:before{content:\"\\f2cd\"}.la.la-window-maximize,.la.la-window-restore{font-family:Line Awesome Free;font-weight:400}.la.la-times-rectangle:before{content:\"\\f410\"}.la.la-window-close-o{font-family:Line Awesome Free;font-weight:400}.la.la-window-close-o:before{content:\"\\f410\"}.la.la-times-rectangle-o{font-family:Line Awesome Free;font-weight:400}.la.la-times-rectangle-o:before{content:\"\\f410\"}.la.la-bandcamp,.la.la-eercast,.la.la-etsy,.la.la-grav,.la.la-imdb,.la.la-ravelry{font-family:Line Awesome Brands;font-weight:400}.la.la-eercast:before{content:\"\\f2da\"}.la.la-snowflake-o{font-family:Line Awesome Free;font-weight:400}.la.la-snowflake-o:before{content:\"\\f2dc\"}.la.la-spotify,.la.la-superpowers,.la.la-wpexplorer{font-family:Line Awesome Brands;font-weight:400}@layer base{*,::backdrop,::file-selector-button,:after,:before{border-color:var(--color-gray-200,currentColor)}}@layer base{[multiple],[type=date],[type=datetime-local],[type=email],[type=month],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=time],[type=url],[type=week],input:where(:not([type])),select,textarea{--tw-shadow:0 0 #0000;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-radius:0;border-width:1px;font-size:1rem;line-height:1.5rem;padding:.5rem .75rem;&:focus{--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:oklch(54.6% 0.245 262.881);--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);border-color:oklch(54.6% .245 262.881);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);outline:2px solid transparent;outline-offset:2px}}input::-moz-placeholder,textarea::-moz-placeholder{color:#6b7280;opacity:1}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-meridiem-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-year-field{padding-bottom:0;padding-top:0}select{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E\");background-position:right .5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;-webkit-print-color-adjust:exact;print-color-adjust:exact}[multiple],[size]:where(select:not([size=\"1\"])){background-image:none;background-position:0 0;background-repeat:unset;background-size:initial;padding-right:.75rem;-webkit-print-color-adjust:unset;print-color-adjust:unset}[type=checkbox],[type=radio]{--tw-shadow:0 0 #0000;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;background-origin:border-box;border-color:#6b7280;border-width:1px;color:oklch(54.6% .245 262.881);display:inline-block;flex-shrink:0;height:1rem;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;-webkit-user-select:none;-moz-user-select:none;user-select:none;vertical-align:middle;width:1rem}[type=checkbox]{border-radius:0}[type=radio]{border-radius:100%}[type=checkbox]:focus,[type=radio]:focus{--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:oklch(54.6% 0.245 262.881);--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);outline:2px solid transparent;outline-offset:2px}[type=checkbox]:checked,[type=radio]:checked{background-color:currentColor;background-position:50%;background-repeat:no-repeat;background-size:100% 100%;border-color:transparent}[type=checkbox]:checked{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E\");@media (forced-colors:active){-webkit-appearance:auto;-moz-appearance:auto;appearance:auto}}[type=radio]:checked{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E\");@media (forced-colors:active){-webkit-appearance:auto;-moz-appearance:auto;appearance:auto}}[type=checkbox]:checked:focus,[type=checkbox]:checked:hover,[type=radio]:checked:focus,[type=radio]:checked:hover{background-color:currentColor;border-color:transparent}[type=checkbox]:indeterminate{background-color:currentColor;background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3E%3C/svg%3E\");background-position:50%;background-repeat:no-repeat;background-size:100% 100%;border-color:transparent;@media (forced-colors:active){-webkit-appearance:auto;-moz-appearance:auto;appearance:auto}}[type=checkbox]:indeterminate:focus,[type=checkbox]:indeterminate:hover{background-color:currentColor;border-color:transparent}[type=file]{background:unset;border-color:inherit;border-radius:0;border-width:0;font-size:unset;line-height:inherit;padding:0}[type=file]:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}}@property --tw-translate-x{syntax:\"*\";inherits:false;initial-value:0}@property --tw-translate-y{syntax:\"*\";inherits:false;initial-value:0}@property --tw-translate-z{syntax:\"*\";inherits:false;initial-value:0}@property --tw-scale-x{syntax:\"*\";inherits:false;initial-value:1}@property --tw-scale-y{syntax:\"*\";inherits:false;initial-value:1}@property --tw-scale-z{syntax:\"*\";inherits:false;initial-value:1}@property --tw-rotate-x{syntax:\"*\";inherits:false}@property --tw-rotate-y{syntax:\"*\";inherits:false}@property --tw-rotate-z{syntax:\"*\";inherits:false}@property --tw-skew-x{syntax:\"*\";inherits:false}@property --tw-skew-y{syntax:\"*\";inherits:false}@property --tw-pan-x{syntax:\"*\";inherits:false}@property --tw-pan-y{syntax:\"*\";inherits:false}@property --tw-pinch-zoom{syntax:\"*\";inherits:false}@property --tw-space-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-divide-x-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-border-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-divide-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-gradient-position{syntax:\"*\";inherits:false}@property --tw-gradient-from{syntax:\"<color>\";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:\"<color>\";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:\"<color>\";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:\"*\";inherits:false}@property --tw-gradient-via-stops{syntax:\"*\";inherits:false}@property --tw-gradient-from-position{syntax:\"<length-percentage>\";inherits:false;initial-value:0}@property --tw-gradient-via-position{syntax:\"<length-percentage>\";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:\"<length-percentage>\";inherits:false;initial-value:100%}@property --tw-leading{syntax:\"*\";inherits:false}@property --tw-font-weight{syntax:\"*\";inherits:false}@property --tw-tracking{syntax:\"*\";inherits:false}@property --tw-ordinal{syntax:\"*\";inherits:false}@property --tw-slashed-zero{syntax:\"*\";inherits:false}@property --tw-numeric-figure{syntax:\"*\";inherits:false}@property --tw-numeric-spacing{syntax:\"*\";inherits:false}@property --tw-numeric-fraction{syntax:\"*\";inherits:false}@property --tw-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:\"*\";inherits:false}@property --tw-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:\"*\";inherits:false}@property --tw-inset-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:\"*\";inherits:false}@property --tw-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:\"*\";inherits:false}@property --tw-inset-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:\"*\";inherits:false}@property --tw-ring-offset-width{syntax:\"<length>\";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:\"*\";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-blur{syntax:\"*\";inherits:false}@property --tw-brightness{syntax:\"*\";inherits:false}@property --tw-contrast{syntax:\"*\";inherits:false}@property --tw-grayscale{syntax:\"*\";inherits:false}@property --tw-hue-rotate{syntax:\"*\";inherits:false}@property --tw-invert{syntax:\"*\";inherits:false}@property --tw-opacity{syntax:\"*\";inherits:false}@property --tw-saturate{syntax:\"*\";inherits:false}@property --tw-sepia{syntax:\"*\";inherits:false}@property --tw-drop-shadow{syntax:\"*\";inherits:false}@property --tw-drop-shadow-color{syntax:\"*\";inherits:false}@property --tw-drop-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:\"*\";inherits:false}@property --tw-backdrop-blur{syntax:\"*\";inherits:false}@property --tw-backdrop-brightness{syntax:\"*\";inherits:false}@property --tw-backdrop-contrast{syntax:\"*\";inherits:false}@property --tw-backdrop-grayscale{syntax:\"*\";inherits:false}@property --tw-backdrop-hue-rotate{syntax:\"*\";inherits:false}@property --tw-backdrop-invert{syntax:\"*\";inherits:false}@property --tw-backdrop-opacity{syntax:\"*\";inherits:false}@property --tw-backdrop-saturate{syntax:\"*\";inherits:false}@property --tw-backdrop-sepia{syntax:\"*\";inherits:false}@property --tw-duration{syntax:\"*\";inherits:false}@property --tw-ease{syntax:\"*\";inherits:false}@property --tw-content{syntax:\"*\";initial-value:\"\";inherits:false}@keyframes pulse{50%{opacity:.5}}@layer properties{@supports ((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,::backdrop,:after,:before{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-pan-x:initial;--tw-pan-y:initial;--tw-pinch-zoom:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-divide-x-reverse:0;--tw-border-style:solid;--tw-divide-y-reverse:0;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial;--tw-content:\"\"}}}";
+var css_248z = "/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback\");@import url(\"https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap\");@layer theme, base, components, utilities;@layer theme{:host,:root{--font-sans:ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";--font-serif:ui-serif,Georgia,Cambria,\"Times New Roman\",Times,serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace;--color-red-50:#ffe8e8;--color-red-300:#ff9494;--color-red-400:#ff7474;--color-red-500:#ff5656;--color-red-600:#fa4949;--color-indigo-500:#9b49ff;--color-indigo-600:#6a2dba;--color-violet-100:#e6e1ff;--color-violet-400:#9c8cff;--color-violet-500:#8470ff;--color-violet-600:#755ff8;--color-violet-700:#5d47de;--color-violet-800:#4634b1;--color-violet-900:#2f227c;--color-violet-950:#1c1357;--color-slate-900:oklch(20.8% 0.042 265.755);--color-gray-50:#f9fafb;--color-gray-100:#f3f4f6;--color-gray-200:#e5e7eb;--color-gray-300:#bfc4cd;--color-gray-400:#9ca3af;--color-gray-500:#6b7280;--color-gray-600:#4b5563;--color-gray-700:#374151;--color-gray-800:#1f2937;--color-gray-900:#111827;--color-gray-950:#030712;--color-black:#000;--color-white:#fff;--spacing:0.25rem;--container-sm:24rem;--container-lg:32rem;--text-xs:0.75rem;--text-xs--line-height:1.5;--text-sm:0.875rem;--text-sm--line-height:1.5715;--text-lg:1.125rem;--text-lg--line-height:1.5;--text-2xl:1.5rem;--text-2xl--line-height:1.33;--text-3xl:1.88rem;--text-3xl--line-height:1.33;--text-4xl:2.25rem;--text-4xl--line-height:1.25;--text-5xl:3rem;--text-5xl--line-height:1.25;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--tracking-tighter:-0.05em;--tracking-tight:-0.025em;--tracking-normal:0em;--tracking-widest:0.1em;--leading-relaxed:1.625;--radius-sm:0.25rem;--radius-md:0.375rem;--radius-lg:0.5rem;--radius-2xl:1rem;--shadow-2xs:0 1px rgba(0,0,0,.05);--shadow-xs:0 1px 2px 0 rgba(0,0,0,.05);--shadow-sm:0 1px 1px 0 rgba(0,0,0,.05),0 1px 2px 0 rgba(0,0,0,.02);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--shadow-xl:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--shadow-2xl:0 25px 50px -12px rgba(0,0,0,.25);--ease-out:cubic-bezier(0,0,0.2,1);--ease-in-out:cubic-bezier(0.4,0,0.2,1);--animate-pulse:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;--blur-sm:8px;--blur-md:12px;--aspect-video:16/9;--default-transition-duration:150ms;--default-transition-timing-function:cubic-bezier(0.4,0,0.2,1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--font-inter:\"Inter\",\"sans-serif\";--font-reddit:\"Reddit Sans\",\"sans-serif\";--text-lg--letter-spacing:-0.01em;--text-2xl--letter-spacing:-0.01em;--text-3xl--letter-spacing:-0.01em;--text-4xl--letter-spacing:-0.02em;--text-5xl--letter-spacing:-0.02em}}@layer base{*,::backdrop,::file-selector-button,:after,:before{border:0 solid;box-sizing:border-box;margin:0;padding:0}:host,html{-webkit-text-size-adjust:100%;font-feature-settings:var(--default-font-feature-settings,normal);-webkit-tap-highlight-color:transparent;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\");font-variation-settings:var(--default-font-variation-settings,normal);line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-feature-settings:var(--default-mono-font-feature-settings,normal);font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace);font-size:1em;font-variation-settings:var(--default-mono-font-variation-settings,normal)}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}menu,ol,ul{list-style:none}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}::file-selector-button,button,input,optgroup,select,textarea{font-feature-settings:inherit;background-color:transparent;border-radius:0;color:inherit;font:inherit;font-variation-settings:inherit;letter-spacing:inherit;opacity:1}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::-moz-placeholder{opacity:1}::placeholder{opacity:1}@supports (not (-webkit-appearance:-apple-pay-button)) or (contain-intrinsic-size:1px){::-moz-placeholder{color:currentcolor;@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,currentcolor 50%,transparent)}}::placeholder{color:currentcolor;@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-meridiem-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-year-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}::file-selector-button,button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer utilities{.pointer-events-auto{pointer-events:auto}.pointer-events-none{pointer-events:none}.collapse{visibility:collapse}.invisible{visibility:hidden}.visible{visibility:visible}.sr-only{clip:rect(0,0,0,0);border-width:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.not-sr-only{clip:auto;height:auto;margin:0;overflow:visible;padding:0;position:static;white-space:normal;width:auto}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.sticky{position:sticky}.-inset-1{inset:calc(var(--spacing)*-1)}.inset-0{inset:calc(var(--spacing)*0)}.inset-x-0{inset-inline:calc(var(--spacing)*0)}.inset-y-0{inset-block:calc(var(--spacing)*0)}.-top-12{top:calc(var(--spacing)*-12)}.top-0{top:calc(var(--spacing)*0)}.top-1{top:calc(var(--spacing)*1)}.top-1\\/2{top:50%}.top-2{top:calc(var(--spacing)*2)}.top-4{top:calc(var(--spacing)*4)}.top-\\[1px\\]{top:1px}.top-\\[50\\%\\]{top:50%}.top-\\[60\\%\\]{top:60%}.top-full{top:100%}.-right-12{right:calc(var(--spacing)*-12)}.right-0{right:calc(var(--spacing)*0)}.right-1{right:calc(var(--spacing)*1)}.right-2{right:calc(var(--spacing)*2)}.right-4{right:calc(var(--spacing)*4)}.-bottom-12{bottom:calc(var(--spacing)*-12)}.bottom-0{bottom:calc(var(--spacing)*0)}.-left-12{left:calc(var(--spacing)*-12)}.left-0{left:calc(var(--spacing)*0)}.left-1{left:calc(var(--spacing)*1)}.left-1\\/2{left:50%}.left-2{left:calc(var(--spacing)*2)}.left-\\[50\\%\\]{left:50%}.isolate{isolation:isolate}.isolation-auto{isolation:auto}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.z-\\[1\\]{z-index:1}.z-\\[100\\]{z-index:100}.container{width:100%;@media (width >= 480px){max-width:480px}@media (width >= 40rem){max-width:40rem}@media (width >= 48rem){max-width:48rem}@media (width >= 64rem){max-width:64rem}@media (width >= 80rem){max-width:80rem}@media (width >= 96rem){max-width:96rem}}.-mx-1{margin-inline:calc(var(--spacing)*-1)}.mx-auto{margin-inline:auto}.my-0{margin-block:calc(var(--spacing)*0)}.my-0\\.5{margin-block:calc(var(--spacing)*.5)}.my-1{margin-block:calc(var(--spacing)*1)}.-mt-4{margin-top:calc(var(--spacing)*-4)}.mt-1{margin-top:calc(var(--spacing)*1)}.mt-1\\.5{margin-top:calc(var(--spacing)*1.5)}.mt-2{margin-top:calc(var(--spacing)*2)}.mt-3{margin-top:calc(var(--spacing)*3)}.mt-4{margin-top:calc(var(--spacing)*4)}.mt-24{margin-top:calc(var(--spacing)*24)}.mt-auto{margin-top:auto}.mr-2{margin-right:calc(var(--spacing)*2)}.mb-0{margin-bottom:calc(var(--spacing)*0)}.mb-0\\.5{margin-bottom:calc(var(--spacing)*.5)}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.mb-5{margin-bottom:calc(var(--spacing)*5)}.-ml-4{margin-left:calc(var(--spacing)*-4)}.ml-1{margin-left:calc(var(--spacing)*1)}.ml-2{margin-left:calc(var(--spacing)*2)}.ml-3{margin-left:calc(var(--spacing)*3)}.ml-4{margin-left:calc(var(--spacing)*4)}.ml-auto{margin-left:auto}.block{display:block}.contents{display:contents}.flex{display:flex}.flow-root{display:flow-root}.grid{display:grid}.hidden{display:none}.inline{display:inline}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.inline-grid{display:inline-grid}.inline-table{display:inline-table}.list-item{display:list-item}.table{display:table}.table-caption{display:table-caption}.table-cell{display:table-cell}.table-column{display:table-column}.table-column-group{display:table-column-group}.table-footer-group{display:table-footer-group}.table-header-group{display:table-header-group}.table-row{display:table-row}.table-row-group{display:table-row-group}.aspect-square{aspect-ratio:1/1}.aspect-video{aspect-ratio:var(--aspect-video)}.h-1{height:calc(var(--spacing)*1)}.h-1\\.5{height:calc(var(--spacing)*1.5)}.h-2{height:calc(var(--spacing)*2)}.h-2\\.5{height:calc(var(--spacing)*2.5)}.h-3{height:calc(var(--spacing)*3)}.h-3\\.5{height:calc(var(--spacing)*3.5)}.h-4{height:calc(var(--spacing)*4)}.h-5{height:calc(var(--spacing)*5)}.h-6{height:calc(var(--spacing)*6)}.h-7{height:calc(var(--spacing)*7)}.h-8{height:calc(var(--spacing)*8)}.h-9{height:calc(var(--spacing)*9)}.h-10{height:calc(var(--spacing)*10)}.h-11{height:calc(var(--spacing)*11)}.h-12{height:calc(var(--spacing)*12)}.h-16{height:calc(var(--spacing)*16)}.h-\\[1px\\]{height:1px}.h-\\[100dvh\\]{height:100dvh}.h-\\[100vh\\]{height:100vh}.h-\\[var\\(--radix-navigation-menu-viewport-height\\)\\]{height:var(--radix-navigation-menu-viewport-height)}.h-\\[var\\(--radix-select-trigger-height\\)\\]{height:var(--radix-select-trigger-height)}.h-auto{height:auto}.h-full{height:100%}.h-px{height:1px}.max-h-96{max-height:calc(var(--spacing)*96)}.max-h-\\[300px\\]{max-height:300px}.max-h-screen{max-height:100vh}.min-h-\\[80px\\]{min-height:80px}.w-0{width:calc(var(--spacing)*0)}.w-1{width:calc(var(--spacing)*1)}.w-2{width:calc(var(--spacing)*2)}.w-2\\.5{width:calc(var(--spacing)*2.5)}.w-3{width:calc(var(--spacing)*3)}.w-3\\.5{width:calc(var(--spacing)*3.5)}.w-3\\/4{width:75%}.w-4{width:calc(var(--spacing)*4)}.w-5{width:calc(var(--spacing)*5)}.w-6{width:calc(var(--spacing)*6)}.w-7{width:calc(var(--spacing)*7)}.w-8{width:calc(var(--spacing)*8)}.w-9{width:calc(var(--spacing)*9)}.w-10{width:calc(var(--spacing)*10)}.w-11{width:calc(var(--spacing)*11)}.w-12{width:calc(var(--spacing)*12)}.w-64{width:calc(var(--spacing)*64)}.w-72{width:calc(var(--spacing)*72)}.w-\\[1px\\]{width:1px}.w-\\[100px\\]{width:100px}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.w-px{width:1px}.max-w-lg{max-width:var(--container-lg)}.max-w-max{max-width:-moz-max-content;max-width:max-content}.min-w-0{min-width:calc(var(--spacing)*0)}.min-w-\\[8rem\\]{min-width:8rem}.min-w-\\[11rem\\]{min-width:11rem}.min-w-\\[12rem\\]{min-width:12rem}.min-w-\\[var\\(--radix-select-trigger-width\\)\\]{min-width:var(--radix-select-trigger-width)}.min-w-fit{min-width:-moz-fit-content;min-width:fit-content}.flex-1{flex:1}.shrink{flex-shrink:1}.shrink-0{flex-shrink:0}.grow{flex-grow:1}.grow-0{flex-grow:0}.basis-full{flex-basis:100%}.caption-bottom{caption-side:bottom}.border-collapse{border-collapse:collapse}.origin-top-right{transform-origin:top right}.-translate-x-1{--tw-translate-x:calc(var(--spacing)*-1)}.-translate-x-1,.-translate-x-1\\/2{translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-x-1\\/2{--tw-translate-x:-50%}.-translate-x-64{--tw-translate-x:calc(var(--spacing)*-64)}.-translate-x-64,.translate-x-0{translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-x-0{--tw-translate-x:calc(var(--spacing)*0)}.translate-x-\\[-50\\%\\]{--tw-translate-x:-50%}.-translate-y-1,.translate-x-\\[-50\\%\\]{translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-1{--tw-translate-y:calc(var(--spacing)*-1)}.-translate-y-1\\/2{--tw-translate-y:-50%}.-translate-y-1\\/2,.-translate-y-2{translate:var(--tw-translate-x) var(--tw-translate-y)}.-translate-y-2{--tw-translate-y:calc(var(--spacing)*-2)}.translate-y-0{--tw-translate-y:calc(var(--spacing)*0)}.translate-y-0,.translate-y-\\[-50\\%\\]{translate:var(--tw-translate-x) var(--tw-translate-y)}.translate-y-\\[-50\\%\\]{--tw-translate-y:-50%}.translate-none{translate:none}.scale-3d{scale:var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z)}.rotate-45{rotate:45deg}.rotate-90{rotate:90deg}.rotate-180{rotate:180deg}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.animate-pulse{animation:var(--animate-pulse)}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}.touch-pinch-zoom{--tw-pinch-zoom:pinch-zoom;touch-action:var(--tw-pan-x,) var(--tw-pan-y,) var(--tw-pinch-zoom,)}.touch-none{touch-action:none}.resize{resize:both}.list-none{list-style-type:none}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-row{flex-direction:row}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.items-stretch{align-items:stretch}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-1{gap:calc(var(--spacing)*1)}.gap-1\\.5{gap:calc(var(--spacing)*1.5)}.gap-2{gap:calc(var(--spacing)*2)}.gap-4{gap:calc(var(--spacing)*4)}.space-y-0{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*0*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*0*var(--tw-space-y-reverse))}}.space-y-1{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*1*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*1*var(--tw-space-y-reverse))}}.space-y-1\\.5{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*1.5*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*1.5*var(--tw-space-y-reverse))}}.space-y-2{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*2*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*2*var(--tw-space-y-reverse))}}.space-y-4{:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*4*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*4*var(--tw-space-y-reverse))}}.space-y-reverse{:where(&>:not(:last-child)){--tw-space-y-reverse:1}}.space-x-1{:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*1*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*1*var(--tw-space-x-reverse))}}.space-x-3{:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*3*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*3*var(--tw-space-x-reverse))}}.space-x-4{:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*4*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*4*var(--tw-space-x-reverse))}}.space-x-reverse{:where(&>:not(:last-child)){--tw-space-x-reverse:1}}.divide-x{:where(&>:not(:last-child)){--tw-divide-x-reverse:0;border-inline-end-width:calc(1px*(1 - var(--tw-divide-x-reverse)));border-inline-start-width:calc(1px*var(--tw-divide-x-reverse));border-inline-style:var(--tw-border-style)}}.divide-y{:where(&>:not(:last-child)){--tw-divide-y-reverse:0;border-bottom-style:var(--tw-border-style);border-bottom-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-top-style:var(--tw-border-style);border-top-width:calc(1px*var(--tw-divide-y-reverse))}}.divide-y-reverse{:where(&>:not(:last-child)){--tw-divide-y-reverse:1}}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.overflow-y-auto{overflow-y:auto}.overflow-y-scroll{overflow-y:scroll}.rounded{border-radius:.25rem}.rounded-\\[2px\\]{border-radius:2px}.rounded-\\[inherit\\]{border-radius:inherit}.rounded-full{border-radius:calc(infinity * 1px)}.rounded-lg{border-radius:var(--radius-lg)}.rounded-md{border-radius:var(--radius-md)}.rounded-sm{border-radius:var(--radius-sm)}.rounded-s{border-end-start-radius:.25rem}.rounded-s,.rounded-ss{border-start-start-radius:.25rem}.rounded-e{border-end-end-radius:.25rem}.rounded-e,.rounded-se{border-start-end-radius:.25rem}.rounded-ee{border-end-end-radius:.25rem}.rounded-es{border-end-start-radius:.25rem}.rounded-t{border-top-left-radius:.25rem;border-top-right-radius:.25rem}.rounded-t-\\[10px\\]{border-top-left-radius:10px;border-top-right-radius:10px}.rounded-l{border-bottom-left-radius:.25rem}.rounded-l,.rounded-tl{border-top-left-radius:.25rem}.rounded-tl-sm{border-top-left-radius:var(--radius-sm)}.rounded-r{border-bottom-right-radius:.25rem;border-top-right-radius:.25rem}.rounded-r-2xl{border-bottom-right-radius:var(--radius-2xl);border-top-right-radius:var(--radius-2xl)}.rounded-tr{border-top-right-radius:.25rem}.rounded-b{border-bottom-left-radius:.25rem}.rounded-b,.rounded-br{border-bottom-right-radius:.25rem}.rounded-bl{border-bottom-left-radius:.25rem}.border{border-style:var(--tw-border-style);border-width:1px}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-\\[1\\.5px\\]{border-style:var(--tw-border-style);border-width:1.5px}.border-x{border-inline-style:var(--tw-border-style);border-inline-width:1px}.border-y{border-block-style:var(--tw-border-style);border-block-width:1px}.border-s{border-inline-start-style:var(--tw-border-style);border-inline-start-width:1px}.border-e{border-inline-end-style:var(--tw-border-style);border-inline-end-width:1px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-r{border-right-style:var(--tw-border-style);border-right-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-l{border-left-style:var(--tw-border-style);border-left-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.border-none{--tw-border-style:none;border-style:none}.border-\\[--color-border\\]{border-color:--color-border}.border-gray-200{border-color:var(--color-gray-200)}.border-indigo-500{border-color:var(--color-indigo-500)}.border-transparent{border-color:transparent}.border-t-transparent{border-top-color:transparent}.border-l-transparent{border-left-color:transparent}.bg-\\[--color-bg\\]{background-color:--color-bg}.bg-black{background-color:var(--color-black)}.bg-black\\/80{background-color:color-mix(in srgb,#000 80%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-black) 80%,transparent)}}.bg-gray-100{background-color:var(--color-gray-100)}.bg-gray-200{background-color:var(--color-gray-200)}.bg-gray-900{background-color:var(--color-gray-900)}.bg-gray-900\\/30{background-color:color-mix(in srgb,#111827 30%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-900) 30%,transparent)}}.bg-indigo-500{background-color:var(--color-indigo-500)}.bg-transparent{background-color:transparent}.bg-white{background-color:var(--color-white)}.bg-linear-to-r{--tw-gradient-position:to right;@supports (background-image:linear-gradient(in lab,red,red)){--tw-gradient-position:to right in oklab}background-image:linear-gradient(var(--tw-gradient-stops))}.from-indigo-500{--tw-gradient-from:var(--color-indigo-500);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.from-indigo-500\\/\\[0\\.12\\]{--tw-gradient-from:color-mix(in srgb,#9b49ff 12%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-gradient-from:color-mix(in oklab,var(--color-indigo-500) 12%,transparent)}--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.to-indigo-500{--tw-gradient-to:var(--color-indigo-500);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.to-indigo-500\\/\\[0\\.04\\]{--tw-gradient-to:color-mix(in srgb,#9b49ff 4%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-gradient-to:color-mix(in oklab,var(--color-indigo-500) 4%,transparent)}--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}.bg-repeat{background-repeat:repeat}.mask-no-clip{-webkit-mask-clip:no-clip;mask-clip:no-clip}.mask-repeat{-webkit-mask-repeat:repeat;mask-repeat:repeat}.fill-current{fill:currentcolor}.p-0{padding:calc(var(--spacing)*0)}.p-1{padding:calc(var(--spacing)*1)}.p-3{padding:calc(var(--spacing)*3)}.p-4{padding:calc(var(--spacing)*4)}.p-6{padding:calc(var(--spacing)*6)}.p-\\[1px\\]{padding:1px}.px-2{padding-inline:calc(var(--spacing)*2)}.px-2\\.5{padding-inline:calc(var(--spacing)*2.5)}.px-3{padding-inline:calc(var(--spacing)*3)}.px-4{padding-inline:calc(var(--spacing)*4)}.px-5{padding-inline:calc(var(--spacing)*5)}.px-8{padding-inline:calc(var(--spacing)*8)}.py-0{padding-block:calc(var(--spacing)*0)}.py-0\\.5{padding-block:calc(var(--spacing)*.5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.py-3{padding-block:calc(var(--spacing)*3)}.py-4{padding-block:calc(var(--spacing)*4)}.py-6{padding-block:calc(var(--spacing)*6)}.pt-0{padding-top:calc(var(--spacing)*0)}.pt-0\\.5{padding-top:calc(var(--spacing)*.5)}.pt-1{padding-top:calc(var(--spacing)*1)}.pt-3{padding-top:calc(var(--spacing)*3)}.pt-4{padding-top:calc(var(--spacing)*4)}.pr-2{padding-right:calc(var(--spacing)*2)}.pr-2\\.5{padding-right:calc(var(--spacing)*2.5)}.pr-3{padding-right:calc(var(--spacing)*3)}.pr-8{padding-right:calc(var(--spacing)*8)}.pb-2{padding-bottom:calc(var(--spacing)*2)}.pb-3{padding-bottom:calc(var(--spacing)*3)}.pb-4{padding-bottom:calc(var(--spacing)*4)}.pl-2{padding-left:calc(var(--spacing)*2)}.pl-2\\.5{padding-left:calc(var(--spacing)*2.5)}.pl-3{padding-left:calc(var(--spacing)*3)}.pl-4{padding-left:calc(var(--spacing)*4)}.pl-5{padding-left:calc(var(--spacing)*5)}.pl-8{padding-left:calc(var(--spacing)*8)}.text-center{text-align:center}.text-left{text-align:left}.align-middle{vertical-align:middle}.font-mono{font-family:var(--font-mono)}.font-reddit{font-family:var(--font-reddit)}.text-2xl{font-size:var(--text-2xl);letter-spacing:var(--tw-tracking,var(--text-2xl--letter-spacing));line-height:var(--tw-leading,var(--text-2xl--line-height))}.text-lg{font-size:var(--text-lg);letter-spacing:var(--tw-tracking,var(--text-lg--letter-spacing));line-height:var(--tw-leading,var(--text-lg--line-height))}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-xs{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}.text-\\[0\\.8rem\\]{font-size:.8rem}.leading-5{--tw-leading:calc(var(--spacing)*5);line-height:calc(var(--spacing)*5)}.leading-none{--tw-leading:1;line-height:1}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.font-semibold{--tw-font-weight:var(--font-weight-semibold);font-weight:var(--font-weight-semibold)}.tracking-tight{--tw-tracking:var(--tracking-tight);letter-spacing:var(--tracking-tight)}.tracking-widest{--tw-tracking:var(--tracking-widest);letter-spacing:var(--tracking-widest)}.text-wrap{text-wrap:wrap}.break-words{overflow-wrap:break-word}.text-clip{text-overflow:clip}.text-ellipsis{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}.text-black{color:var(--color-black)}.text-current{color:currentcolor}.text-gray-400{color:var(--color-gray-400)}.text-gray-500{color:var(--color-gray-500)}.text-gray-500\\/80{color:color-mix(in srgb,#6b7280 80%,transparent);@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,var(--color-gray-500) 80%,transparent)}}.text-gray-600{color:var(--color-gray-600)}.text-gray-800{color:var(--color-gray-800)}.text-indigo-500{color:var(--color-indigo-500)}.text-violet-500{color:var(--color-violet-500)}.text-violet-600{color:var(--color-violet-600)}.text-white{color:var(--color-white)}.capitalize{text-transform:capitalize}.lowercase{text-transform:lowercase}.normal-case{text-transform:none}.uppercase{text-transform:uppercase}.italic{font-style:italic}.not-italic{font-style:normal}.diagonal-fractions{--tw-numeric-fraction:diagonal-fractions}.diagonal-fractions,.lining-nums{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.lining-nums{--tw-numeric-figure:lining-nums}.oldstyle-nums{--tw-numeric-figure:oldstyle-nums}.oldstyle-nums,.ordinal{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.ordinal{--tw-ordinal:ordinal}.proportional-nums{--tw-numeric-spacing:proportional-nums}.proportional-nums,.slashed-zero{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.slashed-zero{--tw-slashed-zero:slashed-zero}.stacked-fractions{--tw-numeric-fraction:stacked-fractions}.stacked-fractions,.tabular-nums{font-variant-numeric:var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,)}.tabular-nums{--tw-numeric-spacing:tabular-nums}.normal-nums{font-variant-numeric:normal}.line-through{text-decoration-line:line-through}.no-underline{text-decoration-line:none}.overline{text-decoration-line:overline}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.subpixel-antialiased{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto}.opacity-0{opacity:0}.opacity-50{opacity:50%}.opacity-60{opacity:60%}.opacity-70{opacity:70%}.opacity-90{opacity:90%}.opacity-100{opacity:100%}.shadow{--tw-shadow:0 1px 3px 0 var(--tw-shadow-color,rgba(0,0,0,.1)),0 1px 2px -1px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow,.shadow-lg{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,rgba(0,0,0,.1)),0 4px 6px -4px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow-md{--tw-shadow:0 4px 6px -1px var(--tw-shadow-color,rgba(0,0,0,.1)),0 2px 4px -2px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow-md,.shadow-sm{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02))}.shadow-xl{--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,rgba(0,0,0,.1)),0 8px 10px -6px var(--tw-shadow-color,rgba(0,0,0,.1))}.shadow-xl,.shadow-xs{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-xs{--tw-shadow:0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.05))}.ring{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor)}.ring,.ring-0{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.ring-0{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor)}.ring-2{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor)}.inset-ring,.ring-2{box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.inset-ring{--tw-inset-ring-shadow:inset 0 0 0 1px var(--tw-inset-ring-color,currentcolor)}.outline{outline-style:var(--tw-outline-style);outline-width:1px}.blur{--tw-blur:blur(8px)}.blur,.blur-sm{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.blur-sm{--tw-blur:blur(var(--blur-sm))}.drop-shadow{--tw-drop-shadow-size:drop-shadow(0 1px 2px var(--tw-drop-shadow-color,rgba(0,0,0,.1))) drop-shadow(0 1px 1px var(--tw-drop-shadow-color,rgba(0,0,0,.06)));--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.drop-shadow,.grayscale{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.grayscale{--tw-grayscale:grayscale(100%)}.invert{--tw-invert:invert(100%)}.invert,.sepia{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.sepia{--tw-sepia:sepia(100%)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-grayscale{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.backdrop-grayscale{--tw-backdrop-grayscale:grayscale(100%)}.backdrop-invert{--tw-backdrop-invert:invert(100%)}.backdrop-invert,.backdrop-sepia{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.backdrop-sepia{--tw-backdrop-sepia:sepia(100%)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.transition{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-all{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-colors{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-opacity{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-shadow{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.transition-transform{transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.duration-200{--tw-duration:200ms;transition-duration:.2s}.duration-1000{--tw-duration:1000ms;transition-duration:1s}.ease-in-out{--tw-ease:var(--ease-in-out);transition-timing-function:var(--ease-in-out)}.ease-out{--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)}.outline-none{--tw-outline-style:none;outline-style:none}.outline-solid{--tw-outline-style:solid;outline-style:solid}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.divide-x-reverse{:where(&>:not(:last-child)){--tw-divide-x-reverse:1}}.ring-inset{--tw-ring-inset:inset}.group-hover\\:text-gray-800{&:is(:where(.group):hover *){@media (hover:hover){color:var(--color-gray-800)}}}.group-hover\\:opacity-100{&:is(:where(.group):hover *){@media (hover:hover){opacity:100%}}}.group-data-\\[state\\=open\\]\\:rotate-180{&:is(:where(.group)[data-state=open] *){rotate:180deg}}.group-\\[\\.destructive\\]\\:text-red-300{&:is(:where(.group):is(.destructive) *){color:var(--color-red-300)}}.group-\\[\\.is-link-group\\]\\:text-gray-500\\/90{&:is(:where(.group):is(.is-link-group) *){color:color-mix(in srgb,#6b7280 90%,transparent);@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,var(--color-gray-500) 90%,transparent)}}}.group-\\[\\.is-link-group\\]\\:text-indigo-500{&:is(:where(.group):is(.is-link-group) *){color:var(--color-indigo-500)}}.group-\\[\\.toaster\\]\\:shadow-lg{&:is(:where(.group):is(.toaster) *){--tw-shadow:0 10px 15px -3px var(--tw-shadow-color,rgba(0,0,0,.1)),0 4px 6px -4px var(--tw-shadow-color,rgba(0,0,0,.1));box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.peer-disabled\\:cursor-not-allowed{&:is(:where(.peer):disabled~*){cursor:not-allowed}}.peer-disabled\\:opacity-70{&:is(:where(.peer):disabled~*){opacity:70%}}.file\\:border-0{&::file-selector-button{border-style:var(--tw-border-style);border-width:0}}.file\\:bg-transparent{&::file-selector-button{background-color:transparent}}.file\\:text-sm{&::file-selector-button{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}}.file\\:font-medium{&::file-selector-button{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}}.before\\:absolute{&:before{content:var(--tw-content);position:absolute}}.before\\:inset-0{&:before{content:var(--tw-content);inset:calc(var(--spacing)*0)}}.before\\:-z-10{&:before{content:var(--tw-content);z-index:-10}}.before\\:bg-white{&:before{background-color:var(--color-white);content:var(--tw-content)}}.before\\:backdrop-blur-md{&:before{--tw-backdrop-blur:blur(var(--blur-md));-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);content:var(--tw-content)}}.after\\:absolute{&:after{content:var(--tw-content);position:absolute}}.after\\:inset-x-0{&:after{content:var(--tw-content);inset-inline:calc(var(--spacing)*0)}}.after\\:inset-y-0{&:after{content:var(--tw-content);inset-block:calc(var(--spacing)*0)}}.after\\:top-full{&:after{content:var(--tw-content);top:100%}}.after\\:left-1\\/2{&:after{content:var(--tw-content);left:50%}}.after\\:-z-10{&:after{content:var(--tw-content);z-index:-10}}.after\\:h-px{&:after{content:var(--tw-content);height:1px}}.after\\:w-1{&:after{content:var(--tw-content);width:calc(var(--spacing)*1)}}.after\\:-translate-x-1\\/2{&:after{--tw-translate-x:-50%;content:var(--tw-content);translate:var(--tw-translate-x) var(--tw-translate-y)}}.after\\:bg-gray-200{&:after{background-color:var(--color-gray-200);content:var(--tw-content)}}.first\\:rounded-l-md{&:first-child{border-bottom-left-radius:var(--radius-md);border-top-left-radius:var(--radius-md)}}.first\\:border-l{&:first-child{border-left-style:var(--tw-border-style);border-left-width:1px}}.last\\:mb-0{&:last-child{margin-bottom:calc(var(--spacing)*0)}}.last\\:rounded-r-md{&:last-child{border-bottom-right-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}}.focus-within\\:relative{&:focus-within{position:relative}}.focus-within\\:z-20{&:focus-within{z-index:20}}.hover\\:border-gray-800{&:hover{@media (hover:hover){border-color:var(--color-gray-800)}}}.hover\\:bg-gray-100{&:hover{@media (hover:hover){background-color:var(--color-gray-100)}}}.hover\\:text-gray-400{&:hover{@media (hover:hover){color:var(--color-gray-400)}}}.hover\\:text-gray-500{&:hover{@media (hover:hover){color:var(--color-gray-500)}}}.hover\\:text-gray-600{&:hover{@media (hover:hover){color:var(--color-gray-600)}}}.hover\\:text-gray-800{&:hover{@media (hover:hover){color:var(--color-gray-800)}}}.hover\\:text-gray-900{&:hover{@media (hover:hover){color:var(--color-gray-900)}}}.hover\\:underline{&:hover{@media (hover:hover){text-decoration-line:underline}}}.hover\\:opacity-100{&:hover{@media (hover:hover){opacity:100%}}}.hover\\:shadow-xl{&:hover{@media (hover:hover){--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,rgba(0,0,0,.1)),0 8px 10px -6px var(--tw-shadow-color,rgba(0,0,0,.1));box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}}.group-\\[\\.destructive\\]\\:hover\\:text-red-50{&:is(:where(.group):is(.destructive) *){&:hover{@media (hover:hover){color:var(--color-red-50)}}}}.hover\\:group-\\[\\.is-link-group\\]\\:text-gray-700{&:hover{@media (hover:hover){&:is(:where(.group):is(.is-link-group) *){color:var(--color-gray-700)}}}}.focus\\:opacity-100{&:focus{opacity:100%}}.focus\\:ring-2{&:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus\\:ring-offset-2{&:focus{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}}.focus\\:outline-hidden{&:focus{--tw-outline-style:none;outline-style:none;@media (forced-colors:active){outline:2px solid transparent;outline-offset:2px}}}.focus\\:outline-none{&:focus{--tw-outline-style:none;outline-style:none}}.group-\\[\\.destructive\\]\\:focus\\:ring-red-400{&:is(:where(.group):is(.destructive) *){&:focus{--tw-ring-color:var(--color-red-400)}}}.group-\\[\\.destructive\\]\\:focus\\:ring-offset-red-600{&:is(:where(.group):is(.destructive) *){&:focus{--tw-ring-offset-color:var(--color-red-600)}}}.focus-visible\\:ring-1{&:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus-visible\\:ring-2{&:focus-visible{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.focus-visible\\:ring-offset-1{&:focus-visible{--tw-ring-offset-width:1px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}}.focus-visible\\:ring-offset-2{&:focus-visible{--tw-ring-offset-width:2px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)}}.focus-visible\\:outline-none{&:focus-visible{--tw-outline-style:none;outline-style:none}}.disabled\\:pointer-events-none{&:disabled{pointer-events:none}}.disabled\\:cursor-not-allowed{&:disabled{cursor:not-allowed}}.disabled\\:opacity-50{&:disabled{opacity:50%}}.has-\\[\\:disabled\\]\\:opacity-50{&:has(:is(:disabled)){opacity:50%}}.aria-selected\\:opacity-30{&[aria-selected=true]{opacity:30%}}.aria-selected\\:opacity-100{&[aria-selected=true]{opacity:100%}}.data-\\[disabled\\]\\:pointer-events-none{&[data-disabled]{pointer-events:none}}.data-\\[disabled\\]\\:opacity-50{&[data-disabled]{opacity:50%}}.data-\\[disabled\\=true\\]\\:pointer-events-none{&[data-disabled=true]{pointer-events:none}}.data-\\[disabled\\=true\\]\\:opacity-50{&[data-disabled=true]{opacity:50%}}.data-\\[panel-group-direction\\=vertical\\]\\:h-px{&[data-panel-group-direction=vertical]{height:1px}}.data-\\[panel-group-direction\\=vertical\\]\\:w-full{&[data-panel-group-direction=vertical]{width:100%}}.data-\\[panel-group-direction\\=vertical\\]\\:flex-col{&[data-panel-group-direction=vertical]{flex-direction:column}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:left-0{&[data-panel-group-direction=vertical]{&:after{content:var(--tw-content);left:calc(var(--spacing)*0)}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:h-1{&[data-panel-group-direction=vertical]{&:after{content:var(--tw-content);height:calc(var(--spacing)*1)}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:w-full{&[data-panel-group-direction=vertical]{&:after{content:var(--tw-content);width:100%}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:translate-x-0{&[data-panel-group-direction=vertical]{&:after{--tw-translate-x:calc(var(--spacing)*0);content:var(--tw-content);translate:var(--tw-translate-x) var(--tw-translate-y)}}}.data-\\[panel-group-direction\\=vertical\\]\\:after\\:-translate-y-1\\/2{&[data-panel-group-direction=vertical]{&:after{--tw-translate-y:-50%;content:var(--tw-content);translate:var(--tw-translate-x) var(--tw-translate-y)}}}.data-\\[selected\\=true\\]\\:font-bold{&[data-selected=true]{--tw-font-weight:var(--font-weight-bold);font-weight:var(--font-weight-bold)}}.data-\\[selected\\=true\\]\\:text-white{&[data-selected=true]{color:var(--color-white)}}.data-\\[side\\=bottom\\]\\:translate-y-1{&[data-side=bottom]{--tw-translate-y:calc(var(--spacing)*1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[side\\=left\\]\\:-translate-x-1{&[data-side=left]{--tw-translate-x:calc(var(--spacing)*-1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[side\\=right\\]\\:translate-x-1{&[data-side=right]{--tw-translate-x:calc(var(--spacing)*1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[side\\=top\\]\\:-translate-y-1{&[data-side=top]{--tw-translate-y:calc(var(--spacing)*-1);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[state\\=active\\]\\:shadow-sm{&[data-state=active]{--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02));box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}.data-\\[state\\=checked\\]\\:translate-x-5{&[data-state=checked]{--tw-translate-x:calc(var(--spacing)*5);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[state\\=closed\\]\\:duration-300{&[data-state=closed]{--tw-duration:300ms;transition-duration:.3s}}.data-\\[state\\=open\\]\\:duration-500{&[data-state=open]{--tw-duration:500ms;transition-duration:.5s}}.data-\\[state\\=unchecked\\]\\:translate-x-0{&[data-state=unchecked]{--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=cancel\\]\\:translate-x-0{&[data-swipe=cancel]{--tw-translate-x:calc(var(--spacing)*0);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=end\\]\\:translate-x-\\[var\\(--radix-toast-swipe-end-x\\)\\]{&[data-swipe=end]{--tw-translate-x:var(--radix-toast-swipe-end-x);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=move\\]\\:translate-x-\\[var\\(--radix-toast-swipe-move-x\\)\\]{&[data-swipe=move]{--tw-translate-x:var(--radix-toast-swipe-move-x);translate:var(--tw-translate-x) var(--tw-translate-y)}}.data-\\[swipe\\=move\\]\\:transition-none{&[data-swipe=move]{transition-property:none}}.max-lg\\:before\\:bg-white\\/90,.max-lg\\:shadow-sm{@media (width < 64rem){&:before{background-color:color-mix(in srgb,#fff 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-white) 90%,transparent)}}}}.sm\\:bottom-0,.sm\\:flex-col,.sm\\:flex-row,.sm\\:gap-2\\.5,.sm\\:justify-end,.sm\\:max-w-sm,.sm\\:mt-0,.sm\\:right-0,.sm\\:space-y-0,.sm\\:top-auto{@media (width >= 40rem){:where(&>:not(:last-child)){--tw-space-y-reverse:0;margin-block-end:calc(var(--spacing)*0*(1 - var(--tw-space-y-reverse)));margin-block-start:calc(var(--spacing)*0*var(--tw-space-y-reverse))}}}.sm\\:space-x-2{@media (width >= 40rem){:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*2*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*2*var(--tw-space-x-reverse))}}}.sm\\:space-x-4{@media (width >= 40rem){:where(&>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-end:calc(var(--spacing)*4*(1 - var(--tw-space-x-reverse)));margin-inline-start:calc(var(--spacing)*4*var(--tw-space-x-reverse))}}}.lg\\:before\\:bg-gray-100\\/90,.lg\\:block,.lg\\:border-b,.lg\\:flex\\!,.lg\\:hidden,.lg\\:inline-flex,.lg\\:left-auto,.lg\\:opacity-0,.lg\\:overflow-y-auto,.lg\\:px-8,.lg\\:static,.lg\\:top-auto,.lg\\:translate-x-0,.lg\\:w-20,.lg\\:z-auto,.md\\:absolute,.md\\:max-w-\\[420px\\],.md\\:w-\\[var\\(--radix-navigation-menu-viewport-width\\)\\],.md\\:w-auto,.sm\\:px-2,.sm\\:px-6,.sm\\:rounded-lg,.sm\\:text-left{@media (width >= 64rem){&:before{background-color:color-mix(in srgb,#f3f4f6 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-100) 90%,transparent)}}}}.lg\\:hover\\:bg-gray-200{@media (width >= 64rem){&:hover{@media (hover:hover){background-color:var(--color-gray-200)}}}}.\\32 xl\\:block,.\\32 xl\\:hidden,.\\32 xl\\:opacity-100,.\\32 xl\\:w-64\\!,.dark\\:block{&:is(.dark *){display:block}}.dark\\:hidden{&:is(.dark *){display:none}}.dark\\:border-gray-700\\/60{&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}}.dark\\:bg-gray-700\\/60{&:is(.dark *){background-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}}.dark\\:bg-gray-800{&:is(.dark *){background-color:var(--color-gray-800)}}.dark\\:bg-gray-900{&:is(.dark *){background-color:var(--color-gray-900)}}.dark\\:bg-slate-900{&:is(.dark *){background-color:var(--color-slate-900)}}.dark\\:from-indigo-500\\/\\[0\\.24\\]{&:is(.dark *){--tw-gradient-from:color-mix(in srgb,#9b49ff 24%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-gradient-from:color-mix(in oklab,var(--color-indigo-500) 24%,transparent)}--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from) var(--tw-gradient-from-position),var(--tw-gradient-to) var(--tw-gradient-to-position))}}.dark\\:text-gray-100{&:is(.dark *){color:var(--color-gray-100)}}.dark\\:text-gray-400{&:is(.dark *){color:var(--color-gray-400)}}.dark\\:text-gray-400\\/80{&:is(.dark *){color:color-mix(in srgb,#9ca3af 80%,transparent);@supports (color:color-mix(in lab,red,red)){color:color-mix(in oklab,var(--color-gray-400) 80%,transparent)}}}.dark\\:text-gray-500{&:is(.dark *){color:var(--color-gray-500)}}.dark\\:text-violet-400{&:is(.dark *){color:var(--color-violet-400)}}.dark\\:text-white{&:is(.dark *){color:var(--color-white)}}.dark\\:group-hover\\:text-white{&:is(.dark *){&:is(:where(.group):hover *){@media (hover:hover){color:var(--color-white)}}}}.dark\\:group-\\[\\.is-link-group\\]\\:text-gray-400{&:is(.dark *){&:is(:where(.group):is(.is-link-group) *){color:var(--color-gray-400)}}}.dark\\:before\\:bg-gray-800{&:is(.dark *){&:before{background-color:var(--color-gray-800);content:var(--tw-content)}}}.dark\\:before\\:bg-gray-900{&:is(.dark *){&:before{background-color:var(--color-gray-900);content:var(--tw-content)}}}.dark\\:after\\:bg-gray-700\\/60{&:is(.dark *){&:after{background-color:color-mix(in srgb,#374151 60%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}}}.dark\\:hover\\:bg-gray-700\\/50{&:is(.dark *){&:hover{@media (hover:hover){background-color:color-mix(in srgb,#374151 50%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 50%,transparent)}}}}}.dark\\:hover\\:text-gray-400{&:is(.dark *){&:hover{@media (hover:hover){color:var(--color-gray-400)}}}}.dark\\:hover\\:text-white{&:is(.dark *){&:hover{@media (hover:hover){color:var(--color-white)}}}}.dark\\:hover\\:group-\\[\\.is-link-group\\]\\:text-gray-200{&:is(.dark *){&:hover{@media (hover:hover){&:is(:where(.group):is(.is-link-group) *){color:var(--color-gray-200)}}}}}.dark\\:max-lg\\:before\\:bg-gray-800\\/90{&:is(.dark *){@media (width < 64rem){&:before{background-color:color-mix(in srgb,#1f2937 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-800) 90%,transparent)}}}}}.dark\\:lg\\:before\\:bg-gray-900\\/90{&:is(.dark *){@media (width >= 64rem){&:before{background-color:color-mix(in srgb,#111827 90%,transparent);content:var(--tw-content);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-900) 90%,transparent)}}}}}.dark\\:lg\\:hover\\:bg-gray-800{&:is(.dark *){@media (width >= 64rem){&:hover{@media (hover:hover){background-color:var(--color-gray-800)}}}}}.sidebar-expanded\\:rotate-180{&:is(.sidebar-expanded *){rotate:180deg}}.sidebar-expanded\\:bg-red-500{&:is(.sidebar-expanded *){background-color:var(--color-red-500)}}.lg\\:sidebar-expanded\\:block{@media (width >= 64rem){&:is(.sidebar-expanded *){display:block}}}.lg\\:sidebar-expanded\\:hidden{@media (width >= 64rem){&:is(.sidebar-expanded *){display:none}}}.lg\\:sidebar-expanded\\:\\!w-64{@media (width >= 64rem){&:is(.sidebar-expanded *){width:calc(var(--spacing)*64)!important}}}.lg\\:sidebar-expanded\\:bg-red-500{@media (width >= 64rem){&:is(.sidebar-expanded *){background-color:var(--color-red-500)}}}.lg\\:sidebar-expanded\\:opacity-100{@media (width >= 64rem){&:is(.sidebar-expanded *){opacity:100%}}}.\\[\\&_\\.recharts-dot\\[stroke\\=\\'\\#fff\\'\\]\\]\\:stroke-transparent{& .recharts-dot[stroke=\"#fff\"]{stroke:transparent}}.\\[\\&_\\.recharts-layer\\]\\:outline-none{& .recharts-layer{--tw-outline-style:none;outline-style:none}}.\\[\\&_\\.recharts-sector\\]\\:outline-none{& .recharts-sector{--tw-outline-style:none;outline-style:none}}.\\[\\&_\\.recharts-sector\\[stroke\\=\\'\\#fff\\'\\]\\]\\:stroke-transparent{& .recharts-sector[stroke=\"#fff\"]{stroke:transparent}}.\\[\\&_\\.recharts-surface\\]\\:outline-none{& .recharts-surface{--tw-outline-style:none;outline-style:none}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:px-2{& [cmdk-group-heading]{padding-inline:calc(var(--spacing)*2)}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:py-1\\.5{& [cmdk-group-heading]{padding-block:calc(var(--spacing)*1.5)}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:text-xs{& [cmdk-group-heading]{font-size:var(--text-xs);line-height:var(--tw-leading,var(--text-xs--line-height))}}.\\[\\&_\\[cmdk-group-heading\\]\\]\\:font-medium{& [cmdk-group-heading]{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}}.\\[\\&_\\[cmdk-group\\]\\]\\:px-2{& [cmdk-group]{padding-inline:calc(var(--spacing)*2)}}.\\[\\&_\\[cmdk-group\\]\\:not\\(\\[hidden\\]\\)_\\~\\[cmdk-group\\]\\]\\:pt-0{& [cmdk-group]:not([hidden])~[cmdk-group]{padding-top:calc(var(--spacing)*0)}}.\\[\\&_\\[cmdk-input-wrapper\\]_svg\\]\\:h-5{& [cmdk-input-wrapper] svg{height:calc(var(--spacing)*5)}}.\\[\\&_\\[cmdk-input-wrapper\\]_svg\\]\\:w-5{& [cmdk-input-wrapper] svg{width:calc(var(--spacing)*5)}}.\\[\\&_\\[cmdk-input\\]\\]\\:h-12{& [cmdk-input]{height:calc(var(--spacing)*12)}}.\\[\\&_\\[cmdk-item\\]\\]\\:px-2{& [cmdk-item]{padding-inline:calc(var(--spacing)*2)}}.\\[\\&_\\[cmdk-item\\]\\]\\:py-3{& [cmdk-item]{padding-block:calc(var(--spacing)*3)}}.\\[\\&_\\[cmdk-item\\]_svg\\]\\:h-5{& [cmdk-item] svg{height:calc(var(--spacing)*5)}}.\\[\\&_\\[cmdk-item\\]_svg\\]\\:w-5{& [cmdk-item] svg{width:calc(var(--spacing)*5)}}.\\[\\&_p\\]\\:leading-relaxed{& p{--tw-leading:var(--leading-relaxed);line-height:var(--leading-relaxed)}}.\\[\\&_tr\\]\\:border-b{& tr{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}}.\\[\\&_tr\\:last-child\\]\\:border-0{& tr:last-child{border-style:var(--tw-border-style);border-width:0}}.first\\:\\[\\&\\:has\\(\\[aria-selected\\]\\)\\]\\:rounded-l-md{&:first-child{&:has([aria-selected]){border-bottom-left-radius:var(--radius-md);border-top-left-radius:var(--radius-md)}}}.last\\:\\[\\&\\:has\\(\\[aria-selected\\]\\)\\]\\:rounded-r-md{&:last-child{&:has([aria-selected]){border-bottom-right-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}}}.\\[\\&\\:has\\(\\[aria-selected\\]\\.day-range-end\\)\\]\\:rounded-r-md{&:has([aria-selected].day-range-end){border-bottom-right-radius:var(--radius-md);border-top-right-radius:var(--radius-md)}}.\\[\\&\\:has\\(\\[role\\=checkbox\\]\\)\\]\\:pr-0{&:has([role=checkbox]){padding-right:calc(var(--spacing)*0)}}.\\[\\&\\>span\\]\\:line-clamp-1{&>span{-webkit-box-orient:vertical;-webkit-line-clamp:1;display:-webkit-box;overflow:hidden}}.\\[\\&\\>svg\\]\\:absolute{&>svg{position:absolute}}.\\[\\&\\>svg\\]\\:top-4{&>svg{top:calc(var(--spacing)*4)}}.\\[\\&\\>svg\\]\\:left-4{&>svg{left:calc(var(--spacing)*4)}}.\\[\\&\\>svg\\]\\:size-3\\.5{&>svg{height:calc(var(--spacing)*3.5);width:calc(var(--spacing)*3.5)}}.\\[\\&\\>svg\\]\\:h-2\\.5{&>svg{height:calc(var(--spacing)*2.5)}}.\\[\\&\\>svg\\]\\:h-3{&>svg{height:calc(var(--spacing)*3)}}.\\[\\&\\>svg\\]\\:w-2\\.5{&>svg{width:calc(var(--spacing)*2.5)}}.\\[\\&\\>svg\\]\\:w-3{&>svg{width:calc(var(--spacing)*3)}}.\\[\\&\\>svg\\+div\\]\\:translate-y-\\[-3px\\]{&>svg+div{--tw-translate-y:-3px;translate:var(--tw-translate-x) var(--tw-translate-y)}}.\\[\\&\\>svg\\~\\*\\]\\:pl-7{&>svg~*{padding-left:calc(var(--spacing)*7)}}.\\[\\&\\>tr\\]\\:last\\:border-b-0{&>tr{&:last-child{border-bottom-style:var(--tw-border-style);border-bottom-width:0}}}.\\[\\&\\[data-panel-group-direction\\=vertical\\]\\>div\\]\\:rotate-90{&[data-panel-group-direction=vertical]>div{rotate:90deg}}.\\[\\&\\[data-state\\=open\\]\\>svg\\]\\:rotate-180{&[data-state=open]>svg{rotate:180deg}}}@layer components{.h1{--tw-font-weight:var(--font-weight-extrabold);--tw-tracking:var(--tracking-tighter);font-size:var(--text-4xl);font-weight:var(--font-weight-extrabold);letter-spacing:var(--tw-tracking,var(--text-4xl--letter-spacing));letter-spacing:var(--tracking-tighter);line-height:var(--tw-leading,var(--text-4xl--line-height))}.h2{--tw-font-weight:var(--font-weight-extrabold);--tw-tracking:var(--tracking-tighter);letter-spacing:var(--tw-tracking,var(--text-3xl--letter-spacing));letter-spacing:var(--tracking-tighter)}.h2,.h3{font-size:var(--text-3xl);font-weight:var(--font-weight-extrabold);line-height:var(--tw-leading,var(--text-3xl--line-height))}.h3{letter-spacing:var(--tw-tracking,var(--text-3xl--letter-spacing))}.h3,.h4{--tw-font-weight:var(--font-weight-extrabold)}.h4{--tw-tracking:var(--tracking-tight);font-size:var(--text-2xl);font-weight:var(--font-weight-extrabold);letter-spacing:var(--tw-tracking,var(--text-2xl--letter-spacing));letter-spacing:var(--tracking-tight);line-height:var(--tw-leading,var(--text-2xl--line-height))}@media (width >= 48rem){.h1{font-size:var(--text-5xl);letter-spacing:var(--tw-tracking,var(--text-5xl--letter-spacing));line-height:var(--tw-leading,var(--text-5xl--line-height))}.h2{font-size:var(--text-4xl);letter-spacing:var(--tw-tracking,var(--text-4xl--letter-spacing));line-height:var(--tw-leading,var(--text-4xl--line-height))}}.btn,.btn-lg,.btn-sm,.btn-xs{--tw-leading:calc(var(--spacing)*5);--tw-font-weight:var(--font-weight-medium);--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02));align-items:center;border-color:transparent;border-radius:var(--radius-lg);border-style:var(--tw-border-style);border-width:1px;box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);display:inline-flex;font-size:var(--text-sm);font-weight:var(--font-weight-medium);justify-content:center;line-height:var(--tw-leading,var(--text-sm--line-height));line-height:calc(var(--spacing)*5);transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function))}.btn-primary{background-color:var(--color-indigo-500);border-radius:var(--radius-md);color:var(--color-white);cursor:pointer;padding-block:calc(var(--spacing)*2)!important;padding-inline:calc(var(--spacing)*4)!important;&:hover{@media (hover:hover){background-color:var(--color-indigo-600)}}}.btn-secondary{background-color:var(--color-white);border-color:var(--color-gray-200);border-radius:var(--radius-md);border-style:var(--tw-border-style);border-width:1px;color:var(--color-gray-600);cursor:pointer;padding-block:calc(var(--spacing)*2)!important;padding-inline:calc(var(--spacing)*4)!important;&:hover{@media (hover:hover){background-color:var(--color-gray-50)}}&:is(.dark *){border-color:var(--color-gray-600)}&:is(.dark *){background-color:var(--color-gray-700)}&:is(.dark *){color:var(--color-gray-200)}&:is(.dark *){&:hover{@media (hover:hover){background-color:var(--color-gray-600)}}}}.btn-option{--tw-font-weight:var(--font-weight-semibold);background-color:var(--color-gray-100);border-radius:var(--radius-md);cursor:pointer;font-size:var(--text-xs);font-weight:var(--font-weight-semibold);line-height:var(--tw-leading,var(--text-xs--line-height));padding-block:calc(var(--spacing)*2);transition-duration:var(--tw-duration,var(--default-transition-duration));transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));&:hover{@media (hover:hover){background-color:var(--color-gray-200)}}&:is(.dark *){background-color:var(--color-gray-700)}&:is(.dark *){&:hover{@media (hover:hover){background-color:var(--color-gray-900)}}}}.btn-black{background-color:var(--color-gray-900);color:var(--color-gray-100);cursor:pointer;&:hover{@media (hover:hover){background-color:var(--color-gray-800)}}&:is(.dark *){background-color:var(--color-gray-100)}&:is(.dark *){color:var(--color-gray-800)}&:is(.dark *){&:hover{@media (hover:hover){background-color:var(--color-white)}}}}.btn{padding-block:calc(var(--spacing)*2);padding-inline:calc(var(--spacing)*3)}.btn-lg{padding-block:calc(var(--spacing)*3);padding-inline:calc(var(--spacing)*4)}.btn-sm{padding-block:calc(var(--spacing)*1)}.btn-sm,.btn-xs{padding-inline:calc(var(--spacing)*2)}.btn-xs{padding-block:calc(var(--spacing)*.5)}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}.form-checkbox,.form-input,.form-multiselect,.form-radio,.form-select,.form-textarea{background-color:var(--color-white);border-style:var(--tw-border-style);border-width:1px;&:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);--tw-ring-offset-width:0px;--tw-ring-offset-shadow:var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}&:is(.dark *){background-color:color-mix(in srgb,#111827 30%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-900) 30%,transparent)}}&:is(.dark *){&:disabled{border-color:var(--color-gray-700)}}&:is(.dark *){&:disabled{background-color:color-mix(in srgb,#374151 30%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 30%,transparent)}}}&:is(.dark *){&:disabled{&:hover{@media (hover:hover){border-color:var(--color-gray-700)}}}}}.form-checkbox{border-radius:var(--radius-sm)}.form-input,.form-multiselect,.form-select,.form-textarea{--tw-leading:calc(var(--spacing)*5);--tw-shadow:0 1px 1px 0 var(--tw-shadow-color,rgba(0,0,0,.05)),0 1px 2px 0 var(--tw-shadow-color,rgba(0,0,0,.02));border-color:var(--color-gray-200);border-radius:var(--radius-lg);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);color:var(--color-gray-800);font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height));line-height:calc(var(--spacing)*5);padding-block:calc(var(--spacing)*2);padding-inline:calc(var(--spacing)*3);&:hover{@media (hover:hover){border-color:var(--color-gray-300)}}&:focus{border-color:var(--color-gray-300)}&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}&:is(.dark *){color:var(--color-gray-100)}&:is(.dark *){&:hover{@media (hover:hover){border-color:var(--color-gray-600)}}}&:is(.dark *){&:focus{border-color:var(--color-gray-600)}}}.form-input,.form-textarea{&::-moz-placeholder{color:var(--color-gray-400)}&::placeholder{color:var(--color-gray-400)}&:is(.dark *){&::-moz-placeholder{color:var(--color-gray-500)}&::placeholder{color:var(--color-gray-500)}}}.form-select{padding-right:calc(var(--spacing)*10)}.form-checkbox,.form-radio{border-color:var(--color-gray-300);border-style:var(--tw-border-style);border-width:1px;color:var(--color-violet-500);&:checked{background-color:var(--color-violet-500);border-color:transparent}&:focus-visible{&:not(:checked){--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}}&:focus-visible{&:not(:checked){--tw-ring-color:color-mix(in srgb,#8470ff 50%,transparent);@supports (color:color-mix(in lab,red,red)){--tw-ring-color:color-mix(in oklab,var(--color-violet-500) 50%,transparent)}}}&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}&:is(.dark *){&:checked{border-color:transparent}}}.form-switch{position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;width:44px}.form-switch label{cursor:pointer;height:calc(var(--spacing)*6);overflow:hidden}.form-switch label,.form-switch label>span:first-child{border-radius:calc(infinity * 1px);display:block}.form-switch label>span:first-child{height:20px;left:2px;position:absolute;right:50%;top:2px;transition:all .15s ease-out;width:20px}.form-switch input[type=checkbox]+label{background-color:var(--color-gray-400);&:is(.dark *){background-color:var(--color-gray-700)}}.form-switch input[type=checkbox]:checked+label{background-color:var(--color-violet-500)}.form-switch input[type=checkbox]:checked+label>span:first-child{left:22px}.form-switch input[type=checkbox]:disabled+label{background-color:var(--color-gray-100);border-color:var(--color-gray-200);border-style:var(--tw-border-style);border-width:1px;cursor:not-allowed;&:is(.dark *){border-color:color-mix(in srgb,#374151 60%,transparent);@supports (color:color-mix(in lab,red,red)){border-color:color-mix(in oklab,var(--color-gray-700) 60%,transparent)}}&:is(.dark *){background-color:color-mix(in srgb,#374151 20%,transparent);@supports (color:color-mix(in lab,red,red)){background-color:color-mix(in oklab,var(--color-gray-700) 20%,transparent)}}}.form-switch input[type=checkbox]:disabled+label>span:first-child{background-color:var(--color-gray-400);&:is(.dark *){background-color:var(--color-gray-600)}}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.video-js{height:100%!important;-o-object-fit:contain!important;object-fit:contain!important;width:100%!important}}.la,.lab,.lad,.lal,.lar,.las{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto}.la-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.la-xs{font-size:.75em}.la-sm{font-size:.875em}.la-1x{font-size:1em}.la-2x{font-size:2em}.la-3x{font-size:3em}.la-4x{font-size:4em}.la-5x{font-size:5em}.la-6x{font-size:6em}.la-7x{font-size:7em}.la-8x{font-size:8em}.la-9x{font-size:9em}.la-10x{font-size:10em}.la-fw{text-align:center;width:1.25em}.la-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.la-ul>li{position:relative}.la-li{left:-2em;line-height:inherit;position:absolute;text-align:center;width:2em}.la-border{border:.08em solid #eee;border-radius:.1em;padding:.2em .25em .15em}.la-pull-left{float:left}.la-pull-right{float:right}.la.la-pull-left,.lab.la-pull-left,.lal.la-pull-left,.lar.la-pull-left,.las.la-pull-left{margin-right:.3em}.la.la-pull-right,.lab.la-pull-right,.lal.la-pull-right,.lar.la-pull-right,.las.la-pull-right{margin-left:.3em}.la-spin{animation:la-spin 2s linear infinite}.la-pulse{animation:la-spin 1s steps(8) infinite}@keyframes la-spin{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.la-rotate-90{transform:rotate(90deg)}.la-rotate-180{transform:rotate(180deg)}.la-rotate-270{transform:rotate(270deg)}.la-flip-horizontal{transform:scaleX(-1)}.la-flip-vertical{transform:scaleY(-1)}.la-flip-both,.la-flip-horizontal.la-flip-vertical{transform:scale(-1)}:root .la-flip-both,:root .la-flip-horizontal,:root .la-flip-vertical,:root .la-rotate-180,:root .la-rotate-270,:root .la-rotate-90{filter:none}.la-stack{display:inline-block;height:2em;line-height:2em;position:relative;vertical-align:middle;width:2.5em}.la-stack-1x,.la-stack-2x{left:0;position:absolute;text-align:center;width:100%}.la-stack-1x{line-height:inherit}.la-stack-2x{font-size:2em}.la-inverse{color:#fff}.la-500px:before{content:\"\\f26e\"}.la-accessible-icon:before{content:\"\\f368\"}.la-accusoft:before{content:\"\\f369\"}.la-acquisitions-incorporated:before{content:\"\\f6af\"}.la-ad:before{content:\"\\f641\"}.la-address-book:before{content:\"\\f2b9\"}.la-address-card:before{content:\"\\f2bb\"}.la-adjust:before{content:\"\\f042\"}.la-adn:before{content:\"\\f170\"}.la-adobe:before{content:\"\\f778\"}.la-adversal:before{content:\"\\f36a\"}.la-affiliatetheme:before{content:\"\\f36b\"}.la-air-freshener:before{content:\"\\f5d0\"}.la-airbnb:before{content:\"\\f834\"}.la-algolia:before{content:\"\\f36c\"}.la-align-center:before{content:\"\\f037\"}.la-align-justify:before{content:\"\\f039\"}.la-align-left:before{content:\"\\f036\"}.la-align-right:before{content:\"\\f038\"}.la-alipay:before{content:\"\\f642\"}.la-allergies:before{content:\"\\f461\"}.la-amazon:before{content:\"\\f270\"}.la-amazon-pay:before{content:\"\\f42c\"}.la-ambulance:before{content:\"\\f0f9\"}.la-american-sign-language-interpreting:before{content:\"\\f2a3\"}.la-amilia:before{content:\"\\f36d\"}.la-anchor:before{content:\"\\f13d\"}.la-android:before{content:\"\\f17b\"}.la-angellist:before{content:\"\\f209\"}.la-angle-double-down:before{content:\"\\f103\"}.la-angle-double-left:before{content:\"\\f100\"}.la-angle-double-right:before{content:\"\\f101\"}.la-angle-double-up:before{content:\"\\f102\"}.la-angle-down:before{content:\"\\f107\"}.la-angle-left:before{content:\"\\f104\"}.la-angle-right:before{content:\"\\f105\"}.la-angle-up:before{content:\"\\f106\"}.la-angry:before{content:\"\\f556\"}.la-angrycreative:before{content:\"\\f36e\"}.la-angular:before{content:\"\\f420\"}.la-ankh:before{content:\"\\f644\"}.la-app-store:before{content:\"\\f36f\"}.la-app-store-ios:before{content:\"\\f370\"}.la-apper:before{content:\"\\f371\"}.la-apple:before{content:\"\\f179\"}.la-apple-alt:before{content:\"\\f5d1\"}.la-apple-pay:before{content:\"\\f415\"}.la-archive:before{content:\"\\f187\"}.la-archway:before{content:\"\\f557\"}.la-arrow-alt-circle-down:before{content:\"\\f358\"}.la-arrow-alt-circle-left:before{content:\"\\f359\"}.la-arrow-alt-circle-right:before{content:\"\\f35a\"}.la-arrow-alt-circle-up:before{content:\"\\f35b\"}.la-arrow-circle-down:before{content:\"\\f0ab\"}.la-arrow-circle-left:before{content:\"\\f0a8\"}.la-arrow-circle-right:before{content:\"\\f0a9\"}.la-arrow-circle-up:before{content:\"\\f0aa\"}.la-arrow-down:before{content:\"\\f063\"}.la-arrow-left:before{content:\"\\f060\"}.la-arrow-right:before{content:\"\\f061\"}.la-arrow-up:before{content:\"\\f062\"}.la-arrows-alt:before{content:\"\\f0b2\"}.la-arrows-alt-h:before{content:\"\\f337\"}.la-arrows-alt-v:before{content:\"\\f338\"}.la-artstation:before{content:\"\\f77a\"}.la-assistive-listening-systems:before{content:\"\\f2a2\"}.la-asterisk:before{content:\"\\f069\"}.la-asymmetrik:before{content:\"\\f372\"}.la-at:before{content:\"\\f1fa\"}.la-atlas:before{content:\"\\f558\"}.la-atlassian:before{content:\"\\f77b\"}.la-atom:before{content:\"\\f5d2\"}.la-audible:before{content:\"\\f373\"}.la-audio-description:before{content:\"\\f29e\"}.la-autoprefixer:before{content:\"\\f41c\"}.la-avianex:before{content:\"\\f374\"}.la-aviato:before{content:\"\\f421\"}.la-award:before{content:\"\\f559\"}.la-aws:before{content:\"\\f375\"}.la-baby:before{content:\"\\f77c\"}.la-baby-carriage:before{content:\"\\f77d\"}.la-backspace:before{content:\"\\f55a\"}.la-backward:before{content:\"\\f04a\"}.la-bacon:before{content:\"\\f7e5\"}.la-balance-scale:before{content:\"\\f24e\"}.la-balance-scale-left:before{content:\"\\f515\"}.la-balance-scale-right:before{content:\"\\f516\"}.la-ban:before{content:\"\\f05e\"}.la-band-aid:before{content:\"\\f462\"}.la-bandcamp:before{content:\"\\f2d5\"}.la-barcode:before{content:\"\\f02a\"}.la-bars:before{content:\"\\f0c9\"}.la-baseball-ball:before{content:\"\\f433\"}.la-basketball-ball:before{content:\"\\f434\"}.la-bath:before{content:\"\\f2cd\"}.la-battery-empty:before{content:\"\\f244\"}.la-battery-full:before{content:\"\\f240\"}.la-battery-half:before{content:\"\\f242\"}.la-battery-quarter:before{content:\"\\f243\"}.la-battery-three-quarters:before{content:\"\\f241\"}.la-battle-net:before{content:\"\\f835\"}.la-bed:before{content:\"\\f236\"}.la-beer:before{content:\"\\f0fc\"}.la-behance:before{content:\"\\f1b4\"}.la-behance-square:before{content:\"\\f1b5\"}.la-bell:before{content:\"\\f0f3\"}.la-bell-slash:before{content:\"\\f1f6\"}.la-bezier-curve:before{content:\"\\f55b\"}.la-bible:before{content:\"\\f647\"}.la-bicycle:before{content:\"\\f206\"}.la-biking:before{content:\"\\f84a\"}.la-bimobject:before{content:\"\\f378\"}.la-binoculars:before{content:\"\\f1e5\"}.la-biohazard:before{content:\"\\f780\"}.la-birthday-cake:before{content:\"\\f1fd\"}.la-bitbucket:before{content:\"\\f171\"}.la-bitcoin:before{content:\"\\f379\"}.la-bity:before{content:\"\\f37a\"}.la-black-tie:before{content:\"\\f27e\"}.la-blackberry:before{content:\"\\f37b\"}.la-blender:before{content:\"\\f517\"}.la-blender-phone:before{content:\"\\f6b6\"}.la-blind:before{content:\"\\f29d\"}.la-blog:before{content:\"\\f781\"}.la-blogger:before{content:\"\\f37c\"}.la-blogger-b:before{content:\"\\f37d\"}.la-bluetooth:before{content:\"\\f293\"}.la-bluetooth-b:before{content:\"\\f294\"}.la-bold:before{content:\"\\f032\"}.la-bolt:before{content:\"\\f0e7\"}.la-bomb:before{content:\"\\f1e2\"}.la-bone:before{content:\"\\f5d7\"}.la-bong:before{content:\"\\f55c\"}.la-book:before{content:\"\\f02d\"}.la-book-dead:before{content:\"\\f6b7\"}.la-book-medical:before{content:\"\\f7e6\"}.la-book-open:before{content:\"\\f518\"}.la-book-reader:before{content:\"\\f5da\"}.la-bookmark:before{content:\"\\f02e\"}.la-bootstrap:before{content:\"\\f836\"}.la-border-all:before{content:\"\\f84c\"}.la-border-none:before{content:\"\\f850\"}.la-border-style:before{content:\"\\f853\"}.la-bowling-ball:before{content:\"\\f436\"}.la-box:before{content:\"\\f466\"}.la-box-open:before{content:\"\\f49e\"}.la-boxes:before{content:\"\\f468\"}.la-braille:before{content:\"\\f2a1\"}.la-brain:before{content:\"\\f5dc\"}.la-bread-slice:before{content:\"\\f7ec\"}.la-briefcase:before{content:\"\\f0b1\"}.la-briefcase-medical:before{content:\"\\f469\"}.la-broadcast-tower:before{content:\"\\f519\"}.la-broom:before{content:\"\\f51a\"}.la-brush:before{content:\"\\f55d\"}.la-btc:before{content:\"\\f15a\"}.la-buffer:before{content:\"\\f837\"}.la-bug:before{content:\"\\f188\"}.la-building:before{content:\"\\f1ad\"}.la-bullhorn:before{content:\"\\f0a1\"}.la-bullseye:before{content:\"\\f140\"}.la-burn:before{content:\"\\f46a\"}.la-buromobelexperte:before{content:\"\\f37f\"}.la-bus:before{content:\"\\f207\"}.la-bus-alt:before{content:\"\\f55e\"}.la-business-time:before{content:\"\\f64a\"}.la-buy-n-large:before{content:\"\\f8a6\"}.la-buysellads:before{content:\"\\f20d\"}.la-calculator:before{content:\"\\f1ec\"}.la-calendar:before{content:\"\\f133\"}.la-calendar-alt:before{content:\"\\f073\"}.la-calendar-check:before{content:\"\\f274\"}.la-calendar-day:before{content:\"\\f783\"}.la-calendar-minus:before{content:\"\\f272\"}.la-calendar-plus:before{content:\"\\f271\"}.la-calendar-times:before{content:\"\\f273\"}.la-calendar-week:before{content:\"\\f784\"}.la-camera:before{content:\"\\f030\"}.la-camera-retro:before{content:\"\\f083\"}.la-campground:before{content:\"\\f6bb\"}.la-canadian-maple-leaf:before{content:\"\\f785\"}.la-candy-cane:before{content:\"\\f786\"}.la-cannabis:before{content:\"\\f55f\"}.la-capsules:before{content:\"\\f46b\"}.la-car:before{content:\"\\f1b9\"}.la-car-alt:before{content:\"\\f5de\"}.la-car-battery:before{content:\"\\f5df\"}.la-car-crash:before{content:\"\\f5e1\"}.la-car-side:before{content:\"\\f5e4\"}.la-caret-down:before{content:\"\\f0d7\"}.la-caret-left:before{content:\"\\f0d9\"}.la-caret-right:before{content:\"\\f0da\"}.la-caret-square-down:before{content:\"\\f150\"}.la-caret-square-left:before{content:\"\\f191\"}.la-caret-square-right:before{content:\"\\f152\"}.la-caret-square-up:before{content:\"\\f151\"}.la-caret-up:before{content:\"\\f0d8\"}.la-carrot:before{content:\"\\f787\"}.la-cart-arrow-down:before{content:\"\\f218\"}.la-cart-plus:before{content:\"\\f217\"}.la-cash-register:before{content:\"\\f788\"}.la-cat:before{content:\"\\f6be\"}.la-cc-amazon-pay:before{content:\"\\f42d\"}.la-cc-amex:before{content:\"\\f1f3\"}.la-cc-apple-pay:before{content:\"\\f416\"}.la-cc-diners-club:before{content:\"\\f24c\"}.la-cc-discover:before{content:\"\\f1f2\"}.la-cc-jcb:before{content:\"\\f24b\"}.la-cc-mastercard:before{content:\"\\f1f1\"}.la-cc-paypal:before{content:\"\\f1f4\"}.la-cc-stripe:before{content:\"\\f1f5\"}.la-cc-visa:before{content:\"\\f1f0\"}.la-centercode:before{content:\"\\f380\"}.la-centos:before{content:\"\\f789\"}.la-certificate:before{content:\"\\f0a3\"}.la-chair:before{content:\"\\f6c0\"}.la-chalkboard:before{content:\"\\f51b\"}.la-chalkboard-teacher:before{content:\"\\f51c\"}.la-charging-station:before{content:\"\\f5e7\"}.la-chart-area:before{content:\"\\f1fe\"}.la-chart-bar:before{content:\"\\f080\"}.la-chart-line:before{content:\"\\f201\"}.la-chart-pie:before{content:\"\\f200\"}.la-check:before{content:\"\\f00c\"}.la-check-circle:before{content:\"\\f058\"}.la-check-double:before{content:\"\\f560\"}.la-check-square:before{content:\"\\f14a\"}.la-cheese:before{content:\"\\f7ef\"}.la-chess:before{content:\"\\f439\"}.la-chess-bishop:before{content:\"\\f43a\"}.la-chess-board:before{content:\"\\f43c\"}.la-chess-king:before{content:\"\\f43f\"}.la-chess-knight:before{content:\"\\f441\"}.la-chess-pawn:before{content:\"\\f443\"}.la-chess-queen:before{content:\"\\f445\"}.la-chess-rook:before{content:\"\\f447\"}.la-chevron-circle-down:before{content:\"\\f13a\"}.la-chevron-circle-left:before{content:\"\\f137\"}.la-chevron-circle-right:before{content:\"\\f138\"}.la-chevron-circle-up:before{content:\"\\f139\"}.la-chevron-down:before{content:\"\\f078\"}.la-chevron-left:before{content:\"\\f053\"}.la-chevron-right:before{content:\"\\f054\"}.la-chevron-up:before{content:\"\\f077\"}.la-child:before{content:\"\\f1ae\"}.la-chrome:before{content:\"\\f268\"}.la-chromecast:before{content:\"\\f838\"}.la-church:before{content:\"\\f51d\"}.la-circle:before{content:\"\\f111\"}.la-circle-notch:before{content:\"\\f1ce\"}.la-city:before{content:\"\\f64f\"}.la-clinic-medical:before{content:\"\\f7f2\"}.la-clipboard:before{content:\"\\f328\"}.la-clipboard-check:before{content:\"\\f46c\"}.la-clipboard-list:before{content:\"\\f46d\"}.la-clock:before{content:\"\\f017\"}.la-clone:before{content:\"\\f24d\"}.la-closed-captioning:before{content:\"\\f20a\"}.la-cloud:before{content:\"\\f0c2\"}.la-cloud-download-alt:before{content:\"\\f381\"}.la-cloud-meatball:before{content:\"\\f73b\"}.la-cloud-moon:before{content:\"\\f6c3\"}.la-cloud-moon-rain:before{content:\"\\f73c\"}.la-cloud-rain:before{content:\"\\f73d\"}.la-cloud-showers-heavy:before{content:\"\\f740\"}.la-cloud-sun:before{content:\"\\f6c4\"}.la-cloud-sun-rain:before{content:\"\\f743\"}.la-cloud-upload-alt:before{content:\"\\f382\"}.la-cloudscale:before{content:\"\\f383\"}.la-cloudsmith:before{content:\"\\f384\"}.la-cloudversify:before{content:\"\\f385\"}.la-cocktail:before{content:\"\\f561\"}.la-code:before{content:\"\\f121\"}.la-code-branch:before{content:\"\\f126\"}.la-codepen:before{content:\"\\f1cb\"}.la-codiepie:before{content:\"\\f284\"}.la-coffee:before{content:\"\\f0f4\"}.la-cog:before{content:\"\\f013\"}.la-cogs:before{content:\"\\f085\"}.la-coins:before{content:\"\\f51e\"}.la-columns:before{content:\"\\f0db\"}.la-comment:before{content:\"\\f075\"}.la-comment-alt:before{content:\"\\f27a\"}.la-comment-dollar:before{content:\"\\f651\"}.la-comment-dots:before{content:\"\\f4ad\"}.la-comment-medical:before{content:\"\\f7f5\"}.la-comment-slash:before{content:\"\\f4b3\"}.la-comments:before{content:\"\\f086\"}.la-comments-dollar:before{content:\"\\f653\"}.la-compact-disc:before{content:\"\\f51f\"}.la-compass:before{content:\"\\f14e\"}.la-compress:before{content:\"\\f066\"}.la-compress-arrows-alt:before{content:\"\\f78c\"}.la-concierge-bell:before{content:\"\\f562\"}.la-confluence:before{content:\"\\f78d\"}.la-connectdevelop:before{content:\"\\f20e\"}.la-contao:before{content:\"\\f26d\"}.la-cookie:before{content:\"\\f563\"}.la-cookie-bite:before{content:\"\\f564\"}.la-copy:before{content:\"\\f0c5\"}.la-copyright:before{content:\"\\f1f9\"}.la-cotton-bureau:before{content:\"\\f89e\"}.la-couch:before{content:\"\\f4b8\"}.la-cpanel:before{content:\"\\f388\"}.la-creative-commons:before{content:\"\\f25e\"}.la-creative-commons-by:before{content:\"\\f4e7\"}.la-creative-commons-nc:before{content:\"\\f4e8\"}.la-creative-commons-nc-eu:before{content:\"\\f4e9\"}.la-creative-commons-nc-jp:before{content:\"\\f4ea\"}.la-creative-commons-nd:before{content:\"\\f4eb\"}.la-creative-commons-pd:before{content:\"\\f4ec\"}.la-creative-commons-pd-alt:before{content:\"\\f4ed\"}.la-creative-commons-remix:before{content:\"\\f4ee\"}.la-creative-commons-sa:before{content:\"\\f4ef\"}.la-creative-commons-sampling:before{content:\"\\f4f0\"}.la-creative-commons-sampling-plus:before{content:\"\\f4f1\"}.la-creative-commons-share:before{content:\"\\f4f2\"}.la-creative-commons-zero:before{content:\"\\f4f3\"}.la-credit-card:before{content:\"\\f09d\"}.la-critical-role:before{content:\"\\f6c9\"}.la-crop:before{content:\"\\f125\"}.la-crop-alt:before{content:\"\\f565\"}.la-cross:before{content:\"\\f654\"}.la-crosshairs:before{content:\"\\f05b\"}.la-crow:before{content:\"\\f520\"}.la-crown:before{content:\"\\f521\"}.la-crutch:before{content:\"\\f7f7\"}.la-css3:before{content:\"\\f13c\"}.la-css3-alt:before{content:\"\\f38b\"}.la-cube:before{content:\"\\f1b2\"}.la-cubes:before{content:\"\\f1b3\"}.la-cut:before{content:\"\\f0c4\"}.la-cuttlefish:before{content:\"\\f38c\"}.la-d-and-d:before{content:\"\\f38d\"}.la-d-and-d-beyond:before{content:\"\\f6ca\"}.la-dashcube:before{content:\"\\f210\"}.la-database:before{content:\"\\f1c0\"}.la-deaf:before{content:\"\\f2a4\"}.la-delicious:before{content:\"\\f1a5\"}.la-democrat:before{content:\"\\f747\"}.la-deploydog:before{content:\"\\f38e\"}.la-deskpro:before{content:\"\\f38f\"}.la-desktop:before{content:\"\\f108\"}.la-dev:before{content:\"\\f6cc\"}.la-deviantart:before{content:\"\\f1bd\"}.la-dharmachakra:before{content:\"\\f655\"}.la-dhl:before{content:\"\\f790\"}.la-diagnoses:before{content:\"\\f470\"}.la-diaspora:before{content:\"\\f791\"}.la-dice:before{content:\"\\f522\"}.la-dice-d20:before{content:\"\\f6cf\"}.la-dice-d6:before{content:\"\\f6d1\"}.la-dice-five:before{content:\"\\f523\"}.la-dice-four:before{content:\"\\f524\"}.la-dice-one:before{content:\"\\f525\"}.la-dice-six:before{content:\"\\f526\"}.la-dice-three:before{content:\"\\f527\"}.la-dice-two:before{content:\"\\f528\"}.la-digg:before{content:\"\\f1a6\"}.la-digital-ocean:before{content:\"\\f391\"}.la-digital-tachograph:before{content:\"\\f566\"}.la-directions:before{content:\"\\f5eb\"}.la-discord:before{content:\"\\f392\"}.la-discourse:before{content:\"\\f393\"}.la-divide:before{content:\"\\f529\"}.la-dizzy:before{content:\"\\f567\"}.la-dna:before{content:\"\\f471\"}.la-dochub:before{content:\"\\f394\"}.la-docker:before{content:\"\\f395\"}.la-dog:before{content:\"\\f6d3\"}.la-dollar-sign:before{content:\"\\f155\"}.la-dolly:before{content:\"\\f472\"}.la-dolly-flatbed:before{content:\"\\f474\"}.la-donate:before{content:\"\\f4b9\"}.la-door-closed:before{content:\"\\f52a\"}.la-door-open:before{content:\"\\f52b\"}.la-dot-circle:before{content:\"\\f192\"}.la-dove:before{content:\"\\f4ba\"}.la-download:before{content:\"\\f019\"}.la-draft2digital:before{content:\"\\f396\"}.la-drafting-compass:before{content:\"\\f568\"}.la-dragon:before{content:\"\\f6d5\"}.la-draw-polygon:before{content:\"\\f5ee\"}.la-dribbble:before{content:\"\\f17d\"}.la-dribbble-square:before{content:\"\\f397\"}.la-dropbox:before{content:\"\\f16b\"}.la-drum:before{content:\"\\f569\"}.la-drum-steelpan:before{content:\"\\f56a\"}.la-drumstick-bite:before{content:\"\\f6d7\"}.la-drupal:before{content:\"\\f1a9\"}.la-dumbbell:before{content:\"\\f44b\"}.la-dumpster:before{content:\"\\f793\"}.la-dumpster-fire:before{content:\"\\f794\"}.la-dungeon:before{content:\"\\f6d9\"}.la-dyalog:before{content:\"\\f399\"}.la-earlybirds:before{content:\"\\f39a\"}.la-ebay:before{content:\"\\f4f4\"}.la-edge:before{content:\"\\f282\"}.la-edit:before{content:\"\\f044\"}.la-egg:before{content:\"\\f7fb\"}.la-eject:before{content:\"\\f052\"}.la-elementor:before{content:\"\\f430\"}.la-ellipsis-h:before{content:\"\\f141\"}.la-ellipsis-v:before{content:\"\\f142\"}.la-ello:before{content:\"\\f5f1\"}.la-ember:before{content:\"\\f423\"}.la-empire:before{content:\"\\f1d1\"}.la-envelope:before{content:\"\\f0e0\"}.la-envelope-open:before{content:\"\\f2b6\"}.la-envelope-open-text:before{content:\"\\f658\"}.la-envelope-square:before{content:\"\\f199\"}.la-envira:before{content:\"\\f299\"}.la-equals:before{content:\"\\f52c\"}.la-eraser:before{content:\"\\f12d\"}.la-erlang:before{content:\"\\f39d\"}.la-ethereum:before{content:\"\\f42e\"}.la-ethernet:before{content:\"\\f796\"}.la-etsy:before{content:\"\\f2d7\"}.la-euro-sign:before{content:\"\\f153\"}.la-evernote:before{content:\"\\f839\"}.la-exchange-alt:before{content:\"\\f362\"}.la-exclamation:before{content:\"\\f12a\"}.la-exclamation-circle:before{content:\"\\f06a\"}.la-exclamation-triangle:before{content:\"\\f071\"}.la-expand:before{content:\"\\f065\"}.la-expand-arrows-alt:before{content:\"\\f31e\"}.la-expeditedssl:before{content:\"\\f23e\"}.la-external-link-alt:before{content:\"\\f35d\"}.la-external-link-square-alt:before{content:\"\\f360\"}.la-eye:before{content:\"\\f06e\"}.la-eye-dropper:before{content:\"\\f1fb\"}.la-eye-slash:before{content:\"\\f070\"}.la-facebook:before{content:\"\\f09a\"}.la-facebook-f:before{content:\"\\f39e\"}.la-facebook-messenger:before{content:\"\\f39f\"}.la-facebook-square:before{content:\"\\f082\"}.la-fan:before{content:\"\\f863\"}.la-fantasy-flight-games:before{content:\"\\f6dc\"}.la-fast-backward:before{content:\"\\f049\"}.la-fast-forward:before{content:\"\\f050\"}.la-fax:before{content:\"\\f1ac\"}.la-feather:before{content:\"\\f52d\"}.la-feather-alt:before{content:\"\\f56b\"}.la-fedex:before{content:\"\\f797\"}.la-fedora:before{content:\"\\f798\"}.la-female:before{content:\"\\f182\"}.la-fighter-jet:before{content:\"\\f0fb\"}.la-figma:before{content:\"\\f799\"}.la-file:before{content:\"\\f15b\"}.la-file-alt:before{content:\"\\f15c\"}.la-file-archive:before{content:\"\\f1c6\"}.la-file-audio:before{content:\"\\f1c7\"}.la-file-code:before{content:\"\\f1c9\"}.la-file-contract:before{content:\"\\f56c\"}.la-file-csv:before{content:\"\\f6dd\"}.la-file-download:before{content:\"\\f56d\"}.la-file-excel:before{content:\"\\f1c3\"}.la-file-export:before{content:\"\\f56e\"}.la-file-image:before{content:\"\\f1c5\"}.la-file-import:before{content:\"\\f56f\"}.la-file-invoice:before{content:\"\\f570\"}.la-file-invoice-dollar:before{content:\"\\f571\"}.la-file-medical:before{content:\"\\f477\"}.la-file-medical-alt:before{content:\"\\f478\"}.la-file-pdf:before{content:\"\\f1c1\"}.la-file-powerpoint:before{content:\"\\f1c4\"}.la-file-prescription:before{content:\"\\f572\"}.la-file-signature:before{content:\"\\f573\"}.la-file-upload:before{content:\"\\f574\"}.la-file-video:before{content:\"\\f1c8\"}.la-file-word:before{content:\"\\f1c2\"}.la-fill:before{content:\"\\f575\"}.la-fill-drip:before{content:\"\\f576\"}.la-film:before{content:\"\\f008\"}.la-filter:before{content:\"\\f0b0\"}.la-fingerprint:before{content:\"\\f577\"}.la-fire:before{content:\"\\f06d\"}.la-fire-alt:before{content:\"\\f7e4\"}.la-fire-extinguisher:before{content:\"\\f134\"}.la-firefox:before{content:\"\\f269\"}.la-first-aid:before{content:\"\\f479\"}.la-first-order:before{content:\"\\f2b0\"}.la-first-order-alt:before{content:\"\\f50a\"}.la-firstdraft:before{content:\"\\f3a1\"}.la-fish:before{content:\"\\f578\"}.la-fist-raised:before{content:\"\\f6de\"}.la-flag:before{content:\"\\f024\"}.la-flag-checkered:before{content:\"\\f11e\"}.la-flag-usa:before{content:\"\\f74d\"}.la-flask:before{content:\"\\f0c3\"}.la-flickr:before{content:\"\\f16e\"}.la-flipboard:before{content:\"\\f44d\"}.la-flushed:before{content:\"\\f579\"}.la-fly:before{content:\"\\f417\"}.la-folder:before{content:\"\\f07b\"}.la-folder-minus:before{content:\"\\f65d\"}.la-folder-open:before{content:\"\\f07c\"}.la-folder-plus:before{content:\"\\f65e\"}.la-font:before{content:\"\\f031\"}.la-font-awesome:before{content:\"\\f2b4\"}.la-font-awesome-alt:before{content:\"\\f35c\"}.la-font-awesome-flag:before{content:\"\\f425\"}.la-font-awesome-logo-full:before{content:\"\\f4e6\"}.la-fonticons:before{content:\"\\f280\"}.la-fonticons-fi:before{content:\"\\f3a2\"}.la-football-ball:before{content:\"\\f44e\"}.la-fort-awesome:before{content:\"\\f286\"}.la-fort-awesome-alt:before{content:\"\\f3a3\"}.la-forumbee:before{content:\"\\f211\"}.la-forward:before{content:\"\\f04e\"}.la-foursquare:before{content:\"\\f180\"}.la-free-code-camp:before{content:\"\\f2c5\"}.la-freebsd:before{content:\"\\f3a4\"}.la-frog:before{content:\"\\f52e\"}.la-frown:before{content:\"\\f119\"}.la-frown-open:before{content:\"\\f57a\"}.la-fulcrum:before{content:\"\\f50b\"}.la-funnel-dollar:before{content:\"\\f662\"}.la-futbol:before{content:\"\\f1e3\"}.la-galactic-republic:before{content:\"\\f50c\"}.la-galactic-senate:before{content:\"\\f50d\"}.la-gamepad:before{content:\"\\f11b\"}.la-gas-pump:before{content:\"\\f52f\"}.la-gavel:before{content:\"\\f0e3\"}.la-gem:before{content:\"\\f3a5\"}.la-genderless:before{content:\"\\f22d\"}.la-get-pocket:before{content:\"\\f265\"}.la-gg:before{content:\"\\f260\"}.la-gg-circle:before{content:\"\\f261\"}.la-ghost:before{content:\"\\f6e2\"}.la-gift:before{content:\"\\f06b\"}.la-gifts:before{content:\"\\f79c\"}.la-git:before{content:\"\\f1d3\"}.la-git-alt:before{content:\"\\f841\"}.la-git-square:before{content:\"\\f1d2\"}.la-github:before{content:\"\\f09b\"}.la-github-alt:before{content:\"\\f113\"}.la-github-square:before{content:\"\\f092\"}.la-gitkraken:before{content:\"\\f3a6\"}.la-gitlab:before{content:\"\\f296\"}.la-gitter:before{content:\"\\f426\"}.la-glass-cheers:before{content:\"\\f79f\"}.la-glass-martini:before{content:\"\\f000\"}.la-glass-martini-alt:before{content:\"\\f57b\"}.la-glass-whiskey:before{content:\"\\f7a0\"}.la-glasses:before{content:\"\\f530\"}.la-glide:before{content:\"\\f2a5\"}.la-glide-g:before{content:\"\\f2a6\"}.la-globe:before{content:\"\\f0ac\"}.la-globe-africa:before{content:\"\\f57c\"}.la-globe-americas:before{content:\"\\f57d\"}.la-globe-asia:before{content:\"\\f57e\"}.la-globe-europe:before{content:\"\\f7a2\"}.la-gofore:before{content:\"\\f3a7\"}.la-golf-ball:before{content:\"\\f450\"}.la-goodreads:before{content:\"\\f3a8\"}.la-goodreads-g:before{content:\"\\f3a9\"}.la-google:before{content:\"\\f1a0\"}.la-google-drive:before{content:\"\\f3aa\"}.la-google-play:before{content:\"\\f3ab\"}.la-google-plus:before{content:\"\\f2b3\"}.la-google-plus-g:before{content:\"\\f0d5\"}.la-google-plus-square:before{content:\"\\f0d4\"}.la-google-wallet:before{content:\"\\f1ee\"}.la-gopuram:before{content:\"\\f664\"}.la-graduation-cap:before{content:\"\\f19d\"}.la-gratipay:before{content:\"\\f184\"}.la-grav:before{content:\"\\f2d6\"}.la-greater-than:before{content:\"\\f531\"}.la-greater-than-equal:before{content:\"\\f532\"}.la-grimace:before{content:\"\\f57f\"}.la-grin:before{content:\"\\f580\"}.la-grin-alt:before{content:\"\\f581\"}.la-grin-beam:before{content:\"\\f582\"}.la-grin-beam-sweat:before{content:\"\\f583\"}.la-grin-hearts:before{content:\"\\f584\"}.la-grin-squint:before{content:\"\\f585\"}.la-grin-squint-tears:before{content:\"\\f586\"}.la-grin-stars:before{content:\"\\f587\"}.la-grin-tears:before{content:\"\\f588\"}.la-grin-tongue:before{content:\"\\f589\"}.la-grin-tongue-squint:before{content:\"\\f58a\"}.la-grin-tongue-wink:before{content:\"\\f58b\"}.la-grin-wink:before{content:\"\\f58c\"}.la-grip-horizontal:before{content:\"\\f58d\"}.la-grip-lines:before{content:\"\\f7a4\"}.la-grip-lines-vertical:before{content:\"\\f7a5\"}.la-grip-vertical:before{content:\"\\f58e\"}.la-gripfire:before{content:\"\\f3ac\"}.la-grunt:before{content:\"\\f3ad\"}.la-guitar:before{content:\"\\f7a6\"}.la-gulp:before{content:\"\\f3ae\"}.la-h-square:before{content:\"\\f0fd\"}.la-hacker-news:before{content:\"\\f1d4\"}.la-hacker-news-square:before{content:\"\\f3af\"}.la-hackerrank:before{content:\"\\f5f7\"}.la-hamburger:before{content:\"\\f805\"}.la-hammer:before{content:\"\\f6e3\"}.la-hamsa:before{content:\"\\f665\"}.la-hand-holding:before{content:\"\\f4bd\"}.la-hand-holding-heart:before{content:\"\\f4be\"}.la-hand-holding-usd:before{content:\"\\f4c0\"}.la-hand-lizard:before{content:\"\\f258\"}.la-hand-middle-finger:before{content:\"\\f806\"}.la-hand-paper:before{content:\"\\f256\"}.la-hand-peace:before{content:\"\\f25b\"}.la-hand-point-down:before{content:\"\\f0a7\"}.la-hand-point-left:before{content:\"\\f0a5\"}.la-hand-point-right:before{content:\"\\f0a4\"}.la-hand-point-up:before{content:\"\\f0a6\"}.la-hand-pointer:before{content:\"\\f25a\"}.la-hand-rock:before{content:\"\\f255\"}.la-hand-scissors:before{content:\"\\f257\"}.la-hand-spock:before{content:\"\\f259\"}.la-hands:before{content:\"\\f4c2\"}.la-hands-helping:before{content:\"\\f4c4\"}.la-handshake:before{content:\"\\f2b5\"}.la-hanukiah:before{content:\"\\f6e6\"}.la-hard-hat:before{content:\"\\f807\"}.la-hashtag:before{content:\"\\f292\"}.la-hat-cowboy:before{content:\"\\f8c0\"}.la-hat-cowboy-side:before{content:\"\\f8c1\"}.la-hat-wizard:before{content:\"\\f6e8\"}.la-haykal:before{content:\"\\f666\"}.la-hdd:before{content:\"\\f0a0\"}.la-heading:before{content:\"\\f1dc\"}.la-headphones:before{content:\"\\f025\"}.la-headphones-alt:before{content:\"\\f58f\"}.la-headset:before{content:\"\\f590\"}.la-heart:before{content:\"\\f004\"}.la-heart-broken:before{content:\"\\f7a9\"}.la-heartbeat:before{content:\"\\f21e\"}.la-helicopter:before{content:\"\\f533\"}.la-highlighter:before{content:\"\\f591\"}.la-hiking:before{content:\"\\f6ec\"}.la-hippo:before{content:\"\\f6ed\"}.la-hips:before{content:\"\\f452\"}.la-hire-a-helper:before{content:\"\\f3b0\"}.la-history:before{content:\"\\f1da\"}.la-hockey-puck:before{content:\"\\f453\"}.la-holly-berry:before{content:\"\\f7aa\"}.la-home:before{content:\"\\f015\"}.la-hooli:before{content:\"\\f427\"}.la-hornbill:before{content:\"\\f592\"}.la-horse:before{content:\"\\f6f0\"}.la-horse-head:before{content:\"\\f7ab\"}.la-hospital:before{content:\"\\f0f8\"}.la-hospital-alt:before{content:\"\\f47d\"}.la-hospital-symbol:before{content:\"\\f47e\"}.la-hot-tub:before{content:\"\\f593\"}.la-hotdog:before{content:\"\\f80f\"}.la-hotel:before{content:\"\\f594\"}.la-hotjar:before{content:\"\\f3b1\"}.la-hourglass:before{content:\"\\f254\"}.la-hourglass-end:before{content:\"\\f253\"}.la-hourglass-half:before{content:\"\\f252\"}.la-hourglass-start:before{content:\"\\f251\"}.la-house-damage:before{content:\"\\f6f1\"}.la-houzz:before{content:\"\\f27c\"}.la-hryvnia:before{content:\"\\f6f2\"}.la-html5:before{content:\"\\f13b\"}.la-hubspot:before{content:\"\\f3b2\"}.la-i-cursor:before{content:\"\\f246\"}.la-ice-cream:before{content:\"\\f810\"}.la-icicles:before{content:\"\\f7ad\"}.la-icons:before{content:\"\\f86d\"}.la-id-badge:before{content:\"\\f2c1\"}.la-id-card:before{content:\"\\f2c2\"}.la-id-card-alt:before{content:\"\\f47f\"}.la-igloo:before{content:\"\\f7ae\"}.la-image:before{content:\"\\f03e\"}.la-images:before{content:\"\\f302\"}.la-imdb:before{content:\"\\f2d8\"}.la-inbox:before{content:\"\\f01c\"}.la-indent:before{content:\"\\f03c\"}.la-industry:before{content:\"\\f275\"}.la-infinity:before{content:\"\\f534\"}.la-info:before{content:\"\\f129\"}.la-info-circle:before{content:\"\\f05a\"}.la-instagram:before{content:\"\\f16d\"}.la-intercom:before{content:\"\\f7af\"}.la-internet-explorer:before{content:\"\\f26b\"}.la-invision:before{content:\"\\f7b0\"}.la-ioxhost:before{content:\"\\f208\"}.la-italic:before{content:\"\\f033\"}.la-itch-io:before{content:\"\\f83a\"}.la-itunes:before{content:\"\\f3b4\"}.la-itunes-note:before{content:\"\\f3b5\"}.la-java:before{content:\"\\f4e4\"}.la-jedi:before{content:\"\\f669\"}.la-jedi-order:before{content:\"\\f50e\"}.la-jenkins:before{content:\"\\f3b6\"}.la-jira:before{content:\"\\f7b1\"}.la-joget:before{content:\"\\f3b7\"}.la-joint:before{content:\"\\f595\"}.la-joomla:before{content:\"\\f1aa\"}.la-journal-whills:before{content:\"\\f66a\"}.la-js:before{content:\"\\f3b8\"}.la-js-square:before{content:\"\\f3b9\"}.la-jsfiddle:before{content:\"\\f1cc\"}.la-kaaba:before{content:\"\\f66b\"}.la-kaggle:before{content:\"\\f5fa\"}.la-key:before{content:\"\\f084\"}.la-keybase:before{content:\"\\f4f5\"}.la-keyboard:before{content:\"\\f11c\"}.la-keycdn:before{content:\"\\f3ba\"}.la-khanda:before{content:\"\\f66d\"}.la-kickstarter:before{content:\"\\f3bb\"}.la-kickstarter-k:before{content:\"\\f3bc\"}.la-kiss:before{content:\"\\f596\"}.la-kiss-beam:before{content:\"\\f597\"}.la-kiss-wink-heart:before{content:\"\\f598\"}.la-kiwi-bird:before{content:\"\\f535\"}.la-korvue:before{content:\"\\f42f\"}.la-landmark:before{content:\"\\f66f\"}.la-language:before{content:\"\\f1ab\"}.la-laptop:before{content:\"\\f109\"}.la-laptop-code:before{content:\"\\f5fc\"}.la-laptop-medical:before{content:\"\\f812\"}.la-laravel:before{content:\"\\f3bd\"}.la-lastfm:before{content:\"\\f202\"}.la-lastfm-square:before{content:\"\\f203\"}.la-laugh:before{content:\"\\f599\"}.la-laugh-beam:before{content:\"\\f59a\"}.la-laugh-squint:before{content:\"\\f59b\"}.la-laugh-wink:before{content:\"\\f59c\"}.la-layer-group:before{content:\"\\f5fd\"}.la-leaf:before{content:\"\\f06c\"}.la-leanpub:before{content:\"\\f212\"}.la-lemon:before{content:\"\\f094\"}.la-less:before{content:\"\\f41d\"}.la-less-than:before{content:\"\\f536\"}.la-less-than-equal:before{content:\"\\f537\"}.la-level-down-alt:before{content:\"\\f3be\"}.la-level-up-alt:before{content:\"\\f3bf\"}.la-life-ring:before{content:\"\\f1cd\"}.la-lightbulb:before{content:\"\\f0eb\"}.la-line:before{content:\"\\f3c0\"}.la-link:before{content:\"\\f0c1\"}.la-linkedin:before{content:\"\\f08c\"}.la-linkedin-in:before{content:\"\\f0e1\"}.la-linode:before{content:\"\\f2b8\"}.la-linux:before{content:\"\\f17c\"}.la-lira-sign:before{content:\"\\f195\"}.la-list:before{content:\"\\f03a\"}.la-list-alt:before{content:\"\\f022\"}.la-list-ol:before{content:\"\\f0cb\"}.la-list-ul:before{content:\"\\f0ca\"}.la-location-arrow:before{content:\"\\f124\"}.la-lock:before{content:\"\\f023\"}.la-lock-open:before{content:\"\\f3c1\"}.la-long-arrow-alt-down:before{content:\"\\f309\"}.la-long-arrow-alt-left:before{content:\"\\f30a\"}.la-long-arrow-alt-right:before{content:\"\\f30b\"}.la-long-arrow-alt-up:before{content:\"\\f30c\"}.la-low-vision:before{content:\"\\f2a8\"}.la-luggage-cart:before{content:\"\\f59d\"}.la-lyft:before{content:\"\\f3c3\"}.la-magento:before{content:\"\\f3c4\"}.la-magic:before{content:\"\\f0d0\"}.la-magnet:before{content:\"\\f076\"}.la-mail-bulk:before{content:\"\\f674\"}.la-mailchimp:before{content:\"\\f59e\"}.la-male:before{content:\"\\f183\"}.la-mandalorian:before{content:\"\\f50f\"}.la-map:before{content:\"\\f279\"}.la-map-marked:before{content:\"\\f59f\"}.la-map-marked-alt:before{content:\"\\f5a0\"}.la-map-marker:before{content:\"\\f041\"}.la-map-marker-alt:before{content:\"\\f3c5\"}.la-map-pin:before{content:\"\\f276\"}.la-map-signs:before{content:\"\\f277\"}.la-markdown:before{content:\"\\f60f\"}.la-marker:before{content:\"\\f5a1\"}.la-mars:before{content:\"\\f222\"}.la-mars-double:before{content:\"\\f227\"}.la-mars-stroke:before{content:\"\\f229\"}.la-mars-stroke-h:before{content:\"\\f22b\"}.la-mars-stroke-v:before{content:\"\\f22a\"}.la-mask:before{content:\"\\f6fa\"}.la-mastodon:before{content:\"\\f4f6\"}.la-maxcdn:before{content:\"\\f136\"}.la-mdb:before{content:\"\\f8ca\"}.la-medal:before{content:\"\\f5a2\"}.la-medapps:before{content:\"\\f3c6\"}.la-medium:before{content:\"\\f23a\"}.la-medium-m:before{content:\"\\f3c7\"}.la-medkit:before{content:\"\\f0fa\"}.la-medrt:before{content:\"\\f3c8\"}.la-meetup:before{content:\"\\f2e0\"}.la-megaport:before{content:\"\\f5a3\"}.la-meh:before{content:\"\\f11a\"}.la-meh-blank:before{content:\"\\f5a4\"}.la-meh-rolling-eyes:before{content:\"\\f5a5\"}.la-memory:before{content:\"\\f538\"}.la-mendeley:before{content:\"\\f7b3\"}.la-menorah:before{content:\"\\f676\"}.la-mercury:before{content:\"\\f223\"}.la-meteor:before{content:\"\\f753\"}.la-microchip:before{content:\"\\f2db\"}.la-microphone:before{content:\"\\f130\"}.la-microphone-alt:before{content:\"\\f3c9\"}.la-microphone-alt-slash:before{content:\"\\f539\"}.la-microphone-slash:before{content:\"\\f131\"}.la-microscope:before{content:\"\\f610\"}.la-microsoft:before{content:\"\\f3ca\"}.la-minus:before{content:\"\\f068\"}.la-minus-circle:before{content:\"\\f056\"}.la-minus-square:before{content:\"\\f146\"}.la-mitten:before{content:\"\\f7b5\"}.la-mix:before{content:\"\\f3cb\"}.la-mixcloud:before{content:\"\\f289\"}.la-mizuni:before{content:\"\\f3cc\"}.la-mobile:before{content:\"\\f10b\"}.la-mobile-alt:before{content:\"\\f3cd\"}.la-modx:before{content:\"\\f285\"}.la-monero:before{content:\"\\f3d0\"}.la-money-bill:before{content:\"\\f0d6\"}.la-money-bill-alt:before{content:\"\\f3d1\"}.la-money-bill-wave:before{content:\"\\f53a\"}.la-money-bill-wave-alt:before{content:\"\\f53b\"}.la-money-check:before{content:\"\\f53c\"}.la-money-check-alt:before{content:\"\\f53d\"}.la-monument:before{content:\"\\f5a6\"}.la-moon:before{content:\"\\f186\"}.la-mortar-pestle:before{content:\"\\f5a7\"}.la-mosque:before{content:\"\\f678\"}.la-motorcycle:before{content:\"\\f21c\"}.la-mountain:before{content:\"\\f6fc\"}.la-mouse:before{content:\"\\f8cc\"}.la-mouse-pointer:before{content:\"\\f245\"}.la-mug-hot:before{content:\"\\f7b6\"}.la-music:before{content:\"\\f001\"}.la-napster:before{content:\"\\f3d2\"}.la-neos:before{content:\"\\f612\"}.la-network-wired:before{content:\"\\f6ff\"}.la-neuter:before{content:\"\\f22c\"}.la-newspaper:before{content:\"\\f1ea\"}.la-nimblr:before{content:\"\\f5a8\"}.la-node:before{content:\"\\f419\"}.la-node-js:before{content:\"\\f3d3\"}.la-not-equal:before{content:\"\\f53e\"}.la-notes-medical:before{content:\"\\f481\"}.la-npm:before{content:\"\\f3d4\"}.la-ns8:before{content:\"\\f3d5\"}.la-nutritionix:before{content:\"\\f3d6\"}.la-object-group:before{content:\"\\f247\"}.la-object-ungroup:before{content:\"\\f248\"}.la-odnoklassniki:before{content:\"\\f263\"}.la-odnoklassniki-square:before{content:\"\\f264\"}.la-oil-can:before{content:\"\\f613\"}.la-old-republic:before{content:\"\\f510\"}.la-om:before{content:\"\\f679\"}.la-opencart:before{content:\"\\f23d\"}.la-openid:before{content:\"\\f19b\"}.la-opera:before{content:\"\\f26a\"}.la-optin-monster:before{content:\"\\f23c\"}.la-orcid:before{content:\"\\f8d2\"}.la-osi:before{content:\"\\f41a\"}.la-otter:before{content:\"\\f700\"}.la-outdent:before{content:\"\\f03b\"}.la-page4:before{content:\"\\f3d7\"}.la-pagelines:before{content:\"\\f18c\"}.la-pager:before{content:\"\\f815\"}.la-paint-brush:before{content:\"\\f1fc\"}.la-paint-roller:before{content:\"\\f5aa\"}.la-palette:before{content:\"\\f53f\"}.la-palfed:before{content:\"\\f3d8\"}.la-pallet:before{content:\"\\f482\"}.la-paper-plane:before{content:\"\\f1d8\"}.la-paperclip:before{content:\"\\f0c6\"}.la-parachute-box:before{content:\"\\f4cd\"}.la-paragraph:before{content:\"\\f1dd\"}.la-parking:before{content:\"\\f540\"}.la-passport:before{content:\"\\f5ab\"}.la-pastafarianism:before{content:\"\\f67b\"}.la-paste:before{content:\"\\f0ea\"}.la-patreon:before{content:\"\\f3d9\"}.la-pause:before{content:\"\\f04c\"}.la-pause-circle:before{content:\"\\f28b\"}.la-paw:before{content:\"\\f1b0\"}.la-paypal:before{content:\"\\f1ed\"}.la-peace:before{content:\"\\f67c\"}.la-pen:before{content:\"\\f304\"}.la-pen-alt:before{content:\"\\f305\"}.la-pen-fancy:before{content:\"\\f5ac\"}.la-pen-nib:before{content:\"\\f5ad\"}.la-pen-square:before{content:\"\\f14b\"}.la-pencil-alt:before{content:\"\\f303\"}.la-pencil-ruler:before{content:\"\\f5ae\"}.la-penny-arcade:before{content:\"\\f704\"}.la-people-carry:before{content:\"\\f4ce\"}.la-pepper-hot:before{content:\"\\f816\"}.la-percent:before{content:\"\\f295\"}.la-percentage:before{content:\"\\f541\"}.la-periscope:before{content:\"\\f3da\"}.la-person-booth:before{content:\"\\f756\"}.la-phabricator:before{content:\"\\f3db\"}.la-phoenix-framework:before{content:\"\\f3dc\"}.la-phoenix-squadron:before{content:\"\\f511\"}.la-phone:before{content:\"\\f095\"}.la-phone-alt:before{content:\"\\f879\"}.la-phone-slash:before{content:\"\\f3dd\"}.la-phone-square:before{content:\"\\f098\"}.la-phone-square-alt:before{content:\"\\f87b\"}.la-phone-volume:before{content:\"\\f2a0\"}.la-photo-video:before{content:\"\\f87c\"}.la-php:before{content:\"\\f457\"}.la-pied-piper:before{content:\"\\f2ae\"}.la-pied-piper-alt:before{content:\"\\f1a8\"}.la-pied-piper-hat:before{content:\"\\f4e5\"}.la-pied-piper-pp:before{content:\"\\f1a7\"}.la-piggy-bank:before{content:\"\\f4d3\"}.la-pills:before{content:\"\\f484\"}.la-pinterest:before{content:\"\\f0d2\"}.la-pinterest-p:before{content:\"\\f231\"}.la-pinterest-square:before{content:\"\\f0d3\"}.la-pizza-slice:before{content:\"\\f818\"}.la-place-of-worship:before{content:\"\\f67f\"}.la-plane:before{content:\"\\f072\"}.la-plane-arrival:before{content:\"\\f5af\"}.la-plane-departure:before{content:\"\\f5b0\"}.la-play:before{content:\"\\f04b\"}.la-play-circle:before{content:\"\\f144\"}.la-playstation:before{content:\"\\f3df\"}.la-plug:before{content:\"\\f1e6\"}.la-plus:before{content:\"\\f067\"}.la-plus-circle:before{content:\"\\f055\"}.la-plus-square:before{content:\"\\f0fe\"}.la-podcast:before{content:\"\\f2ce\"}.la-poll:before{content:\"\\f681\"}.la-poll-h:before{content:\"\\f682\"}.la-poo:before{content:\"\\f2fe\"}.la-poo-storm:before{content:\"\\f75a\"}.la-poop:before{content:\"\\f619\"}.la-portrait:before{content:\"\\f3e0\"}.la-pound-sign:before{content:\"\\f154\"}.la-power-off:before{content:\"\\f011\"}.la-pray:before{content:\"\\f683\"}.la-praying-hands:before{content:\"\\f684\"}.la-prescription:before{content:\"\\f5b1\"}.la-prescription-bottle:before{content:\"\\f485\"}.la-prescription-bottle-alt:before{content:\"\\f486\"}.la-print:before{content:\"\\f02f\"}.la-procedures:before{content:\"\\f487\"}.la-product-hunt:before{content:\"\\f288\"}.la-project-diagram:before{content:\"\\f542\"}.la-pushed:before{content:\"\\f3e1\"}.la-puzzle-piece:before{content:\"\\f12e\"}.la-python:before{content:\"\\f3e2\"}.la-qq:before{content:\"\\f1d6\"}.la-qrcode:before{content:\"\\f029\"}.la-question:before{content:\"\\f128\"}.la-question-circle:before{content:\"\\f059\"}.la-quidditch:before{content:\"\\f458\"}.la-quinscape:before{content:\"\\f459\"}.la-quora:before{content:\"\\f2c4\"}.la-quote-left:before{content:\"\\f10d\"}.la-quote-right:before{content:\"\\f10e\"}.la-quran:before{content:\"\\f687\"}.la-r-project:before{content:\"\\f4f7\"}.la-radiation:before{content:\"\\f7b9\"}.la-radiation-alt:before{content:\"\\f7ba\"}.la-rainbow:before{content:\"\\f75b\"}.la-random:before{content:\"\\f074\"}.la-raspberry-pi:before{content:\"\\f7bb\"}.la-ravelry:before{content:\"\\f2d9\"}.la-react:before{content:\"\\f41b\"}.la-reacteurope:before{content:\"\\f75d\"}.la-readme:before{content:\"\\f4d5\"}.la-rebel:before{content:\"\\f1d0\"}.la-receipt:before{content:\"\\f543\"}.la-record-vinyl:before{content:\"\\f8d9\"}.la-recycle:before{content:\"\\f1b8\"}.la-red-river:before{content:\"\\f3e3\"}.la-reddit:before{content:\"\\f1a1\"}.la-reddit-alien:before{content:\"\\f281\"}.la-reddit-square:before{content:\"\\f1a2\"}.la-redhat:before{content:\"\\f7bc\"}.la-redo:before{content:\"\\f01e\"}.la-redo-alt:before{content:\"\\f2f9\"}.la-registered:before{content:\"\\f25d\"}.la-remove-format:before{content:\"\\f87d\"}.la-renren:before{content:\"\\f18b\"}.la-reply:before{content:\"\\f3e5\"}.la-reply-all:before{content:\"\\f122\"}.la-replyd:before{content:\"\\f3e6\"}.la-republican:before{content:\"\\f75e\"}.la-researchgate:before{content:\"\\f4f8\"}.la-resolving:before{content:\"\\f3e7\"}.la-restroom:before{content:\"\\f7bd\"}.la-retweet:before{content:\"\\f079\"}.la-rev:before{content:\"\\f5b2\"}.la-ribbon:before{content:\"\\f4d6\"}.la-ring:before{content:\"\\f70b\"}.la-road:before{content:\"\\f018\"}.la-robot:before{content:\"\\f544\"}.la-rocket:before{content:\"\\f135\"}.la-rocketchat:before{content:\"\\f3e8\"}.la-rockrms:before{content:\"\\f3e9\"}.la-route:before{content:\"\\f4d7\"}.la-rss:before{content:\"\\f09e\"}.la-rss-square:before{content:\"\\f143\"}.la-ruble-sign:before{content:\"\\f158\"}.la-ruler:before{content:\"\\f545\"}.la-ruler-combined:before{content:\"\\f546\"}.la-ruler-horizontal:before{content:\"\\f547\"}.la-ruler-vertical:before{content:\"\\f548\"}.la-running:before{content:\"\\f70c\"}.la-rupee-sign:before{content:\"\\f156\"}.la-sad-cry:before{content:\"\\f5b3\"}.la-sad-tear:before{content:\"\\f5b4\"}.la-safari:before{content:\"\\f267\"}.la-salesforce:before{content:\"\\f83b\"}.la-sass:before{content:\"\\f41e\"}.la-satellite:before{content:\"\\f7bf\"}.la-satellite-dish:before{content:\"\\f7c0\"}.la-save:before{content:\"\\f0c7\"}.la-schlix:before{content:\"\\f3ea\"}.la-school:before{content:\"\\f549\"}.la-screwdriver:before{content:\"\\f54a\"}.la-scribd:before{content:\"\\f28a\"}.la-scroll:before{content:\"\\f70e\"}.la-sd-card:before{content:\"\\f7c2\"}.la-search:before{content:\"\\f002\"}.la-search-dollar:before{content:\"\\f688\"}.la-search-location:before{content:\"\\f689\"}.la-search-minus:before{content:\"\\f010\"}.la-search-plus:before{content:\"\\f00e\"}.la-searchengin:before{content:\"\\f3eb\"}.la-seedling:before{content:\"\\f4d8\"}.la-sellcast:before{content:\"\\f2da\"}.la-sellsy:before{content:\"\\f213\"}.la-server:before{content:\"\\f233\"}.la-servicestack:before{content:\"\\f3ec\"}.la-shapes:before{content:\"\\f61f\"}.la-share:before{content:\"\\f064\"}.la-share-alt:before{content:\"\\f1e0\"}.la-share-alt-square:before{content:\"\\f1e1\"}.la-share-square:before{content:\"\\f14d\"}.la-shekel-sign:before{content:\"\\f20b\"}.la-shield-alt:before{content:\"\\f3ed\"}.la-ship:before{content:\"\\f21a\"}.la-shipping-fast:before{content:\"\\f48b\"}.la-shirtsinbulk:before{content:\"\\f214\"}.la-shoe-prints:before{content:\"\\f54b\"}.la-shopping-bag:before{content:\"\\f290\"}.la-shopping-basket:before{content:\"\\f291\"}.la-shopping-cart:before{content:\"\\f07a\"}.la-shopware:before{content:\"\\f5b5\"}.la-shower:before{content:\"\\f2cc\"}.la-shuttle-van:before{content:\"\\f5b6\"}.la-sign:before{content:\"\\f4d9\"}.la-sign-in-alt:before{content:\"\\f2f6\"}.la-sign-language:before{content:\"\\f2a7\"}.la-sign-out-alt:before{content:\"\\f2f5\"}.la-signal:before{content:\"\\f012\"}.la-signature:before{content:\"\\f5b7\"}.la-sim-card:before{content:\"\\f7c4\"}.la-simplybuilt:before{content:\"\\f215\"}.la-sistrix:before{content:\"\\f3ee\"}.la-sitemap:before{content:\"\\f0e8\"}.la-sith:before{content:\"\\f512\"}.la-skating:before{content:\"\\f7c5\"}.la-sketch:before{content:\"\\f7c6\"}.la-skiing:before{content:\"\\f7c9\"}.la-skiing-nordic:before{content:\"\\f7ca\"}.la-skull:before{content:\"\\f54c\"}.la-skull-crossbones:before{content:\"\\f714\"}.la-skyatlas:before{content:\"\\f216\"}.la-skype:before{content:\"\\f17e\"}.la-slack:before{content:\"\\f198\"}.la-slack-hash:before{content:\"\\f3ef\"}.la-slash:before{content:\"\\f715\"}.la-sleigh:before{content:\"\\f7cc\"}.la-sliders-h:before{content:\"\\f1de\"}.la-slideshare:before{content:\"\\f1e7\"}.la-smile:before{content:\"\\f118\"}.la-smile-beam:before{content:\"\\f5b8\"}.la-smile-wink:before{content:\"\\f4da\"}.la-smog:before{content:\"\\f75f\"}.la-smoking:before{content:\"\\f48d\"}.la-smoking-ban:before{content:\"\\f54d\"}.la-sms:before{content:\"\\f7cd\"}.la-snapchat:before{content:\"\\f2ab\"}.la-snapchat-ghost:before{content:\"\\f2ac\"}.la-snapchat-square:before{content:\"\\f2ad\"}.la-snowboarding:before{content:\"\\f7ce\"}.la-snowflake:before{content:\"\\f2dc\"}.la-snowman:before{content:\"\\f7d0\"}.la-snowplow:before{content:\"\\f7d2\"}.la-socks:before{content:\"\\f696\"}.la-solar-panel:before{content:\"\\f5ba\"}.la-sort:before{content:\"\\f0dc\"}.la-sort-alpha-down:before{content:\"\\f15d\"}.la-sort-alpha-down-alt:before{content:\"\\f881\"}.la-sort-alpha-up:before{content:\"\\f15e\"}.la-sort-alpha-up-alt:before{content:\"\\f882\"}.la-sort-amount-down:before{content:\"\\f160\"}.la-sort-amount-down-alt:before{content:\"\\f884\"}.la-sort-amount-up:before{content:\"\\f161\"}.la-sort-amount-up-alt:before{content:\"\\f885\"}.la-sort-down:before{content:\"\\f0dd\"}.la-sort-numeric-down:before{content:\"\\f162\"}.la-sort-numeric-down-alt:before{content:\"\\f886\"}.la-sort-numeric-up:before{content:\"\\f163\"}.la-sort-numeric-up-alt:before{content:\"\\f887\"}.la-sort-up:before{content:\"\\f0de\"}.la-soundcloud:before{content:\"\\f1be\"}.la-sourcetree:before{content:\"\\f7d3\"}.la-spa:before{content:\"\\f5bb\"}.la-space-shuttle:before{content:\"\\f197\"}.la-speakap:before{content:\"\\f3f3\"}.la-speaker-deck:before{content:\"\\f83c\"}.la-spell-check:before{content:\"\\f891\"}.la-spider:before{content:\"\\f717\"}.la-spinner:before{content:\"\\f110\"}.la-splotch:before{content:\"\\f5bc\"}.la-spotify:before{content:\"\\f1bc\"}.la-spray-can:before{content:\"\\f5bd\"}.la-square:before{content:\"\\f0c8\"}.la-square-full:before{content:\"\\f45c\"}.la-square-root-alt:before{content:\"\\f698\"}.la-squarespace:before{content:\"\\f5be\"}.la-stack-exchange:before{content:\"\\f18d\"}.la-stack-overflow:before{content:\"\\f16c\"}.la-stackpath:before{content:\"\\f842\"}.la-stamp:before{content:\"\\f5bf\"}.la-star:before{content:\"\\f005\"}.la-star-and-crescent:before{content:\"\\f699\"}.la-star-half:before{content:\"\\f089\"}.la-star-half-alt:before{content:\"\\f5c0\"}.la-star-of-david:before{content:\"\\f69a\"}.la-star-of-life:before{content:\"\\f621\"}.la-staylinked:before{content:\"\\f3f5\"}.la-steam:before{content:\"\\f1b6\"}.la-steam-square:before{content:\"\\f1b7\"}.la-steam-symbol:before{content:\"\\f3f6\"}.la-step-backward:before{content:\"\\f048\"}.la-step-forward:before{content:\"\\f051\"}.la-stethoscope:before{content:\"\\f0f1\"}.la-sticker-mule:before{content:\"\\f3f7\"}.la-sticky-note:before{content:\"\\f249\"}.la-stop:before{content:\"\\f04d\"}.la-stop-circle:before{content:\"\\f28d\"}.la-stopwatch:before{content:\"\\f2f2\"}.la-store:before{content:\"\\f54e\"}.la-store-alt:before{content:\"\\f54f\"}.la-strava:before{content:\"\\f428\"}.la-stream:before{content:\"\\f550\"}.la-street-view:before{content:\"\\f21d\"}.la-strikethrough:before{content:\"\\f0cc\"}.la-stripe:before{content:\"\\f429\"}.la-stripe-s:before{content:\"\\f42a\"}.la-stroopwafel:before{content:\"\\f551\"}.la-studiovinari:before{content:\"\\f3f8\"}.la-stumbleupon:before{content:\"\\f1a4\"}.la-stumbleupon-circle:before{content:\"\\f1a3\"}.la-subscript:before{content:\"\\f12c\"}.la-subway:before{content:\"\\f239\"}.la-suitcase:before{content:\"\\f0f2\"}.la-suitcase-rolling:before{content:\"\\f5c1\"}.la-sun:before{content:\"\\f185\"}.la-superpowers:before{content:\"\\f2dd\"}.la-superscript:before{content:\"\\f12b\"}.la-supple:before{content:\"\\f3f9\"}.la-surprise:before{content:\"\\f5c2\"}.la-suse:before{content:\"\\f7d6\"}.la-swatchbook:before{content:\"\\f5c3\"}.la-swift:before{content:\"\\f8e1\"}.la-swimmer:before{content:\"\\f5c4\"}.la-swimming-pool:before{content:\"\\f5c5\"}.la-symfony:before{content:\"\\f83d\"}.la-synagogue:before{content:\"\\f69b\"}.la-sync:before{content:\"\\f021\"}.la-sync-alt:before{content:\"\\f2f1\"}.la-syringe:before{content:\"\\f48e\"}.la-table:before{content:\"\\f0ce\"}.la-table-tennis:before{content:\"\\f45d\"}.la-tablet:before{content:\"\\f10a\"}.la-tablet-alt:before{content:\"\\f3fa\"}.la-tablets:before{content:\"\\f490\"}.la-tachometer-alt:before{content:\"\\f3fd\"}.la-tag:before{content:\"\\f02b\"}.la-tags:before{content:\"\\f02c\"}.la-tape:before{content:\"\\f4db\"}.la-tasks:before{content:\"\\f0ae\"}.la-taxi:before{content:\"\\f1ba\"}.la-teamspeak:before{content:\"\\f4f9\"}.la-teeth:before{content:\"\\f62e\"}.la-teeth-open:before{content:\"\\f62f\"}.la-telegram:before{content:\"\\f2c6\"}.la-telegram-plane:before{content:\"\\f3fe\"}.la-temperature-high:before{content:\"\\f769\"}.la-temperature-low:before{content:\"\\f76b\"}.la-tencent-weibo:before{content:\"\\f1d5\"}.la-tenge:before{content:\"\\f7d7\"}.la-terminal:before{content:\"\\f120\"}.la-text-height:before{content:\"\\f034\"}.la-text-width:before{content:\"\\f035\"}.la-th:before{content:\"\\f00a\"}.la-th-large:before{content:\"\\f009\"}.la-th-list:before{content:\"\\f00b\"}.la-the-red-yeti:before{content:\"\\f69d\"}.la-theater-masks:before{content:\"\\f630\"}.la-themeco:before{content:\"\\f5c6\"}.la-themeisle:before{content:\"\\f2b2\"}.la-thermometer:before{content:\"\\f491\"}.la-thermometer-empty:before{content:\"\\f2cb\"}.la-thermometer-full:before{content:\"\\f2c7\"}.la-thermometer-half:before{content:\"\\f2c9\"}.la-thermometer-quarter:before{content:\"\\f2ca\"}.la-thermometer-three-quarters:before{content:\"\\f2c8\"}.la-think-peaks:before{content:\"\\f731\"}.la-thumbs-down:before{content:\"\\f165\"}.la-thumbs-up:before{content:\"\\f164\"}.la-thumbtack:before{content:\"\\f08d\"}.la-ticket-alt:before{content:\"\\f3ff\"}.la-times:before{content:\"\\f00d\"}.la-times-circle:before{content:\"\\f057\"}.la-tint:before{content:\"\\f043\"}.la-tint-slash:before{content:\"\\f5c7\"}.la-tired:before{content:\"\\f5c8\"}.la-toggle-off:before{content:\"\\f204\"}.la-toggle-on:before{content:\"\\f205\"}.la-toilet:before{content:\"\\f7d8\"}.la-toilet-paper:before{content:\"\\f71e\"}.la-toolbox:before{content:\"\\f552\"}.la-tools:before{content:\"\\f7d9\"}.la-tooth:before{content:\"\\f5c9\"}.la-torah:before{content:\"\\f6a0\"}.la-torii-gate:before{content:\"\\f6a1\"}.la-tractor:before{content:\"\\f722\"}.la-trade-federation:before{content:\"\\f513\"}.la-trademark:before{content:\"\\f25c\"}.la-traffic-light:before{content:\"\\f637\"}.la-train:before{content:\"\\f238\"}.la-tram:before{content:\"\\f7da\"}.la-transgender:before{content:\"\\f224\"}.la-transgender-alt:before{content:\"\\f225\"}.la-trash:before{content:\"\\f1f8\"}.la-trash-alt:before{content:\"\\f2ed\"}.la-trash-restore:before{content:\"\\f829\"}.la-trash-restore-alt:before{content:\"\\f82a\"}.la-tree:before{content:\"\\f1bb\"}.la-trello:before{content:\"\\f181\"}.la-tripadvisor:before{content:\"\\f262\"}.la-trophy:before{content:\"\\f091\"}.la-truck:before{content:\"\\f0d1\"}.la-truck-loading:before{content:\"\\f4de\"}.la-truck-monster:before{content:\"\\f63b\"}.la-truck-moving:before{content:\"\\f4df\"}.la-truck-pickup:before{content:\"\\f63c\"}.la-tshirt:before{content:\"\\f553\"}.la-tty:before{content:\"\\f1e4\"}.la-tumblr:before{content:\"\\f173\"}.la-tumblr-square:before{content:\"\\f174\"}.la-tv:before{content:\"\\f26c\"}.la-twitch:before{content:\"\\f1e8\"}.la-twitter:before{content:\"\\f099\"}.la-twitter-square:before{content:\"\\f081\"}.la-typo3:before{content:\"\\f42b\"}.la-uber:before{content:\"\\f402\"}.la-ubuntu:before{content:\"\\f7df\"}.la-uikit:before{content:\"\\f403\"}.la-umbraco:before{content:\"\\f8e8\"}.la-umbrella:before{content:\"\\f0e9\"}.la-umbrella-beach:before{content:\"\\f5ca\"}.la-underline:before{content:\"\\f0cd\"}.la-undo:before{content:\"\\f0e2\"}.la-undo-alt:before{content:\"\\f2ea\"}.la-uniregistry:before{content:\"\\f404\"}.la-universal-access:before{content:\"\\f29a\"}.la-university:before{content:\"\\f19c\"}.la-unlink:before{content:\"\\f127\"}.la-unlock:before{content:\"\\f09c\"}.la-unlock-alt:before{content:\"\\f13e\"}.la-untappd:before{content:\"\\f405\"}.la-upload:before{content:\"\\f093\"}.la-ups:before{content:\"\\f7e0\"}.la-usb:before{content:\"\\f287\"}.la-user:before{content:\"\\f007\"}.la-user-alt:before{content:\"\\f406\"}.la-user-alt-slash:before{content:\"\\f4fa\"}.la-user-astronaut:before{content:\"\\f4fb\"}.la-user-check:before{content:\"\\f4fc\"}.la-user-circle:before{content:\"\\f2bd\"}.la-user-clock:before{content:\"\\f4fd\"}.la-user-cog:before{content:\"\\f4fe\"}.la-user-edit:before{content:\"\\f4ff\"}.la-user-friends:before{content:\"\\f500\"}.la-user-graduate:before{content:\"\\f501\"}.la-user-injured:before{content:\"\\f728\"}.la-user-lock:before{content:\"\\f502\"}.la-user-md:before{content:\"\\f0f0\"}.la-user-minus:before{content:\"\\f503\"}.la-user-ninja:before{content:\"\\f504\"}.la-user-nurse:before{content:\"\\f82f\"}.la-user-plus:before{content:\"\\f234\"}.la-user-secret:before{content:\"\\f21b\"}.la-user-shield:before{content:\"\\f505\"}.la-user-slash:before{content:\"\\f506\"}.la-user-tag:before{content:\"\\f507\"}.la-user-tie:before{content:\"\\f508\"}.la-user-times:before{content:\"\\f235\"}.la-users:before{content:\"\\f0c0\"}.la-users-cog:before{content:\"\\f509\"}.la-usps:before{content:\"\\f7e1\"}.la-ussunnah:before{content:\"\\f407\"}.la-utensil-spoon:before{content:\"\\f2e5\"}.la-utensils:before{content:\"\\f2e7\"}.la-vaadin:before{content:\"\\f408\"}.la-vector-square:before{content:\"\\f5cb\"}.la-venus:before{content:\"\\f221\"}.la-venus-double:before{content:\"\\f226\"}.la-venus-mars:before{content:\"\\f228\"}.la-viacoin:before{content:\"\\f237\"}.la-viadeo:before{content:\"\\f2a9\"}.la-viadeo-square:before{content:\"\\f2aa\"}.la-vial:before{content:\"\\f492\"}.la-vials:before{content:\"\\f493\"}.la-viber:before{content:\"\\f409\"}.la-video:before{content:\"\\f03d\"}.la-video-slash:before{content:\"\\f4e2\"}.la-vihara:before{content:\"\\f6a7\"}.la-vimeo:before{content:\"\\f40a\"}.la-vimeo-square:before{content:\"\\f194\"}.la-vimeo-v:before{content:\"\\f27d\"}.la-vine:before{content:\"\\f1ca\"}.la-vk:before{content:\"\\f189\"}.la-vnv:before{content:\"\\f40b\"}.la-voicemail:before{content:\"\\f897\"}.la-volleyball-ball:before{content:\"\\f45f\"}.la-volume-down:before{content:\"\\f027\"}.la-volume-mute:before{content:\"\\f6a9\"}.la-volume-off:before{content:\"\\f026\"}.la-volume-up:before{content:\"\\f028\"}.la-vote-yea:before{content:\"\\f772\"}.la-vr-cardboard:before{content:\"\\f729\"}.la-vuejs:before{content:\"\\f41f\"}.la-walking:before{content:\"\\f554\"}.la-wallet:before{content:\"\\f555\"}.la-warehouse:before{content:\"\\f494\"}.la-water:before{content:\"\\f773\"}.la-wave-square:before{content:\"\\f83e\"}.la-waze:before{content:\"\\f83f\"}.la-weebly:before{content:\"\\f5cc\"}.la-weibo:before{content:\"\\f18a\"}.la-weight:before{content:\"\\f496\"}.la-weight-hanging:before{content:\"\\f5cd\"}.la-weixin:before{content:\"\\f1d7\"}.la-whatsapp:before{content:\"\\f232\"}.la-whatsapp-square:before{content:\"\\f40c\"}.la-wheelchair:before{content:\"\\f193\"}.la-whmcs:before{content:\"\\f40d\"}.la-wifi:before{content:\"\\f1eb\"}.la-wikipedia-w:before{content:\"\\f266\"}.la-wind:before{content:\"\\f72e\"}.la-window-close:before{content:\"\\f410\"}.la-window-maximize:before{content:\"\\f2d0\"}.la-window-minimize:before{content:\"\\f2d1\"}.la-window-restore:before{content:\"\\f2d2\"}.la-windows:before{content:\"\\f17a\"}.la-wine-bottle:before{content:\"\\f72f\"}.la-wine-glass:before{content:\"\\f4e3\"}.la-wine-glass-alt:before{content:\"\\f5ce\"}.la-wix:before{content:\"\\f5cf\"}.la-wizards-of-the-coast:before{content:\"\\f730\"}.la-wolf-pack-battalion:before{content:\"\\f514\"}.la-won-sign:before{content:\"\\f159\"}.la-wordpress:before{content:\"\\f19a\"}.la-wordpress-simple:before{content:\"\\f411\"}.la-wpbeginner:before{content:\"\\f297\"}.la-wpexplorer:before{content:\"\\f2de\"}.la-wpforms:before{content:\"\\f298\"}.la-wpressr:before{content:\"\\f3e4\"}.la-wrench:before{content:\"\\f0ad\"}.la-x-ray:before{content:\"\\f497\"}.la-xbox:before{content:\"\\f412\"}.la-xing:before{content:\"\\f168\"}.la-xing-square:before{content:\"\\f169\"}.la-y-combinator:before{content:\"\\f23b\"}.la-yahoo:before{content:\"\\f19e\"}.la-yammer:before{content:\"\\f840\"}.la-yandex:before{content:\"\\f413\"}.la-yandex-international:before{content:\"\\f414\"}.la-yarn:before{content:\"\\f7e3\"}.la-yelp:before{content:\"\\f1e9\"}.la-yen-sign:before{content:\"\\f157\"}.la-yin-yang:before{content:\"\\f6ad\"}.la-yoast:before{content:\"\\f2b1\"}.la-youtube:before{content:\"\\f167\"}.la-youtube-square:before{content:\"\\f431\"}.la-zhihu:before{content:\"\\f63f\"}.sr-only{clip:rect(0,0,0,0);border:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}@font-face{font-display:auto;font-family:Line Awesome Brands;font-style:normal;font-weight:400;src:url(/fonts/la-brands-400.eot);src:url(/fonts/la-brands-400.eot?#iefix) format(\"embedded-opentype\"),url(/fonts/la-brands-400.woff2) format(\"woff2\"),url(/fonts/la-brands-400.woff) format(\"woff\"),url(/fonts/la-brands-400.ttf) format(\"truetype\"),url(/fonts/la-brands-400.svg#lineawesome) format(\"svg\")}.lab{font-family:Line Awesome Brands}@font-face{font-display:auto;font-family:Line Awesome Free;font-style:normal;font-weight:400;src:url(/fonts/la-regular-400.eot);src:url(/fonts/la-regular-400.eot?#iefix) format(\"embedded-opentype\"),url(/fonts/la-regular-400.woff2) format(\"woff2\"),url(/fonts/la-regular-400.woff) format(\"woff\"),url(/fonts/la-regular-400.ttf) format(\"truetype\"),url(/fonts/la-regular-400.svg#lineawesome) format(\"svg\")}.lar{font-weight:400}@font-face{font-display:auto;font-family:Line Awesome Free;font-style:normal;font-weight:900;src:url(/fonts/la-solid-900.eot);src:url(/fonts/la-solid-900.eot?#iefix) format(\"embedded-opentype\"),url(/fonts/la-solid-900.woff2) format(\"woff2\"),url(/fonts/la-solid-900.woff) format(\"woff\"),url(/fonts/la-solid-900.ttf) format(\"truetype\"),url(/fonts/la-solid-900.svg#lineawesome) format(\"svg\")}.la,.lar,.las{font-family:Line Awesome Free}.la,.las{font-weight:900}.la.la-glass:before{content:\"\\f000\"}.la.la-meetup{font-family:Line Awesome Brands;font-weight:400}.la.la-star-o{font-family:Line Awesome Free;font-weight:400}.la.la-star-o:before{content:\"\\f005\"}.la.la-close:before,.la.la-remove:before{content:\"\\f00d\"}.la.la-gear:before{content:\"\\f013\"}.la.la-trash-o{font-family:Line Awesome Free;font-weight:400}.la.la-trash-o:before{content:\"\\f2ed\"}.la.la-file-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-o:before{content:\"\\f15b\"}.la.la-clock-o{font-family:Line Awesome Free;font-weight:400}.la.la-clock-o:before{content:\"\\f017\"}.la.la-arrow-circle-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-down:before{content:\"\\f358\"}.la.la-arrow-circle-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-up:before{content:\"\\f35b\"}.la.la-play-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-play-circle-o:before{content:\"\\f144\"}.la.la-repeat:before,.la.la-rotate-right:before{content:\"\\f01e\"}.la.la-refresh:before{content:\"\\f021\"}.la.la-list-alt{font-family:Line Awesome Free;font-weight:400}.la.la-dedent:before{content:\"\\f03b\"}.la.la-video-camera:before{content:\"\\f03d\"}.la.la-picture-o{font-family:Line Awesome Free;font-weight:400}.la.la-picture-o:before{content:\"\\f03e\"}.la.la-photo{font-family:Line Awesome Free;font-weight:400}.la.la-photo:before{content:\"\\f03e\"}.la.la-image{font-family:Line Awesome Free;font-weight:400}.la.la-image:before{content:\"\\f03e\"}.la.la-pencil:before{content:\"\\f303\"}.la.la-map-marker:before{content:\"\\f3c5\"}.la.la-pencil-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-pencil-square-o:before{content:\"\\f044\"}.la.la-share-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-share-square-o:before{content:\"\\f14d\"}.la.la-check-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-check-square-o:before{content:\"\\f14a\"}.la.la-arrows:before{content:\"\\f0b2\"}.la.la-times-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-times-circle-o:before{content:\"\\f057\"}.la.la-check-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-check-circle-o:before{content:\"\\f058\"}.la.la-mail-forward:before{content:\"\\f064\"}.la.la-eye,.la.la-eye-slash{font-family:Line Awesome Free;font-weight:400}.la.la-warning:before{content:\"\\f071\"}.la.la-calendar:before{content:\"\\f073\"}.la.la-arrows-v:before{content:\"\\f338\"}.la.la-arrows-h:before{content:\"\\f337\"}.la.la-bar-chart{font-family:Line Awesome Free;font-weight:400}.la.la-bar-chart:before{content:\"\\f080\"}.la.la-bar-chart-o{font-family:Line Awesome Free;font-weight:400}.la.la-bar-chart-o:before{content:\"\\f080\"}.la.la-facebook-square,.la.la-twitter-square{font-family:Line Awesome Brands;font-weight:400}.la.la-gears:before{content:\"\\f085\"}.la.la-thumbs-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-thumbs-o-up:before{content:\"\\f164\"}.la.la-thumbs-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-thumbs-o-down:before{content:\"\\f165\"}.la.la-heart-o{font-family:Line Awesome Free;font-weight:400}.la.la-heart-o:before{content:\"\\f004\"}.la.la-sign-out:before{content:\"\\f2f5\"}.la.la-linkedin-square{font-family:Line Awesome Brands;font-weight:400}.la.la-linkedin-square:before{content:\"\\f08c\"}.la.la-thumb-tack:before{content:\"\\f08d\"}.la.la-external-link:before{content:\"\\f35d\"}.la.la-sign-in:before{content:\"\\f2f6\"}.la.la-github-square{font-family:Line Awesome Brands;font-weight:400}.la.la-lemon-o{font-family:Line Awesome Free;font-weight:400}.la.la-lemon-o:before{content:\"\\f094\"}.la.la-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-square-o:before{content:\"\\f0c8\"}.la.la-bookmark-o{font-family:Line Awesome Free;font-weight:400}.la.la-bookmark-o:before{content:\"\\f02e\"}.la.la-facebook,.la.la-twitter{font-family:Line Awesome Brands;font-weight:400}.la.la-facebook:before{content:\"\\f39e\"}.la.la-facebook-f{font-family:Line Awesome Brands;font-weight:400}.la.la-facebook-f:before{content:\"\\f39e\"}.la.la-github{font-family:Line Awesome Brands;font-weight:400}.la.la-credit-card{font-family:Line Awesome Free;font-weight:400}.la.la-feed:before{content:\"\\f09e\"}.la.la-hdd-o{font-family:Line Awesome Free;font-weight:400}.la.la-hdd-o:before{content:\"\\f0a0\"}.la.la-hand-o-right{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-right:before{content:\"\\f0a4\"}.la.la-hand-o-left{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-left:before{content:\"\\f0a5\"}.la.la-hand-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-up:before{content:\"\\f0a6\"}.la.la-hand-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-hand-o-down:before{content:\"\\f0a7\"}.la.la-arrows-alt:before{content:\"\\f31e\"}.la.la-group:before{content:\"\\f0c0\"}.la.la-chain:before{content:\"\\f0c1\"}.la.la-scissors:before{content:\"\\f0c4\"}.la.la-files-o{font-family:Line Awesome Free;font-weight:400}.la.la-files-o:before{content:\"\\f0c5\"}.la.la-floppy-o{font-family:Line Awesome Free;font-weight:400}.la.la-floppy-o:before{content:\"\\f0c7\"}.la.la-navicon:before,.la.la-reorder:before{content:\"\\f0c9\"}.la.la-google-plus,.la.la-google-plus-square,.la.la-pinterest,.la.la-pinterest-square{font-family:Line Awesome Brands;font-weight:400}.la.la-google-plus:before{content:\"\\f0d5\"}.la.la-money{font-family:Line Awesome Free;font-weight:400}.la.la-money:before{content:\"\\f3d1\"}.la.la-unsorted:before{content:\"\\f0dc\"}.la.la-sort-desc:before{content:\"\\f0dd\"}.la.la-sort-asc:before{content:\"\\f0de\"}.la.la-linkedin{font-family:Line Awesome Brands;font-weight:400}.la.la-linkedin:before{content:\"\\f0e1\"}.la.la-rotate-left:before{content:\"\\f0e2\"}.la.la-legal:before{content:\"\\f0e3\"}.la.la-dashboard:before,.la.la-tachometer:before{content:\"\\f3fd\"}.la.la-comment-o{font-family:Line Awesome Free;font-weight:400}.la.la-comment-o:before{content:\"\\f075\"}.la.la-comments-o{font-family:Line Awesome Free;font-weight:400}.la.la-comments-o:before{content:\"\\f086\"}.la.la-flash:before{content:\"\\f0e7\"}.la.la-clipboard,.la.la-paste{font-family:Line Awesome Free;font-weight:400}.la.la-paste:before{content:\"\\f328\"}.la.la-lightbulb-o{font-family:Line Awesome Free;font-weight:400}.la.la-lightbulb-o:before{content:\"\\f0eb\"}.la.la-exchange:before{content:\"\\f362\"}.la.la-cloud-download:before{content:\"\\f381\"}.la.la-cloud-upload:before{content:\"\\f382\"}.la.la-bell-o{font-family:Line Awesome Free;font-weight:400}.la.la-bell-o:before{content:\"\\f0f3\"}.la.la-cutlery:before{content:\"\\f2e7\"}.la.la-file-text-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-text-o:before{content:\"\\f15c\"}.la.la-building-o{font-family:Line Awesome Free;font-weight:400}.la.la-building-o:before{content:\"\\f1ad\"}.la.la-hospital-o{font-family:Line Awesome Free;font-weight:400}.la.la-hospital-o:before{content:\"\\f0f8\"}.la.la-tablet:before{content:\"\\f3fa\"}.la.la-mobile-phone:before,.la.la-mobile:before{content:\"\\f3cd\"}.la.la-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-circle-o:before{content:\"\\f111\"}.la.la-mail-reply:before{content:\"\\f3e5\"}.la.la-github-alt{font-family:Line Awesome Brands;font-weight:400}.la.la-folder-o{font-family:Line Awesome Free;font-weight:400}.la.la-folder-o:before{content:\"\\f07b\"}.la.la-folder-open-o{font-family:Line Awesome Free;font-weight:400}.la.la-folder-open-o:before{content:\"\\f07c\"}.la.la-smile-o{font-family:Line Awesome Free;font-weight:400}.la.la-smile-o:before{content:\"\\f118\"}.la.la-frown-o{font-family:Line Awesome Free;font-weight:400}.la.la-frown-o:before{content:\"\\f119\"}.la.la-meh-o{font-family:Line Awesome Free;font-weight:400}.la.la-meh-o:before{content:\"\\f11a\"}.la.la-keyboard-o{font-family:Line Awesome Free;font-weight:400}.la.la-keyboard-o:before{content:\"\\f11c\"}.la.la-flag-o{font-family:Line Awesome Free;font-weight:400}.la.la-flag-o:before{content:\"\\f024\"}.la.la-mail-reply-all:before{content:\"\\f122\"}.la.la-star-half-o{font-family:Line Awesome Free;font-weight:400}.la.la-star-half-o:before{content:\"\\f089\"}.la.la-star-half-empty{font-family:Line Awesome Free;font-weight:400}.la.la-star-half-empty:before{content:\"\\f089\"}.la.la-star-half-full{font-family:Line Awesome Free;font-weight:400}.la.la-star-half-full:before{content:\"\\f089\"}.la.la-code-fork:before{content:\"\\f126\"}.la.la-chain-broken:before{content:\"\\f127\"}.la.la-shield:before{content:\"\\f3ed\"}.la.la-calendar-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-o:before{content:\"\\f133\"}.la.la-css3,.la.la-html5,.la.la-maxcdn{font-family:Line Awesome Brands;font-weight:400}.la.la-ticket:before{content:\"\\f3ff\"}.la.la-minus-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-minus-square-o:before{content:\"\\f146\"}.la.la-level-up:before{content:\"\\f3bf\"}.la.la-level-down:before{content:\"\\f3be\"}.la.la-pencil-square:before{content:\"\\f14b\"}.la.la-external-link-square:before{content:\"\\f360\"}.la.la-compass{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-down{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-down:before{content:\"\\f150\"}.la.la-toggle-down{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-down:before{content:\"\\f150\"}.la.la-caret-square-o-up{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-up:before{content:\"\\f151\"}.la.la-toggle-up{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-up:before{content:\"\\f151\"}.la.la-caret-square-o-right{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-right:before{content:\"\\f152\"}.la.la-toggle-right{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-right:before{content:\"\\f152\"}.la.la-eur:before,.la.la-euro:before{content:\"\\f153\"}.la.la-gbp:before{content:\"\\f154\"}.la.la-dollar:before,.la.la-usd:before{content:\"\\f155\"}.la.la-inr:before,.la.la-rupee:before{content:\"\\f156\"}.la.la-cny:before,.la.la-jpy:before,.la.la-rmb:before,.la.la-yen:before{content:\"\\f157\"}.la.la-rouble:before,.la.la-rub:before,.la.la-ruble:before{content:\"\\f158\"}.la.la-krw:before,.la.la-won:before{content:\"\\f159\"}.la.la-bitcoin,.la.la-btc{font-family:Line Awesome Brands;font-weight:400}.la.la-bitcoin:before{content:\"\\f15a\"}.la.la-file-text:before{content:\"\\f15c\"}.la.la-sort-alpha-asc:before{content:\"\\f15d\"}.la.la-sort-alpha-desc:before{content:\"\\f881\"}.la.la-sort-amount-asc:before{content:\"\\f160\"}.la.la-sort-amount-desc:before{content:\"\\f884\"}.la.la-sort-numeric-asc:before{content:\"\\f162\"}.la.la-sort-numeric-desc:before{content:\"\\f886\"}.la.la-xing,.la.la-xing-square,.la.la-youtube,.la.la-youtube-play,.la.la-youtube-square{font-family:Line Awesome Brands;font-weight:400}.la.la-youtube-play:before{content:\"\\f167\"}.la.la-adn,.la.la-bitbucket,.la.la-bitbucket-square,.la.la-dropbox,.la.la-flickr,.la.la-instagram,.la.la-stack-overflow{font-family:Line Awesome Brands;font-weight:400}.la.la-bitbucket-square:before{content:\"\\f171\"}.la.la-tumblr,.la.la-tumblr-square{font-family:Line Awesome Brands;font-weight:400}.la.la-long-arrow-down:before{content:\"\\f309\"}.la.la-long-arrow-up:before{content:\"\\f30c\"}.la.la-long-arrow-left:before{content:\"\\f30a\"}.la.la-long-arrow-right:before{content:\"\\f30b\"}.la.la-android,.la.la-apple,.la.la-dribbble,.la.la-foursquare,.la.la-gittip,.la.la-gratipay,.la.la-linux,.la.la-skype,.la.la-trello,.la.la-windows{font-family:Line Awesome Brands;font-weight:400}.la.la-gittip:before{content:\"\\f184\"}.la.la-sun-o{font-family:Line Awesome Free;font-weight:400}.la.la-sun-o:before{content:\"\\f185\"}.la.la-moon-o{font-family:Line Awesome Free;font-weight:400}.la.la-moon-o:before{content:\"\\f186\"}.la.la-pagelines,.la.la-renren,.la.la-stack-exchange,.la.la-vk,.la.la-weibo{font-family:Line Awesome Brands;font-weight:400}.la.la-arrow-circle-o-right{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-right:before{content:\"\\f35a\"}.la.la-arrow-circle-o-left{font-family:Line Awesome Free;font-weight:400}.la.la-arrow-circle-o-left:before{content:\"\\f359\"}.la.la-caret-square-o-left{font-family:Line Awesome Free;font-weight:400}.la.la-caret-square-o-left:before{content:\"\\f191\"}.la.la-toggle-left{font-family:Line Awesome Free;font-weight:400}.la.la-toggle-left:before{content:\"\\f191\"}.la.la-dot-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-dot-circle-o:before{content:\"\\f192\"}.la.la-vimeo-square{font-family:Line Awesome Brands;font-weight:400}.la.la-try:before,.la.la-turkish-lira:before{content:\"\\f195\"}.la.la-plus-square-o{font-family:Line Awesome Free;font-weight:400}.la.la-plus-square-o:before{content:\"\\f0fe\"}.la.la-openid,.la.la-slack,.la.la-wordpress{font-family:Line Awesome Brands;font-weight:400}.la.la-bank:before,.la.la-institution:before{content:\"\\f19c\"}.la.la-mortar-board:before{content:\"\\f19d\"}.la.la-delicious,.la.la-digg,.la.la-drupal,.la.la-google,.la.la-joomla,.la.la-pied-piper-alt,.la.la-pied-piper-pp,.la.la-reddit,.la.la-reddit-square,.la.la-stumbleupon,.la.la-stumbleupon-circle,.la.la-yahoo{font-family:Line Awesome Brands;font-weight:400}.la.la-spoon:before{content:\"\\f2e5\"}.la.la-behance,.la.la-behance-square,.la.la-steam,.la.la-steam-square{font-family:Line Awesome Brands;font-weight:400}.la.la-automobile:before{content:\"\\f1b9\"}.la.la-cab:before{content:\"\\f1ba\"}.la.la-envelope-o{font-family:Line Awesome Free;font-weight:400}.la.la-envelope-o:before{content:\"\\f0e0\"}.la.la-deviantart,.la.la-soundcloud{font-family:Line Awesome Brands;font-weight:400}.la.la-file-pdf-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-pdf-o:before{content:\"\\f1c1\"}.la.la-file-word-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-word-o:before{content:\"\\f1c2\"}.la.la-file-excel-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-excel-o:before{content:\"\\f1c3\"}.la.la-file-powerpoint-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-powerpoint-o:before{content:\"\\f1c4\"}.la.la-file-image-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-image-o:before{content:\"\\f1c5\"}.la.la-file-photo-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-photo-o:before{content:\"\\f1c5\"}.la.la-file-picture-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-picture-o:before{content:\"\\f1c5\"}.la.la-file-archive-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-archive-o:before{content:\"\\f1c6\"}.la.la-file-zip-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-zip-o:before{content:\"\\f1c6\"}.la.la-file-audio-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-audio-o:before{content:\"\\f1c7\"}.la.la-file-sound-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-sound-o:before{content:\"\\f1c7\"}.la.la-file-video-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-video-o:before{content:\"\\f1c8\"}.la.la-file-movie-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-movie-o:before{content:\"\\f1c8\"}.la.la-file-code-o{font-family:Line Awesome Free;font-weight:400}.la.la-file-code-o:before{content:\"\\f1c9\"}.la.la-codepen,.la.la-jsfiddle,.la.la-vine{font-family:Line Awesome Brands;font-weight:400}.la.la-life-bouy,.la.la-life-ring{font-family:Line Awesome Free;font-weight:400}.la.la-life-bouy:before{content:\"\\f1cd\"}.la.la-life-buoy{font-family:Line Awesome Free;font-weight:400}.la.la-life-buoy:before{content:\"\\f1cd\"}.la.la-life-saver{font-family:Line Awesome Free;font-weight:400}.la.la-life-saver:before{content:\"\\f1cd\"}.la.la-support{font-family:Line Awesome Free;font-weight:400}.la.la-support:before{content:\"\\f1cd\"}.la.la-circle-o-notch:before{content:\"\\f1ce\"}.la.la-ra,.la.la-rebel{font-family:Line Awesome Brands;font-weight:400}.la.la-ra:before{content:\"\\f1d0\"}.la.la-resistance{font-family:Line Awesome Brands;font-weight:400}.la.la-resistance:before{content:\"\\f1d0\"}.la.la-empire,.la.la-ge{font-family:Line Awesome Brands;font-weight:400}.la.la-ge:before{content:\"\\f1d1\"}.la.la-git,.la.la-git-square,.la.la-hacker-news,.la.la-y-combinator-square{font-family:Line Awesome Brands;font-weight:400}.la.la-y-combinator-square:before{content:\"\\f1d4\"}.la.la-yc-square{font-family:Line Awesome Brands;font-weight:400}.la.la-yc-square:before{content:\"\\f1d4\"}.la.la-qq,.la.la-tencent-weibo,.la.la-wechat,.la.la-weixin{font-family:Line Awesome Brands;font-weight:400}.la.la-wechat:before{content:\"\\f1d7\"}.la.la-send:before{content:\"\\f1d8\"}.la.la-paper-plane-o{font-family:Line Awesome Free;font-weight:400}.la.la-paper-plane-o:before{content:\"\\f1d8\"}.la.la-send-o{font-family:Line Awesome Free;font-weight:400}.la.la-send-o:before{content:\"\\f1d8\"}.la.la-circle-thin{font-family:Line Awesome Free;font-weight:400}.la.la-circle-thin:before{content:\"\\f111\"}.la.la-header:before{content:\"\\f1dc\"}.la.la-sliders:before{content:\"\\f1de\"}.la.la-futbol-o{font-family:Line Awesome Free;font-weight:400}.la.la-futbol-o:before{content:\"\\f1e3\"}.la.la-soccer-ball-o{font-family:Line Awesome Free;font-weight:400}.la.la-soccer-ball-o:before{content:\"\\f1e3\"}.la.la-slideshare,.la.la-twitch,.la.la-yelp{font-family:Line Awesome Brands;font-weight:400}.la.la-newspaper-o{font-family:Line Awesome Free;font-weight:400}.la.la-newspaper-o:before{content:\"\\f1ea\"}.la.la-cc-amex,.la.la-cc-discover,.la.la-cc-mastercard,.la.la-cc-paypal,.la.la-cc-stripe,.la.la-cc-visa,.la.la-google-wallet,.la.la-paypal{font-family:Line Awesome Brands;font-weight:400}.la.la-bell-slash-o{font-family:Line Awesome Free;font-weight:400}.la.la-bell-slash-o:before{content:\"\\f1f6\"}.la.la-trash:before{content:\"\\f2ed\"}.la.la-copyright{font-family:Line Awesome Free;font-weight:400}.la.la-eyedropper:before{content:\"\\f1fb\"}.la.la-area-chart:before{content:\"\\f1fe\"}.la.la-pie-chart:before{content:\"\\f200\"}.la.la-line-chart:before{content:\"\\f201\"}.la.la-angellist,.la.la-ioxhost,.la.la-lastfm,.la.la-lastfm-square{font-family:Line Awesome Brands;font-weight:400}.la.la-cc{font-family:Line Awesome Free;font-weight:400}.la.la-cc:before{content:\"\\f20a\"}.la.la-ils:before,.la.la-shekel:before,.la.la-sheqel:before{content:\"\\f20b\"}.la.la-meanpath{font-family:Line Awesome Brands;font-weight:400}.la.la-meanpath:before{content:\"\\f2b4\"}.la.la-buysellads,.la.la-connectdevelop,.la.la-dashcube,.la.la-forumbee,.la.la-leanpub,.la.la-sellsy,.la.la-shirtsinbulk,.la.la-simplybuilt,.la.la-skyatlas{font-family:Line Awesome Brands;font-weight:400}.la.la-diamond{font-family:Line Awesome Free;font-weight:400}.la.la-diamond:before{content:\"\\f3a5\"}.la.la-intersex:before{content:\"\\f224\"}.la.la-facebook-official{font-family:Line Awesome Brands;font-weight:400}.la.la-facebook-official:before{content:\"\\f09a\"}.la.la-pinterest-p,.la.la-whatsapp{font-family:Line Awesome Brands;font-weight:400}.la.la-hotel:before{content:\"\\f236\"}.la.la-medium,.la.la-viacoin,.la.la-y-combinator,.la.la-yc{font-family:Line Awesome Brands;font-weight:400}.la.la-yc:before{content:\"\\f23b\"}.la.la-expeditedssl,.la.la-opencart,.la.la-optin-monster{font-family:Line Awesome Brands;font-weight:400}.la.la-battery-4:before,.la.la-battery:before{content:\"\\f240\"}.la.la-battery-3:before{content:\"\\f241\"}.la.la-battery-2:before{content:\"\\f242\"}.la.la-battery-1:before{content:\"\\f243\"}.la.la-battery-0:before{content:\"\\f244\"}.la.la-object-group,.la.la-object-ungroup,.la.la-sticky-note-o{font-family:Line Awesome Free;font-weight:400}.la.la-sticky-note-o:before{content:\"\\f249\"}.la.la-cc-diners-club,.la.la-cc-jcb{font-family:Line Awesome Brands;font-weight:400}.la.la-clone,.la.la-hourglass-o{font-family:Line Awesome Free;font-weight:400}.la.la-hourglass-o:before{content:\"\\f254\"}.la.la-hourglass-1:before{content:\"\\f251\"}.la.la-hourglass-2:before{content:\"\\f252\"}.la.la-hourglass-3:before{content:\"\\f253\"}.la.la-hand-rock-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-rock-o:before{content:\"\\f255\"}.la.la-hand-grab-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-grab-o:before{content:\"\\f255\"}.la.la-hand-paper-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-paper-o:before{content:\"\\f256\"}.la.la-hand-stop-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-stop-o:before{content:\"\\f256\"}.la.la-hand-scissors-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-scissors-o:before{content:\"\\f257\"}.la.la-hand-lizard-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-lizard-o:before{content:\"\\f258\"}.la.la-hand-spock-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-spock-o:before{content:\"\\f259\"}.la.la-hand-pointer-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-pointer-o:before{content:\"\\f25a\"}.la.la-hand-peace-o{font-family:Line Awesome Free;font-weight:400}.la.la-hand-peace-o:before{content:\"\\f25b\"}.la.la-registered{font-family:Line Awesome Free;font-weight:400}.la.la-chrome,.la.la-creative-commons,.la.la-firefox,.la.la-get-pocket,.la.la-gg,.la.la-gg-circle,.la.la-internet-explorer,.la.la-odnoklassniki,.la.la-odnoklassniki-square,.la.la-opera,.la.la-safari,.la.la-tripadvisor,.la.la-wikipedia-w{font-family:Line Awesome Brands;font-weight:400}.la.la-television:before{content:\"\\f26c\"}.la.la-500px,.la.la-amazon,.la.la-contao{font-family:Line Awesome Brands;font-weight:400}.la.la-calendar-plus-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-plus-o:before{content:\"\\f271\"}.la.la-calendar-minus-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-minus-o:before{content:\"\\f272\"}.la.la-calendar-times-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-times-o:before{content:\"\\f273\"}.la.la-calendar-check-o{font-family:Line Awesome Free;font-weight:400}.la.la-calendar-check-o:before{content:\"\\f274\"}.la.la-map-o{font-family:Line Awesome Free;font-weight:400}.la.la-map-o:before{content:\"\\f279\"}.la.la-commenting:before{content:\"\\f4ad\"}.la.la-commenting-o{font-family:Line Awesome Free;font-weight:400}.la.la-commenting-o:before{content:\"\\f4ad\"}.la.la-houzz,.la.la-vimeo{font-family:Line Awesome Brands;font-weight:400}.la.la-vimeo:before{content:\"\\f27d\"}.la.la-black-tie,.la.la-edge,.la.la-fonticons,.la.la-reddit-alien{font-family:Line Awesome Brands;font-weight:400}.la.la-credit-card-alt:before{content:\"\\f09d\"}.la.la-codiepie,.la.la-fort-awesome,.la.la-mixcloud,.la.la-modx,.la.la-product-hunt,.la.la-scribd,.la.la-usb{font-family:Line Awesome Brands;font-weight:400}.la.la-pause-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-pause-circle-o:before{content:\"\\f28b\"}.la.la-stop-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-stop-circle-o:before{content:\"\\f28d\"}.la.la-bluetooth,.la.la-bluetooth-b,.la.la-envira,.la.la-gitlab,.la.la-wheelchair-alt,.la.la-wpbeginner,.la.la-wpforms{font-family:Line Awesome Brands;font-weight:400}.la.la-wheelchair-alt:before{content:\"\\f368\"}.la.la-question-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-question-circle-o:before{content:\"\\f059\"}.la.la-volume-control-phone:before{content:\"\\f2a0\"}.la.la-asl-interpreting:before{content:\"\\f2a3\"}.la.la-deafness:before,.la.la-hard-of-hearing:before{content:\"\\f2a4\"}.la.la-glide,.la.la-glide-g{font-family:Line Awesome Brands;font-weight:400}.la.la-signing:before{content:\"\\f2a7\"}.la.la-first-order,.la.la-google-plus-official,.la.la-pied-piper,.la.la-snapchat,.la.la-snapchat-ghost,.la.la-snapchat-square,.la.la-themeisle,.la.la-viadeo,.la.la-viadeo-square,.la.la-yoast{font-family:Line Awesome Brands;font-weight:400}.la.la-google-plus-official:before{content:\"\\f2b3\"}.la.la-google-plus-circle{font-family:Line Awesome Brands;font-weight:400}.la.la-google-plus-circle:before{content:\"\\f2b3\"}.la.la-fa,.la.la-font-awesome{font-family:Line Awesome Brands;font-weight:400}.la.la-fa:before{content:\"\\f2b4\"}.la.la-handshake-o{font-family:Line Awesome Free;font-weight:400}.la.la-handshake-o:before{content:\"\\f2b5\"}.la.la-envelope-open-o{font-family:Line Awesome Free;font-weight:400}.la.la-envelope-open-o:before{content:\"\\f2b6\"}.la.la-linode{font-family:Line Awesome Brands;font-weight:400}.la.la-address-book-o{font-family:Line Awesome Free;font-weight:400}.la.la-address-book-o:before{content:\"\\f2b9\"}.la.la-vcard:before{content:\"\\f2bb\"}.la.la-address-card-o{font-family:Line Awesome Free;font-weight:400}.la.la-address-card-o:before{content:\"\\f2bb\"}.la.la-vcard-o{font-family:Line Awesome Free;font-weight:400}.la.la-vcard-o:before{content:\"\\f2bb\"}.la.la-user-circle-o{font-family:Line Awesome Free;font-weight:400}.la.la-user-circle-o:before{content:\"\\f2bd\"}.la.la-user-o{font-family:Line Awesome Free;font-weight:400}.la.la-user-o:before{content:\"\\f007\"}.la.la-id-badge{font-family:Line Awesome Free;font-weight:400}.la.la-drivers-license:before{content:\"\\f2c2\"}.la.la-id-card-o{font-family:Line Awesome Free;font-weight:400}.la.la-id-card-o:before{content:\"\\f2c2\"}.la.la-drivers-license-o{font-family:Line Awesome Free;font-weight:400}.la.la-drivers-license-o:before{content:\"\\f2c2\"}.la.la-free-code-camp,.la.la-quora,.la.la-telegram{font-family:Line Awesome Brands;font-weight:400}.la.la-thermometer-4:before,.la.la-thermometer:before{content:\"\\f2c7\"}.la.la-thermometer-3:before{content:\"\\f2c8\"}.la.la-thermometer-2:before{content:\"\\f2c9\"}.la.la-thermometer-1:before{content:\"\\f2ca\"}.la.la-thermometer-0:before{content:\"\\f2cb\"}.la.la-bathtub:before,.la.la-s15:before{content:\"\\f2cd\"}.la.la-window-maximize,.la.la-window-restore{font-family:Line Awesome Free;font-weight:400}.la.la-times-rectangle:before{content:\"\\f410\"}.la.la-window-close-o{font-family:Line Awesome Free;font-weight:400}.la.la-window-close-o:before{content:\"\\f410\"}.la.la-times-rectangle-o{font-family:Line Awesome Free;font-weight:400}.la.la-times-rectangle-o:before{content:\"\\f410\"}.la.la-bandcamp,.la.la-eercast,.la.la-etsy,.la.la-grav,.la.la-imdb,.la.la-ravelry{font-family:Line Awesome Brands;font-weight:400}.la.la-eercast:before{content:\"\\f2da\"}.la.la-snowflake-o{font-family:Line Awesome Free;font-weight:400}.la.la-snowflake-o:before{content:\"\\f2dc\"}.la.la-spotify,.la.la-superpowers,.la.la-wpexplorer{font-family:Line Awesome Brands;font-weight:400}@layer base{*,::backdrop,::file-selector-button,:after,:before{border-color:var(--color-gray-200,currentColor)}}@layer base{[multiple],[type=date],[type=datetime-local],[type=email],[type=month],[type=number],[type=password],[type=search],[type=tel],[type=text],[type=time],[type=url],[type=week],input:where(:not([type])),select,textarea{--tw-shadow:0 0 #0000;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-radius:0;border-width:1px;font-size:1rem;line-height:1.5rem;padding:.5rem .75rem;&:focus{--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:oklch(54.6% 0.245 262.881);--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);border-color:oklch(54.6% .245 262.881);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);outline:2px solid transparent;outline-offset:2px}}input::-moz-placeholder,textarea::-moz-placeholder{color:#6b7280;opacity:1}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-meridiem-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-year-field{padding-bottom:0;padding-top:0}select{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E\");background-position:right .5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;-webkit-print-color-adjust:exact;print-color-adjust:exact}[multiple],[size]:where(select:not([size=\"1\"])){background-image:none;background-position:0 0;background-repeat:unset;background-size:initial;padding-right:.75rem;-webkit-print-color-adjust:unset;print-color-adjust:unset}[type=checkbox],[type=radio]{--tw-shadow:0 0 #0000;-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;background-origin:border-box;border-color:#6b7280;border-width:1px;color:oklch(54.6% .245 262.881);display:inline-block;flex-shrink:0;height:1rem;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;-webkit-user-select:none;-moz-user-select:none;user-select:none;vertical-align:middle;width:1rem}[type=checkbox]{border-radius:0}[type=radio]{border-radius:100%}[type=checkbox]:focus,[type=radio]:focus{--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:oklch(54.6% 0.245 262.881);--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow);outline:2px solid transparent;outline-offset:2px}[type=checkbox]:checked,[type=radio]:checked{background-color:currentColor;background-position:50%;background-repeat:no-repeat;background-size:100% 100%;border-color:transparent}[type=checkbox]:checked{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E\");@media (forced-colors:active){-webkit-appearance:auto;-moz-appearance:auto;appearance:auto}}[type=radio]:checked{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E\");@media (forced-colors:active){-webkit-appearance:auto;-moz-appearance:auto;appearance:auto}}[type=checkbox]:checked:focus,[type=checkbox]:checked:hover,[type=radio]:checked:focus,[type=radio]:checked:hover{background-color:currentColor;border-color:transparent}[type=checkbox]:indeterminate{background-color:currentColor;background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3E%3C/svg%3E\");background-position:50%;background-repeat:no-repeat;background-size:100% 100%;border-color:transparent;@media (forced-colors:active){-webkit-appearance:auto;-moz-appearance:auto;appearance:auto}}[type=checkbox]:indeterminate:focus,[type=checkbox]:indeterminate:hover{background-color:currentColor;border-color:transparent}[type=file]{background:unset;border-color:inherit;border-radius:0;border-width:0;font-size:unset;line-height:inherit;padding:0}[type=file]:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}}@property --tw-translate-x{syntax:\"*\";inherits:false;initial-value:0}@property --tw-translate-y{syntax:\"*\";inherits:false;initial-value:0}@property --tw-translate-z{syntax:\"*\";inherits:false;initial-value:0}@property --tw-scale-x{syntax:\"*\";inherits:false;initial-value:1}@property --tw-scale-y{syntax:\"*\";inherits:false;initial-value:1}@property --tw-scale-z{syntax:\"*\";inherits:false;initial-value:1}@property --tw-rotate-x{syntax:\"*\";inherits:false}@property --tw-rotate-y{syntax:\"*\";inherits:false}@property --tw-rotate-z{syntax:\"*\";inherits:false}@property --tw-skew-x{syntax:\"*\";inherits:false}@property --tw-skew-y{syntax:\"*\";inherits:false}@property --tw-pan-x{syntax:\"*\";inherits:false}@property --tw-pan-y{syntax:\"*\";inherits:false}@property --tw-pinch-zoom{syntax:\"*\";inherits:false}@property --tw-space-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-space-x-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-divide-x-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-border-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-divide-y-reverse{syntax:\"*\";inherits:false;initial-value:0}@property --tw-gradient-position{syntax:\"*\";inherits:false}@property --tw-gradient-from{syntax:\"<color>\";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:\"<color>\";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:\"<color>\";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:\"*\";inherits:false}@property --tw-gradient-via-stops{syntax:\"*\";inherits:false}@property --tw-gradient-from-position{syntax:\"<length-percentage>\";inherits:false;initial-value:0}@property --tw-gradient-via-position{syntax:\"<length-percentage>\";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:\"<length-percentage>\";inherits:false;initial-value:100%}@property --tw-leading{syntax:\"*\";inherits:false}@property --tw-font-weight{syntax:\"*\";inherits:false}@property --tw-tracking{syntax:\"*\";inherits:false}@property --tw-ordinal{syntax:\"*\";inherits:false}@property --tw-slashed-zero{syntax:\"*\";inherits:false}@property --tw-numeric-figure{syntax:\"*\";inherits:false}@property --tw-numeric-spacing{syntax:\"*\";inherits:false}@property --tw-numeric-fraction{syntax:\"*\";inherits:false}@property --tw-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:\"*\";inherits:false}@property --tw-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:\"*\";inherits:false}@property --tw-inset-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:\"*\";inherits:false}@property --tw-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:\"*\";inherits:false}@property --tw-inset-ring-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:\"*\";inherits:false}@property --tw-ring-offset-width{syntax:\"<length>\";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:\"*\";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:\"*\";inherits:false;initial-value:0 0 #0000}@property --tw-outline-style{syntax:\"*\";inherits:false;initial-value:solid}@property --tw-blur{syntax:\"*\";inherits:false}@property --tw-brightness{syntax:\"*\";inherits:false}@property --tw-contrast{syntax:\"*\";inherits:false}@property --tw-grayscale{syntax:\"*\";inherits:false}@property --tw-hue-rotate{syntax:\"*\";inherits:false}@property --tw-invert{syntax:\"*\";inherits:false}@property --tw-opacity{syntax:\"*\";inherits:false}@property --tw-saturate{syntax:\"*\";inherits:false}@property --tw-sepia{syntax:\"*\";inherits:false}@property --tw-drop-shadow{syntax:\"*\";inherits:false}@property --tw-drop-shadow-color{syntax:\"*\";inherits:false}@property --tw-drop-shadow-alpha{syntax:\"<percentage>\";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:\"*\";inherits:false}@property --tw-backdrop-blur{syntax:\"*\";inherits:false}@property --tw-backdrop-brightness{syntax:\"*\";inherits:false}@property --tw-backdrop-contrast{syntax:\"*\";inherits:false}@property --tw-backdrop-grayscale{syntax:\"*\";inherits:false}@property --tw-backdrop-hue-rotate{syntax:\"*\";inherits:false}@property --tw-backdrop-invert{syntax:\"*\";inherits:false}@property --tw-backdrop-opacity{syntax:\"*\";inherits:false}@property --tw-backdrop-saturate{syntax:\"*\";inherits:false}@property --tw-backdrop-sepia{syntax:\"*\";inherits:false}@property --tw-duration{syntax:\"*\";inherits:false}@property --tw-ease{syntax:\"*\";inherits:false}@property --tw-content{syntax:\"*\";initial-value:\"\";inherits:false}@keyframes pulse{50%{opacity:.5}}@layer properties{@supports ((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,::backdrop,:after,:before{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-pan-x:initial;--tw-pan-y:initial;--tw-pinch-zoom:initial;--tw-space-y-reverse:0;--tw-space-x-reverse:0;--tw-divide-x-reverse:0;--tw-border-style:solid;--tw-divide-y-reverse:0;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-leading:initial;--tw-font-weight:initial;--tw-tracking:initial;--tw-ordinal:initial;--tw-slashed-zero:initial;--tw-numeric-figure:initial;--tw-numeric-spacing:initial;--tw-numeric-fraction:initial;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-outline-style:solid;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial;--tw-content:\"\"}}}";
 styleInject(css_248z,{"insertAt":"top"});
 
 var M$3=(e,i,s,u,m,a,l,h)=>{let d=document.documentElement,w=["light","dark"];function p(n){(Array.isArray(e)?e:[e]).forEach(y=>{let k=y==="class",S=k&&a?m.map(f=>a[f]||f):m;k?(d.classList.remove(...S),d.classList.add(a&&a[n]?a[n]:n)):d.setAttribute(y,n);}),R(n);}function R(n){h&&w.includes(n)&&(d.style.colorScheme=n);}function c(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}if(u)p(u);else try{let n=localStorage.getItem(i)||s,y=l&&n==="system"?c():n;p(y);}catch(n){}};var b$3=["light","dark"],I$3="(prefers-color-scheme: dark)",O$4=typeof window=="undefined",x$4=React.createContext(void 0),U$3={setTheme:e=>{},themes:[]},z=()=>{var e;return (e=React.useContext(x$4))!=null?e:U$3},J$2=e=>React.useContext(x$4)?React.createElement(React.Fragment,null,e.children):React.createElement(V$1,{...e}),N$1=["light","dark"],V$1=({forcedTheme:e,disableTransitionOnChange:i=false,enableSystem:s=true,enableColorScheme:u=true,storageKey:m="theme",themes:a=N$1,defaultTheme:l=s?"system":"light",attribute:h="data-theme",value:d,children:w,nonce:p,scriptProps:R})=>{let[c,n]=React.useState(()=>H$3(m,l)),[T,y]=React.useState(()=>c==="system"?E$5():c),k=d?Object.values(d):a,S=React.useCallback(o=>{let r=o;if(!r)return;o==="system"&&s&&(r=E$5());let v=d?d[r]:r,C=i?W(p):null,P=document.documentElement,L=g=>{g==="class"?(P.classList.remove(...k),v&&P.classList.add(v)):g.startsWith("data-")&&(v?P.setAttribute(g,v):P.removeAttribute(g));};if(Array.isArray(h)?h.forEach(L):L(h),u){let g=b$3.includes(l)?l:null,D=b$3.includes(r)?r:g;P.style.colorScheme=D;}C==null||C();},[p]),f=React.useCallback(o=>{let r=typeof o=="function"?o(c):o;n(r);try{localStorage.setItem(m,r);}catch(v){}},[c]),A=React.useCallback(o=>{let r=E$5(o);y(r),c==="system"&&s&&!e&&S("system");},[c,e]);React.useEffect(()=>{let o=window.matchMedia(I$3);return o.addListener(A),A(o),()=>o.removeListener(A)},[A]),React.useEffect(()=>{let o=r=>{r.key===m&&(r.newValue?n(r.newValue):f(l));};return window.addEventListener("storage",o),()=>window.removeEventListener("storage",o)},[f]),React.useEffect(()=>{S(e!=null?e:c);},[e,c]);let Q=React.useMemo(()=>({theme:c,setTheme:f,forcedTheme:e,resolvedTheme:c==="system"?T:c,themes:s?[...a,"system"]:a,systemTheme:s?T:void 0}),[c,f,e,T,s,a]);return React.createElement(x$4.Provider,{value:Q},React.createElement(_$3,{forcedTheme:e,storageKey:m,attribute:h,enableSystem:s,enableColorScheme:u,defaultTheme:l,value:d,themes:a,nonce:p,scriptProps:R}),w)},_$3=React.memo(({forcedTheme:e,storageKey:i,attribute:s,enableSystem:u,enableColorScheme:m,defaultTheme:a,value:l,themes:h,nonce:d,scriptProps:w})=>{let p=JSON.stringify([s,i,a,e,h,l,u,m]).slice(1,-1);return React.createElement("script",{...w,suppressHydrationWarning:true,nonce:typeof window=="undefined"?d:"",dangerouslySetInnerHTML:{__html:`(${M$3.toString()})(${p})`}})}),H$3=(e,i)=>{if(O$4)return;let s;try{s=localStorage.getItem(e)||void 0;}catch(u){}return s||i},W=e=>{let i=document.createElement("style");return e&&i.setAttribute("nonce",e),i.appendChild(document.createTextNode("*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}")),document.head.appendChild(i),()=>{window.getComputedStyle(document.body),setTimeout(()=>{document.head.removeChild(i);},1);}},E$5=e=>(e||(e=window.matchMedia(I$3)),e.matches?"dark":"light");
 
+class CookieManager {
+    config;
+    constructor(config = {}) {
+        this.config = {
+            defaultPath: '/',
+            defaultSecure: typeof window !== 'undefined' ? window.location.protocol === 'https:' : false,
+            defaultSameSite: 'lax',
+            ...config,
+        };
+    }
+    // Set a cookie
+    set(name, value, options = {}) {
+        if (typeof document === 'undefined') {
+            console.warn('CookieManager: document is not available (SSR environment)');
+            return false;
+        }
+        try {
+            const cookieName = this.config.prefix ? `${this.config.prefix}${name}` : name;
+            let cookieString = `${encodeURIComponent(cookieName)}=${encodeURIComponent(value)}`;
+            // Handle expires
+            if (options.expires) {
+                if (typeof options.expires === 'number') {
+                    // Convert days to date
+                    const date = new Date();
+                    date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+                    cookieString += `; expires=${date.toUTCString()}`;
+                }
+                else {
+                    cookieString += `; expires=${options.expires.toUTCString()}`;
+                }
+            }
+            // Handle maxAge
+            if (options.maxAge !== undefined) {
+                cookieString += `; max-age=${options.maxAge}`;
+            }
+            // Handle path
+            const path = options.path ?? this.config.defaultPath;
+            if (path) {
+                cookieString += `; path=${path}`;
+            }
+            // Handle domain
+            const domain = options.domain ?? this.config.defaultDomain;
+            if (domain) {
+                cookieString += `; domain=${domain}`;
+            }
+            // Handle secure
+            const secure = options.secure ?? this.config.defaultSecure;
+            if (secure) {
+                cookieString += '; secure';
+            }
+            // Handle httpOnly (note: this can't be set via JavaScript)
+            if (options.httpOnly) {
+                console.warn('CookieManager: httpOnly flag cannot be set via JavaScript');
+            }
+            // Handle sameSite
+            const sameSite = options.sameSite ?? this.config.defaultSameSite;
+            if (sameSite) {
+                cookieString += `; samesite=${sameSite}`;
+            }
+            document.cookie = cookieString;
+            return true;
+        }
+        catch (error) {
+            console.error('CookieManager: Error setting cookie', error);
+            return false;
+        }
+    }
+    // Get a cookie value
+    get(name) {
+        if (typeof document === 'undefined') {
+            return null;
+        }
+        try {
+            const cookieName = this.config.prefix ? `${this.config.prefix}${name}` : name;
+            const encodedName = encodeURIComponent(cookieName);
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+                if (cookie.startsWith(`${encodedName}=`)) {
+                    return decodeURIComponent(cookie.substring(encodedName.length + 1));
+                }
+            }
+            return null;
+        }
+        catch (error) {
+            console.error('CookieManager: Error getting cookie', error);
+            return null;
+        }
+    }
+    // Get a cookie value and parse as JSON
+    getJSON(name) {
+        const value = this.get(name);
+        if (value === null)
+            return null;
+        try {
+            return JSON.parse(value);
+        }
+        catch (error) {
+            console.error('CookieManager: Error parsing JSON cookie', error);
+            return null;
+        }
+    }
+    // Set a cookie with JSON value
+    setJSON(name, value, options = {}) {
+        try {
+            const jsonString = JSON.stringify(value);
+            return this.set(name, jsonString, options);
+        }
+        catch (error) {
+            console.error('CookieManager: Error stringifying JSON cookie', error);
+            return false;
+        }
+    }
+    // Remove a cookie
+    remove(name, options = {}) {
+        return this.set(name, '', {
+            ...options,
+            expires: new Date(0), // Set to past date
+            maxAge: 0,
+        });
+    }
+    // Check if a cookie exists
+    has(name) {
+        return this.get(name) !== null;
+    }
+    // Get all cookies as an object
+    getAll() {
+        if (typeof document === 'undefined') {
+            return {};
+        }
+        try {
+            const cookies = {};
+            const cookieStrings = document.cookie.split(';');
+            for (let cookie of cookieStrings) {
+                cookie = cookie.trim();
+                const [encodedName, ...valueParts] = cookie.split('=');
+                if (encodedName && valueParts.length > 0) {
+                    const name = decodeURIComponent(encodedName);
+                    const value = decodeURIComponent(valueParts.join('='));
+                    // Remove prefix if it exists
+                    const finalName = this.config.prefix && name.startsWith(this.config.prefix)
+                        ? name.substring(this.config.prefix.length)
+                        : name;
+                    cookies[finalName] = value;
+                }
+            }
+            return cookies;
+        }
+        catch (error) {
+            console.error('CookieManager: Error getting all cookies', error);
+            return {};
+        }
+    }
+    // Clear all cookies (only those with the same prefix if configured)
+    clear(options = {}) {
+        const allCookies = this.getAll();
+        Object.keys(allCookies).forEach(name => {
+            this.remove(name, options);
+        });
+    }
+    // Get cookie size in bytes
+    getSize(name) {
+        const value = this.get(name);
+        if (value === null)
+            return 0;
+        return new Blob([value]).size;
+    }
+    // Get total cookies size
+    getTotalSize() {
+        if (typeof document === 'undefined')
+            return 0;
+        return new Blob([document.cookie]).size;
+    }
+    // Check if cookies are enabled
+    isEnabled() {
+        if (typeof document === 'undefined')
+            return false;
+        try {
+            const testCookie = '__cookie_test__';
+            this.set(testCookie, 'test');
+            const isEnabled = this.has(testCookie);
+            this.remove(testCookie);
+            return isEnabled;
+        }
+        catch {
+            return false;
+        }
+    }
+}
+// Default cookie manager instance
+const cookieManager = new CookieManager();
+// Utility functions for quick access
+const setCookie = (name, value, options) => {
+    return cookieManager.set(name, value, options);
+};
+const getCookie = (name) => {
+    return cookieManager.get(name);
+};
+const getCookieJSON = (name) => {
+    return cookieManager.getJSON(name);
+};
+const setCookieJSON = (name, value, options) => {
+    return cookieManager.setJSON(name, value, options);
+};
+const removeCookie = (name, options) => {
+    return cookieManager.remove(name, options);
+};
+const hasCookie = (name) => {
+    return cookieManager.has(name);
+};
+const getAllCookies = () => {
+    return cookieManager.getAll();
+};
+const clearAllCookies = (options) => {
+    return cookieManager.clear(options);
+};
+const isCookiesEnabled = () => {
+    return cookieManager.isEnabled();
+};
+// Create a custom cookie manager with specific configuration
+const createCookieManager = (config) => {
+    return new CookieManager(config);
+};
+
+const getAuthToken = () => {
+    const token = getCookieJSON("token");
+    if (token?.access_token) {
+        return token;
+    }
+    return null;
+};
+const logoutAuthUser = (callback) => {
+    removeCookie("token");
+    callback?.();
+};
+
+const GlobalInterceptors = {
+    request: [],
+    response: [],
+    error: [],
+};
+class ApiClient {
+    static instances = new Map();
+    config;
+    localInterceptors;
+    constructor(config) {
+        this.config = config;
+        this.localInterceptors = {
+            request: [],
+            response: [],
+            error: [],
+        };
+    }
+    // Singleton per unique key (e.g., baseURL or custom ID)
+    static getInstance(config) {
+        const key = config.baseURL;
+        if (!key)
+            throw new Error("ApiClient config must have an 'id' or 'baseURL' to use as key");
+        if (!ApiClient.instances.has(key)) {
+            ApiClient.instances.set(key, new ApiClient(config));
+        }
+        return ApiClient.instances.get(key);
+    }
+    static addGlobalRequestInterceptor(interceptor) {
+        GlobalInterceptors.request.push(interceptor);
+    }
+    static addGlobalResponseInterceptor(interceptor) {
+        GlobalInterceptors.response.push(interceptor);
+    }
+    static addGlobalErrorInterceptor(interceptor) {
+        GlobalInterceptors.error.push(interceptor);
+    }
+    // Local (instance-level) interceptors
+    addRequestInterceptor(interceptor) {
+        this.localInterceptors.request.push(interceptor);
+    }
+    addResponseInterceptor(interceptor) {
+        this.localInterceptors.response.push(interceptor);
+    }
+    addErrorInterceptor(interceptor) {
+        this.localInterceptors.error.push(interceptor);
+    }
+    async applyInterceptors(type, input) {
+        const all = [...GlobalInterceptors[type], ...this.localInterceptors[type]];
+        let result = input;
+        for (const fn of all) {
+            result = (await fn(result));
+        }
+        return result;
+    }
+    // Build URL with query parameters
+    buildURL(endpoint, params) {
+        const url = new URL(endpoint, this.config.baseURL);
+        if (params) {
+            Object.entries(params).forEach(([key, value]) => {
+                url.searchParams.append(key, String(value));
+            });
+        }
+        return url.toString();
+    }
+    // Main request method
+    async request(endpoint, config = {}) {
+        try {
+            // Apply request interceptors
+            const modifiedConfig = await this.applyInterceptors("request", config);
+            // Build URL
+            const url = this.buildURL(endpoint, modifiedConfig.params);
+            // Prepare headers
+            const headers = {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                ...this.config.headers,
+                ...modifiedConfig.headers,
+            };
+            // Prepare fetch options
+            const fetchOptions = {
+                method: modifiedConfig.method || "GET",
+                headers,
+                credentials: modifiedConfig.withCredentials ?? this.config.withCredentials ? "include" : "same-origin",
+            };
+            // Add body for non-GET requests
+            if (modifiedConfig.body && modifiedConfig.method !== "GET") {
+                fetchOptions.body = typeof modifiedConfig.body === "string" ? modifiedConfig.body : JSON.stringify(modifiedConfig.body);
+            }
+            // Set up timeout
+            const timeout = modifiedConfig.timeout || this.config.timeout || 10000;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), timeout);
+            fetchOptions.signal = controller.signal;
+            // Make the request
+            const response = await fetch(url, fetchOptions);
+            clearTimeout(timeoutId);
+            // Parse response
+            let data;
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                data = await response.json();
+            }
+            else {
+                data = (await response.text());
+            }
+            // Create response object
+            const apiResponse = {
+                data,
+                status: response.status,
+                statusText: response.statusText,
+                headers: Object.fromEntries(response.headers.entries()),
+            };
+            // Check if response is successful
+            if (!response.ok) {
+                const error = {
+                    message: `Request failed with status ${response.status}`,
+                    status: response.status,
+                    statusText: response.statusText,
+                    data,
+                };
+                throw await this.applyInterceptors("error", error);
+            }
+            // Apply response interceptors
+            return await this.applyInterceptors("response", apiResponse);
+        }
+        catch (error) {
+            if (error instanceof Error) {
+                const apiError = {
+                    message: error.message,
+                };
+                throw await this.applyInterceptors("error", apiError);
+            }
+            throw error;
+        }
+    }
+    // Convenience methods
+    async get(endpoint, config) {
+        return this.request(endpoint, { ...config, method: "GET" });
+    }
+    async post(endpoint, data, config) {
+        return this.request(endpoint, { ...config, method: "POST", body: data });
+    }
+    async put(endpoint, data, config) {
+        return this.request(endpoint, { ...config, method: "PUT", body: data });
+    }
+    async patch(endpoint, data, config) {
+        return this.request(endpoint, { ...config, method: "PATCH", body: data });
+    }
+    async delete(endpoint, config) {
+        return this.request(endpoint, { ...config, method: "DELETE" });
+    }
+}
+// Create a default API client instance
+const createApiClient = (config) => {
+    return ApiClient.getInstance(config);
+};
+// Utility function for quick API calls without creating a client
+const apiCall = async (url, config = {}) => {
+    const { baseURL = "", ...requestConfig } = config;
+    const client = ApiClient.getInstance({ baseURL });
+    return client.request(url, requestConfig);
+};
+
+const useWindowWidth = () => {
+    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : undefined);
+    useEffect(() => {
+        if (typeof window === 'undefined')
+            return;
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+        // Set initial width
+        handleResize();
+        // Remove event listener on cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []); // Empty array ensures effect is only run on mount and unmount
+    return windowWidth;
+};
+
+const envConstants = {
+    BASE_API_URL: {
+        CORE: process.env.NEXT_PUBLIC_API_URL_CORE,
+        CONTENT: process.env.NEXT_PUBLIC_API_URL_CONTENT,
+        CHAT: process.env.NEXT_PUBLIC_API_URL_CHAT,
+        GENAGENT: process.env.NEXT_PUBLIC_API_GENAGENT_URL,
+        WEBSITE_BUILDER: process.env.NEXT_PUBLIC_WEBSITE_BUILDER_URL,
+        CHANNEL_BUILDER: process.env.NEXT_PUBLIC_CHANNEL_BUILDERL_URL,
+        FINANCE: process.env.NEXT_PUBLIC_FINANCE_URL,
+    },
+};
+
+const baseUrls = envConstants.BASE_API_URL;
+ApiClient.getInstance({
+    baseURL: baseUrls.CORE,
+});
+// REQUEST INTERCEPTOR
+ApiClient.addGlobalRequestInterceptor(async (config) => {
+    const token = getCookieJSON("token");
+    if (token?.access_token) {
+        config.headers = {
+            ...config.headers,
+            Authorization: `Bearer ${token.access_token}`,
+        };
+    }
+    return config;
+});
+// RESPONSE INTERCEPTOR
+ApiClient.addGlobalErrorInterceptor(async (error) => {
+    //   if (error.status === 401 && mergedConfig.autoRefresh) {
+    //     try {
+    //       await refreshToken();
+    //       // Retry the original request would need to be implemented here
+    //     } catch (refreshError) {
+    //       await logout();
+    //     }
+    //   }
+    return error;
+});
+ApiClient.addGlobalResponseInterceptor(async (response) => {
+    // Handle specific response status codes or data transformations here
+    if (response.status === 401) {
+        // Handle unauthorized access, e.g., redirect to login
+        console.error("Unauthorized access - redirecting to login");
+        // You can implement a redirect or logout logic here
+    }
+    return response;
+});
+const createClient = (baseURL) => {
+    return ApiClient.getInstance({ baseURL });
+};
+const extendedClient = {
+    addGlobalRequestInterceptor: ApiClient.addGlobalRequestInterceptor,
+    addGlobalResponseInterceptor: ApiClient.addGlobalResponseInterceptor,
+    addGlobalErrorInterceptor: ApiClient.addGlobalErrorInterceptor,
+    getInstance: ApiClient.getInstance,
+};
+// @ts-ignore
+const ApiInstance = {
+    client: extendedClient,
+    ...Object.fromEntries(Object.entries(baseUrls).map(([name, url]) => [name, createClient(url)])),
+};
+
+function r$5(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e)){var o=e.length;for(t=0;t<o;t++)e[t]&&(f=r$5(e[t]))&&(n&&(n+=" "),n+=f);}else for(f in e)e[f]&&(n&&(n+=" "),n+=f);return n}function clsx(){for(var e,t,f=0,n="",o=arguments.length;f<o;f++)(e=arguments[f])&&(t=r$5(e))&&(n&&(n+=" "),n+=t);return n}
+
+const CLASS_PART_SEPARATOR = '-';
+const createClassGroupUtils = config => {
+  const classMap = createClassMap(config);
+  const {
+    conflictingClassGroups,
+    conflictingClassGroupModifiers
+  } = config;
+  const getClassGroupId = className => {
+    const classParts = className.split(CLASS_PART_SEPARATOR);
+    // Classes like `-inset-1` produce an empty string as first classPart. We assume that classes for negative values are used correctly and remove it from classParts.
+    if (classParts[0] === '' && classParts.length !== 1) {
+      classParts.shift();
+    }
+    return getGroupRecursive(classParts, classMap) || getGroupIdForArbitraryProperty(className);
+  };
+  const getConflictingClassGroupIds = (classGroupId, hasPostfixModifier) => {
+    const conflicts = conflictingClassGroups[classGroupId] || [];
+    if (hasPostfixModifier && conflictingClassGroupModifiers[classGroupId]) {
+      return [...conflicts, ...conflictingClassGroupModifiers[classGroupId]];
+    }
+    return conflicts;
+  };
+  return {
+    getClassGroupId,
+    getConflictingClassGroupIds
+  };
+};
+const getGroupRecursive = (classParts, classPartObject) => {
+  if (classParts.length === 0) {
+    return classPartObject.classGroupId;
+  }
+  const currentClassPart = classParts[0];
+  const nextClassPartObject = classPartObject.nextPart.get(currentClassPart);
+  const classGroupFromNextClassPart = nextClassPartObject ? getGroupRecursive(classParts.slice(1), nextClassPartObject) : undefined;
+  if (classGroupFromNextClassPart) {
+    return classGroupFromNextClassPart;
+  }
+  if (classPartObject.validators.length === 0) {
+    return undefined;
+  }
+  const classRest = classParts.join(CLASS_PART_SEPARATOR);
+  return classPartObject.validators.find(({
+    validator
+  }) => validator(classRest))?.classGroupId;
+};
+const arbitraryPropertyRegex = /^\[(.+)\]$/;
+const getGroupIdForArbitraryProperty = className => {
+  if (arbitraryPropertyRegex.test(className)) {
+    const arbitraryPropertyClassName = arbitraryPropertyRegex.exec(className)[1];
+    const property = arbitraryPropertyClassName?.substring(0, arbitraryPropertyClassName.indexOf(':'));
+    if (property) {
+      // I use two dots here because one dot is used as prefix for class groups in plugins
+      return 'arbitrary..' + property;
+    }
+  }
+};
+/**
+ * Exported for testing only
+ */
+const createClassMap = config => {
+  const {
+    theme,
+    classGroups
+  } = config;
+  const classMap = {
+    nextPart: new Map(),
+    validators: []
+  };
+  for (const classGroupId in classGroups) {
+    processClassesRecursively(classGroups[classGroupId], classMap, classGroupId, theme);
+  }
+  return classMap;
+};
+const processClassesRecursively = (classGroup, classPartObject, classGroupId, theme) => {
+  classGroup.forEach(classDefinition => {
+    if (typeof classDefinition === 'string') {
+      const classPartObjectToEdit = classDefinition === '' ? classPartObject : getPart(classPartObject, classDefinition);
+      classPartObjectToEdit.classGroupId = classGroupId;
+      return;
+    }
+    if (typeof classDefinition === 'function') {
+      if (isThemeGetter(classDefinition)) {
+        processClassesRecursively(classDefinition(theme), classPartObject, classGroupId, theme);
+        return;
+      }
+      classPartObject.validators.push({
+        validator: classDefinition,
+        classGroupId
+      });
+      return;
+    }
+    Object.entries(classDefinition).forEach(([key, classGroup]) => {
+      processClassesRecursively(classGroup, getPart(classPartObject, key), classGroupId, theme);
+    });
+  });
+};
+const getPart = (classPartObject, path) => {
+  let currentClassPartObject = classPartObject;
+  path.split(CLASS_PART_SEPARATOR).forEach(pathPart => {
+    if (!currentClassPartObject.nextPart.has(pathPart)) {
+      currentClassPartObject.nextPart.set(pathPart, {
+        nextPart: new Map(),
+        validators: []
+      });
+    }
+    currentClassPartObject = currentClassPartObject.nextPart.get(pathPart);
+  });
+  return currentClassPartObject;
+};
+const isThemeGetter = func => func.isThemeGetter;
+
+// LRU cache inspired from hashlru (https://github.com/dominictarr/hashlru/blob/v1.0.4/index.js) but object replaced with Map to improve performance
+const createLruCache = maxCacheSize => {
+  if (maxCacheSize < 1) {
+    return {
+      get: () => undefined,
+      set: () => {}
+    };
+  }
+  let cacheSize = 0;
+  let cache = new Map();
+  let previousCache = new Map();
+  const update = (key, value) => {
+    cache.set(key, value);
+    cacheSize++;
+    if (cacheSize > maxCacheSize) {
+      cacheSize = 0;
+      previousCache = cache;
+      cache = new Map();
+    }
+  };
+  return {
+    get(key) {
+      let value = cache.get(key);
+      if (value !== undefined) {
+        return value;
+      }
+      if ((value = previousCache.get(key)) !== undefined) {
+        update(key, value);
+        return value;
+      }
+    },
+    set(key, value) {
+      if (cache.has(key)) {
+        cache.set(key, value);
+      } else {
+        update(key, value);
+      }
+    }
+  };
+};
+const IMPORTANT_MODIFIER = '!';
+const MODIFIER_SEPARATOR = ':';
+const MODIFIER_SEPARATOR_LENGTH = MODIFIER_SEPARATOR.length;
+const createParseClassName = config => {
+  const {
+    prefix,
+    experimentalParseClassName
+  } = config;
+  /**
+   * Parse class name into parts.
+   *
+   * Inspired by `splitAtTopLevelOnly` used in Tailwind CSS
+   * @see https://github.com/tailwindlabs/tailwindcss/blob/v3.2.2/src/util/splitAtTopLevelOnly.js
+   */
+  let parseClassName = className => {
+    const modifiers = [];
+    let bracketDepth = 0;
+    let parenDepth = 0;
+    let modifierStart = 0;
+    let postfixModifierPosition;
+    for (let index = 0; index < className.length; index++) {
+      let currentCharacter = className[index];
+      if (bracketDepth === 0 && parenDepth === 0) {
+        if (currentCharacter === MODIFIER_SEPARATOR) {
+          modifiers.push(className.slice(modifierStart, index));
+          modifierStart = index + MODIFIER_SEPARATOR_LENGTH;
+          continue;
+        }
+        if (currentCharacter === '/') {
+          postfixModifierPosition = index;
+          continue;
+        }
+      }
+      if (currentCharacter === '[') {
+        bracketDepth++;
+      } else if (currentCharacter === ']') {
+        bracketDepth--;
+      } else if (currentCharacter === '(') {
+        parenDepth++;
+      } else if (currentCharacter === ')') {
+        parenDepth--;
+      }
+    }
+    const baseClassNameWithImportantModifier = modifiers.length === 0 ? className : className.substring(modifierStart);
+    const baseClassName = stripImportantModifier(baseClassNameWithImportantModifier);
+    const hasImportantModifier = baseClassName !== baseClassNameWithImportantModifier;
+    const maybePostfixModifierPosition = postfixModifierPosition && postfixModifierPosition > modifierStart ? postfixModifierPosition - modifierStart : undefined;
+    return {
+      modifiers,
+      hasImportantModifier,
+      baseClassName,
+      maybePostfixModifierPosition
+    };
+  };
+  if (prefix) {
+    const fullPrefix = prefix + MODIFIER_SEPARATOR;
+    const parseClassNameOriginal = parseClassName;
+    parseClassName = className => className.startsWith(fullPrefix) ? parseClassNameOriginal(className.substring(fullPrefix.length)) : {
+      isExternal: true,
+      modifiers: [],
+      hasImportantModifier: false,
+      baseClassName: className,
+      maybePostfixModifierPosition: undefined
+    };
+  }
+  if (experimentalParseClassName) {
+    const parseClassNameOriginal = parseClassName;
+    parseClassName = className => experimentalParseClassName({
+      className,
+      parseClassName: parseClassNameOriginal
+    });
+  }
+  return parseClassName;
+};
+const stripImportantModifier = baseClassName => {
+  if (baseClassName.endsWith(IMPORTANT_MODIFIER)) {
+    return baseClassName.substring(0, baseClassName.length - 1);
+  }
+  /**
+   * In Tailwind CSS v3 the important modifier was at the start of the base class name. This is still supported for legacy reasons.
+   * @see https://github.com/dcastil/tailwind-merge/issues/513#issuecomment-2614029864
+   */
+  if (baseClassName.startsWith(IMPORTANT_MODIFIER)) {
+    return baseClassName.substring(1);
+  }
+  return baseClassName;
+};
+
+/**
+ * Sorts modifiers according to following schema:
+ * - Predefined modifiers are sorted alphabetically
+ * - When an arbitrary variant appears, it must be preserved which modifiers are before and after it
+ */
+const createSortModifiers = config => {
+  const orderSensitiveModifiers = Object.fromEntries(config.orderSensitiveModifiers.map(modifier => [modifier, true]));
+  const sortModifiers = modifiers => {
+    if (modifiers.length <= 1) {
+      return modifiers;
+    }
+    const sortedModifiers = [];
+    let unsortedModifiers = [];
+    modifiers.forEach(modifier => {
+      const isPositionSensitive = modifier[0] === '[' || orderSensitiveModifiers[modifier];
+      if (isPositionSensitive) {
+        sortedModifiers.push(...unsortedModifiers.sort(), modifier);
+        unsortedModifiers = [];
+      } else {
+        unsortedModifiers.push(modifier);
+      }
+    });
+    sortedModifiers.push(...unsortedModifiers.sort());
+    return sortedModifiers;
+  };
+  return sortModifiers;
+};
+const createConfigUtils = config => ({
+  cache: createLruCache(config.cacheSize),
+  parseClassName: createParseClassName(config),
+  sortModifiers: createSortModifiers(config),
+  ...createClassGroupUtils(config)
+});
+const SPLIT_CLASSES_REGEX = /\s+/;
+const mergeClassList = (classList, configUtils) => {
+  const {
+    parseClassName,
+    getClassGroupId,
+    getConflictingClassGroupIds,
+    sortModifiers
+  } = configUtils;
+  /**
+   * Set of classGroupIds in following format:
+   * `{importantModifier}{variantModifiers}{classGroupId}`
+   * @example 'float'
+   * @example 'hover:focus:bg-color'
+   * @example 'md:!pr'
+   */
+  const classGroupsInConflict = [];
+  const classNames = classList.trim().split(SPLIT_CLASSES_REGEX);
+  let result = '';
+  for (let index = classNames.length - 1; index >= 0; index -= 1) {
+    const originalClassName = classNames[index];
+    const {
+      isExternal,
+      modifiers,
+      hasImportantModifier,
+      baseClassName,
+      maybePostfixModifierPosition
+    } = parseClassName(originalClassName);
+    if (isExternal) {
+      result = originalClassName + (result.length > 0 ? ' ' + result : result);
+      continue;
+    }
+    let hasPostfixModifier = !!maybePostfixModifierPosition;
+    let classGroupId = getClassGroupId(hasPostfixModifier ? baseClassName.substring(0, maybePostfixModifierPosition) : baseClassName);
+    if (!classGroupId) {
+      if (!hasPostfixModifier) {
+        // Not a Tailwind class
+        result = originalClassName + (result.length > 0 ? ' ' + result : result);
+        continue;
+      }
+      classGroupId = getClassGroupId(baseClassName);
+      if (!classGroupId) {
+        // Not a Tailwind class
+        result = originalClassName + (result.length > 0 ? ' ' + result : result);
+        continue;
+      }
+      hasPostfixModifier = false;
+    }
+    const variantModifier = sortModifiers(modifiers).join(':');
+    const modifierId = hasImportantModifier ? variantModifier + IMPORTANT_MODIFIER : variantModifier;
+    const classId = modifierId + classGroupId;
+    if (classGroupsInConflict.includes(classId)) {
+      // Tailwind class omitted due to conflict
+      continue;
+    }
+    classGroupsInConflict.push(classId);
+    const conflictGroups = getConflictingClassGroupIds(classGroupId, hasPostfixModifier);
+    for (let i = 0; i < conflictGroups.length; ++i) {
+      const group = conflictGroups[i];
+      classGroupsInConflict.push(modifierId + group);
+    }
+    // Tailwind class not in conflict
+    result = originalClassName + (result.length > 0 ? ' ' + result : result);
+  }
+  return result;
+};
+
+/**
+ * The code in this file is copied from https://github.com/lukeed/clsx and modified to suit the needs of tailwind-merge better.
+ *
+ * Specifically:
+ * - Runtime code from https://github.com/lukeed/clsx/blob/v1.2.1/src/index.js
+ * - TypeScript types from https://github.com/lukeed/clsx/blob/v1.2.1/clsx.d.ts
+ *
+ * Original code has MIT license: Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
+ */
+function twJoin() {
+  let index = 0;
+  let argument;
+  let resolvedValue;
+  let string = '';
+  while (index < arguments.length) {
+    if (argument = arguments[index++]) {
+      if (resolvedValue = toValue(argument)) {
+        string && (string += ' ');
+        string += resolvedValue;
+      }
+    }
+  }
+  return string;
+}
+const toValue = mix => {
+  if (typeof mix === 'string') {
+    return mix;
+  }
+  let resolvedValue;
+  let string = '';
+  for (let k = 0; k < mix.length; k++) {
+    if (mix[k]) {
+      if (resolvedValue = toValue(mix[k])) {
+        string && (string += ' ');
+        string += resolvedValue;
+      }
+    }
+  }
+  return string;
+};
+function createTailwindMerge(createConfigFirst, ...createConfigRest) {
+  let configUtils;
+  let cacheGet;
+  let cacheSet;
+  let functionToCall = initTailwindMerge;
+  function initTailwindMerge(classList) {
+    const config = createConfigRest.reduce((previousConfig, createConfigCurrent) => createConfigCurrent(previousConfig), createConfigFirst());
+    configUtils = createConfigUtils(config);
+    cacheGet = configUtils.cache.get;
+    cacheSet = configUtils.cache.set;
+    functionToCall = tailwindMerge;
+    return tailwindMerge(classList);
+  }
+  function tailwindMerge(classList) {
+    const cachedResult = cacheGet(classList);
+    if (cachedResult) {
+      return cachedResult;
+    }
+    const result = mergeClassList(classList, configUtils);
+    cacheSet(classList, result);
+    return result;
+  }
+  return function callTailwindMerge() {
+    return functionToCall(twJoin.apply(null, arguments));
+  };
+}
+const fromTheme = key => {
+  const themeGetter = theme => theme[key] || [];
+  themeGetter.isThemeGetter = true;
+  return themeGetter;
+};
+const arbitraryValueRegex = /^\[(?:(\w[\w-]*):)?(.+)\]$/i;
+const arbitraryVariableRegex = /^\((?:(\w[\w-]*):)?(.+)\)$/i;
+const fractionRegex = /^\d+\/\d+$/;
+const tshirtUnitRegex = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/;
+const lengthUnitRegex = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/;
+const colorFunctionRegex = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/;
+// Shadow always begins with x and y offset separated by underscore optionally prepended by inset
+const shadowRegex = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;
+const imageRegex = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/;
+const isFraction = value => fractionRegex.test(value);
+const isNumber = value => !!value && !Number.isNaN(Number(value));
+const isInteger = value => !!value && Number.isInteger(Number(value));
+const isPercent = value => value.endsWith('%') && isNumber(value.slice(0, -1));
+const isTshirtSize = value => tshirtUnitRegex.test(value);
+const isAny = () => true;
+const isLengthOnly = value =>
+// `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
+// For example, `hsl(0 0% 0%)` would be classified as a length without this check.
+// I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
+lengthUnitRegex.test(value) && !colorFunctionRegex.test(value);
+const isNever = () => false;
+const isShadow = value => shadowRegex.test(value);
+const isImage = value => imageRegex.test(value);
+const isAnyNonArbitrary = value => !isArbitraryValue(value) && !isArbitraryVariable(value);
+const isArbitrarySize = value => getIsArbitraryValue(value, isLabelSize, isNever);
+const isArbitraryValue = value => arbitraryValueRegex.test(value);
+const isArbitraryLength = value => getIsArbitraryValue(value, isLabelLength, isLengthOnly);
+const isArbitraryNumber = value => getIsArbitraryValue(value, isLabelNumber, isNumber);
+const isArbitraryPosition = value => getIsArbitraryValue(value, isLabelPosition, isNever);
+const isArbitraryImage = value => getIsArbitraryValue(value, isLabelImage, isImage);
+const isArbitraryShadow = value => getIsArbitraryValue(value, isLabelShadow, isShadow);
+const isArbitraryVariable = value => arbitraryVariableRegex.test(value);
+const isArbitraryVariableLength = value => getIsArbitraryVariable(value, isLabelLength);
+const isArbitraryVariableFamilyName = value => getIsArbitraryVariable(value, isLabelFamilyName);
+const isArbitraryVariablePosition = value => getIsArbitraryVariable(value, isLabelPosition);
+const isArbitraryVariableSize = value => getIsArbitraryVariable(value, isLabelSize);
+const isArbitraryVariableImage = value => getIsArbitraryVariable(value, isLabelImage);
+const isArbitraryVariableShadow = value => getIsArbitraryVariable(value, isLabelShadow, true);
+// Helpers
+const getIsArbitraryValue = (value, testLabel, testValue) => {
+  const result = arbitraryValueRegex.exec(value);
+  if (result) {
+    if (result[1]) {
+      return testLabel(result[1]);
+    }
+    return testValue(result[2]);
+  }
+  return false;
+};
+const getIsArbitraryVariable = (value, testLabel, shouldMatchNoLabel = false) => {
+  const result = arbitraryVariableRegex.exec(value);
+  if (result) {
+    if (result[1]) {
+      return testLabel(result[1]);
+    }
+    return shouldMatchNoLabel;
+  }
+  return false;
+};
+// Labels
+const isLabelPosition = label => label === 'position' || label === 'percentage';
+const isLabelImage = label => label === 'image' || label === 'url';
+const isLabelSize = label => label === 'length' || label === 'size' || label === 'bg-size';
+const isLabelLength = label => label === 'length';
+const isLabelNumber = label => label === 'number';
+const isLabelFamilyName = label => label === 'family-name';
+const isLabelShadow = label => label === 'shadow';
+const getDefaultConfig = () => {
+  /**
+   * Theme getters for theme variable namespaces
+   * @see https://tailwindcss.com/docs/theme#theme-variable-namespaces
+   */
+  /***/
+  const themeColor = fromTheme('color');
+  const themeFont = fromTheme('font');
+  const themeText = fromTheme('text');
+  const themeFontWeight = fromTheme('font-weight');
+  const themeTracking = fromTheme('tracking');
+  const themeLeading = fromTheme('leading');
+  const themeBreakpoint = fromTheme('breakpoint');
+  const themeContainer = fromTheme('container');
+  const themeSpacing = fromTheme('spacing');
+  const themeRadius = fromTheme('radius');
+  const themeShadow = fromTheme('shadow');
+  const themeInsetShadow = fromTheme('inset-shadow');
+  const themeTextShadow = fromTheme('text-shadow');
+  const themeDropShadow = fromTheme('drop-shadow');
+  const themeBlur = fromTheme('blur');
+  const themePerspective = fromTheme('perspective');
+  const themeAspect = fromTheme('aspect');
+  const themeEase = fromTheme('ease');
+  const themeAnimate = fromTheme('animate');
+  /**
+   * Helpers to avoid repeating the same scales
+   *
+   * We use functions that create a new array every time they're called instead of static arrays.
+   * This ensures that users who modify any scale by mutating the array (e.g. with `array.push(element)`) don't accidentally mutate arrays in other parts of the config.
+   */
+  /***/
+  const scaleBreak = () => ['auto', 'avoid', 'all', 'avoid-page', 'page', 'left', 'right', 'column'];
+  const scalePosition = () => ['center', 'top', 'bottom', 'left', 'right', 'top-left',
+  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
+  'left-top', 'top-right',
+  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
+  'right-top', 'bottom-right',
+  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
+  'right-bottom', 'bottom-left',
+  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
+  'left-bottom'];
+  const scalePositionWithArbitrary = () => [...scalePosition(), isArbitraryVariable, isArbitraryValue];
+  const scaleOverflow = () => ['auto', 'hidden', 'clip', 'visible', 'scroll'];
+  const scaleOverscroll = () => ['auto', 'contain', 'none'];
+  const scaleUnambiguousSpacing = () => [isArbitraryVariable, isArbitraryValue, themeSpacing];
+  const scaleInset = () => [isFraction, 'full', 'auto', ...scaleUnambiguousSpacing()];
+  const scaleGridTemplateColsRows = () => [isInteger, 'none', 'subgrid', isArbitraryVariable, isArbitraryValue];
+  const scaleGridColRowStartAndEnd = () => ['auto', {
+    span: ['full', isInteger, isArbitraryVariable, isArbitraryValue]
+  }, isInteger, isArbitraryVariable, isArbitraryValue];
+  const scaleGridColRowStartOrEnd = () => [isInteger, 'auto', isArbitraryVariable, isArbitraryValue];
+  const scaleGridAutoColsRows = () => ['auto', 'min', 'max', 'fr', isArbitraryVariable, isArbitraryValue];
+  const scaleAlignPrimaryAxis = () => ['start', 'end', 'center', 'between', 'around', 'evenly', 'stretch', 'baseline', 'center-safe', 'end-safe'];
+  const scaleAlignSecondaryAxis = () => ['start', 'end', 'center', 'stretch', 'center-safe', 'end-safe'];
+  const scaleMargin = () => ['auto', ...scaleUnambiguousSpacing()];
+  const scaleSizing = () => [isFraction, 'auto', 'full', 'dvw', 'dvh', 'lvw', 'lvh', 'svw', 'svh', 'min', 'max', 'fit', ...scaleUnambiguousSpacing()];
+  const scaleColor = () => [themeColor, isArbitraryVariable, isArbitraryValue];
+  const scaleBgPosition = () => [...scalePosition(), isArbitraryVariablePosition, isArbitraryPosition, {
+    position: [isArbitraryVariable, isArbitraryValue]
+  }];
+  const scaleBgRepeat = () => ['no-repeat', {
+    repeat: ['', 'x', 'y', 'space', 'round']
+  }];
+  const scaleBgSize = () => ['auto', 'cover', 'contain', isArbitraryVariableSize, isArbitrarySize, {
+    size: [isArbitraryVariable, isArbitraryValue]
+  }];
+  const scaleGradientStopPosition = () => [isPercent, isArbitraryVariableLength, isArbitraryLength];
+  const scaleRadius = () => [
+  // Deprecated since Tailwind CSS v4.0.0
+  '', 'none', 'full', themeRadius, isArbitraryVariable, isArbitraryValue];
+  const scaleBorderWidth = () => ['', isNumber, isArbitraryVariableLength, isArbitraryLength];
+  const scaleLineStyle = () => ['solid', 'dashed', 'dotted', 'double'];
+  const scaleBlendMode = () => ['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'];
+  const scaleMaskImagePosition = () => [isNumber, isPercent, isArbitraryVariablePosition, isArbitraryPosition];
+  const scaleBlur = () => [
+  // Deprecated since Tailwind CSS v4.0.0
+  '', 'none', themeBlur, isArbitraryVariable, isArbitraryValue];
+  const scaleRotate = () => ['none', isNumber, isArbitraryVariable, isArbitraryValue];
+  const scaleScale = () => ['none', isNumber, isArbitraryVariable, isArbitraryValue];
+  const scaleSkew = () => [isNumber, isArbitraryVariable, isArbitraryValue];
+  const scaleTranslate = () => [isFraction, 'full', ...scaleUnambiguousSpacing()];
+  return {
+    cacheSize: 500,
+    theme: {
+      animate: ['spin', 'ping', 'pulse', 'bounce'],
+      aspect: ['video'],
+      blur: [isTshirtSize],
+      breakpoint: [isTshirtSize],
+      color: [isAny],
+      container: [isTshirtSize],
+      'drop-shadow': [isTshirtSize],
+      ease: ['in', 'out', 'in-out'],
+      font: [isAnyNonArbitrary],
+      'font-weight': ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black'],
+      'inset-shadow': [isTshirtSize],
+      leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
+      perspective: ['dramatic', 'near', 'normal', 'midrange', 'distant', 'none'],
+      radius: [isTshirtSize],
+      shadow: [isTshirtSize],
+      spacing: ['px', isNumber],
+      text: [isTshirtSize],
+      'text-shadow': [isTshirtSize],
+      tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest']
+    },
+    classGroups: {
+      // --------------
+      // --- Layout ---
+      // --------------
+      /**
+       * Aspect Ratio
+       * @see https://tailwindcss.com/docs/aspect-ratio
+       */
+      aspect: [{
+        aspect: ['auto', 'square', isFraction, isArbitraryValue, isArbitraryVariable, themeAspect]
+      }],
+      /**
+       * Container
+       * @see https://tailwindcss.com/docs/container
+       * @deprecated since Tailwind CSS v4.0.0
+       */
+      container: ['container'],
+      /**
+       * Columns
+       * @see https://tailwindcss.com/docs/columns
+       */
+      columns: [{
+        columns: [isNumber, isArbitraryValue, isArbitraryVariable, themeContainer]
+      }],
+      /**
+       * Break After
+       * @see https://tailwindcss.com/docs/break-after
+       */
+      'break-after': [{
+        'break-after': scaleBreak()
+      }],
+      /**
+       * Break Before
+       * @see https://tailwindcss.com/docs/break-before
+       */
+      'break-before': [{
+        'break-before': scaleBreak()
+      }],
+      /**
+       * Break Inside
+       * @see https://tailwindcss.com/docs/break-inside
+       */
+      'break-inside': [{
+        'break-inside': ['auto', 'avoid', 'avoid-page', 'avoid-column']
+      }],
+      /**
+       * Box Decoration Break
+       * @see https://tailwindcss.com/docs/box-decoration-break
+       */
+      'box-decoration': [{
+        'box-decoration': ['slice', 'clone']
+      }],
+      /**
+       * Box Sizing
+       * @see https://tailwindcss.com/docs/box-sizing
+       */
+      box: [{
+        box: ['border', 'content']
+      }],
+      /**
+       * Display
+       * @see https://tailwindcss.com/docs/display
+       */
+      display: ['block', 'inline-block', 'inline', 'flex', 'inline-flex', 'table', 'inline-table', 'table-caption', 'table-cell', 'table-column', 'table-column-group', 'table-footer-group', 'table-header-group', 'table-row-group', 'table-row', 'flow-root', 'grid', 'inline-grid', 'contents', 'list-item', 'hidden'],
+      /**
+       * Screen Reader Only
+       * @see https://tailwindcss.com/docs/display#screen-reader-only
+       */
+      sr: ['sr-only', 'not-sr-only'],
+      /**
+       * Floats
+       * @see https://tailwindcss.com/docs/float
+       */
+      float: [{
+        float: ['right', 'left', 'none', 'start', 'end']
+      }],
+      /**
+       * Clear
+       * @see https://tailwindcss.com/docs/clear
+       */
+      clear: [{
+        clear: ['left', 'right', 'both', 'none', 'start', 'end']
+      }],
+      /**
+       * Isolation
+       * @see https://tailwindcss.com/docs/isolation
+       */
+      isolation: ['isolate', 'isolation-auto'],
+      /**
+       * Object Fit
+       * @see https://tailwindcss.com/docs/object-fit
+       */
+      'object-fit': [{
+        object: ['contain', 'cover', 'fill', 'none', 'scale-down']
+      }],
+      /**
+       * Object Position
+       * @see https://tailwindcss.com/docs/object-position
+       */
+      'object-position': [{
+        object: scalePositionWithArbitrary()
+      }],
+      /**
+       * Overflow
+       * @see https://tailwindcss.com/docs/overflow
+       */
+      overflow: [{
+        overflow: scaleOverflow()
+      }],
+      /**
+       * Overflow X
+       * @see https://tailwindcss.com/docs/overflow
+       */
+      'overflow-x': [{
+        'overflow-x': scaleOverflow()
+      }],
+      /**
+       * Overflow Y
+       * @see https://tailwindcss.com/docs/overflow
+       */
+      'overflow-y': [{
+        'overflow-y': scaleOverflow()
+      }],
+      /**
+       * Overscroll Behavior
+       * @see https://tailwindcss.com/docs/overscroll-behavior
+       */
+      overscroll: [{
+        overscroll: scaleOverscroll()
+      }],
+      /**
+       * Overscroll Behavior X
+       * @see https://tailwindcss.com/docs/overscroll-behavior
+       */
+      'overscroll-x': [{
+        'overscroll-x': scaleOverscroll()
+      }],
+      /**
+       * Overscroll Behavior Y
+       * @see https://tailwindcss.com/docs/overscroll-behavior
+       */
+      'overscroll-y': [{
+        'overscroll-y': scaleOverscroll()
+      }],
+      /**
+       * Position
+       * @see https://tailwindcss.com/docs/position
+       */
+      position: ['static', 'fixed', 'absolute', 'relative', 'sticky'],
+      /**
+       * Top / Right / Bottom / Left
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      inset: [{
+        inset: scaleInset()
+      }],
+      /**
+       * Right / Left
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      'inset-x': [{
+        'inset-x': scaleInset()
+      }],
+      /**
+       * Top / Bottom
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      'inset-y': [{
+        'inset-y': scaleInset()
+      }],
+      /**
+       * Start
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      start: [{
+        start: scaleInset()
+      }],
+      /**
+       * End
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      end: [{
+        end: scaleInset()
+      }],
+      /**
+       * Top
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      top: [{
+        top: scaleInset()
+      }],
+      /**
+       * Right
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      right: [{
+        right: scaleInset()
+      }],
+      /**
+       * Bottom
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      bottom: [{
+        bottom: scaleInset()
+      }],
+      /**
+       * Left
+       * @see https://tailwindcss.com/docs/top-right-bottom-left
+       */
+      left: [{
+        left: scaleInset()
+      }],
+      /**
+       * Visibility
+       * @see https://tailwindcss.com/docs/visibility
+       */
+      visibility: ['visible', 'invisible', 'collapse'],
+      /**
+       * Z-Index
+       * @see https://tailwindcss.com/docs/z-index
+       */
+      z: [{
+        z: [isInteger, 'auto', isArbitraryVariable, isArbitraryValue]
+      }],
+      // ------------------------
+      // --- Flexbox and Grid ---
+      // ------------------------
+      /**
+       * Flex Basis
+       * @see https://tailwindcss.com/docs/flex-basis
+       */
+      basis: [{
+        basis: [isFraction, 'full', 'auto', themeContainer, ...scaleUnambiguousSpacing()]
+      }],
+      /**
+       * Flex Direction
+       * @see https://tailwindcss.com/docs/flex-direction
+       */
+      'flex-direction': [{
+        flex: ['row', 'row-reverse', 'col', 'col-reverse']
+      }],
+      /**
+       * Flex Wrap
+       * @see https://tailwindcss.com/docs/flex-wrap
+       */
+      'flex-wrap': [{
+        flex: ['nowrap', 'wrap', 'wrap-reverse']
+      }],
+      /**
+       * Flex
+       * @see https://tailwindcss.com/docs/flex
+       */
+      flex: [{
+        flex: [isNumber, isFraction, 'auto', 'initial', 'none', isArbitraryValue]
+      }],
+      /**
+       * Flex Grow
+       * @see https://tailwindcss.com/docs/flex-grow
+       */
+      grow: [{
+        grow: ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Flex Shrink
+       * @see https://tailwindcss.com/docs/flex-shrink
+       */
+      shrink: [{
+        shrink: ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Order
+       * @see https://tailwindcss.com/docs/order
+       */
+      order: [{
+        order: [isInteger, 'first', 'last', 'none', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Grid Template Columns
+       * @see https://tailwindcss.com/docs/grid-template-columns
+       */
+      'grid-cols': [{
+        'grid-cols': scaleGridTemplateColsRows()
+      }],
+      /**
+       * Grid Column Start / End
+       * @see https://tailwindcss.com/docs/grid-column
+       */
+      'col-start-end': [{
+        col: scaleGridColRowStartAndEnd()
+      }],
+      /**
+       * Grid Column Start
+       * @see https://tailwindcss.com/docs/grid-column
+       */
+      'col-start': [{
+        'col-start': scaleGridColRowStartOrEnd()
+      }],
+      /**
+       * Grid Column End
+       * @see https://tailwindcss.com/docs/grid-column
+       */
+      'col-end': [{
+        'col-end': scaleGridColRowStartOrEnd()
+      }],
+      /**
+       * Grid Template Rows
+       * @see https://tailwindcss.com/docs/grid-template-rows
+       */
+      'grid-rows': [{
+        'grid-rows': scaleGridTemplateColsRows()
+      }],
+      /**
+       * Grid Row Start / End
+       * @see https://tailwindcss.com/docs/grid-row
+       */
+      'row-start-end': [{
+        row: scaleGridColRowStartAndEnd()
+      }],
+      /**
+       * Grid Row Start
+       * @see https://tailwindcss.com/docs/grid-row
+       */
+      'row-start': [{
+        'row-start': scaleGridColRowStartOrEnd()
+      }],
+      /**
+       * Grid Row End
+       * @see https://tailwindcss.com/docs/grid-row
+       */
+      'row-end': [{
+        'row-end': scaleGridColRowStartOrEnd()
+      }],
+      /**
+       * Grid Auto Flow
+       * @see https://tailwindcss.com/docs/grid-auto-flow
+       */
+      'grid-flow': [{
+        'grid-flow': ['row', 'col', 'dense', 'row-dense', 'col-dense']
+      }],
+      /**
+       * Grid Auto Columns
+       * @see https://tailwindcss.com/docs/grid-auto-columns
+       */
+      'auto-cols': [{
+        'auto-cols': scaleGridAutoColsRows()
+      }],
+      /**
+       * Grid Auto Rows
+       * @see https://tailwindcss.com/docs/grid-auto-rows
+       */
+      'auto-rows': [{
+        'auto-rows': scaleGridAutoColsRows()
+      }],
+      /**
+       * Gap
+       * @see https://tailwindcss.com/docs/gap
+       */
+      gap: [{
+        gap: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Gap X
+       * @see https://tailwindcss.com/docs/gap
+       */
+      'gap-x': [{
+        'gap-x': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Gap Y
+       * @see https://tailwindcss.com/docs/gap
+       */
+      'gap-y': [{
+        'gap-y': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Justify Content
+       * @see https://tailwindcss.com/docs/justify-content
+       */
+      'justify-content': [{
+        justify: [...scaleAlignPrimaryAxis(), 'normal']
+      }],
+      /**
+       * Justify Items
+       * @see https://tailwindcss.com/docs/justify-items
+       */
+      'justify-items': [{
+        'justify-items': [...scaleAlignSecondaryAxis(), 'normal']
+      }],
+      /**
+       * Justify Self
+       * @see https://tailwindcss.com/docs/justify-self
+       */
+      'justify-self': [{
+        'justify-self': ['auto', ...scaleAlignSecondaryAxis()]
+      }],
+      /**
+       * Align Content
+       * @see https://tailwindcss.com/docs/align-content
+       */
+      'align-content': [{
+        content: ['normal', ...scaleAlignPrimaryAxis()]
+      }],
+      /**
+       * Align Items
+       * @see https://tailwindcss.com/docs/align-items
+       */
+      'align-items': [{
+        items: [...scaleAlignSecondaryAxis(), {
+          baseline: ['', 'last']
+        }]
+      }],
+      /**
+       * Align Self
+       * @see https://tailwindcss.com/docs/align-self
+       */
+      'align-self': [{
+        self: ['auto', ...scaleAlignSecondaryAxis(), {
+          baseline: ['', 'last']
+        }]
+      }],
+      /**
+       * Place Content
+       * @see https://tailwindcss.com/docs/place-content
+       */
+      'place-content': [{
+        'place-content': scaleAlignPrimaryAxis()
+      }],
+      /**
+       * Place Items
+       * @see https://tailwindcss.com/docs/place-items
+       */
+      'place-items': [{
+        'place-items': [...scaleAlignSecondaryAxis(), 'baseline']
+      }],
+      /**
+       * Place Self
+       * @see https://tailwindcss.com/docs/place-self
+       */
+      'place-self': [{
+        'place-self': ['auto', ...scaleAlignSecondaryAxis()]
+      }],
+      // Spacing
+      /**
+       * Padding
+       * @see https://tailwindcss.com/docs/padding
+       */
+      p: [{
+        p: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding X
+       * @see https://tailwindcss.com/docs/padding
+       */
+      px: [{
+        px: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding Y
+       * @see https://tailwindcss.com/docs/padding
+       */
+      py: [{
+        py: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding Start
+       * @see https://tailwindcss.com/docs/padding
+       */
+      ps: [{
+        ps: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding End
+       * @see https://tailwindcss.com/docs/padding
+       */
+      pe: [{
+        pe: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding Top
+       * @see https://tailwindcss.com/docs/padding
+       */
+      pt: [{
+        pt: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding Right
+       * @see https://tailwindcss.com/docs/padding
+       */
+      pr: [{
+        pr: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding Bottom
+       * @see https://tailwindcss.com/docs/padding
+       */
+      pb: [{
+        pb: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Padding Left
+       * @see https://tailwindcss.com/docs/padding
+       */
+      pl: [{
+        pl: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Margin
+       * @see https://tailwindcss.com/docs/margin
+       */
+      m: [{
+        m: scaleMargin()
+      }],
+      /**
+       * Margin X
+       * @see https://tailwindcss.com/docs/margin
+       */
+      mx: [{
+        mx: scaleMargin()
+      }],
+      /**
+       * Margin Y
+       * @see https://tailwindcss.com/docs/margin
+       */
+      my: [{
+        my: scaleMargin()
+      }],
+      /**
+       * Margin Start
+       * @see https://tailwindcss.com/docs/margin
+       */
+      ms: [{
+        ms: scaleMargin()
+      }],
+      /**
+       * Margin End
+       * @see https://tailwindcss.com/docs/margin
+       */
+      me: [{
+        me: scaleMargin()
+      }],
+      /**
+       * Margin Top
+       * @see https://tailwindcss.com/docs/margin
+       */
+      mt: [{
+        mt: scaleMargin()
+      }],
+      /**
+       * Margin Right
+       * @see https://tailwindcss.com/docs/margin
+       */
+      mr: [{
+        mr: scaleMargin()
+      }],
+      /**
+       * Margin Bottom
+       * @see https://tailwindcss.com/docs/margin
+       */
+      mb: [{
+        mb: scaleMargin()
+      }],
+      /**
+       * Margin Left
+       * @see https://tailwindcss.com/docs/margin
+       */
+      ml: [{
+        ml: scaleMargin()
+      }],
+      /**
+       * Space Between X
+       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
+       */
+      'space-x': [{
+        'space-x': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Space Between X Reverse
+       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
+       */
+      'space-x-reverse': ['space-x-reverse'],
+      /**
+       * Space Between Y
+       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
+       */
+      'space-y': [{
+        'space-y': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Space Between Y Reverse
+       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
+       */
+      'space-y-reverse': ['space-y-reverse'],
+      // --------------
+      // --- Sizing ---
+      // --------------
+      /**
+       * Size
+       * @see https://tailwindcss.com/docs/width#setting-both-width-and-height
+       */
+      size: [{
+        size: scaleSizing()
+      }],
+      /**
+       * Width
+       * @see https://tailwindcss.com/docs/width
+       */
+      w: [{
+        w: [themeContainer, 'screen', ...scaleSizing()]
+      }],
+      /**
+       * Min-Width
+       * @see https://tailwindcss.com/docs/min-width
+       */
+      'min-w': [{
+        'min-w': [themeContainer, 'screen', /** Deprecated. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
+        'none', ...scaleSizing()]
+      }],
+      /**
+       * Max-Width
+       * @see https://tailwindcss.com/docs/max-width
+       */
+      'max-w': [{
+        'max-w': [themeContainer, 'screen', 'none', /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
+        'prose', /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
+        {
+          screen: [themeBreakpoint]
+        }, ...scaleSizing()]
+      }],
+      /**
+       * Height
+       * @see https://tailwindcss.com/docs/height
+       */
+      h: [{
+        h: ['screen', 'lh', ...scaleSizing()]
+      }],
+      /**
+       * Min-Height
+       * @see https://tailwindcss.com/docs/min-height
+       */
+      'min-h': [{
+        'min-h': ['screen', 'lh', 'none', ...scaleSizing()]
+      }],
+      /**
+       * Max-Height
+       * @see https://tailwindcss.com/docs/max-height
+       */
+      'max-h': [{
+        'max-h': ['screen', 'lh', ...scaleSizing()]
+      }],
+      // ------------------
+      // --- Typography ---
+      // ------------------
+      /**
+       * Font Size
+       * @see https://tailwindcss.com/docs/font-size
+       */
+      'font-size': [{
+        text: ['base', themeText, isArbitraryVariableLength, isArbitraryLength]
+      }],
+      /**
+       * Font Smoothing
+       * @see https://tailwindcss.com/docs/font-smoothing
+       */
+      'font-smoothing': ['antialiased', 'subpixel-antialiased'],
+      /**
+       * Font Style
+       * @see https://tailwindcss.com/docs/font-style
+       */
+      'font-style': ['italic', 'not-italic'],
+      /**
+       * Font Weight
+       * @see https://tailwindcss.com/docs/font-weight
+       */
+      'font-weight': [{
+        font: [themeFontWeight, isArbitraryVariable, isArbitraryNumber]
+      }],
+      /**
+       * Font Stretch
+       * @see https://tailwindcss.com/docs/font-stretch
+       */
+      'font-stretch': [{
+        'font-stretch': ['ultra-condensed', 'extra-condensed', 'condensed', 'semi-condensed', 'normal', 'semi-expanded', 'expanded', 'extra-expanded', 'ultra-expanded', isPercent, isArbitraryValue]
+      }],
+      /**
+       * Font Family
+       * @see https://tailwindcss.com/docs/font-family
+       */
+      'font-family': [{
+        font: [isArbitraryVariableFamilyName, isArbitraryValue, themeFont]
+      }],
+      /**
+       * Font Variant Numeric
+       * @see https://tailwindcss.com/docs/font-variant-numeric
+       */
+      'fvn-normal': ['normal-nums'],
+      /**
+       * Font Variant Numeric
+       * @see https://tailwindcss.com/docs/font-variant-numeric
+       */
+      'fvn-ordinal': ['ordinal'],
+      /**
+       * Font Variant Numeric
+       * @see https://tailwindcss.com/docs/font-variant-numeric
+       */
+      'fvn-slashed-zero': ['slashed-zero'],
+      /**
+       * Font Variant Numeric
+       * @see https://tailwindcss.com/docs/font-variant-numeric
+       */
+      'fvn-figure': ['lining-nums', 'oldstyle-nums'],
+      /**
+       * Font Variant Numeric
+       * @see https://tailwindcss.com/docs/font-variant-numeric
+       */
+      'fvn-spacing': ['proportional-nums', 'tabular-nums'],
+      /**
+       * Font Variant Numeric
+       * @see https://tailwindcss.com/docs/font-variant-numeric
+       */
+      'fvn-fraction': ['diagonal-fractions', 'stacked-fractions'],
+      /**
+       * Letter Spacing
+       * @see https://tailwindcss.com/docs/letter-spacing
+       */
+      tracking: [{
+        tracking: [themeTracking, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Line Clamp
+       * @see https://tailwindcss.com/docs/line-clamp
+       */
+      'line-clamp': [{
+        'line-clamp': [isNumber, 'none', isArbitraryVariable, isArbitraryNumber]
+      }],
+      /**
+       * Line Height
+       * @see https://tailwindcss.com/docs/line-height
+       */
+      leading: [{
+        leading: [/** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
+        themeLeading, ...scaleUnambiguousSpacing()]
+      }],
+      /**
+       * List Style Image
+       * @see https://tailwindcss.com/docs/list-style-image
+       */
+      'list-image': [{
+        'list-image': ['none', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * List Style Position
+       * @see https://tailwindcss.com/docs/list-style-position
+       */
+      'list-style-position': [{
+        list: ['inside', 'outside']
+      }],
+      /**
+       * List Style Type
+       * @see https://tailwindcss.com/docs/list-style-type
+       */
+      'list-style-type': [{
+        list: ['disc', 'decimal', 'none', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Text Alignment
+       * @see https://tailwindcss.com/docs/text-align
+       */
+      'text-alignment': [{
+        text: ['left', 'center', 'right', 'justify', 'start', 'end']
+      }],
+      /**
+       * Placeholder Color
+       * @deprecated since Tailwind CSS v3.0.0
+       * @see https://v3.tailwindcss.com/docs/placeholder-color
+       */
+      'placeholder-color': [{
+        placeholder: scaleColor()
+      }],
+      /**
+       * Text Color
+       * @see https://tailwindcss.com/docs/text-color
+       */
+      'text-color': [{
+        text: scaleColor()
+      }],
+      /**
+       * Text Decoration
+       * @see https://tailwindcss.com/docs/text-decoration
+       */
+      'text-decoration': ['underline', 'overline', 'line-through', 'no-underline'],
+      /**
+       * Text Decoration Style
+       * @see https://tailwindcss.com/docs/text-decoration-style
+       */
+      'text-decoration-style': [{
+        decoration: [...scaleLineStyle(), 'wavy']
+      }],
+      /**
+       * Text Decoration Thickness
+       * @see https://tailwindcss.com/docs/text-decoration-thickness
+       */
+      'text-decoration-thickness': [{
+        decoration: [isNumber, 'from-font', 'auto', isArbitraryVariable, isArbitraryLength]
+      }],
+      /**
+       * Text Decoration Color
+       * @see https://tailwindcss.com/docs/text-decoration-color
+       */
+      'text-decoration-color': [{
+        decoration: scaleColor()
+      }],
+      /**
+       * Text Underline Offset
+       * @see https://tailwindcss.com/docs/text-underline-offset
+       */
+      'underline-offset': [{
+        'underline-offset': [isNumber, 'auto', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Text Transform
+       * @see https://tailwindcss.com/docs/text-transform
+       */
+      'text-transform': ['uppercase', 'lowercase', 'capitalize', 'normal-case'],
+      /**
+       * Text Overflow
+       * @see https://tailwindcss.com/docs/text-overflow
+       */
+      'text-overflow': ['truncate', 'text-ellipsis', 'text-clip'],
+      /**
+       * Text Wrap
+       * @see https://tailwindcss.com/docs/text-wrap
+       */
+      'text-wrap': [{
+        text: ['wrap', 'nowrap', 'balance', 'pretty']
+      }],
+      /**
+       * Text Indent
+       * @see https://tailwindcss.com/docs/text-indent
+       */
+      indent: [{
+        indent: scaleUnambiguousSpacing()
+      }],
+      /**
+       * Vertical Alignment
+       * @see https://tailwindcss.com/docs/vertical-align
+       */
+      'vertical-align': [{
+        align: ['baseline', 'top', 'middle', 'bottom', 'text-top', 'text-bottom', 'sub', 'super', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Whitespace
+       * @see https://tailwindcss.com/docs/whitespace
+       */
+      whitespace: [{
+        whitespace: ['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'break-spaces']
+      }],
+      /**
+       * Word Break
+       * @see https://tailwindcss.com/docs/word-break
+       */
+      break: [{
+        break: ['normal', 'words', 'all', 'keep']
+      }],
+      /**
+       * Overflow Wrap
+       * @see https://tailwindcss.com/docs/overflow-wrap
+       */
+      wrap: [{
+        wrap: ['break-word', 'anywhere', 'normal']
+      }],
+      /**
+       * Hyphens
+       * @see https://tailwindcss.com/docs/hyphens
+       */
+      hyphens: [{
+        hyphens: ['none', 'manual', 'auto']
+      }],
+      /**
+       * Content
+       * @see https://tailwindcss.com/docs/content
+       */
+      content: [{
+        content: ['none', isArbitraryVariable, isArbitraryValue]
+      }],
+      // -------------------
+      // --- Backgrounds ---
+      // -------------------
+      /**
+       * Background Attachment
+       * @see https://tailwindcss.com/docs/background-attachment
+       */
+      'bg-attachment': [{
+        bg: ['fixed', 'local', 'scroll']
+      }],
+      /**
+       * Background Clip
+       * @see https://tailwindcss.com/docs/background-clip
+       */
+      'bg-clip': [{
+        'bg-clip': ['border', 'padding', 'content', 'text']
+      }],
+      /**
+       * Background Origin
+       * @see https://tailwindcss.com/docs/background-origin
+       */
+      'bg-origin': [{
+        'bg-origin': ['border', 'padding', 'content']
+      }],
+      /**
+       * Background Position
+       * @see https://tailwindcss.com/docs/background-position
+       */
+      'bg-position': [{
+        bg: scaleBgPosition()
+      }],
+      /**
+       * Background Repeat
+       * @see https://tailwindcss.com/docs/background-repeat
+       */
+      'bg-repeat': [{
+        bg: scaleBgRepeat()
+      }],
+      /**
+       * Background Size
+       * @see https://tailwindcss.com/docs/background-size
+       */
+      'bg-size': [{
+        bg: scaleBgSize()
+      }],
+      /**
+       * Background Image
+       * @see https://tailwindcss.com/docs/background-image
+       */
+      'bg-image': [{
+        bg: ['none', {
+          linear: [{
+            to: ['t', 'tr', 'r', 'br', 'b', 'bl', 'l', 'tl']
+          }, isInteger, isArbitraryVariable, isArbitraryValue],
+          radial: ['', isArbitraryVariable, isArbitraryValue],
+          conic: [isInteger, isArbitraryVariable, isArbitraryValue]
+        }, isArbitraryVariableImage, isArbitraryImage]
+      }],
+      /**
+       * Background Color
+       * @see https://tailwindcss.com/docs/background-color
+       */
+      'bg-color': [{
+        bg: scaleColor()
+      }],
+      /**
+       * Gradient Color Stops From Position
+       * @see https://tailwindcss.com/docs/gradient-color-stops
+       */
+      'gradient-from-pos': [{
+        from: scaleGradientStopPosition()
+      }],
+      /**
+       * Gradient Color Stops Via Position
+       * @see https://tailwindcss.com/docs/gradient-color-stops
+       */
+      'gradient-via-pos': [{
+        via: scaleGradientStopPosition()
+      }],
+      /**
+       * Gradient Color Stops To Position
+       * @see https://tailwindcss.com/docs/gradient-color-stops
+       */
+      'gradient-to-pos': [{
+        to: scaleGradientStopPosition()
+      }],
+      /**
+       * Gradient Color Stops From
+       * @see https://tailwindcss.com/docs/gradient-color-stops
+       */
+      'gradient-from': [{
+        from: scaleColor()
+      }],
+      /**
+       * Gradient Color Stops Via
+       * @see https://tailwindcss.com/docs/gradient-color-stops
+       */
+      'gradient-via': [{
+        via: scaleColor()
+      }],
+      /**
+       * Gradient Color Stops To
+       * @see https://tailwindcss.com/docs/gradient-color-stops
+       */
+      'gradient-to': [{
+        to: scaleColor()
+      }],
+      // ---------------
+      // --- Borders ---
+      // ---------------
+      /**
+       * Border Radius
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      rounded: [{
+        rounded: scaleRadius()
+      }],
+      /**
+       * Border Radius Start
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-s': [{
+        'rounded-s': scaleRadius()
+      }],
+      /**
+       * Border Radius End
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-e': [{
+        'rounded-e': scaleRadius()
+      }],
+      /**
+       * Border Radius Top
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-t': [{
+        'rounded-t': scaleRadius()
+      }],
+      /**
+       * Border Radius Right
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-r': [{
+        'rounded-r': scaleRadius()
+      }],
+      /**
+       * Border Radius Bottom
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-b': [{
+        'rounded-b': scaleRadius()
+      }],
+      /**
+       * Border Radius Left
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-l': [{
+        'rounded-l': scaleRadius()
+      }],
+      /**
+       * Border Radius Start Start
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-ss': [{
+        'rounded-ss': scaleRadius()
+      }],
+      /**
+       * Border Radius Start End
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-se': [{
+        'rounded-se': scaleRadius()
+      }],
+      /**
+       * Border Radius End End
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-ee': [{
+        'rounded-ee': scaleRadius()
+      }],
+      /**
+       * Border Radius End Start
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-es': [{
+        'rounded-es': scaleRadius()
+      }],
+      /**
+       * Border Radius Top Left
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-tl': [{
+        'rounded-tl': scaleRadius()
+      }],
+      /**
+       * Border Radius Top Right
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-tr': [{
+        'rounded-tr': scaleRadius()
+      }],
+      /**
+       * Border Radius Bottom Right
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-br': [{
+        'rounded-br': scaleRadius()
+      }],
+      /**
+       * Border Radius Bottom Left
+       * @see https://tailwindcss.com/docs/border-radius
+       */
+      'rounded-bl': [{
+        'rounded-bl': scaleRadius()
+      }],
+      /**
+       * Border Width
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w': [{
+        border: scaleBorderWidth()
+      }],
+      /**
+       * Border Width X
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-x': [{
+        'border-x': scaleBorderWidth()
+      }],
+      /**
+       * Border Width Y
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-y': [{
+        'border-y': scaleBorderWidth()
+      }],
+      /**
+       * Border Width Start
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-s': [{
+        'border-s': scaleBorderWidth()
+      }],
+      /**
+       * Border Width End
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-e': [{
+        'border-e': scaleBorderWidth()
+      }],
+      /**
+       * Border Width Top
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-t': [{
+        'border-t': scaleBorderWidth()
+      }],
+      /**
+       * Border Width Right
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-r': [{
+        'border-r': scaleBorderWidth()
+      }],
+      /**
+       * Border Width Bottom
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-b': [{
+        'border-b': scaleBorderWidth()
+      }],
+      /**
+       * Border Width Left
+       * @see https://tailwindcss.com/docs/border-width
+       */
+      'border-w-l': [{
+        'border-l': scaleBorderWidth()
+      }],
+      /**
+       * Divide Width X
+       * @see https://tailwindcss.com/docs/border-width#between-children
+       */
+      'divide-x': [{
+        'divide-x': scaleBorderWidth()
+      }],
+      /**
+       * Divide Width X Reverse
+       * @see https://tailwindcss.com/docs/border-width#between-children
+       */
+      'divide-x-reverse': ['divide-x-reverse'],
+      /**
+       * Divide Width Y
+       * @see https://tailwindcss.com/docs/border-width#between-children
+       */
+      'divide-y': [{
+        'divide-y': scaleBorderWidth()
+      }],
+      /**
+       * Divide Width Y Reverse
+       * @see https://tailwindcss.com/docs/border-width#between-children
+       */
+      'divide-y-reverse': ['divide-y-reverse'],
+      /**
+       * Border Style
+       * @see https://tailwindcss.com/docs/border-style
+       */
+      'border-style': [{
+        border: [...scaleLineStyle(), 'hidden', 'none']
+      }],
+      /**
+       * Divide Style
+       * @see https://tailwindcss.com/docs/border-style#setting-the-divider-style
+       */
+      'divide-style': [{
+        divide: [...scaleLineStyle(), 'hidden', 'none']
+      }],
+      /**
+       * Border Color
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color': [{
+        border: scaleColor()
+      }],
+      /**
+       * Border Color X
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-x': [{
+        'border-x': scaleColor()
+      }],
+      /**
+       * Border Color Y
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-y': [{
+        'border-y': scaleColor()
+      }],
+      /**
+       * Border Color S
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-s': [{
+        'border-s': scaleColor()
+      }],
+      /**
+       * Border Color E
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-e': [{
+        'border-e': scaleColor()
+      }],
+      /**
+       * Border Color Top
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-t': [{
+        'border-t': scaleColor()
+      }],
+      /**
+       * Border Color Right
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-r': [{
+        'border-r': scaleColor()
+      }],
+      /**
+       * Border Color Bottom
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-b': [{
+        'border-b': scaleColor()
+      }],
+      /**
+       * Border Color Left
+       * @see https://tailwindcss.com/docs/border-color
+       */
+      'border-color-l': [{
+        'border-l': scaleColor()
+      }],
+      /**
+       * Divide Color
+       * @see https://tailwindcss.com/docs/divide-color
+       */
+      'divide-color': [{
+        divide: scaleColor()
+      }],
+      /**
+       * Outline Style
+       * @see https://tailwindcss.com/docs/outline-style
+       */
+      'outline-style': [{
+        outline: [...scaleLineStyle(), 'none', 'hidden']
+      }],
+      /**
+       * Outline Offset
+       * @see https://tailwindcss.com/docs/outline-offset
+       */
+      'outline-offset': [{
+        'outline-offset': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Outline Width
+       * @see https://tailwindcss.com/docs/outline-width
+       */
+      'outline-w': [{
+        outline: ['', isNumber, isArbitraryVariableLength, isArbitraryLength]
+      }],
+      /**
+       * Outline Color
+       * @see https://tailwindcss.com/docs/outline-color
+       */
+      'outline-color': [{
+        outline: scaleColor()
+      }],
+      // ---------------
+      // --- Effects ---
+      // ---------------
+      /**
+       * Box Shadow
+       * @see https://tailwindcss.com/docs/box-shadow
+       */
+      shadow: [{
+        shadow: [
+        // Deprecated since Tailwind CSS v4.0.0
+        '', 'none', themeShadow, isArbitraryVariableShadow, isArbitraryShadow]
+      }],
+      /**
+       * Box Shadow Color
+       * @see https://tailwindcss.com/docs/box-shadow#setting-the-shadow-color
+       */
+      'shadow-color': [{
+        shadow: scaleColor()
+      }],
+      /**
+       * Inset Box Shadow
+       * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-shadow
+       */
+      'inset-shadow': [{
+        'inset-shadow': ['none', themeInsetShadow, isArbitraryVariableShadow, isArbitraryShadow]
+      }],
+      /**
+       * Inset Box Shadow Color
+       * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-shadow-color
+       */
+      'inset-shadow-color': [{
+        'inset-shadow': scaleColor()
+      }],
+      /**
+       * Ring Width
+       * @see https://tailwindcss.com/docs/box-shadow#adding-a-ring
+       */
+      'ring-w': [{
+        ring: scaleBorderWidth()
+      }],
+      /**
+       * Ring Width Inset
+       * @see https://v3.tailwindcss.com/docs/ring-width#inset-rings
+       * @deprecated since Tailwind CSS v4.0.0
+       * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
+       */
+      'ring-w-inset': ['ring-inset'],
+      /**
+       * Ring Color
+       * @see https://tailwindcss.com/docs/box-shadow#setting-the-ring-color
+       */
+      'ring-color': [{
+        ring: scaleColor()
+      }],
+      /**
+       * Ring Offset Width
+       * @see https://v3.tailwindcss.com/docs/ring-offset-width
+       * @deprecated since Tailwind CSS v4.0.0
+       * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
+       */
+      'ring-offset-w': [{
+        'ring-offset': [isNumber, isArbitraryLength]
+      }],
+      /**
+       * Ring Offset Color
+       * @see https://v3.tailwindcss.com/docs/ring-offset-color
+       * @deprecated since Tailwind CSS v4.0.0
+       * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
+       */
+      'ring-offset-color': [{
+        'ring-offset': scaleColor()
+      }],
+      /**
+       * Inset Ring Width
+       * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-ring
+       */
+      'inset-ring-w': [{
+        'inset-ring': scaleBorderWidth()
+      }],
+      /**
+       * Inset Ring Color
+       * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-ring-color
+       */
+      'inset-ring-color': [{
+        'inset-ring': scaleColor()
+      }],
+      /**
+       * Text Shadow
+       * @see https://tailwindcss.com/docs/text-shadow
+       */
+      'text-shadow': [{
+        'text-shadow': ['none', themeTextShadow, isArbitraryVariableShadow, isArbitraryShadow]
+      }],
+      /**
+       * Text Shadow Color
+       * @see https://tailwindcss.com/docs/text-shadow#setting-the-shadow-color
+       */
+      'text-shadow-color': [{
+        'text-shadow': scaleColor()
+      }],
+      /**
+       * Opacity
+       * @see https://tailwindcss.com/docs/opacity
+       */
+      opacity: [{
+        opacity: [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Mix Blend Mode
+       * @see https://tailwindcss.com/docs/mix-blend-mode
+       */
+      'mix-blend': [{
+        'mix-blend': [...scaleBlendMode(), 'plus-darker', 'plus-lighter']
+      }],
+      /**
+       * Background Blend Mode
+       * @see https://tailwindcss.com/docs/background-blend-mode
+       */
+      'bg-blend': [{
+        'bg-blend': scaleBlendMode()
+      }],
+      /**
+       * Mask Clip
+       * @see https://tailwindcss.com/docs/mask-clip
+       */
+      'mask-clip': [{
+        'mask-clip': ['border', 'padding', 'content', 'fill', 'stroke', 'view']
+      }, 'mask-no-clip'],
+      /**
+       * Mask Composite
+       * @see https://tailwindcss.com/docs/mask-composite
+       */
+      'mask-composite': [{
+        mask: ['add', 'subtract', 'intersect', 'exclude']
+      }],
+      /**
+       * Mask Image
+       * @see https://tailwindcss.com/docs/mask-image
+       */
+      'mask-image-linear-pos': [{
+        'mask-linear': [isNumber]
+      }],
+      'mask-image-linear-from-pos': [{
+        'mask-linear-from': scaleMaskImagePosition()
+      }],
+      'mask-image-linear-to-pos': [{
+        'mask-linear-to': scaleMaskImagePosition()
+      }],
+      'mask-image-linear-from-color': [{
+        'mask-linear-from': scaleColor()
+      }],
+      'mask-image-linear-to-color': [{
+        'mask-linear-to': scaleColor()
+      }],
+      'mask-image-t-from-pos': [{
+        'mask-t-from': scaleMaskImagePosition()
+      }],
+      'mask-image-t-to-pos': [{
+        'mask-t-to': scaleMaskImagePosition()
+      }],
+      'mask-image-t-from-color': [{
+        'mask-t-from': scaleColor()
+      }],
+      'mask-image-t-to-color': [{
+        'mask-t-to': scaleColor()
+      }],
+      'mask-image-r-from-pos': [{
+        'mask-r-from': scaleMaskImagePosition()
+      }],
+      'mask-image-r-to-pos': [{
+        'mask-r-to': scaleMaskImagePosition()
+      }],
+      'mask-image-r-from-color': [{
+        'mask-r-from': scaleColor()
+      }],
+      'mask-image-r-to-color': [{
+        'mask-r-to': scaleColor()
+      }],
+      'mask-image-b-from-pos': [{
+        'mask-b-from': scaleMaskImagePosition()
+      }],
+      'mask-image-b-to-pos': [{
+        'mask-b-to': scaleMaskImagePosition()
+      }],
+      'mask-image-b-from-color': [{
+        'mask-b-from': scaleColor()
+      }],
+      'mask-image-b-to-color': [{
+        'mask-b-to': scaleColor()
+      }],
+      'mask-image-l-from-pos': [{
+        'mask-l-from': scaleMaskImagePosition()
+      }],
+      'mask-image-l-to-pos': [{
+        'mask-l-to': scaleMaskImagePosition()
+      }],
+      'mask-image-l-from-color': [{
+        'mask-l-from': scaleColor()
+      }],
+      'mask-image-l-to-color': [{
+        'mask-l-to': scaleColor()
+      }],
+      'mask-image-x-from-pos': [{
+        'mask-x-from': scaleMaskImagePosition()
+      }],
+      'mask-image-x-to-pos': [{
+        'mask-x-to': scaleMaskImagePosition()
+      }],
+      'mask-image-x-from-color': [{
+        'mask-x-from': scaleColor()
+      }],
+      'mask-image-x-to-color': [{
+        'mask-x-to': scaleColor()
+      }],
+      'mask-image-y-from-pos': [{
+        'mask-y-from': scaleMaskImagePosition()
+      }],
+      'mask-image-y-to-pos': [{
+        'mask-y-to': scaleMaskImagePosition()
+      }],
+      'mask-image-y-from-color': [{
+        'mask-y-from': scaleColor()
+      }],
+      'mask-image-y-to-color': [{
+        'mask-y-to': scaleColor()
+      }],
+      'mask-image-radial': [{
+        'mask-radial': [isArbitraryVariable, isArbitraryValue]
+      }],
+      'mask-image-radial-from-pos': [{
+        'mask-radial-from': scaleMaskImagePosition()
+      }],
+      'mask-image-radial-to-pos': [{
+        'mask-radial-to': scaleMaskImagePosition()
+      }],
+      'mask-image-radial-from-color': [{
+        'mask-radial-from': scaleColor()
+      }],
+      'mask-image-radial-to-color': [{
+        'mask-radial-to': scaleColor()
+      }],
+      'mask-image-radial-shape': [{
+        'mask-radial': ['circle', 'ellipse']
+      }],
+      'mask-image-radial-size': [{
+        'mask-radial': [{
+          closest: ['side', 'corner'],
+          farthest: ['side', 'corner']
+        }]
+      }],
+      'mask-image-radial-pos': [{
+        'mask-radial-at': scalePosition()
+      }],
+      'mask-image-conic-pos': [{
+        'mask-conic': [isNumber]
+      }],
+      'mask-image-conic-from-pos': [{
+        'mask-conic-from': scaleMaskImagePosition()
+      }],
+      'mask-image-conic-to-pos': [{
+        'mask-conic-to': scaleMaskImagePosition()
+      }],
+      'mask-image-conic-from-color': [{
+        'mask-conic-from': scaleColor()
+      }],
+      'mask-image-conic-to-color': [{
+        'mask-conic-to': scaleColor()
+      }],
+      /**
+       * Mask Mode
+       * @see https://tailwindcss.com/docs/mask-mode
+       */
+      'mask-mode': [{
+        mask: ['alpha', 'luminance', 'match']
+      }],
+      /**
+       * Mask Origin
+       * @see https://tailwindcss.com/docs/mask-origin
+       */
+      'mask-origin': [{
+        'mask-origin': ['border', 'padding', 'content', 'fill', 'stroke', 'view']
+      }],
+      /**
+       * Mask Position
+       * @see https://tailwindcss.com/docs/mask-position
+       */
+      'mask-position': [{
+        mask: scaleBgPosition()
+      }],
+      /**
+       * Mask Repeat
+       * @see https://tailwindcss.com/docs/mask-repeat
+       */
+      'mask-repeat': [{
+        mask: scaleBgRepeat()
+      }],
+      /**
+       * Mask Size
+       * @see https://tailwindcss.com/docs/mask-size
+       */
+      'mask-size': [{
+        mask: scaleBgSize()
+      }],
+      /**
+       * Mask Type
+       * @see https://tailwindcss.com/docs/mask-type
+       */
+      'mask-type': [{
+        'mask-type': ['alpha', 'luminance']
+      }],
+      /**
+       * Mask Image
+       * @see https://tailwindcss.com/docs/mask-image
+       */
+      'mask-image': [{
+        mask: ['none', isArbitraryVariable, isArbitraryValue]
+      }],
+      // ---------------
+      // --- Filters ---
+      // ---------------
+      /**
+       * Filter
+       * @see https://tailwindcss.com/docs/filter
+       */
+      filter: [{
+        filter: [
+        // Deprecated since Tailwind CSS v3.0.0
+        '', 'none', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Blur
+       * @see https://tailwindcss.com/docs/blur
+       */
+      blur: [{
+        blur: scaleBlur()
+      }],
+      /**
+       * Brightness
+       * @see https://tailwindcss.com/docs/brightness
+       */
+      brightness: [{
+        brightness: [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Contrast
+       * @see https://tailwindcss.com/docs/contrast
+       */
+      contrast: [{
+        contrast: [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Drop Shadow
+       * @see https://tailwindcss.com/docs/drop-shadow
+       */
+      'drop-shadow': [{
+        'drop-shadow': [
+        // Deprecated since Tailwind CSS v4.0.0
+        '', 'none', themeDropShadow, isArbitraryVariableShadow, isArbitraryShadow]
+      }],
+      /**
+       * Drop Shadow Color
+       * @see https://tailwindcss.com/docs/filter-drop-shadow#setting-the-shadow-color
+       */
+      'drop-shadow-color': [{
+        'drop-shadow': scaleColor()
+      }],
+      /**
+       * Grayscale
+       * @see https://tailwindcss.com/docs/grayscale
+       */
+      grayscale: [{
+        grayscale: ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Hue Rotate
+       * @see https://tailwindcss.com/docs/hue-rotate
+       */
+      'hue-rotate': [{
+        'hue-rotate': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Invert
+       * @see https://tailwindcss.com/docs/invert
+       */
+      invert: [{
+        invert: ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Saturate
+       * @see https://tailwindcss.com/docs/saturate
+       */
+      saturate: [{
+        saturate: [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Sepia
+       * @see https://tailwindcss.com/docs/sepia
+       */
+      sepia: [{
+        sepia: ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Filter
+       * @see https://tailwindcss.com/docs/backdrop-filter
+       */
+      'backdrop-filter': [{
+        'backdrop-filter': [
+        // Deprecated since Tailwind CSS v3.0.0
+        '', 'none', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Blur
+       * @see https://tailwindcss.com/docs/backdrop-blur
+       */
+      'backdrop-blur': [{
+        'backdrop-blur': scaleBlur()
+      }],
+      /**
+       * Backdrop Brightness
+       * @see https://tailwindcss.com/docs/backdrop-brightness
+       */
+      'backdrop-brightness': [{
+        'backdrop-brightness': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Contrast
+       * @see https://tailwindcss.com/docs/backdrop-contrast
+       */
+      'backdrop-contrast': [{
+        'backdrop-contrast': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Grayscale
+       * @see https://tailwindcss.com/docs/backdrop-grayscale
+       */
+      'backdrop-grayscale': [{
+        'backdrop-grayscale': ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Hue Rotate
+       * @see https://tailwindcss.com/docs/backdrop-hue-rotate
+       */
+      'backdrop-hue-rotate': [{
+        'backdrop-hue-rotate': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Invert
+       * @see https://tailwindcss.com/docs/backdrop-invert
+       */
+      'backdrop-invert': [{
+        'backdrop-invert': ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Opacity
+       * @see https://tailwindcss.com/docs/backdrop-opacity
+       */
+      'backdrop-opacity': [{
+        'backdrop-opacity': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Saturate
+       * @see https://tailwindcss.com/docs/backdrop-saturate
+       */
+      'backdrop-saturate': [{
+        'backdrop-saturate': [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Backdrop Sepia
+       * @see https://tailwindcss.com/docs/backdrop-sepia
+       */
+      'backdrop-sepia': [{
+        'backdrop-sepia': ['', isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      // --------------
+      // --- Tables ---
+      // --------------
+      /**
+       * Border Collapse
+       * @see https://tailwindcss.com/docs/border-collapse
+       */
+      'border-collapse': [{
+        border: ['collapse', 'separate']
+      }],
+      /**
+       * Border Spacing
+       * @see https://tailwindcss.com/docs/border-spacing
+       */
+      'border-spacing': [{
+        'border-spacing': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Border Spacing X
+       * @see https://tailwindcss.com/docs/border-spacing
+       */
+      'border-spacing-x': [{
+        'border-spacing-x': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Border Spacing Y
+       * @see https://tailwindcss.com/docs/border-spacing
+       */
+      'border-spacing-y': [{
+        'border-spacing-y': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Table Layout
+       * @see https://tailwindcss.com/docs/table-layout
+       */
+      'table-layout': [{
+        table: ['auto', 'fixed']
+      }],
+      /**
+       * Caption Side
+       * @see https://tailwindcss.com/docs/caption-side
+       */
+      caption: [{
+        caption: ['top', 'bottom']
+      }],
+      // ---------------------------------
+      // --- Transitions and Animation ---
+      // ---------------------------------
+      /**
+       * Transition Property
+       * @see https://tailwindcss.com/docs/transition-property
+       */
+      transition: [{
+        transition: ['', 'all', 'colors', 'opacity', 'shadow', 'transform', 'none', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Transition Behavior
+       * @see https://tailwindcss.com/docs/transition-behavior
+       */
+      'transition-behavior': [{
+        transition: ['normal', 'discrete']
+      }],
+      /**
+       * Transition Duration
+       * @see https://tailwindcss.com/docs/transition-duration
+       */
+      duration: [{
+        duration: [isNumber, 'initial', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Transition Timing Function
+       * @see https://tailwindcss.com/docs/transition-timing-function
+       */
+      ease: [{
+        ease: ['linear', 'initial', themeEase, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Transition Delay
+       * @see https://tailwindcss.com/docs/transition-delay
+       */
+      delay: [{
+        delay: [isNumber, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Animation
+       * @see https://tailwindcss.com/docs/animation
+       */
+      animate: [{
+        animate: ['none', themeAnimate, isArbitraryVariable, isArbitraryValue]
+      }],
+      // ------------------
+      // --- Transforms ---
+      // ------------------
+      /**
+       * Backface Visibility
+       * @see https://tailwindcss.com/docs/backface-visibility
+       */
+      backface: [{
+        backface: ['hidden', 'visible']
+      }],
+      /**
+       * Perspective
+       * @see https://tailwindcss.com/docs/perspective
+       */
+      perspective: [{
+        perspective: [themePerspective, isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Perspective Origin
+       * @see https://tailwindcss.com/docs/perspective-origin
+       */
+      'perspective-origin': [{
+        'perspective-origin': scalePositionWithArbitrary()
+      }],
+      /**
+       * Rotate
+       * @see https://tailwindcss.com/docs/rotate
+       */
+      rotate: [{
+        rotate: scaleRotate()
+      }],
+      /**
+       * Rotate X
+       * @see https://tailwindcss.com/docs/rotate
+       */
+      'rotate-x': [{
+        'rotate-x': scaleRotate()
+      }],
+      /**
+       * Rotate Y
+       * @see https://tailwindcss.com/docs/rotate
+       */
+      'rotate-y': [{
+        'rotate-y': scaleRotate()
+      }],
+      /**
+       * Rotate Z
+       * @see https://tailwindcss.com/docs/rotate
+       */
+      'rotate-z': [{
+        'rotate-z': scaleRotate()
+      }],
+      /**
+       * Scale
+       * @see https://tailwindcss.com/docs/scale
+       */
+      scale: [{
+        scale: scaleScale()
+      }],
+      /**
+       * Scale X
+       * @see https://tailwindcss.com/docs/scale
+       */
+      'scale-x': [{
+        'scale-x': scaleScale()
+      }],
+      /**
+       * Scale Y
+       * @see https://tailwindcss.com/docs/scale
+       */
+      'scale-y': [{
+        'scale-y': scaleScale()
+      }],
+      /**
+       * Scale Z
+       * @see https://tailwindcss.com/docs/scale
+       */
+      'scale-z': [{
+        'scale-z': scaleScale()
+      }],
+      /**
+       * Scale 3D
+       * @see https://tailwindcss.com/docs/scale
+       */
+      'scale-3d': ['scale-3d'],
+      /**
+       * Skew
+       * @see https://tailwindcss.com/docs/skew
+       */
+      skew: [{
+        skew: scaleSkew()
+      }],
+      /**
+       * Skew X
+       * @see https://tailwindcss.com/docs/skew
+       */
+      'skew-x': [{
+        'skew-x': scaleSkew()
+      }],
+      /**
+       * Skew Y
+       * @see https://tailwindcss.com/docs/skew
+       */
+      'skew-y': [{
+        'skew-y': scaleSkew()
+      }],
+      /**
+       * Transform
+       * @see https://tailwindcss.com/docs/transform
+       */
+      transform: [{
+        transform: [isArbitraryVariable, isArbitraryValue, '', 'none', 'gpu', 'cpu']
+      }],
+      /**
+       * Transform Origin
+       * @see https://tailwindcss.com/docs/transform-origin
+       */
+      'transform-origin': [{
+        origin: scalePositionWithArbitrary()
+      }],
+      /**
+       * Transform Style
+       * @see https://tailwindcss.com/docs/transform-style
+       */
+      'transform-style': [{
+        transform: ['3d', 'flat']
+      }],
+      /**
+       * Translate
+       * @see https://tailwindcss.com/docs/translate
+       */
+      translate: [{
+        translate: scaleTranslate()
+      }],
+      /**
+       * Translate X
+       * @see https://tailwindcss.com/docs/translate
+       */
+      'translate-x': [{
+        'translate-x': scaleTranslate()
+      }],
+      /**
+       * Translate Y
+       * @see https://tailwindcss.com/docs/translate
+       */
+      'translate-y': [{
+        'translate-y': scaleTranslate()
+      }],
+      /**
+       * Translate Z
+       * @see https://tailwindcss.com/docs/translate
+       */
+      'translate-z': [{
+        'translate-z': scaleTranslate()
+      }],
+      /**
+       * Translate None
+       * @see https://tailwindcss.com/docs/translate
+       */
+      'translate-none': ['translate-none'],
+      // ---------------------
+      // --- Interactivity ---
+      // ---------------------
+      /**
+       * Accent Color
+       * @see https://tailwindcss.com/docs/accent-color
+       */
+      accent: [{
+        accent: scaleColor()
+      }],
+      /**
+       * Appearance
+       * @see https://tailwindcss.com/docs/appearance
+       */
+      appearance: [{
+        appearance: ['none', 'auto']
+      }],
+      /**
+       * Caret Color
+       * @see https://tailwindcss.com/docs/just-in-time-mode#caret-color-utilities
+       */
+      'caret-color': [{
+        caret: scaleColor()
+      }],
+      /**
+       * Color Scheme
+       * @see https://tailwindcss.com/docs/color-scheme
+       */
+      'color-scheme': [{
+        scheme: ['normal', 'dark', 'light', 'light-dark', 'only-dark', 'only-light']
+      }],
+      /**
+       * Cursor
+       * @see https://tailwindcss.com/docs/cursor
+       */
+      cursor: [{
+        cursor: ['auto', 'default', 'pointer', 'wait', 'text', 'move', 'help', 'not-allowed', 'none', 'context-menu', 'progress', 'cell', 'crosshair', 'vertical-text', 'alias', 'copy', 'no-drop', 'grab', 'grabbing', 'all-scroll', 'col-resize', 'row-resize', 'n-resize', 'e-resize', 's-resize', 'w-resize', 'ne-resize', 'nw-resize', 'se-resize', 'sw-resize', 'ew-resize', 'ns-resize', 'nesw-resize', 'nwse-resize', 'zoom-in', 'zoom-out', isArbitraryVariable, isArbitraryValue]
+      }],
+      /**
+       * Field Sizing
+       * @see https://tailwindcss.com/docs/field-sizing
+       */
+      'field-sizing': [{
+        'field-sizing': ['fixed', 'content']
+      }],
+      /**
+       * Pointer Events
+       * @see https://tailwindcss.com/docs/pointer-events
+       */
+      'pointer-events': [{
+        'pointer-events': ['auto', 'none']
+      }],
+      /**
+       * Resize
+       * @see https://tailwindcss.com/docs/resize
+       */
+      resize: [{
+        resize: ['none', '', 'y', 'x']
+      }],
+      /**
+       * Scroll Behavior
+       * @see https://tailwindcss.com/docs/scroll-behavior
+       */
+      'scroll-behavior': [{
+        scroll: ['auto', 'smooth']
+      }],
+      /**
+       * Scroll Margin
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-m': [{
+        'scroll-m': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin X
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-mx': [{
+        'scroll-mx': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin Y
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-my': [{
+        'scroll-my': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin Start
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-ms': [{
+        'scroll-ms': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin End
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-me': [{
+        'scroll-me': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin Top
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-mt': [{
+        'scroll-mt': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin Right
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-mr': [{
+        'scroll-mr': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin Bottom
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-mb': [{
+        'scroll-mb': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Margin Left
+       * @see https://tailwindcss.com/docs/scroll-margin
+       */
+      'scroll-ml': [{
+        'scroll-ml': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-p': [{
+        'scroll-p': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding X
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-px': [{
+        'scroll-px': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding Y
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-py': [{
+        'scroll-py': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding Start
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-ps': [{
+        'scroll-ps': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding End
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-pe': [{
+        'scroll-pe': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding Top
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-pt': [{
+        'scroll-pt': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding Right
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-pr': [{
+        'scroll-pr': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding Bottom
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-pb': [{
+        'scroll-pb': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Padding Left
+       * @see https://tailwindcss.com/docs/scroll-padding
+       */
+      'scroll-pl': [{
+        'scroll-pl': scaleUnambiguousSpacing()
+      }],
+      /**
+       * Scroll Snap Align
+       * @see https://tailwindcss.com/docs/scroll-snap-align
+       */
+      'snap-align': [{
+        snap: ['start', 'end', 'center', 'align-none']
+      }],
+      /**
+       * Scroll Snap Stop
+       * @see https://tailwindcss.com/docs/scroll-snap-stop
+       */
+      'snap-stop': [{
+        snap: ['normal', 'always']
+      }],
+      /**
+       * Scroll Snap Type
+       * @see https://tailwindcss.com/docs/scroll-snap-type
+       */
+      'snap-type': [{
+        snap: ['none', 'x', 'y', 'both']
+      }],
+      /**
+       * Scroll Snap Type Strictness
+       * @see https://tailwindcss.com/docs/scroll-snap-type
+       */
+      'snap-strictness': [{
+        snap: ['mandatory', 'proximity']
+      }],
+      /**
+       * Touch Action
+       * @see https://tailwindcss.com/docs/touch-action
+       */
+      touch: [{
+        touch: ['auto', 'none', 'manipulation']
+      }],
+      /**
+       * Touch Action X
+       * @see https://tailwindcss.com/docs/touch-action
+       */
+      'touch-x': [{
+        'touch-pan': ['x', 'left', 'right']
+      }],
+      /**
+       * Touch Action Y
+       * @see https://tailwindcss.com/docs/touch-action
+       */
+      'touch-y': [{
+        'touch-pan': ['y', 'up', 'down']
+      }],
+      /**
+       * Touch Action Pinch Zoom
+       * @see https://tailwindcss.com/docs/touch-action
+       */
+      'touch-pz': ['touch-pinch-zoom'],
+      /**
+       * User Select
+       * @see https://tailwindcss.com/docs/user-select
+       */
+      select: [{
+        select: ['none', 'text', 'all', 'auto']
+      }],
+      /**
+       * Will Change
+       * @see https://tailwindcss.com/docs/will-change
+       */
+      'will-change': [{
+        'will-change': ['auto', 'scroll', 'contents', 'transform', isArbitraryVariable, isArbitraryValue]
+      }],
+      // -----------
+      // --- SVG ---
+      // -----------
+      /**
+       * Fill
+       * @see https://tailwindcss.com/docs/fill
+       */
+      fill: [{
+        fill: ['none', ...scaleColor()]
+      }],
+      /**
+       * Stroke Width
+       * @see https://tailwindcss.com/docs/stroke-width
+       */
+      'stroke-w': [{
+        stroke: [isNumber, isArbitraryVariableLength, isArbitraryLength, isArbitraryNumber]
+      }],
+      /**
+       * Stroke
+       * @see https://tailwindcss.com/docs/stroke
+       */
+      stroke: [{
+        stroke: ['none', ...scaleColor()]
+      }],
+      // ---------------------
+      // --- Accessibility ---
+      // ---------------------
+      /**
+       * Forced Color Adjust
+       * @see https://tailwindcss.com/docs/forced-color-adjust
+       */
+      'forced-color-adjust': [{
+        'forced-color-adjust': ['auto', 'none']
+      }]
+    },
+    conflictingClassGroups: {
+      overflow: ['overflow-x', 'overflow-y'],
+      overscroll: ['overscroll-x', 'overscroll-y'],
+      inset: ['inset-x', 'inset-y', 'start', 'end', 'top', 'right', 'bottom', 'left'],
+      'inset-x': ['right', 'left'],
+      'inset-y': ['top', 'bottom'],
+      flex: ['basis', 'grow', 'shrink'],
+      gap: ['gap-x', 'gap-y'],
+      p: ['px', 'py', 'ps', 'pe', 'pt', 'pr', 'pb', 'pl'],
+      px: ['pr', 'pl'],
+      py: ['pt', 'pb'],
+      m: ['mx', 'my', 'ms', 'me', 'mt', 'mr', 'mb', 'ml'],
+      mx: ['mr', 'ml'],
+      my: ['mt', 'mb'],
+      size: ['w', 'h'],
+      'font-size': ['leading'],
+      'fvn-normal': ['fvn-ordinal', 'fvn-slashed-zero', 'fvn-figure', 'fvn-spacing', 'fvn-fraction'],
+      'fvn-ordinal': ['fvn-normal'],
+      'fvn-slashed-zero': ['fvn-normal'],
+      'fvn-figure': ['fvn-normal'],
+      'fvn-spacing': ['fvn-normal'],
+      'fvn-fraction': ['fvn-normal'],
+      'line-clamp': ['display', 'overflow'],
+      rounded: ['rounded-s', 'rounded-e', 'rounded-t', 'rounded-r', 'rounded-b', 'rounded-l', 'rounded-ss', 'rounded-se', 'rounded-ee', 'rounded-es', 'rounded-tl', 'rounded-tr', 'rounded-br', 'rounded-bl'],
+      'rounded-s': ['rounded-ss', 'rounded-es'],
+      'rounded-e': ['rounded-se', 'rounded-ee'],
+      'rounded-t': ['rounded-tl', 'rounded-tr'],
+      'rounded-r': ['rounded-tr', 'rounded-br'],
+      'rounded-b': ['rounded-br', 'rounded-bl'],
+      'rounded-l': ['rounded-tl', 'rounded-bl'],
+      'border-spacing': ['border-spacing-x', 'border-spacing-y'],
+      'border-w': ['border-w-x', 'border-w-y', 'border-w-s', 'border-w-e', 'border-w-t', 'border-w-r', 'border-w-b', 'border-w-l'],
+      'border-w-x': ['border-w-r', 'border-w-l'],
+      'border-w-y': ['border-w-t', 'border-w-b'],
+      'border-color': ['border-color-x', 'border-color-y', 'border-color-s', 'border-color-e', 'border-color-t', 'border-color-r', 'border-color-b', 'border-color-l'],
+      'border-color-x': ['border-color-r', 'border-color-l'],
+      'border-color-y': ['border-color-t', 'border-color-b'],
+      translate: ['translate-x', 'translate-y', 'translate-none'],
+      'translate-none': ['translate', 'translate-x', 'translate-y', 'translate-z'],
+      'scroll-m': ['scroll-mx', 'scroll-my', 'scroll-ms', 'scroll-me', 'scroll-mt', 'scroll-mr', 'scroll-mb', 'scroll-ml'],
+      'scroll-mx': ['scroll-mr', 'scroll-ml'],
+      'scroll-my': ['scroll-mt', 'scroll-mb'],
+      'scroll-p': ['scroll-px', 'scroll-py', 'scroll-ps', 'scroll-pe', 'scroll-pt', 'scroll-pr', 'scroll-pb', 'scroll-pl'],
+      'scroll-px': ['scroll-pr', 'scroll-pl'],
+      'scroll-py': ['scroll-pt', 'scroll-pb'],
+      touch: ['touch-x', 'touch-y', 'touch-pz'],
+      'touch-x': ['touch'],
+      'touch-y': ['touch'],
+      'touch-pz': ['touch']
+    },
+    conflictingClassGroupModifiers: {
+      'font-size': ['leading']
+    },
+    orderSensitiveModifiers: ['*', '**', 'after', 'backdrop', 'before', 'details-content', 'file', 'first-letter', 'first-line', 'marker', 'placeholder', 'selection']
+  };
+};
+const twMerge = /*#__PURE__*/createTailwindMerge(getDefaultConfig);
+
+function cn(...inputs) {
+    return twMerge(clsx(inputs));
+}
+
+const getFullImageUrl = (imagePath) => {
+    const baseUrl = process.env.NEXT_PUBLIC_AWS_URL;
+    return imagePath ? `${baseUrl}${imagePath}` : null;
+};
+const getInitialsFromEmail = (email) => {
+    if (!email)
+        return "";
+    const localPart = email.split("@")[0]; // "sagar" or "sagar.jadhav"
+    const parts = localPart.split("."); // ["sagar"] or ["sagar", "jadhav"]
+    const firstInitial = parts[0]?.charAt(0).toUpperCase() || "";
+    const lastInitial = parts[1]?.charAt(0).toUpperCase() || "";
+    return lastInitial ? `${firstInitial}${lastInitial}` : `${firstInitial}`;
+};
+
+const apiEndpoints = {
+    auth: {
+        profile: "user/profile"},
+};
+
+// Default configuration
+const defaultConfig = {
+    tokenStorage: {
+        cookieOptions: {
+            secure: true,
+            sameSite: "lax",
+            path: "/",
+        },
+    },
+    redirectOnUnauthorized: "/login",
+    onAuthStateChange: () => { },
+};
+// Initial state
+const initialState = {
+    user: null,
+    token: {
+        access_token: null,
+        expires_at: null,
+        token_type: null,
+    },
+    isAuthenticated: false,
+    isLoading: true,
+    error: null,
+};
+// Auth reducer
+const authReducer = (state, action) => {
+    switch (action.type) {
+        case "SET_LOADING":
+            return { ...state, isLoading: action.payload };
+        case "SET_ERROR":
+            return { ...state, error: action.payload, isLoading: false };
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.payload,
+                isAuthenticated: !!action.payload,
+                error: null,
+            };
+        case "SET_TOKENS":
+            return { ...state, token: action.payload };
+        case "SET_AUTHENTICATED":
+            return { ...state, isAuthenticated: action.payload };
+        case "UPDATE_USER":
+            return {
+                ...state,
+                user: state.user ? { ...state.user, ...action.payload } : null,
+            };
+        case "CLEAR_AUTH":
+            return {
+                ...initialState,
+                isLoading: false,
+            };
+        default:
+            return state;
+    }
+};
+// Create context
+const AuthContext = createContext(undefined);
+const AuthProvider = ({ children, config }) => {
+    const [state, dispatch] = useReducer(authReducer, initialState);
+    const mergedConfig = { ...defaultConfig, ...(config ?? {}) };
+    // Token management
+    const updateToken = useCallback((token) => {
+        setCookieJSON("token", token);
+        dispatch({ type: "SET_TOKENS", payload: token });
+    }, []);
+    const logoutUser = useCallback((callback) => {
+        logoutAuthUser(() => {
+            dispatch({ type: "CLEAR_AUTH" });
+            callback?.();
+        });
+    }, []);
+    const getToken = useCallback(() => {
+        return getAuthToken();
+    }, []);
+    // API request interceptor to add auth token
+    useEffect(() => {
+        ApiInstance.client.addGlobalRequestInterceptor(async (config) => {
+            const token = getAuthToken();
+            if (token?.access_token) {
+                config.headers = {
+                    ...config.headers,
+                    Authorization: `Bearer ${token?.access_token}`,
+                };
+            }
+            return config;
+        });
+        // Response interceptor to handle token refresh
+        ApiInstance.client.addGlobalErrorInterceptor(async (error) => {
+            if (error.status === 401) {
+                try {
+                    logoutUser(() => {
+                        // Redirect to login page or handle unauthorized access
+                    });
+                }
+                catch (refreshError) {
+                    console.error("Token refresh failed:", refreshError);
+                    dispatch({ type: "SET_ERROR", payload: "Session expired. Please log in again." });
+                }
+            }
+            return error;
+        });
+        refreshUser();
+    }, []);
+    // Authentication methods
+    const refreshUser = useCallback(async () => {
+        dispatch({ type: "SET_LOADING", payload: true });
+        dispatch({ type: "SET_ERROR", payload: null });
+        ApiInstance.CORE.get(apiEndpoints.auth.profile)
+            .then((res) => {
+            const user = res.data;
+            dispatch({ type: "SET_USER", payload: user });
+        })
+            .catch((err) => {
+            dispatch({ type: "SET_ERROR", payload: err.message || "Login failed" });
+        })
+            .finally(() => {
+            dispatch({ type: "SET_LOADING", payload: false });
+        });
+    }, []);
+    // Utility methods
+    useCallback(() => {
+        dispatch({ type: "SET_ERROR", payload: null });
+    }, []);
+    // Notify auth state changes
+    useEffect(() => {
+        mergedConfig.onAuthStateChange(state);
+    }, [state, mergedConfig.onAuthStateChange]);
+    const contextValue = {
+        ...state,
+        getToken,
+        updateToken,
+        logout: logoutUser,
+        refreshUser,
+    };
+    return jsx(AuthContext.Provider, { value: contextValue, children: children });
+};
+// Hook to use auth context
+const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (context === undefined) {
+        throw new Error("useAuth must be used within an AuthProvider");
+    }
+    return context;
+};
+
+const AppContext = createContext({
+    sidebarOpen: true,
+    setSidebarOpen: (value) => { },
+    sidebarExpanded: true,
+    setSidebarExpanded: (value) => { },
+});
+function AppProvider({ children }) {
+    const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [sidebarExpanded, setSidebarExpanded] = useState(true);
+    return (jsx(AppContext.Provider, { value: {
+            sidebarOpen,
+            setSidebarOpen,
+            sidebarExpanded,
+            setSidebarExpanded,
+        }, children: children }));
+}
+const useAppProvider = () => useContext(AppContext);
+
 function RootLayout({ children }) {
-    return (jsxs("html", { className: `font-reddit`, lang: "en", suppressHydrationWarning: true, children: [jsx("head", {}), jsx("body", { className: "font-reddit antialiased bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400", "cz-shortcut-listen": "true", children: jsx("div", { className: "flex flex-col h-[100vh]", children: jsx(J$2, { attribute: "class", disableTransitionOnChange: true, children: children }) }) })] }));
+    return (jsxs("html", { className: `font-reddit`, lang: "en", suppressHydrationWarning: true, children: [jsx("head", {}), jsx("body", { className: "font-reddit antialiased bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400", "cz-shortcut-listen": "true", children: jsx("div", { className: "flex flex-col h-[100vh]", children: jsx(J$2, { attribute: "class", disableTransitionOnChange: true, children: jsx(AppProvider, { children: children }) }) }) })] }));
 }
 
 function getDefaultExportFromCjs (x) {
@@ -5588,24 +9212,6 @@ var link = linkExports;
 
 var Link = /*@__PURE__*/getDefaultExportFromCjs(link);
 
-const AppContext = createContext({
-    sidebarOpen: true,
-    setSidebarOpen: () => false,
-    sidebarExpanded: true,
-    setSidebarExpanded: () => false,
-});
-function AppProvider({ children, }) {
-    const [sidebarOpen, setSidebarOpen] = useState(true);
-    const [sidebarExpanded, setSidebarExpanded] = useState(true);
-    return (jsx(AppContext.Provider, { value: {
-            sidebarOpen,
-            setSidebarOpen,
-            sidebarExpanded,
-            setSidebarExpanded,
-        }, children: children }));
-}
-const useAppProvider = () => useContext(AppContext);
-
 function SidebarLink({ children, href, active }) {
     const { setSidebarOpen } = useAppProvider();
     return (jsx(Link, { className: `block text-gray-800 dark:text-gray-100 transition truncate ${active ? 'group-[.is-link-group]:text-indigo-500' : 'hover:text-gray-900 dark:hover:text-white group-[.is-link-group]:text-gray-500/90 dark:group-[.is-link-group]:text-gray-400 hover:group-[.is-link-group]:text-gray-700 dark:hover:group-[.is-link-group]:text-gray-200'}`, href: href, onClick: () => setSidebarOpen(false), children: children }));
@@ -5618,24 +9224,6 @@ function SidebarLinkGroup({ children, open = false }) {
     };
     return (jsx("li", { className: `pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r group is-link-group ${open && 'from-indigo-500/[0.12] dark:from-indigo-500/[0.24] to-indigo-500/[0.04]'}`, children: children(handleClick, openGroup) }));
 }
-
-const useWindowWidth = () => {
-    const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : undefined);
-    useEffect(() => {
-        if (typeof window === 'undefined')
-            return;
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-        // Add event listener
-        window.addEventListener('resize', handleResize);
-        // Set initial width
-        handleResize();
-        // Remove event listener on cleanup
-        return () => window.removeEventListener('resize', handleResize);
-    }, []); // Empty array ensures effect is only run on mount and unmount
-    return windowWidth;
-};
 
 function Logo({ imageUrl, label }) {
     return (jsx(Link, { className: "block", href: "/", children: jsx("img", { src: imageUrl ??
@@ -5651,7 +9239,8 @@ function Sidebar({ variant = "v2", menus, logoLabel, logoUrl, marketPlaceMenu = 
     const { sidebarOpen, setSidebarOpen, sidebarExpanded, setSidebarExpanded } = useAppProvider();
     console.log("sidebarExpanded", sidebarExpanded, sidebarOpen);
     const segments = navigation.useSelectedLayoutSegments();
-    useWindowWidth();
+    const breakpoint = useWindowWidth();
+    const expandOnly = !sidebarExpanded && breakpoint && breakpoint >= 1024 && breakpoint < 1536;
     useEffect(() => {
         const clickHandler = ({ target }) => {
             if (!sidebar.current)
@@ -5673,7 +9262,7 @@ function Sidebar({ variant = "v2", menus, logoLabel, logoUrl, marketPlaceMenu = 
         document.addEventListener("keydown", keyHandler);
         return () => document.removeEventListener("keydown", keyHandler);
     }, [sidebarOpen, setSidebarOpen]);
-    return (jsxs("div", { className: `min-w-fit  ${sidebarExpanded ? "sidebar-expanded" : ""}`, children: [jsx("div", { className: `fixed inset-0 bg-gray-900/30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`, "aria-hidden": "true" }), jsxs("div", { id: "sidebar", ref: sidebar, className: `flex lg:flex! flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:w-64! shrink-0 bg-white dark:bg-gray-800 p-4 transition-all duration-200 ease-in-out  ${sidebarOpen ? "translate-x-0" : "-translate-x-64"} ${variant === "v2" ? "border-r border-gray-200 dark:border-gray-700/60" : "rounded-r-2xl shadow-xs"} `, children: [jsxs("div", { className: "flex justify-center mb-5 pr-3 sm:px-2", children: [jsxs("button", { className: "lg:hidden text-gray-500 hover:text-gray-400", onClick: () => setSidebarOpen(!sidebarOpen), "aria-controls": "sidebar", "aria-expanded": sidebarOpen, children: [jsx("span", { className: "sr-only", children: "Close sidebar" }), jsx("svg", { className: "w-6 h-6 fill-current", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: jsx("path", { d: "M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z" }) })] }), jsx(Logo, { imageUrl: logoUrl, label: logoLabel })] }), jsx("div", { className: "space-y-0 flex-1", children: menus?.map((menu, index) => (jsxs("div", { children: [menu?.name && (jsxs("h3", { className: "text-xs uppercase text-gray-400 dark:text-gray-500 font-semibold pl-3", children: [jsx("span", { className: "hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6", "aria-hidden": "true", children: "\u2022\u2022\u2022" }), jsx("span", { className: "lg:hidden lg:sidebar-expanded:block 2xl:block", children: menu?.name })] })), jsx("ul", { className: "mt-3", children: menu.items?.map((item) => {
+    return (jsxs("div", { className: `min-w-fit  ${sidebarExpanded ? "sidebar-expanded" : ""}`, children: [jsx("div", { className: `fixed inset-0 bg-gray-900/30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`, "aria-hidden": "true" }), jsxs("div", { id: "sidebar", ref: sidebar, className: `flex lg:flex! flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-[100dvh] overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 shrink-0 bg-white dark:bg-gray-800 p-4 transition-all duration-200 ease-in-out  ${sidebarOpen ? "translate-x-0" : "-translate-x-64"} ${variant === "v2" ? "border-r border-gray-200 dark:border-gray-700/60" : "rounded-r-2xl shadow-xs"} `, children: [jsxs("div", { className: "flex justify-center mb-5 pr-3 sm:px-2", children: [jsxs("button", { className: "lg:hidden text-gray-500 hover:text-gray-400", onClick: () => setSidebarOpen(!sidebarOpen), "aria-controls": "sidebar", "aria-expanded": sidebarOpen, children: [jsx("span", { className: "sr-only", children: "Close sidebar" }), jsx("svg", { className: "w-6 h-6 fill-current", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: jsx("path", { d: "M10.7 18.7l1.4-1.4L7.8 13H20v-2H7.8l4.3-4.3-1.4-1.4L4 12z" }) })] }), jsx(Logo, { imageUrl: logoUrl, label: logoLabel })] }), jsx("div", { className: "space-y-0 flex-1", children: menus?.map((menu, index) => (jsxs("div", { children: [menu?.name && (jsxs("h3", { className: "text-xs uppercase text-gray-400 dark:text-gray-500 font-semibold pl-3", children: [jsx("span", { className: "hidden lg:block lg:sidebar-expanded:hidden text-center w-6", "aria-hidden": "true", children: "\u2022\u2022\u2022" }), jsx("span", { className: "lg:hidden lg:sidebar-expanded:block", children: menu?.name })] })), jsx("ul", { className: "mt-3", children: menu.items?.map((item) => {
                                         const isMenuActive = segments?.includes(item?.value) || item?.subMenu?.some((s) => segments?.includes(s?.value));
                                         return (jsx(SidebarLinkGroup, { open: isMenuActive, children: (handleClick, open) => {
                                                 const Wrapper = item?.href ? Link : "div";
@@ -5681,3604 +9270,16 @@ function Sidebar({ variant = "v2", menus, logoLabel, logoUrl, marketPlaceMenu = 
                                                             // href="#0"
                                                             className: `block cursor-pointer text-gray-800 dark:text-gray-100 truncate transition ${isMenuActive ? "" : "hover:text-gray-900 dark:hover:text-white"}`, onClick: (e) => {
                                                                 // e.preventDefault();
-                                                                handleClick();
-                                                            }, children: jsxs("div", { className: "flex items-center justify-between", children: [jsxs("div", { className: "flex flex-1 items-center", children: [jsx("span", { className: `shrink-0 fill-current ${isMenuActive ? "text-indigo-500" : "text-gray-400 dark:text-gray-500"}`, children: item?.icon }), jsx("span", { className: "text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200", children: item?.label })] }), item?.badge && (jsx("div", { className: "flex shrink-0 ml-2", children: jsx("span", { className: "inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-indigo-500 px-2 rounded-sm", children: item?.badge }) })), !item?.href && (jsx("div", { className: "flex shrink-0 ml-2", children: jsx("svg", { className: `w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500 ${open && "rotate-180"}`, viewBox: "0 0 12 12", children: jsx("path", { d: "M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" }) }) }))] }) }), item?.subMenu && (jsx("div", { className: "lg:hidden lg:sidebar-expanded:block 2xl:block", children: jsx("ul", { className: `pl-8 mt-1 ${!open && "hidden"}`, children: item?.subMenu?.map((sub) => {
-                                                                    return (jsx("li", { className: "mb-1 last:mb-0", children: jsx(SidebarLink, { href: sub?.href, active: segments?.includes(sub?.value), children: jsx("span", { className: "text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200", children: sub?.label }) }) }, sub?.label));
+                                                                expandOnly ? setSidebarExpanded(true) : handleClick();
+                                                            }, children: jsxs("div", { className: "flex items-center justify-between", children: [jsxs("div", { className: "flex flex-1 items-center", children: [jsx("span", { className: `shrink-0 fill-current ${isMenuActive ? "text-indigo-500" : "text-gray-400 dark:text-gray-500"}`, children: item?.icon }), jsx("span", { className: "text-sm font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200", children: item?.label })] }), item?.badge && (jsx("div", { className: "flex shrink-0 ml-2", children: jsx("span", { className: "inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-indigo-500 px-2 rounded-sm", children: item?.badge }) })), !item?.href && (jsx("div", { className: "flex shrink-0 ml-2", children: jsx("svg", { className: `w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500 ${open && "rotate-180"}`, viewBox: "0 0 12 12", children: jsx("path", { d: "M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z" }) }) }))] }) }), item?.subMenu && (jsx("div", { className: "lg:hidden lg:sidebar-expanded:block", children: jsx("ul", { className: `pl-8 mt-1 ${!open && "hidden"}`, children: item?.subMenu?.map((sub) => {
+                                                                    return (jsx("li", { className: "mb-1 last:mb-0", children: jsx(SidebarLink, { href: sub?.href, active: segments?.includes(sub?.value), children: jsx("span", { className: "text-sm font-medium lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200", children: sub?.label }) }) }, sub?.label));
                                                                 }) }) }))] }));
                                             } }, item?.label));
-                                    }) })] }, index))) }), jsxs("div", { className: "flex justify-between items-center mb-4", children: [sidebarExpanded ? (jsx(SidebarLink, { href: marketPlaceMenu?.href, active: segments?.includes(marketPlaceMenu?.value), children: jsxs("div", { className: "flex items-center", children: [jsx("svg", { className: `shrink-0 fill-current ${segments?.includes(marketPlaceMenu?.value) ? "text-violet-500" : "text-gray-400 dark:text-gray-500"}`, xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", viewBox: "0 0 16 16", children: jsx("path", { d: "M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z" }) }), jsx("span", { className: `text-md font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 ${segments?.includes(marketPlaceMenu?.value) ? "text-indigo-500" : ""}`, children: "Market Place" })] }) })) : null, jsxs("button", { className: "text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400", onClick: () => {
-                                    console.log("SETTING", sidebarExpanded, sidebarOpen);
-                                    setSidebarExpanded(!sidebarExpanded);
-                                }, children: [jsx("span", { className: "sr-only", children: "Expand / collapse sidebar" }), jsx("svg", { className: "shrink-0 fill-current text-gray-400 dark:text-gray-500 sidebar-expanded:rotate-180", xmlns: "http://www.w3.org/2000/svg", width: "16", height: "16", viewBox: "0 0 16 16", children: jsx("path", { d: "M15 16a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v14a1 1 0 0 1-1 1ZM8.586 7H1a1 1 0 1 0 0 2h7.586l-2.793 2.793a1 1 0 1 0 1.414 1.414l4.5-4.5A.997.997 0 0 0 12 8.01M11.924 7.617a.997.997 0 0 0-.217-.324l-4.5-4.5a1 1 0 0 0-1.414 1.414L8.586 7M12 7.99a.996.996 0 0 0-.076-.373Z" }) })] })] })] })] }));
+                                    }) })] }, index))) }), jsxs("div", { className: "flex justify-between items-center mb-4", children: [sidebarExpanded ? (jsx(SidebarLink, { href: marketPlaceMenu?.href, active: segments?.includes(marketPlaceMenu?.value), children: jsxs("div", { className: "flex items-center", children: [jsx("svg", { className: `shrink-0 fill-current ${segments?.includes(marketPlaceMenu?.value) ? "text-violet-500" : "text-gray-400 dark:text-gray-500"}`, xmlns: "http://www.w3.org/2000/svg", width: "20", height: "20", viewBox: "0 0 16 16", children: jsx("path", { d: "M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z" }) }), jsx("span", { className: `text-md font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200 ${segments?.includes(marketPlaceMenu?.value) ? "text-indigo-500" : ""}`, children: "Market Place" })] }) })) : null, jsx("div", { className: "pl-4 pr-3 py-2", children: jsxs("button", { className: "text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400", onClick: () => {
+                                        console.log("SETTING", sidebarExpanded, sidebarOpen);
+                                        setSidebarExpanded(!sidebarExpanded);
+                                    }, children: [jsx("span", { className: "sr-only", children: "Expand / collapse sidebar" }), jsx("svg", { className: "shrink-0 fill-current text-gray-400 dark:text-gray-500 sidebar-expanded:rotate-180", xmlns: "http://www.w3.org/2000/svg", width: "16", height: "16", viewBox: "0 0 16 16", children: jsx("path", { d: "M15 16a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v14a1 1 0 0 1-1 1ZM8.586 7H1a1 1 0 1 0 0 2h7.586l-2.793 2.793a1 1 0 1 0 1.414 1.414l4.5-4.5A.997.997 0 0 0 12 8.01M11.924 7.617a.997.997 0 0 0-.217-.324l-4.5-4.5a1 1 0 0 0-1.414 1.414L8.586 7M12 7.99a.996.996 0 0 0-.076-.373Z" }) })] }) })] })] })] }));
 }
-
-class CookieManager {
-    config;
-    constructor(config = {}) {
-        this.config = {
-            defaultPath: '/',
-            defaultSecure: typeof window !== 'undefined' ? window.location.protocol === 'https:' : false,
-            defaultSameSite: 'lax',
-            ...config,
-        };
-    }
-    // Set a cookie
-    set(name, value, options = {}) {
-        if (typeof document === 'undefined') {
-            console.warn('CookieManager: document is not available (SSR environment)');
-            return false;
-        }
-        try {
-            const cookieName = this.config.prefix ? `${this.config.prefix}${name}` : name;
-            let cookieString = `${encodeURIComponent(cookieName)}=${encodeURIComponent(value)}`;
-            // Handle expires
-            if (options.expires) {
-                if (typeof options.expires === 'number') {
-                    // Convert days to date
-                    const date = new Date();
-                    date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
-                    cookieString += `; expires=${date.toUTCString()}`;
-                }
-                else {
-                    cookieString += `; expires=${options.expires.toUTCString()}`;
-                }
-            }
-            // Handle maxAge
-            if (options.maxAge !== undefined) {
-                cookieString += `; max-age=${options.maxAge}`;
-            }
-            // Handle path
-            const path = options.path ?? this.config.defaultPath;
-            if (path) {
-                cookieString += `; path=${path}`;
-            }
-            // Handle domain
-            const domain = options.domain ?? this.config.defaultDomain;
-            if (domain) {
-                cookieString += `; domain=${domain}`;
-            }
-            // Handle secure
-            const secure = options.secure ?? this.config.defaultSecure;
-            if (secure) {
-                cookieString += '; secure';
-            }
-            // Handle httpOnly (note: this can't be set via JavaScript)
-            if (options.httpOnly) {
-                console.warn('CookieManager: httpOnly flag cannot be set via JavaScript');
-            }
-            // Handle sameSite
-            const sameSite = options.sameSite ?? this.config.defaultSameSite;
-            if (sameSite) {
-                cookieString += `; samesite=${sameSite}`;
-            }
-            document.cookie = cookieString;
-            return true;
-        }
-        catch (error) {
-            console.error('CookieManager: Error setting cookie', error);
-            return false;
-        }
-    }
-    // Get a cookie value
-    get(name) {
-        if (typeof document === 'undefined') {
-            return null;
-        }
-        try {
-            const cookieName = this.config.prefix ? `${this.config.prefix}${name}` : name;
-            const encodedName = encodeURIComponent(cookieName);
-            const cookies = document.cookie.split(';');
-            for (let cookie of cookies) {
-                cookie = cookie.trim();
-                if (cookie.startsWith(`${encodedName}=`)) {
-                    return decodeURIComponent(cookie.substring(encodedName.length + 1));
-                }
-            }
-            return null;
-        }
-        catch (error) {
-            console.error('CookieManager: Error getting cookie', error);
-            return null;
-        }
-    }
-    // Get a cookie value and parse as JSON
-    getJSON(name) {
-        const value = this.get(name);
-        if (value === null)
-            return null;
-        try {
-            return JSON.parse(value);
-        }
-        catch (error) {
-            console.error('CookieManager: Error parsing JSON cookie', error);
-            return null;
-        }
-    }
-    // Set a cookie with JSON value
-    setJSON(name, value, options = {}) {
-        try {
-            const jsonString = JSON.stringify(value);
-            return this.set(name, jsonString, options);
-        }
-        catch (error) {
-            console.error('CookieManager: Error stringifying JSON cookie', error);
-            return false;
-        }
-    }
-    // Remove a cookie
-    remove(name, options = {}) {
-        return this.set(name, '', {
-            ...options,
-            expires: new Date(0), // Set to past date
-            maxAge: 0,
-        });
-    }
-    // Check if a cookie exists
-    has(name) {
-        return this.get(name) !== null;
-    }
-    // Get all cookies as an object
-    getAll() {
-        if (typeof document === 'undefined') {
-            return {};
-        }
-        try {
-            const cookies = {};
-            const cookieStrings = document.cookie.split(';');
-            for (let cookie of cookieStrings) {
-                cookie = cookie.trim();
-                const [encodedName, ...valueParts] = cookie.split('=');
-                if (encodedName && valueParts.length > 0) {
-                    const name = decodeURIComponent(encodedName);
-                    const value = decodeURIComponent(valueParts.join('='));
-                    // Remove prefix if it exists
-                    const finalName = this.config.prefix && name.startsWith(this.config.prefix)
-                        ? name.substring(this.config.prefix.length)
-                        : name;
-                    cookies[finalName] = value;
-                }
-            }
-            return cookies;
-        }
-        catch (error) {
-            console.error('CookieManager: Error getting all cookies', error);
-            return {};
-        }
-    }
-    // Clear all cookies (only those with the same prefix if configured)
-    clear(options = {}) {
-        const allCookies = this.getAll();
-        Object.keys(allCookies).forEach(name => {
-            this.remove(name, options);
-        });
-    }
-    // Get cookie size in bytes
-    getSize(name) {
-        const value = this.get(name);
-        if (value === null)
-            return 0;
-        return new Blob([value]).size;
-    }
-    // Get total cookies size
-    getTotalSize() {
-        if (typeof document === 'undefined')
-            return 0;
-        return new Blob([document.cookie]).size;
-    }
-    // Check if cookies are enabled
-    isEnabled() {
-        if (typeof document === 'undefined')
-            return false;
-        try {
-            const testCookie = '__cookie_test__';
-            this.set(testCookie, 'test');
-            const isEnabled = this.has(testCookie);
-            this.remove(testCookie);
-            return isEnabled;
-        }
-        catch {
-            return false;
-        }
-    }
-}
-// Default cookie manager instance
-const cookieManager = new CookieManager();
-// Utility functions for quick access
-const setCookie = (name, value, options) => {
-    return cookieManager.set(name, value, options);
-};
-const getCookie = (name) => {
-    return cookieManager.get(name);
-};
-const getCookieJSON = (name) => {
-    return cookieManager.getJSON(name);
-};
-const setCookieJSON = (name, value, options) => {
-    return cookieManager.setJSON(name, value, options);
-};
-const removeCookie = (name, options) => {
-    return cookieManager.remove(name, options);
-};
-const hasCookie = (name) => {
-    return cookieManager.has(name);
-};
-const getAllCookies = () => {
-    return cookieManager.getAll();
-};
-const clearAllCookies = (options) => {
-    return cookieManager.clear(options);
-};
-const isCookiesEnabled = () => {
-    return cookieManager.isEnabled();
-};
-// Create a custom cookie manager with specific configuration
-const createCookieManager = (config) => {
-    return new CookieManager(config);
-};
-
-const getAuthToken = () => {
-    const token = getCookieJSON("token");
-    if (token?.access_token) {
-        return token;
-    }
-    return null;
-};
-const logoutAuthUser = (callback) => {
-    removeCookie("token");
-    callback?.();
-};
-
-const GlobalInterceptors = {
-    request: [],
-    response: [],
-    error: [],
-};
-class ApiClient {
-    static instances = new Map();
-    config;
-    localInterceptors;
-    constructor(config) {
-        this.config = config;
-        this.localInterceptors = {
-            request: [],
-            response: [],
-            error: [],
-        };
-    }
-    // Singleton per unique key (e.g., baseURL or custom ID)
-    static getInstance(config) {
-        const key = config.baseURL;
-        if (!key)
-            throw new Error("ApiClient config must have an 'id' or 'baseURL' to use as key");
-        if (!ApiClient.instances.has(key)) {
-            ApiClient.instances.set(key, new ApiClient(config));
-        }
-        return ApiClient.instances.get(key);
-    }
-    static addGlobalRequestInterceptor(interceptor) {
-        GlobalInterceptors.request.push(interceptor);
-    }
-    static addGlobalResponseInterceptor(interceptor) {
-        GlobalInterceptors.response.push(interceptor);
-    }
-    static addGlobalErrorInterceptor(interceptor) {
-        GlobalInterceptors.error.push(interceptor);
-    }
-    // Local (instance-level) interceptors
-    addRequestInterceptor(interceptor) {
-        this.localInterceptors.request.push(interceptor);
-    }
-    addResponseInterceptor(interceptor) {
-        this.localInterceptors.response.push(interceptor);
-    }
-    addErrorInterceptor(interceptor) {
-        this.localInterceptors.error.push(interceptor);
-    }
-    async applyInterceptors(type, input) {
-        const all = [...GlobalInterceptors[type], ...this.localInterceptors[type]];
-        let result = input;
-        for (const fn of all) {
-            result = (await fn(result));
-        }
-        return result;
-    }
-    // Build URL with query parameters
-    buildURL(endpoint, params) {
-        const url = new URL(endpoint, this.config.baseURL);
-        if (params) {
-            Object.entries(params).forEach(([key, value]) => {
-                url.searchParams.append(key, String(value));
-            });
-        }
-        return url.toString();
-    }
-    // Main request method
-    async request(endpoint, config = {}) {
-        try {
-            // Apply request interceptors
-            const modifiedConfig = await this.applyInterceptors("request", config);
-            // Build URL
-            const url = this.buildURL(endpoint, modifiedConfig.params);
-            // Prepare headers
-            const headers = {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                ...this.config.headers,
-                ...modifiedConfig.headers,
-            };
-            // Prepare fetch options
-            const fetchOptions = {
-                method: modifiedConfig.method || "GET",
-                headers,
-                credentials: modifiedConfig.withCredentials ?? this.config.withCredentials ? "include" : "same-origin",
-            };
-            // Add body for non-GET requests
-            if (modifiedConfig.body && modifiedConfig.method !== "GET") {
-                fetchOptions.body = typeof modifiedConfig.body === "string" ? modifiedConfig.body : JSON.stringify(modifiedConfig.body);
-            }
-            // Set up timeout
-            const timeout = modifiedConfig.timeout || this.config.timeout || 10000;
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), timeout);
-            fetchOptions.signal = controller.signal;
-            // Make the request
-            const response = await fetch(url, fetchOptions);
-            clearTimeout(timeoutId);
-            // Parse response
-            let data;
-            const contentType = response.headers.get("content-type");
-            if (contentType && contentType.includes("application/json")) {
-                data = await response.json();
-            }
-            else {
-                data = (await response.text());
-            }
-            // Create response object
-            const apiResponse = {
-                data,
-                status: response.status,
-                statusText: response.statusText,
-                headers: Object.fromEntries(response.headers.entries()),
-            };
-            // Check if response is successful
-            if (!response.ok) {
-                const error = {
-                    message: `Request failed with status ${response.status}`,
-                    status: response.status,
-                    statusText: response.statusText,
-                    data,
-                };
-                throw await this.applyInterceptors("error", error);
-            }
-            // Apply response interceptors
-            return await this.applyInterceptors("response", apiResponse);
-        }
-        catch (error) {
-            if (error instanceof Error) {
-                const apiError = {
-                    message: error.message,
-                };
-                throw await this.applyInterceptors("error", apiError);
-            }
-            throw error;
-        }
-    }
-    // Convenience methods
-    async get(endpoint, config) {
-        return this.request(endpoint, { ...config, method: "GET" });
-    }
-    async post(endpoint, data, config) {
-        return this.request(endpoint, { ...config, method: "POST", body: data });
-    }
-    async put(endpoint, data, config) {
-        return this.request(endpoint, { ...config, method: "PUT", body: data });
-    }
-    async patch(endpoint, data, config) {
-        return this.request(endpoint, { ...config, method: "PATCH", body: data });
-    }
-    async delete(endpoint, config) {
-        return this.request(endpoint, { ...config, method: "DELETE" });
-    }
-}
-// Create a default API client instance
-const createApiClient = (config) => {
-    return ApiClient.getInstance(config);
-};
-// Utility function for quick API calls without creating a client
-const apiCall = async (url, config = {}) => {
-    const { baseURL = "", ...requestConfig } = config;
-    const client = ApiClient.getInstance({ baseURL });
-    return client.request(url, requestConfig);
-};
-
-const envConstants = {
-    BASE_API_URL: {
-        CORE: process.env.NEXT_PUBLIC_API_URL_CORE,
-        CONTENT: process.env.NEXT_PUBLIC_API_URL_CONTENT,
-        CHAT: process.env.NEXT_PUBLIC_API_URL_CHAT,
-        GENAGENT: process.env.NEXT_PUBLIC_API_GENAGENT_URL,
-        WEBSITE_BUILDER: process.env.NEXT_PUBLIC_WEBSITE_BUILDER_URL,
-        CHANNEL_BUILDER: process.env.NEXT_PUBLIC_CHANNEL_BUILDERL_URL,
-        FINANCE: process.env.NEXT_PUBLIC_FINANCE_URL,
-    },
-};
-
-const baseUrls = envConstants.BASE_API_URL;
-ApiClient.getInstance({
-    baseURL: baseUrls.CORE,
-});
-// REQUEST INTERCEPTOR
-ApiClient.addGlobalRequestInterceptor(async (config) => {
-    const token = getCookieJSON("token");
-    if (token?.access_token) {
-        config.headers = {
-            ...config.headers,
-            Authorization: `Bearer ${token.access_token}`,
-        };
-    }
-    return config;
-});
-// RESPONSE INTERCEPTOR
-ApiClient.addGlobalErrorInterceptor(async (error) => {
-    //   if (error.status === 401 && mergedConfig.autoRefresh) {
-    //     try {
-    //       await refreshToken();
-    //       // Retry the original request would need to be implemented here
-    //     } catch (refreshError) {
-    //       await logout();
-    //     }
-    //   }
-    return error;
-});
-ApiClient.addGlobalResponseInterceptor(async (response) => {
-    // Handle specific response status codes or data transformations here
-    if (response.status === 401) {
-        // Handle unauthorized access, e.g., redirect to login
-        console.error("Unauthorized access - redirecting to login");
-        // You can implement a redirect or logout logic here
-    }
-    return response;
-});
-const createClient = (baseURL) => {
-    return ApiClient.getInstance({ baseURL });
-};
-const extendedClient = {
-    addGlobalRequestInterceptor: ApiClient.addGlobalRequestInterceptor,
-    addGlobalResponseInterceptor: ApiClient.addGlobalResponseInterceptor,
-    addGlobalErrorInterceptor: ApiClient.addGlobalErrorInterceptor,
-    getInstance: ApiClient.getInstance,
-};
-// @ts-ignore
-const ApiInstance = {
-    client: extendedClient,
-    ...Object.fromEntries(Object.entries(baseUrls).map(([name, url]) => [name, createClient(url)])),
-};
-
-function r$5(e){var t,f,n="";if("string"==typeof e||"number"==typeof e)n+=e;else if("object"==typeof e)if(Array.isArray(e)){var o=e.length;for(t=0;t<o;t++)e[t]&&(f=r$5(e[t]))&&(n&&(n+=" "),n+=f);}else for(f in e)e[f]&&(n&&(n+=" "),n+=f);return n}function clsx(){for(var e,t,f=0,n="",o=arguments.length;f<o;f++)(e=arguments[f])&&(t=r$5(e))&&(n&&(n+=" "),n+=t);return n}
-
-const CLASS_PART_SEPARATOR = '-';
-const createClassGroupUtils = config => {
-  const classMap = createClassMap(config);
-  const {
-    conflictingClassGroups,
-    conflictingClassGroupModifiers
-  } = config;
-  const getClassGroupId = className => {
-    const classParts = className.split(CLASS_PART_SEPARATOR);
-    // Classes like `-inset-1` produce an empty string as first classPart. We assume that classes for negative values are used correctly and remove it from classParts.
-    if (classParts[0] === '' && classParts.length !== 1) {
-      classParts.shift();
-    }
-    return getGroupRecursive(classParts, classMap) || getGroupIdForArbitraryProperty(className);
-  };
-  const getConflictingClassGroupIds = (classGroupId, hasPostfixModifier) => {
-    const conflicts = conflictingClassGroups[classGroupId] || [];
-    if (hasPostfixModifier && conflictingClassGroupModifiers[classGroupId]) {
-      return [...conflicts, ...conflictingClassGroupModifiers[classGroupId]];
-    }
-    return conflicts;
-  };
-  return {
-    getClassGroupId,
-    getConflictingClassGroupIds
-  };
-};
-const getGroupRecursive = (classParts, classPartObject) => {
-  if (classParts.length === 0) {
-    return classPartObject.classGroupId;
-  }
-  const currentClassPart = classParts[0];
-  const nextClassPartObject = classPartObject.nextPart.get(currentClassPart);
-  const classGroupFromNextClassPart = nextClassPartObject ? getGroupRecursive(classParts.slice(1), nextClassPartObject) : undefined;
-  if (classGroupFromNextClassPart) {
-    return classGroupFromNextClassPart;
-  }
-  if (classPartObject.validators.length === 0) {
-    return undefined;
-  }
-  const classRest = classParts.join(CLASS_PART_SEPARATOR);
-  return classPartObject.validators.find(({
-    validator
-  }) => validator(classRest))?.classGroupId;
-};
-const arbitraryPropertyRegex = /^\[(.+)\]$/;
-const getGroupIdForArbitraryProperty = className => {
-  if (arbitraryPropertyRegex.test(className)) {
-    const arbitraryPropertyClassName = arbitraryPropertyRegex.exec(className)[1];
-    const property = arbitraryPropertyClassName?.substring(0, arbitraryPropertyClassName.indexOf(':'));
-    if (property) {
-      // I use two dots here because one dot is used as prefix for class groups in plugins
-      return 'arbitrary..' + property;
-    }
-  }
-};
-/**
- * Exported for testing only
- */
-const createClassMap = config => {
-  const {
-    theme,
-    classGroups
-  } = config;
-  const classMap = {
-    nextPart: new Map(),
-    validators: []
-  };
-  for (const classGroupId in classGroups) {
-    processClassesRecursively(classGroups[classGroupId], classMap, classGroupId, theme);
-  }
-  return classMap;
-};
-const processClassesRecursively = (classGroup, classPartObject, classGroupId, theme) => {
-  classGroup.forEach(classDefinition => {
-    if (typeof classDefinition === 'string') {
-      const classPartObjectToEdit = classDefinition === '' ? classPartObject : getPart(classPartObject, classDefinition);
-      classPartObjectToEdit.classGroupId = classGroupId;
-      return;
-    }
-    if (typeof classDefinition === 'function') {
-      if (isThemeGetter(classDefinition)) {
-        processClassesRecursively(classDefinition(theme), classPartObject, classGroupId, theme);
-        return;
-      }
-      classPartObject.validators.push({
-        validator: classDefinition,
-        classGroupId
-      });
-      return;
-    }
-    Object.entries(classDefinition).forEach(([key, classGroup]) => {
-      processClassesRecursively(classGroup, getPart(classPartObject, key), classGroupId, theme);
-    });
-  });
-};
-const getPart = (classPartObject, path) => {
-  let currentClassPartObject = classPartObject;
-  path.split(CLASS_PART_SEPARATOR).forEach(pathPart => {
-    if (!currentClassPartObject.nextPart.has(pathPart)) {
-      currentClassPartObject.nextPart.set(pathPart, {
-        nextPart: new Map(),
-        validators: []
-      });
-    }
-    currentClassPartObject = currentClassPartObject.nextPart.get(pathPart);
-  });
-  return currentClassPartObject;
-};
-const isThemeGetter = func => func.isThemeGetter;
-
-// LRU cache inspired from hashlru (https://github.com/dominictarr/hashlru/blob/v1.0.4/index.js) but object replaced with Map to improve performance
-const createLruCache = maxCacheSize => {
-  if (maxCacheSize < 1) {
-    return {
-      get: () => undefined,
-      set: () => {}
-    };
-  }
-  let cacheSize = 0;
-  let cache = new Map();
-  let previousCache = new Map();
-  const update = (key, value) => {
-    cache.set(key, value);
-    cacheSize++;
-    if (cacheSize > maxCacheSize) {
-      cacheSize = 0;
-      previousCache = cache;
-      cache = new Map();
-    }
-  };
-  return {
-    get(key) {
-      let value = cache.get(key);
-      if (value !== undefined) {
-        return value;
-      }
-      if ((value = previousCache.get(key)) !== undefined) {
-        update(key, value);
-        return value;
-      }
-    },
-    set(key, value) {
-      if (cache.has(key)) {
-        cache.set(key, value);
-      } else {
-        update(key, value);
-      }
-    }
-  };
-};
-const IMPORTANT_MODIFIER = '!';
-const MODIFIER_SEPARATOR = ':';
-const MODIFIER_SEPARATOR_LENGTH = MODIFIER_SEPARATOR.length;
-const createParseClassName = config => {
-  const {
-    prefix,
-    experimentalParseClassName
-  } = config;
-  /**
-   * Parse class name into parts.
-   *
-   * Inspired by `splitAtTopLevelOnly` used in Tailwind CSS
-   * @see https://github.com/tailwindlabs/tailwindcss/blob/v3.2.2/src/util/splitAtTopLevelOnly.js
-   */
-  let parseClassName = className => {
-    const modifiers = [];
-    let bracketDepth = 0;
-    let parenDepth = 0;
-    let modifierStart = 0;
-    let postfixModifierPosition;
-    for (let index = 0; index < className.length; index++) {
-      let currentCharacter = className[index];
-      if (bracketDepth === 0 && parenDepth === 0) {
-        if (currentCharacter === MODIFIER_SEPARATOR) {
-          modifiers.push(className.slice(modifierStart, index));
-          modifierStart = index + MODIFIER_SEPARATOR_LENGTH;
-          continue;
-        }
-        if (currentCharacter === '/') {
-          postfixModifierPosition = index;
-          continue;
-        }
-      }
-      if (currentCharacter === '[') {
-        bracketDepth++;
-      } else if (currentCharacter === ']') {
-        bracketDepth--;
-      } else if (currentCharacter === '(') {
-        parenDepth++;
-      } else if (currentCharacter === ')') {
-        parenDepth--;
-      }
-    }
-    const baseClassNameWithImportantModifier = modifiers.length === 0 ? className : className.substring(modifierStart);
-    const baseClassName = stripImportantModifier(baseClassNameWithImportantModifier);
-    const hasImportantModifier = baseClassName !== baseClassNameWithImportantModifier;
-    const maybePostfixModifierPosition = postfixModifierPosition && postfixModifierPosition > modifierStart ? postfixModifierPosition - modifierStart : undefined;
-    return {
-      modifiers,
-      hasImportantModifier,
-      baseClassName,
-      maybePostfixModifierPosition
-    };
-  };
-  if (prefix) {
-    const fullPrefix = prefix + MODIFIER_SEPARATOR;
-    const parseClassNameOriginal = parseClassName;
-    parseClassName = className => className.startsWith(fullPrefix) ? parseClassNameOriginal(className.substring(fullPrefix.length)) : {
-      isExternal: true,
-      modifiers: [],
-      hasImportantModifier: false,
-      baseClassName: className,
-      maybePostfixModifierPosition: undefined
-    };
-  }
-  if (experimentalParseClassName) {
-    const parseClassNameOriginal = parseClassName;
-    parseClassName = className => experimentalParseClassName({
-      className,
-      parseClassName: parseClassNameOriginal
-    });
-  }
-  return parseClassName;
-};
-const stripImportantModifier = baseClassName => {
-  if (baseClassName.endsWith(IMPORTANT_MODIFIER)) {
-    return baseClassName.substring(0, baseClassName.length - 1);
-  }
-  /**
-   * In Tailwind CSS v3 the important modifier was at the start of the base class name. This is still supported for legacy reasons.
-   * @see https://github.com/dcastil/tailwind-merge/issues/513#issuecomment-2614029864
-   */
-  if (baseClassName.startsWith(IMPORTANT_MODIFIER)) {
-    return baseClassName.substring(1);
-  }
-  return baseClassName;
-};
-
-/**
- * Sorts modifiers according to following schema:
- * - Predefined modifiers are sorted alphabetically
- * - When an arbitrary variant appears, it must be preserved which modifiers are before and after it
- */
-const createSortModifiers = config => {
-  const orderSensitiveModifiers = Object.fromEntries(config.orderSensitiveModifiers.map(modifier => [modifier, true]));
-  const sortModifiers = modifiers => {
-    if (modifiers.length <= 1) {
-      return modifiers;
-    }
-    const sortedModifiers = [];
-    let unsortedModifiers = [];
-    modifiers.forEach(modifier => {
-      const isPositionSensitive = modifier[0] === '[' || orderSensitiveModifiers[modifier];
-      if (isPositionSensitive) {
-        sortedModifiers.push(...unsortedModifiers.sort(), modifier);
-        unsortedModifiers = [];
-      } else {
-        unsortedModifiers.push(modifier);
-      }
-    });
-    sortedModifiers.push(...unsortedModifiers.sort());
-    return sortedModifiers;
-  };
-  return sortModifiers;
-};
-const createConfigUtils = config => ({
-  cache: createLruCache(config.cacheSize),
-  parseClassName: createParseClassName(config),
-  sortModifiers: createSortModifiers(config),
-  ...createClassGroupUtils(config)
-});
-const SPLIT_CLASSES_REGEX = /\s+/;
-const mergeClassList = (classList, configUtils) => {
-  const {
-    parseClassName,
-    getClassGroupId,
-    getConflictingClassGroupIds,
-    sortModifiers
-  } = configUtils;
-  /**
-   * Set of classGroupIds in following format:
-   * `{importantModifier}{variantModifiers}{classGroupId}`
-   * @example 'float'
-   * @example 'hover:focus:bg-color'
-   * @example 'md:!pr'
-   */
-  const classGroupsInConflict = [];
-  const classNames = classList.trim().split(SPLIT_CLASSES_REGEX);
-  let result = '';
-  for (let index = classNames.length - 1; index >= 0; index -= 1) {
-    const originalClassName = classNames[index];
-    const {
-      isExternal,
-      modifiers,
-      hasImportantModifier,
-      baseClassName,
-      maybePostfixModifierPosition
-    } = parseClassName(originalClassName);
-    if (isExternal) {
-      result = originalClassName + (result.length > 0 ? ' ' + result : result);
-      continue;
-    }
-    let hasPostfixModifier = !!maybePostfixModifierPosition;
-    let classGroupId = getClassGroupId(hasPostfixModifier ? baseClassName.substring(0, maybePostfixModifierPosition) : baseClassName);
-    if (!classGroupId) {
-      if (!hasPostfixModifier) {
-        // Not a Tailwind class
-        result = originalClassName + (result.length > 0 ? ' ' + result : result);
-        continue;
-      }
-      classGroupId = getClassGroupId(baseClassName);
-      if (!classGroupId) {
-        // Not a Tailwind class
-        result = originalClassName + (result.length > 0 ? ' ' + result : result);
-        continue;
-      }
-      hasPostfixModifier = false;
-    }
-    const variantModifier = sortModifiers(modifiers).join(':');
-    const modifierId = hasImportantModifier ? variantModifier + IMPORTANT_MODIFIER : variantModifier;
-    const classId = modifierId + classGroupId;
-    if (classGroupsInConflict.includes(classId)) {
-      // Tailwind class omitted due to conflict
-      continue;
-    }
-    classGroupsInConflict.push(classId);
-    const conflictGroups = getConflictingClassGroupIds(classGroupId, hasPostfixModifier);
-    for (let i = 0; i < conflictGroups.length; ++i) {
-      const group = conflictGroups[i];
-      classGroupsInConflict.push(modifierId + group);
-    }
-    // Tailwind class not in conflict
-    result = originalClassName + (result.length > 0 ? ' ' + result : result);
-  }
-  return result;
-};
-
-/**
- * The code in this file is copied from https://github.com/lukeed/clsx and modified to suit the needs of tailwind-merge better.
- *
- * Specifically:
- * - Runtime code from https://github.com/lukeed/clsx/blob/v1.2.1/src/index.js
- * - TypeScript types from https://github.com/lukeed/clsx/blob/v1.2.1/clsx.d.ts
- *
- * Original code has MIT license: Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
- */
-function twJoin() {
-  let index = 0;
-  let argument;
-  let resolvedValue;
-  let string = '';
-  while (index < arguments.length) {
-    if (argument = arguments[index++]) {
-      if (resolvedValue = toValue(argument)) {
-        string && (string += ' ');
-        string += resolvedValue;
-      }
-    }
-  }
-  return string;
-}
-const toValue = mix => {
-  if (typeof mix === 'string') {
-    return mix;
-  }
-  let resolvedValue;
-  let string = '';
-  for (let k = 0; k < mix.length; k++) {
-    if (mix[k]) {
-      if (resolvedValue = toValue(mix[k])) {
-        string && (string += ' ');
-        string += resolvedValue;
-      }
-    }
-  }
-  return string;
-};
-function createTailwindMerge(createConfigFirst, ...createConfigRest) {
-  let configUtils;
-  let cacheGet;
-  let cacheSet;
-  let functionToCall = initTailwindMerge;
-  function initTailwindMerge(classList) {
-    const config = createConfigRest.reduce((previousConfig, createConfigCurrent) => createConfigCurrent(previousConfig), createConfigFirst());
-    configUtils = createConfigUtils(config);
-    cacheGet = configUtils.cache.get;
-    cacheSet = configUtils.cache.set;
-    functionToCall = tailwindMerge;
-    return tailwindMerge(classList);
-  }
-  function tailwindMerge(classList) {
-    const cachedResult = cacheGet(classList);
-    if (cachedResult) {
-      return cachedResult;
-    }
-    const result = mergeClassList(classList, configUtils);
-    cacheSet(classList, result);
-    return result;
-  }
-  return function callTailwindMerge() {
-    return functionToCall(twJoin.apply(null, arguments));
-  };
-}
-const fromTheme = key => {
-  const themeGetter = theme => theme[key] || [];
-  themeGetter.isThemeGetter = true;
-  return themeGetter;
-};
-const arbitraryValueRegex = /^\[(?:(\w[\w-]*):)?(.+)\]$/i;
-const arbitraryVariableRegex = /^\((?:(\w[\w-]*):)?(.+)\)$/i;
-const fractionRegex = /^\d+\/\d+$/;
-const tshirtUnitRegex = /^(\d+(\.\d+)?)?(xs|sm|md|lg|xl)$/;
-const lengthUnitRegex = /\d+(%|px|r?em|[sdl]?v([hwib]|min|max)|pt|pc|in|cm|mm|cap|ch|ex|r?lh|cq(w|h|i|b|min|max))|\b(calc|min|max|clamp)\(.+\)|^0$/;
-const colorFunctionRegex = /^(rgba?|hsla?|hwb|(ok)?(lab|lch)|color-mix)\(.+\)$/;
-// Shadow always begins with x and y offset separated by underscore optionally prepended by inset
-const shadowRegex = /^(inset_)?-?((\d+)?\.?(\d+)[a-z]+|0)_-?((\d+)?\.?(\d+)[a-z]+|0)/;
-const imageRegex = /^(url|image|image-set|cross-fade|element|(repeating-)?(linear|radial|conic)-gradient)\(.+\)$/;
-const isFraction = value => fractionRegex.test(value);
-const isNumber = value => !!value && !Number.isNaN(Number(value));
-const isInteger = value => !!value && Number.isInteger(Number(value));
-const isPercent = value => value.endsWith('%') && isNumber(value.slice(0, -1));
-const isTshirtSize = value => tshirtUnitRegex.test(value);
-const isAny = () => true;
-const isLengthOnly = value =>
-// `colorFunctionRegex` check is necessary because color functions can have percentages in them which which would be incorrectly classified as lengths.
-// For example, `hsl(0 0% 0%)` would be classified as a length without this check.
-// I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
-lengthUnitRegex.test(value) && !colorFunctionRegex.test(value);
-const isNever = () => false;
-const isShadow = value => shadowRegex.test(value);
-const isImage = value => imageRegex.test(value);
-const isAnyNonArbitrary = value => !isArbitraryValue(value) && !isArbitraryVariable(value);
-const isArbitrarySize = value => getIsArbitraryValue(value, isLabelSize, isNever);
-const isArbitraryValue = value => arbitraryValueRegex.test(value);
-const isArbitraryLength = value => getIsArbitraryValue(value, isLabelLength, isLengthOnly);
-const isArbitraryNumber = value => getIsArbitraryValue(value, isLabelNumber, isNumber);
-const isArbitraryPosition = value => getIsArbitraryValue(value, isLabelPosition, isNever);
-const isArbitraryImage = value => getIsArbitraryValue(value, isLabelImage, isImage);
-const isArbitraryShadow = value => getIsArbitraryValue(value, isLabelShadow, isShadow);
-const isArbitraryVariable = value => arbitraryVariableRegex.test(value);
-const isArbitraryVariableLength = value => getIsArbitraryVariable(value, isLabelLength);
-const isArbitraryVariableFamilyName = value => getIsArbitraryVariable(value, isLabelFamilyName);
-const isArbitraryVariablePosition = value => getIsArbitraryVariable(value, isLabelPosition);
-const isArbitraryVariableSize = value => getIsArbitraryVariable(value, isLabelSize);
-const isArbitraryVariableImage = value => getIsArbitraryVariable(value, isLabelImage);
-const isArbitraryVariableShadow = value => getIsArbitraryVariable(value, isLabelShadow, true);
-// Helpers
-const getIsArbitraryValue = (value, testLabel, testValue) => {
-  const result = arbitraryValueRegex.exec(value);
-  if (result) {
-    if (result[1]) {
-      return testLabel(result[1]);
-    }
-    return testValue(result[2]);
-  }
-  return false;
-};
-const getIsArbitraryVariable = (value, testLabel, shouldMatchNoLabel = false) => {
-  const result = arbitraryVariableRegex.exec(value);
-  if (result) {
-    if (result[1]) {
-      return testLabel(result[1]);
-    }
-    return shouldMatchNoLabel;
-  }
-  return false;
-};
-// Labels
-const isLabelPosition = label => label === 'position' || label === 'percentage';
-const isLabelImage = label => label === 'image' || label === 'url';
-const isLabelSize = label => label === 'length' || label === 'size' || label === 'bg-size';
-const isLabelLength = label => label === 'length';
-const isLabelNumber = label => label === 'number';
-const isLabelFamilyName = label => label === 'family-name';
-const isLabelShadow = label => label === 'shadow';
-const getDefaultConfig = () => {
-  /**
-   * Theme getters for theme variable namespaces
-   * @see https://tailwindcss.com/docs/theme#theme-variable-namespaces
-   */
-  /***/
-  const themeColor = fromTheme('color');
-  const themeFont = fromTheme('font');
-  const themeText = fromTheme('text');
-  const themeFontWeight = fromTheme('font-weight');
-  const themeTracking = fromTheme('tracking');
-  const themeLeading = fromTheme('leading');
-  const themeBreakpoint = fromTheme('breakpoint');
-  const themeContainer = fromTheme('container');
-  const themeSpacing = fromTheme('spacing');
-  const themeRadius = fromTheme('radius');
-  const themeShadow = fromTheme('shadow');
-  const themeInsetShadow = fromTheme('inset-shadow');
-  const themeTextShadow = fromTheme('text-shadow');
-  const themeDropShadow = fromTheme('drop-shadow');
-  const themeBlur = fromTheme('blur');
-  const themePerspective = fromTheme('perspective');
-  const themeAspect = fromTheme('aspect');
-  const themeEase = fromTheme('ease');
-  const themeAnimate = fromTheme('animate');
-  /**
-   * Helpers to avoid repeating the same scales
-   *
-   * We use functions that create a new array every time they're called instead of static arrays.
-   * This ensures that users who modify any scale by mutating the array (e.g. with `array.push(element)`) don't accidentally mutate arrays in other parts of the config.
-   */
-  /***/
-  const scaleBreak = () => ['auto', 'avoid', 'all', 'avoid-page', 'page', 'left', 'right', 'column'];
-  const scalePosition = () => ['center', 'top', 'bottom', 'left', 'right', 'top-left',
-  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
-  'left-top', 'top-right',
-  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
-  'right-top', 'bottom-right',
-  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
-  'right-bottom', 'bottom-left',
-  // Deprecated since Tailwind CSS v4.1.0, see https://github.com/tailwindlabs/tailwindcss/pull/17378
-  'left-bottom'];
-  const scalePositionWithArbitrary = () => [...scalePosition(), isArbitraryVariable, isArbitraryValue];
-  const scaleOverflow = () => ['auto', 'hidden', 'clip', 'visible', 'scroll'];
-  const scaleOverscroll = () => ['auto', 'contain', 'none'];
-  const scaleUnambiguousSpacing = () => [isArbitraryVariable, isArbitraryValue, themeSpacing];
-  const scaleInset = () => [isFraction, 'full', 'auto', ...scaleUnambiguousSpacing()];
-  const scaleGridTemplateColsRows = () => [isInteger, 'none', 'subgrid', isArbitraryVariable, isArbitraryValue];
-  const scaleGridColRowStartAndEnd = () => ['auto', {
-    span: ['full', isInteger, isArbitraryVariable, isArbitraryValue]
-  }, isInteger, isArbitraryVariable, isArbitraryValue];
-  const scaleGridColRowStartOrEnd = () => [isInteger, 'auto', isArbitraryVariable, isArbitraryValue];
-  const scaleGridAutoColsRows = () => ['auto', 'min', 'max', 'fr', isArbitraryVariable, isArbitraryValue];
-  const scaleAlignPrimaryAxis = () => ['start', 'end', 'center', 'between', 'around', 'evenly', 'stretch', 'baseline', 'center-safe', 'end-safe'];
-  const scaleAlignSecondaryAxis = () => ['start', 'end', 'center', 'stretch', 'center-safe', 'end-safe'];
-  const scaleMargin = () => ['auto', ...scaleUnambiguousSpacing()];
-  const scaleSizing = () => [isFraction, 'auto', 'full', 'dvw', 'dvh', 'lvw', 'lvh', 'svw', 'svh', 'min', 'max', 'fit', ...scaleUnambiguousSpacing()];
-  const scaleColor = () => [themeColor, isArbitraryVariable, isArbitraryValue];
-  const scaleBgPosition = () => [...scalePosition(), isArbitraryVariablePosition, isArbitraryPosition, {
-    position: [isArbitraryVariable, isArbitraryValue]
-  }];
-  const scaleBgRepeat = () => ['no-repeat', {
-    repeat: ['', 'x', 'y', 'space', 'round']
-  }];
-  const scaleBgSize = () => ['auto', 'cover', 'contain', isArbitraryVariableSize, isArbitrarySize, {
-    size: [isArbitraryVariable, isArbitraryValue]
-  }];
-  const scaleGradientStopPosition = () => [isPercent, isArbitraryVariableLength, isArbitraryLength];
-  const scaleRadius = () => [
-  // Deprecated since Tailwind CSS v4.0.0
-  '', 'none', 'full', themeRadius, isArbitraryVariable, isArbitraryValue];
-  const scaleBorderWidth = () => ['', isNumber, isArbitraryVariableLength, isArbitraryLength];
-  const scaleLineStyle = () => ['solid', 'dashed', 'dotted', 'double'];
-  const scaleBlendMode = () => ['normal', 'multiply', 'screen', 'overlay', 'darken', 'lighten', 'color-dodge', 'color-burn', 'hard-light', 'soft-light', 'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'];
-  const scaleMaskImagePosition = () => [isNumber, isPercent, isArbitraryVariablePosition, isArbitraryPosition];
-  const scaleBlur = () => [
-  // Deprecated since Tailwind CSS v4.0.0
-  '', 'none', themeBlur, isArbitraryVariable, isArbitraryValue];
-  const scaleRotate = () => ['none', isNumber, isArbitraryVariable, isArbitraryValue];
-  const scaleScale = () => ['none', isNumber, isArbitraryVariable, isArbitraryValue];
-  const scaleSkew = () => [isNumber, isArbitraryVariable, isArbitraryValue];
-  const scaleTranslate = () => [isFraction, 'full', ...scaleUnambiguousSpacing()];
-  return {
-    cacheSize: 500,
-    theme: {
-      animate: ['spin', 'ping', 'pulse', 'bounce'],
-      aspect: ['video'],
-      blur: [isTshirtSize],
-      breakpoint: [isTshirtSize],
-      color: [isAny],
-      container: [isTshirtSize],
-      'drop-shadow': [isTshirtSize],
-      ease: ['in', 'out', 'in-out'],
-      font: [isAnyNonArbitrary],
-      'font-weight': ['thin', 'extralight', 'light', 'normal', 'medium', 'semibold', 'bold', 'extrabold', 'black'],
-      'inset-shadow': [isTshirtSize],
-      leading: ['none', 'tight', 'snug', 'normal', 'relaxed', 'loose'],
-      perspective: ['dramatic', 'near', 'normal', 'midrange', 'distant', 'none'],
-      radius: [isTshirtSize],
-      shadow: [isTshirtSize],
-      spacing: ['px', isNumber],
-      text: [isTshirtSize],
-      'text-shadow': [isTshirtSize],
-      tracking: ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest']
-    },
-    classGroups: {
-      // --------------
-      // --- Layout ---
-      // --------------
-      /**
-       * Aspect Ratio
-       * @see https://tailwindcss.com/docs/aspect-ratio
-       */
-      aspect: [{
-        aspect: ['auto', 'square', isFraction, isArbitraryValue, isArbitraryVariable, themeAspect]
-      }],
-      /**
-       * Container
-       * @see https://tailwindcss.com/docs/container
-       * @deprecated since Tailwind CSS v4.0.0
-       */
-      container: ['container'],
-      /**
-       * Columns
-       * @see https://tailwindcss.com/docs/columns
-       */
-      columns: [{
-        columns: [isNumber, isArbitraryValue, isArbitraryVariable, themeContainer]
-      }],
-      /**
-       * Break After
-       * @see https://tailwindcss.com/docs/break-after
-       */
-      'break-after': [{
-        'break-after': scaleBreak()
-      }],
-      /**
-       * Break Before
-       * @see https://tailwindcss.com/docs/break-before
-       */
-      'break-before': [{
-        'break-before': scaleBreak()
-      }],
-      /**
-       * Break Inside
-       * @see https://tailwindcss.com/docs/break-inside
-       */
-      'break-inside': [{
-        'break-inside': ['auto', 'avoid', 'avoid-page', 'avoid-column']
-      }],
-      /**
-       * Box Decoration Break
-       * @see https://tailwindcss.com/docs/box-decoration-break
-       */
-      'box-decoration': [{
-        'box-decoration': ['slice', 'clone']
-      }],
-      /**
-       * Box Sizing
-       * @see https://tailwindcss.com/docs/box-sizing
-       */
-      box: [{
-        box: ['border', 'content']
-      }],
-      /**
-       * Display
-       * @see https://tailwindcss.com/docs/display
-       */
-      display: ['block', 'inline-block', 'inline', 'flex', 'inline-flex', 'table', 'inline-table', 'table-caption', 'table-cell', 'table-column', 'table-column-group', 'table-footer-group', 'table-header-group', 'table-row-group', 'table-row', 'flow-root', 'grid', 'inline-grid', 'contents', 'list-item', 'hidden'],
-      /**
-       * Screen Reader Only
-       * @see https://tailwindcss.com/docs/display#screen-reader-only
-       */
-      sr: ['sr-only', 'not-sr-only'],
-      /**
-       * Floats
-       * @see https://tailwindcss.com/docs/float
-       */
-      float: [{
-        float: ['right', 'left', 'none', 'start', 'end']
-      }],
-      /**
-       * Clear
-       * @see https://tailwindcss.com/docs/clear
-       */
-      clear: [{
-        clear: ['left', 'right', 'both', 'none', 'start', 'end']
-      }],
-      /**
-       * Isolation
-       * @see https://tailwindcss.com/docs/isolation
-       */
-      isolation: ['isolate', 'isolation-auto'],
-      /**
-       * Object Fit
-       * @see https://tailwindcss.com/docs/object-fit
-       */
-      'object-fit': [{
-        object: ['contain', 'cover', 'fill', 'none', 'scale-down']
-      }],
-      /**
-       * Object Position
-       * @see https://tailwindcss.com/docs/object-position
-       */
-      'object-position': [{
-        object: scalePositionWithArbitrary()
-      }],
-      /**
-       * Overflow
-       * @see https://tailwindcss.com/docs/overflow
-       */
-      overflow: [{
-        overflow: scaleOverflow()
-      }],
-      /**
-       * Overflow X
-       * @see https://tailwindcss.com/docs/overflow
-       */
-      'overflow-x': [{
-        'overflow-x': scaleOverflow()
-      }],
-      /**
-       * Overflow Y
-       * @see https://tailwindcss.com/docs/overflow
-       */
-      'overflow-y': [{
-        'overflow-y': scaleOverflow()
-      }],
-      /**
-       * Overscroll Behavior
-       * @see https://tailwindcss.com/docs/overscroll-behavior
-       */
-      overscroll: [{
-        overscroll: scaleOverscroll()
-      }],
-      /**
-       * Overscroll Behavior X
-       * @see https://tailwindcss.com/docs/overscroll-behavior
-       */
-      'overscroll-x': [{
-        'overscroll-x': scaleOverscroll()
-      }],
-      /**
-       * Overscroll Behavior Y
-       * @see https://tailwindcss.com/docs/overscroll-behavior
-       */
-      'overscroll-y': [{
-        'overscroll-y': scaleOverscroll()
-      }],
-      /**
-       * Position
-       * @see https://tailwindcss.com/docs/position
-       */
-      position: ['static', 'fixed', 'absolute', 'relative', 'sticky'],
-      /**
-       * Top / Right / Bottom / Left
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      inset: [{
-        inset: scaleInset()
-      }],
-      /**
-       * Right / Left
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      'inset-x': [{
-        'inset-x': scaleInset()
-      }],
-      /**
-       * Top / Bottom
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      'inset-y': [{
-        'inset-y': scaleInset()
-      }],
-      /**
-       * Start
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      start: [{
-        start: scaleInset()
-      }],
-      /**
-       * End
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      end: [{
-        end: scaleInset()
-      }],
-      /**
-       * Top
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      top: [{
-        top: scaleInset()
-      }],
-      /**
-       * Right
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      right: [{
-        right: scaleInset()
-      }],
-      /**
-       * Bottom
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      bottom: [{
-        bottom: scaleInset()
-      }],
-      /**
-       * Left
-       * @see https://tailwindcss.com/docs/top-right-bottom-left
-       */
-      left: [{
-        left: scaleInset()
-      }],
-      /**
-       * Visibility
-       * @see https://tailwindcss.com/docs/visibility
-       */
-      visibility: ['visible', 'invisible', 'collapse'],
-      /**
-       * Z-Index
-       * @see https://tailwindcss.com/docs/z-index
-       */
-      z: [{
-        z: [isInteger, 'auto', isArbitraryVariable, isArbitraryValue]
-      }],
-      // ------------------------
-      // --- Flexbox and Grid ---
-      // ------------------------
-      /**
-       * Flex Basis
-       * @see https://tailwindcss.com/docs/flex-basis
-       */
-      basis: [{
-        basis: [isFraction, 'full', 'auto', themeContainer, ...scaleUnambiguousSpacing()]
-      }],
-      /**
-       * Flex Direction
-       * @see https://tailwindcss.com/docs/flex-direction
-       */
-      'flex-direction': [{
-        flex: ['row', 'row-reverse', 'col', 'col-reverse']
-      }],
-      /**
-       * Flex Wrap
-       * @see https://tailwindcss.com/docs/flex-wrap
-       */
-      'flex-wrap': [{
-        flex: ['nowrap', 'wrap', 'wrap-reverse']
-      }],
-      /**
-       * Flex
-       * @see https://tailwindcss.com/docs/flex
-       */
-      flex: [{
-        flex: [isNumber, isFraction, 'auto', 'initial', 'none', isArbitraryValue]
-      }],
-      /**
-       * Flex Grow
-       * @see https://tailwindcss.com/docs/flex-grow
-       */
-      grow: [{
-        grow: ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Flex Shrink
-       * @see https://tailwindcss.com/docs/flex-shrink
-       */
-      shrink: [{
-        shrink: ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Order
-       * @see https://tailwindcss.com/docs/order
-       */
-      order: [{
-        order: [isInteger, 'first', 'last', 'none', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Grid Template Columns
-       * @see https://tailwindcss.com/docs/grid-template-columns
-       */
-      'grid-cols': [{
-        'grid-cols': scaleGridTemplateColsRows()
-      }],
-      /**
-       * Grid Column Start / End
-       * @see https://tailwindcss.com/docs/grid-column
-       */
-      'col-start-end': [{
-        col: scaleGridColRowStartAndEnd()
-      }],
-      /**
-       * Grid Column Start
-       * @see https://tailwindcss.com/docs/grid-column
-       */
-      'col-start': [{
-        'col-start': scaleGridColRowStartOrEnd()
-      }],
-      /**
-       * Grid Column End
-       * @see https://tailwindcss.com/docs/grid-column
-       */
-      'col-end': [{
-        'col-end': scaleGridColRowStartOrEnd()
-      }],
-      /**
-       * Grid Template Rows
-       * @see https://tailwindcss.com/docs/grid-template-rows
-       */
-      'grid-rows': [{
-        'grid-rows': scaleGridTemplateColsRows()
-      }],
-      /**
-       * Grid Row Start / End
-       * @see https://tailwindcss.com/docs/grid-row
-       */
-      'row-start-end': [{
-        row: scaleGridColRowStartAndEnd()
-      }],
-      /**
-       * Grid Row Start
-       * @see https://tailwindcss.com/docs/grid-row
-       */
-      'row-start': [{
-        'row-start': scaleGridColRowStartOrEnd()
-      }],
-      /**
-       * Grid Row End
-       * @see https://tailwindcss.com/docs/grid-row
-       */
-      'row-end': [{
-        'row-end': scaleGridColRowStartOrEnd()
-      }],
-      /**
-       * Grid Auto Flow
-       * @see https://tailwindcss.com/docs/grid-auto-flow
-       */
-      'grid-flow': [{
-        'grid-flow': ['row', 'col', 'dense', 'row-dense', 'col-dense']
-      }],
-      /**
-       * Grid Auto Columns
-       * @see https://tailwindcss.com/docs/grid-auto-columns
-       */
-      'auto-cols': [{
-        'auto-cols': scaleGridAutoColsRows()
-      }],
-      /**
-       * Grid Auto Rows
-       * @see https://tailwindcss.com/docs/grid-auto-rows
-       */
-      'auto-rows': [{
-        'auto-rows': scaleGridAutoColsRows()
-      }],
-      /**
-       * Gap
-       * @see https://tailwindcss.com/docs/gap
-       */
-      gap: [{
-        gap: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Gap X
-       * @see https://tailwindcss.com/docs/gap
-       */
-      'gap-x': [{
-        'gap-x': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Gap Y
-       * @see https://tailwindcss.com/docs/gap
-       */
-      'gap-y': [{
-        'gap-y': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Justify Content
-       * @see https://tailwindcss.com/docs/justify-content
-       */
-      'justify-content': [{
-        justify: [...scaleAlignPrimaryAxis(), 'normal']
-      }],
-      /**
-       * Justify Items
-       * @see https://tailwindcss.com/docs/justify-items
-       */
-      'justify-items': [{
-        'justify-items': [...scaleAlignSecondaryAxis(), 'normal']
-      }],
-      /**
-       * Justify Self
-       * @see https://tailwindcss.com/docs/justify-self
-       */
-      'justify-self': [{
-        'justify-self': ['auto', ...scaleAlignSecondaryAxis()]
-      }],
-      /**
-       * Align Content
-       * @see https://tailwindcss.com/docs/align-content
-       */
-      'align-content': [{
-        content: ['normal', ...scaleAlignPrimaryAxis()]
-      }],
-      /**
-       * Align Items
-       * @see https://tailwindcss.com/docs/align-items
-       */
-      'align-items': [{
-        items: [...scaleAlignSecondaryAxis(), {
-          baseline: ['', 'last']
-        }]
-      }],
-      /**
-       * Align Self
-       * @see https://tailwindcss.com/docs/align-self
-       */
-      'align-self': [{
-        self: ['auto', ...scaleAlignSecondaryAxis(), {
-          baseline: ['', 'last']
-        }]
-      }],
-      /**
-       * Place Content
-       * @see https://tailwindcss.com/docs/place-content
-       */
-      'place-content': [{
-        'place-content': scaleAlignPrimaryAxis()
-      }],
-      /**
-       * Place Items
-       * @see https://tailwindcss.com/docs/place-items
-       */
-      'place-items': [{
-        'place-items': [...scaleAlignSecondaryAxis(), 'baseline']
-      }],
-      /**
-       * Place Self
-       * @see https://tailwindcss.com/docs/place-self
-       */
-      'place-self': [{
-        'place-self': ['auto', ...scaleAlignSecondaryAxis()]
-      }],
-      // Spacing
-      /**
-       * Padding
-       * @see https://tailwindcss.com/docs/padding
-       */
-      p: [{
-        p: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding X
-       * @see https://tailwindcss.com/docs/padding
-       */
-      px: [{
-        px: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding Y
-       * @see https://tailwindcss.com/docs/padding
-       */
-      py: [{
-        py: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding Start
-       * @see https://tailwindcss.com/docs/padding
-       */
-      ps: [{
-        ps: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding End
-       * @see https://tailwindcss.com/docs/padding
-       */
-      pe: [{
-        pe: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding Top
-       * @see https://tailwindcss.com/docs/padding
-       */
-      pt: [{
-        pt: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding Right
-       * @see https://tailwindcss.com/docs/padding
-       */
-      pr: [{
-        pr: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding Bottom
-       * @see https://tailwindcss.com/docs/padding
-       */
-      pb: [{
-        pb: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Padding Left
-       * @see https://tailwindcss.com/docs/padding
-       */
-      pl: [{
-        pl: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Margin
-       * @see https://tailwindcss.com/docs/margin
-       */
-      m: [{
-        m: scaleMargin()
-      }],
-      /**
-       * Margin X
-       * @see https://tailwindcss.com/docs/margin
-       */
-      mx: [{
-        mx: scaleMargin()
-      }],
-      /**
-       * Margin Y
-       * @see https://tailwindcss.com/docs/margin
-       */
-      my: [{
-        my: scaleMargin()
-      }],
-      /**
-       * Margin Start
-       * @see https://tailwindcss.com/docs/margin
-       */
-      ms: [{
-        ms: scaleMargin()
-      }],
-      /**
-       * Margin End
-       * @see https://tailwindcss.com/docs/margin
-       */
-      me: [{
-        me: scaleMargin()
-      }],
-      /**
-       * Margin Top
-       * @see https://tailwindcss.com/docs/margin
-       */
-      mt: [{
-        mt: scaleMargin()
-      }],
-      /**
-       * Margin Right
-       * @see https://tailwindcss.com/docs/margin
-       */
-      mr: [{
-        mr: scaleMargin()
-      }],
-      /**
-       * Margin Bottom
-       * @see https://tailwindcss.com/docs/margin
-       */
-      mb: [{
-        mb: scaleMargin()
-      }],
-      /**
-       * Margin Left
-       * @see https://tailwindcss.com/docs/margin
-       */
-      ml: [{
-        ml: scaleMargin()
-      }],
-      /**
-       * Space Between X
-       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
-       */
-      'space-x': [{
-        'space-x': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Space Between X Reverse
-       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
-       */
-      'space-x-reverse': ['space-x-reverse'],
-      /**
-       * Space Between Y
-       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
-       */
-      'space-y': [{
-        'space-y': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Space Between Y Reverse
-       * @see https://tailwindcss.com/docs/margin#adding-space-between-children
-       */
-      'space-y-reverse': ['space-y-reverse'],
-      // --------------
-      // --- Sizing ---
-      // --------------
-      /**
-       * Size
-       * @see https://tailwindcss.com/docs/width#setting-both-width-and-height
-       */
-      size: [{
-        size: scaleSizing()
-      }],
-      /**
-       * Width
-       * @see https://tailwindcss.com/docs/width
-       */
-      w: [{
-        w: [themeContainer, 'screen', ...scaleSizing()]
-      }],
-      /**
-       * Min-Width
-       * @see https://tailwindcss.com/docs/min-width
-       */
-      'min-w': [{
-        'min-w': [themeContainer, 'screen', /** Deprecated. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
-        'none', ...scaleSizing()]
-      }],
-      /**
-       * Max-Width
-       * @see https://tailwindcss.com/docs/max-width
-       */
-      'max-w': [{
-        'max-w': [themeContainer, 'screen', 'none', /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
-        'prose', /** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
-        {
-          screen: [themeBreakpoint]
-        }, ...scaleSizing()]
-      }],
-      /**
-       * Height
-       * @see https://tailwindcss.com/docs/height
-       */
-      h: [{
-        h: ['screen', 'lh', ...scaleSizing()]
-      }],
-      /**
-       * Min-Height
-       * @see https://tailwindcss.com/docs/min-height
-       */
-      'min-h': [{
-        'min-h': ['screen', 'lh', 'none', ...scaleSizing()]
-      }],
-      /**
-       * Max-Height
-       * @see https://tailwindcss.com/docs/max-height
-       */
-      'max-h': [{
-        'max-h': ['screen', 'lh', ...scaleSizing()]
-      }],
-      // ------------------
-      // --- Typography ---
-      // ------------------
-      /**
-       * Font Size
-       * @see https://tailwindcss.com/docs/font-size
-       */
-      'font-size': [{
-        text: ['base', themeText, isArbitraryVariableLength, isArbitraryLength]
-      }],
-      /**
-       * Font Smoothing
-       * @see https://tailwindcss.com/docs/font-smoothing
-       */
-      'font-smoothing': ['antialiased', 'subpixel-antialiased'],
-      /**
-       * Font Style
-       * @see https://tailwindcss.com/docs/font-style
-       */
-      'font-style': ['italic', 'not-italic'],
-      /**
-       * Font Weight
-       * @see https://tailwindcss.com/docs/font-weight
-       */
-      'font-weight': [{
-        font: [themeFontWeight, isArbitraryVariable, isArbitraryNumber]
-      }],
-      /**
-       * Font Stretch
-       * @see https://tailwindcss.com/docs/font-stretch
-       */
-      'font-stretch': [{
-        'font-stretch': ['ultra-condensed', 'extra-condensed', 'condensed', 'semi-condensed', 'normal', 'semi-expanded', 'expanded', 'extra-expanded', 'ultra-expanded', isPercent, isArbitraryValue]
-      }],
-      /**
-       * Font Family
-       * @see https://tailwindcss.com/docs/font-family
-       */
-      'font-family': [{
-        font: [isArbitraryVariableFamilyName, isArbitraryValue, themeFont]
-      }],
-      /**
-       * Font Variant Numeric
-       * @see https://tailwindcss.com/docs/font-variant-numeric
-       */
-      'fvn-normal': ['normal-nums'],
-      /**
-       * Font Variant Numeric
-       * @see https://tailwindcss.com/docs/font-variant-numeric
-       */
-      'fvn-ordinal': ['ordinal'],
-      /**
-       * Font Variant Numeric
-       * @see https://tailwindcss.com/docs/font-variant-numeric
-       */
-      'fvn-slashed-zero': ['slashed-zero'],
-      /**
-       * Font Variant Numeric
-       * @see https://tailwindcss.com/docs/font-variant-numeric
-       */
-      'fvn-figure': ['lining-nums', 'oldstyle-nums'],
-      /**
-       * Font Variant Numeric
-       * @see https://tailwindcss.com/docs/font-variant-numeric
-       */
-      'fvn-spacing': ['proportional-nums', 'tabular-nums'],
-      /**
-       * Font Variant Numeric
-       * @see https://tailwindcss.com/docs/font-variant-numeric
-       */
-      'fvn-fraction': ['diagonal-fractions', 'stacked-fractions'],
-      /**
-       * Letter Spacing
-       * @see https://tailwindcss.com/docs/letter-spacing
-       */
-      tracking: [{
-        tracking: [themeTracking, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Line Clamp
-       * @see https://tailwindcss.com/docs/line-clamp
-       */
-      'line-clamp': [{
-        'line-clamp': [isNumber, 'none', isArbitraryVariable, isArbitraryNumber]
-      }],
-      /**
-       * Line Height
-       * @see https://tailwindcss.com/docs/line-height
-       */
-      leading: [{
-        leading: [/** Deprecated since Tailwind CSS v4.0.0. @see https://github.com/tailwindlabs/tailwindcss.com/issues/2027#issuecomment-2620152757 */
-        themeLeading, ...scaleUnambiguousSpacing()]
-      }],
-      /**
-       * List Style Image
-       * @see https://tailwindcss.com/docs/list-style-image
-       */
-      'list-image': [{
-        'list-image': ['none', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * List Style Position
-       * @see https://tailwindcss.com/docs/list-style-position
-       */
-      'list-style-position': [{
-        list: ['inside', 'outside']
-      }],
-      /**
-       * List Style Type
-       * @see https://tailwindcss.com/docs/list-style-type
-       */
-      'list-style-type': [{
-        list: ['disc', 'decimal', 'none', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Text Alignment
-       * @see https://tailwindcss.com/docs/text-align
-       */
-      'text-alignment': [{
-        text: ['left', 'center', 'right', 'justify', 'start', 'end']
-      }],
-      /**
-       * Placeholder Color
-       * @deprecated since Tailwind CSS v3.0.0
-       * @see https://v3.tailwindcss.com/docs/placeholder-color
-       */
-      'placeholder-color': [{
-        placeholder: scaleColor()
-      }],
-      /**
-       * Text Color
-       * @see https://tailwindcss.com/docs/text-color
-       */
-      'text-color': [{
-        text: scaleColor()
-      }],
-      /**
-       * Text Decoration
-       * @see https://tailwindcss.com/docs/text-decoration
-       */
-      'text-decoration': ['underline', 'overline', 'line-through', 'no-underline'],
-      /**
-       * Text Decoration Style
-       * @see https://tailwindcss.com/docs/text-decoration-style
-       */
-      'text-decoration-style': [{
-        decoration: [...scaleLineStyle(), 'wavy']
-      }],
-      /**
-       * Text Decoration Thickness
-       * @see https://tailwindcss.com/docs/text-decoration-thickness
-       */
-      'text-decoration-thickness': [{
-        decoration: [isNumber, 'from-font', 'auto', isArbitraryVariable, isArbitraryLength]
-      }],
-      /**
-       * Text Decoration Color
-       * @see https://tailwindcss.com/docs/text-decoration-color
-       */
-      'text-decoration-color': [{
-        decoration: scaleColor()
-      }],
-      /**
-       * Text Underline Offset
-       * @see https://tailwindcss.com/docs/text-underline-offset
-       */
-      'underline-offset': [{
-        'underline-offset': [isNumber, 'auto', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Text Transform
-       * @see https://tailwindcss.com/docs/text-transform
-       */
-      'text-transform': ['uppercase', 'lowercase', 'capitalize', 'normal-case'],
-      /**
-       * Text Overflow
-       * @see https://tailwindcss.com/docs/text-overflow
-       */
-      'text-overflow': ['truncate', 'text-ellipsis', 'text-clip'],
-      /**
-       * Text Wrap
-       * @see https://tailwindcss.com/docs/text-wrap
-       */
-      'text-wrap': [{
-        text: ['wrap', 'nowrap', 'balance', 'pretty']
-      }],
-      /**
-       * Text Indent
-       * @see https://tailwindcss.com/docs/text-indent
-       */
-      indent: [{
-        indent: scaleUnambiguousSpacing()
-      }],
-      /**
-       * Vertical Alignment
-       * @see https://tailwindcss.com/docs/vertical-align
-       */
-      'vertical-align': [{
-        align: ['baseline', 'top', 'middle', 'bottom', 'text-top', 'text-bottom', 'sub', 'super', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Whitespace
-       * @see https://tailwindcss.com/docs/whitespace
-       */
-      whitespace: [{
-        whitespace: ['normal', 'nowrap', 'pre', 'pre-line', 'pre-wrap', 'break-spaces']
-      }],
-      /**
-       * Word Break
-       * @see https://tailwindcss.com/docs/word-break
-       */
-      break: [{
-        break: ['normal', 'words', 'all', 'keep']
-      }],
-      /**
-       * Overflow Wrap
-       * @see https://tailwindcss.com/docs/overflow-wrap
-       */
-      wrap: [{
-        wrap: ['break-word', 'anywhere', 'normal']
-      }],
-      /**
-       * Hyphens
-       * @see https://tailwindcss.com/docs/hyphens
-       */
-      hyphens: [{
-        hyphens: ['none', 'manual', 'auto']
-      }],
-      /**
-       * Content
-       * @see https://tailwindcss.com/docs/content
-       */
-      content: [{
-        content: ['none', isArbitraryVariable, isArbitraryValue]
-      }],
-      // -------------------
-      // --- Backgrounds ---
-      // -------------------
-      /**
-       * Background Attachment
-       * @see https://tailwindcss.com/docs/background-attachment
-       */
-      'bg-attachment': [{
-        bg: ['fixed', 'local', 'scroll']
-      }],
-      /**
-       * Background Clip
-       * @see https://tailwindcss.com/docs/background-clip
-       */
-      'bg-clip': [{
-        'bg-clip': ['border', 'padding', 'content', 'text']
-      }],
-      /**
-       * Background Origin
-       * @see https://tailwindcss.com/docs/background-origin
-       */
-      'bg-origin': [{
-        'bg-origin': ['border', 'padding', 'content']
-      }],
-      /**
-       * Background Position
-       * @see https://tailwindcss.com/docs/background-position
-       */
-      'bg-position': [{
-        bg: scaleBgPosition()
-      }],
-      /**
-       * Background Repeat
-       * @see https://tailwindcss.com/docs/background-repeat
-       */
-      'bg-repeat': [{
-        bg: scaleBgRepeat()
-      }],
-      /**
-       * Background Size
-       * @see https://tailwindcss.com/docs/background-size
-       */
-      'bg-size': [{
-        bg: scaleBgSize()
-      }],
-      /**
-       * Background Image
-       * @see https://tailwindcss.com/docs/background-image
-       */
-      'bg-image': [{
-        bg: ['none', {
-          linear: [{
-            to: ['t', 'tr', 'r', 'br', 'b', 'bl', 'l', 'tl']
-          }, isInteger, isArbitraryVariable, isArbitraryValue],
-          radial: ['', isArbitraryVariable, isArbitraryValue],
-          conic: [isInteger, isArbitraryVariable, isArbitraryValue]
-        }, isArbitraryVariableImage, isArbitraryImage]
-      }],
-      /**
-       * Background Color
-       * @see https://tailwindcss.com/docs/background-color
-       */
-      'bg-color': [{
-        bg: scaleColor()
-      }],
-      /**
-       * Gradient Color Stops From Position
-       * @see https://tailwindcss.com/docs/gradient-color-stops
-       */
-      'gradient-from-pos': [{
-        from: scaleGradientStopPosition()
-      }],
-      /**
-       * Gradient Color Stops Via Position
-       * @see https://tailwindcss.com/docs/gradient-color-stops
-       */
-      'gradient-via-pos': [{
-        via: scaleGradientStopPosition()
-      }],
-      /**
-       * Gradient Color Stops To Position
-       * @see https://tailwindcss.com/docs/gradient-color-stops
-       */
-      'gradient-to-pos': [{
-        to: scaleGradientStopPosition()
-      }],
-      /**
-       * Gradient Color Stops From
-       * @see https://tailwindcss.com/docs/gradient-color-stops
-       */
-      'gradient-from': [{
-        from: scaleColor()
-      }],
-      /**
-       * Gradient Color Stops Via
-       * @see https://tailwindcss.com/docs/gradient-color-stops
-       */
-      'gradient-via': [{
-        via: scaleColor()
-      }],
-      /**
-       * Gradient Color Stops To
-       * @see https://tailwindcss.com/docs/gradient-color-stops
-       */
-      'gradient-to': [{
-        to: scaleColor()
-      }],
-      // ---------------
-      // --- Borders ---
-      // ---------------
-      /**
-       * Border Radius
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      rounded: [{
-        rounded: scaleRadius()
-      }],
-      /**
-       * Border Radius Start
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-s': [{
-        'rounded-s': scaleRadius()
-      }],
-      /**
-       * Border Radius End
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-e': [{
-        'rounded-e': scaleRadius()
-      }],
-      /**
-       * Border Radius Top
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-t': [{
-        'rounded-t': scaleRadius()
-      }],
-      /**
-       * Border Radius Right
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-r': [{
-        'rounded-r': scaleRadius()
-      }],
-      /**
-       * Border Radius Bottom
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-b': [{
-        'rounded-b': scaleRadius()
-      }],
-      /**
-       * Border Radius Left
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-l': [{
-        'rounded-l': scaleRadius()
-      }],
-      /**
-       * Border Radius Start Start
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-ss': [{
-        'rounded-ss': scaleRadius()
-      }],
-      /**
-       * Border Radius Start End
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-se': [{
-        'rounded-se': scaleRadius()
-      }],
-      /**
-       * Border Radius End End
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-ee': [{
-        'rounded-ee': scaleRadius()
-      }],
-      /**
-       * Border Radius End Start
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-es': [{
-        'rounded-es': scaleRadius()
-      }],
-      /**
-       * Border Radius Top Left
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-tl': [{
-        'rounded-tl': scaleRadius()
-      }],
-      /**
-       * Border Radius Top Right
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-tr': [{
-        'rounded-tr': scaleRadius()
-      }],
-      /**
-       * Border Radius Bottom Right
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-br': [{
-        'rounded-br': scaleRadius()
-      }],
-      /**
-       * Border Radius Bottom Left
-       * @see https://tailwindcss.com/docs/border-radius
-       */
-      'rounded-bl': [{
-        'rounded-bl': scaleRadius()
-      }],
-      /**
-       * Border Width
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w': [{
-        border: scaleBorderWidth()
-      }],
-      /**
-       * Border Width X
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-x': [{
-        'border-x': scaleBorderWidth()
-      }],
-      /**
-       * Border Width Y
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-y': [{
-        'border-y': scaleBorderWidth()
-      }],
-      /**
-       * Border Width Start
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-s': [{
-        'border-s': scaleBorderWidth()
-      }],
-      /**
-       * Border Width End
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-e': [{
-        'border-e': scaleBorderWidth()
-      }],
-      /**
-       * Border Width Top
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-t': [{
-        'border-t': scaleBorderWidth()
-      }],
-      /**
-       * Border Width Right
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-r': [{
-        'border-r': scaleBorderWidth()
-      }],
-      /**
-       * Border Width Bottom
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-b': [{
-        'border-b': scaleBorderWidth()
-      }],
-      /**
-       * Border Width Left
-       * @see https://tailwindcss.com/docs/border-width
-       */
-      'border-w-l': [{
-        'border-l': scaleBorderWidth()
-      }],
-      /**
-       * Divide Width X
-       * @see https://tailwindcss.com/docs/border-width#between-children
-       */
-      'divide-x': [{
-        'divide-x': scaleBorderWidth()
-      }],
-      /**
-       * Divide Width X Reverse
-       * @see https://tailwindcss.com/docs/border-width#between-children
-       */
-      'divide-x-reverse': ['divide-x-reverse'],
-      /**
-       * Divide Width Y
-       * @see https://tailwindcss.com/docs/border-width#between-children
-       */
-      'divide-y': [{
-        'divide-y': scaleBorderWidth()
-      }],
-      /**
-       * Divide Width Y Reverse
-       * @see https://tailwindcss.com/docs/border-width#between-children
-       */
-      'divide-y-reverse': ['divide-y-reverse'],
-      /**
-       * Border Style
-       * @see https://tailwindcss.com/docs/border-style
-       */
-      'border-style': [{
-        border: [...scaleLineStyle(), 'hidden', 'none']
-      }],
-      /**
-       * Divide Style
-       * @see https://tailwindcss.com/docs/border-style#setting-the-divider-style
-       */
-      'divide-style': [{
-        divide: [...scaleLineStyle(), 'hidden', 'none']
-      }],
-      /**
-       * Border Color
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color': [{
-        border: scaleColor()
-      }],
-      /**
-       * Border Color X
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-x': [{
-        'border-x': scaleColor()
-      }],
-      /**
-       * Border Color Y
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-y': [{
-        'border-y': scaleColor()
-      }],
-      /**
-       * Border Color S
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-s': [{
-        'border-s': scaleColor()
-      }],
-      /**
-       * Border Color E
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-e': [{
-        'border-e': scaleColor()
-      }],
-      /**
-       * Border Color Top
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-t': [{
-        'border-t': scaleColor()
-      }],
-      /**
-       * Border Color Right
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-r': [{
-        'border-r': scaleColor()
-      }],
-      /**
-       * Border Color Bottom
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-b': [{
-        'border-b': scaleColor()
-      }],
-      /**
-       * Border Color Left
-       * @see https://tailwindcss.com/docs/border-color
-       */
-      'border-color-l': [{
-        'border-l': scaleColor()
-      }],
-      /**
-       * Divide Color
-       * @see https://tailwindcss.com/docs/divide-color
-       */
-      'divide-color': [{
-        divide: scaleColor()
-      }],
-      /**
-       * Outline Style
-       * @see https://tailwindcss.com/docs/outline-style
-       */
-      'outline-style': [{
-        outline: [...scaleLineStyle(), 'none', 'hidden']
-      }],
-      /**
-       * Outline Offset
-       * @see https://tailwindcss.com/docs/outline-offset
-       */
-      'outline-offset': [{
-        'outline-offset': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Outline Width
-       * @see https://tailwindcss.com/docs/outline-width
-       */
-      'outline-w': [{
-        outline: ['', isNumber, isArbitraryVariableLength, isArbitraryLength]
-      }],
-      /**
-       * Outline Color
-       * @see https://tailwindcss.com/docs/outline-color
-       */
-      'outline-color': [{
-        outline: scaleColor()
-      }],
-      // ---------------
-      // --- Effects ---
-      // ---------------
-      /**
-       * Box Shadow
-       * @see https://tailwindcss.com/docs/box-shadow
-       */
-      shadow: [{
-        shadow: [
-        // Deprecated since Tailwind CSS v4.0.0
-        '', 'none', themeShadow, isArbitraryVariableShadow, isArbitraryShadow]
-      }],
-      /**
-       * Box Shadow Color
-       * @see https://tailwindcss.com/docs/box-shadow#setting-the-shadow-color
-       */
-      'shadow-color': [{
-        shadow: scaleColor()
-      }],
-      /**
-       * Inset Box Shadow
-       * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-shadow
-       */
-      'inset-shadow': [{
-        'inset-shadow': ['none', themeInsetShadow, isArbitraryVariableShadow, isArbitraryShadow]
-      }],
-      /**
-       * Inset Box Shadow Color
-       * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-shadow-color
-       */
-      'inset-shadow-color': [{
-        'inset-shadow': scaleColor()
-      }],
-      /**
-       * Ring Width
-       * @see https://tailwindcss.com/docs/box-shadow#adding-a-ring
-       */
-      'ring-w': [{
-        ring: scaleBorderWidth()
-      }],
-      /**
-       * Ring Width Inset
-       * @see https://v3.tailwindcss.com/docs/ring-width#inset-rings
-       * @deprecated since Tailwind CSS v4.0.0
-       * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
-       */
-      'ring-w-inset': ['ring-inset'],
-      /**
-       * Ring Color
-       * @see https://tailwindcss.com/docs/box-shadow#setting-the-ring-color
-       */
-      'ring-color': [{
-        ring: scaleColor()
-      }],
-      /**
-       * Ring Offset Width
-       * @see https://v3.tailwindcss.com/docs/ring-offset-width
-       * @deprecated since Tailwind CSS v4.0.0
-       * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
-       */
-      'ring-offset-w': [{
-        'ring-offset': [isNumber, isArbitraryLength]
-      }],
-      /**
-       * Ring Offset Color
-       * @see https://v3.tailwindcss.com/docs/ring-offset-color
-       * @deprecated since Tailwind CSS v4.0.0
-       * @see https://github.com/tailwindlabs/tailwindcss/blob/v4.0.0/packages/tailwindcss/src/utilities.ts#L4158
-       */
-      'ring-offset-color': [{
-        'ring-offset': scaleColor()
-      }],
-      /**
-       * Inset Ring Width
-       * @see https://tailwindcss.com/docs/box-shadow#adding-an-inset-ring
-       */
-      'inset-ring-w': [{
-        'inset-ring': scaleBorderWidth()
-      }],
-      /**
-       * Inset Ring Color
-       * @see https://tailwindcss.com/docs/box-shadow#setting-the-inset-ring-color
-       */
-      'inset-ring-color': [{
-        'inset-ring': scaleColor()
-      }],
-      /**
-       * Text Shadow
-       * @see https://tailwindcss.com/docs/text-shadow
-       */
-      'text-shadow': [{
-        'text-shadow': ['none', themeTextShadow, isArbitraryVariableShadow, isArbitraryShadow]
-      }],
-      /**
-       * Text Shadow Color
-       * @see https://tailwindcss.com/docs/text-shadow#setting-the-shadow-color
-       */
-      'text-shadow-color': [{
-        'text-shadow': scaleColor()
-      }],
-      /**
-       * Opacity
-       * @see https://tailwindcss.com/docs/opacity
-       */
-      opacity: [{
-        opacity: [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Mix Blend Mode
-       * @see https://tailwindcss.com/docs/mix-blend-mode
-       */
-      'mix-blend': [{
-        'mix-blend': [...scaleBlendMode(), 'plus-darker', 'plus-lighter']
-      }],
-      /**
-       * Background Blend Mode
-       * @see https://tailwindcss.com/docs/background-blend-mode
-       */
-      'bg-blend': [{
-        'bg-blend': scaleBlendMode()
-      }],
-      /**
-       * Mask Clip
-       * @see https://tailwindcss.com/docs/mask-clip
-       */
-      'mask-clip': [{
-        'mask-clip': ['border', 'padding', 'content', 'fill', 'stroke', 'view']
-      }, 'mask-no-clip'],
-      /**
-       * Mask Composite
-       * @see https://tailwindcss.com/docs/mask-composite
-       */
-      'mask-composite': [{
-        mask: ['add', 'subtract', 'intersect', 'exclude']
-      }],
-      /**
-       * Mask Image
-       * @see https://tailwindcss.com/docs/mask-image
-       */
-      'mask-image-linear-pos': [{
-        'mask-linear': [isNumber]
-      }],
-      'mask-image-linear-from-pos': [{
-        'mask-linear-from': scaleMaskImagePosition()
-      }],
-      'mask-image-linear-to-pos': [{
-        'mask-linear-to': scaleMaskImagePosition()
-      }],
-      'mask-image-linear-from-color': [{
-        'mask-linear-from': scaleColor()
-      }],
-      'mask-image-linear-to-color': [{
-        'mask-linear-to': scaleColor()
-      }],
-      'mask-image-t-from-pos': [{
-        'mask-t-from': scaleMaskImagePosition()
-      }],
-      'mask-image-t-to-pos': [{
-        'mask-t-to': scaleMaskImagePosition()
-      }],
-      'mask-image-t-from-color': [{
-        'mask-t-from': scaleColor()
-      }],
-      'mask-image-t-to-color': [{
-        'mask-t-to': scaleColor()
-      }],
-      'mask-image-r-from-pos': [{
-        'mask-r-from': scaleMaskImagePosition()
-      }],
-      'mask-image-r-to-pos': [{
-        'mask-r-to': scaleMaskImagePosition()
-      }],
-      'mask-image-r-from-color': [{
-        'mask-r-from': scaleColor()
-      }],
-      'mask-image-r-to-color': [{
-        'mask-r-to': scaleColor()
-      }],
-      'mask-image-b-from-pos': [{
-        'mask-b-from': scaleMaskImagePosition()
-      }],
-      'mask-image-b-to-pos': [{
-        'mask-b-to': scaleMaskImagePosition()
-      }],
-      'mask-image-b-from-color': [{
-        'mask-b-from': scaleColor()
-      }],
-      'mask-image-b-to-color': [{
-        'mask-b-to': scaleColor()
-      }],
-      'mask-image-l-from-pos': [{
-        'mask-l-from': scaleMaskImagePosition()
-      }],
-      'mask-image-l-to-pos': [{
-        'mask-l-to': scaleMaskImagePosition()
-      }],
-      'mask-image-l-from-color': [{
-        'mask-l-from': scaleColor()
-      }],
-      'mask-image-l-to-color': [{
-        'mask-l-to': scaleColor()
-      }],
-      'mask-image-x-from-pos': [{
-        'mask-x-from': scaleMaskImagePosition()
-      }],
-      'mask-image-x-to-pos': [{
-        'mask-x-to': scaleMaskImagePosition()
-      }],
-      'mask-image-x-from-color': [{
-        'mask-x-from': scaleColor()
-      }],
-      'mask-image-x-to-color': [{
-        'mask-x-to': scaleColor()
-      }],
-      'mask-image-y-from-pos': [{
-        'mask-y-from': scaleMaskImagePosition()
-      }],
-      'mask-image-y-to-pos': [{
-        'mask-y-to': scaleMaskImagePosition()
-      }],
-      'mask-image-y-from-color': [{
-        'mask-y-from': scaleColor()
-      }],
-      'mask-image-y-to-color': [{
-        'mask-y-to': scaleColor()
-      }],
-      'mask-image-radial': [{
-        'mask-radial': [isArbitraryVariable, isArbitraryValue]
-      }],
-      'mask-image-radial-from-pos': [{
-        'mask-radial-from': scaleMaskImagePosition()
-      }],
-      'mask-image-radial-to-pos': [{
-        'mask-radial-to': scaleMaskImagePosition()
-      }],
-      'mask-image-radial-from-color': [{
-        'mask-radial-from': scaleColor()
-      }],
-      'mask-image-radial-to-color': [{
-        'mask-radial-to': scaleColor()
-      }],
-      'mask-image-radial-shape': [{
-        'mask-radial': ['circle', 'ellipse']
-      }],
-      'mask-image-radial-size': [{
-        'mask-radial': [{
-          closest: ['side', 'corner'],
-          farthest: ['side', 'corner']
-        }]
-      }],
-      'mask-image-radial-pos': [{
-        'mask-radial-at': scalePosition()
-      }],
-      'mask-image-conic-pos': [{
-        'mask-conic': [isNumber]
-      }],
-      'mask-image-conic-from-pos': [{
-        'mask-conic-from': scaleMaskImagePosition()
-      }],
-      'mask-image-conic-to-pos': [{
-        'mask-conic-to': scaleMaskImagePosition()
-      }],
-      'mask-image-conic-from-color': [{
-        'mask-conic-from': scaleColor()
-      }],
-      'mask-image-conic-to-color': [{
-        'mask-conic-to': scaleColor()
-      }],
-      /**
-       * Mask Mode
-       * @see https://tailwindcss.com/docs/mask-mode
-       */
-      'mask-mode': [{
-        mask: ['alpha', 'luminance', 'match']
-      }],
-      /**
-       * Mask Origin
-       * @see https://tailwindcss.com/docs/mask-origin
-       */
-      'mask-origin': [{
-        'mask-origin': ['border', 'padding', 'content', 'fill', 'stroke', 'view']
-      }],
-      /**
-       * Mask Position
-       * @see https://tailwindcss.com/docs/mask-position
-       */
-      'mask-position': [{
-        mask: scaleBgPosition()
-      }],
-      /**
-       * Mask Repeat
-       * @see https://tailwindcss.com/docs/mask-repeat
-       */
-      'mask-repeat': [{
-        mask: scaleBgRepeat()
-      }],
-      /**
-       * Mask Size
-       * @see https://tailwindcss.com/docs/mask-size
-       */
-      'mask-size': [{
-        mask: scaleBgSize()
-      }],
-      /**
-       * Mask Type
-       * @see https://tailwindcss.com/docs/mask-type
-       */
-      'mask-type': [{
-        'mask-type': ['alpha', 'luminance']
-      }],
-      /**
-       * Mask Image
-       * @see https://tailwindcss.com/docs/mask-image
-       */
-      'mask-image': [{
-        mask: ['none', isArbitraryVariable, isArbitraryValue]
-      }],
-      // ---------------
-      // --- Filters ---
-      // ---------------
-      /**
-       * Filter
-       * @see https://tailwindcss.com/docs/filter
-       */
-      filter: [{
-        filter: [
-        // Deprecated since Tailwind CSS v3.0.0
-        '', 'none', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Blur
-       * @see https://tailwindcss.com/docs/blur
-       */
-      blur: [{
-        blur: scaleBlur()
-      }],
-      /**
-       * Brightness
-       * @see https://tailwindcss.com/docs/brightness
-       */
-      brightness: [{
-        brightness: [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Contrast
-       * @see https://tailwindcss.com/docs/contrast
-       */
-      contrast: [{
-        contrast: [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Drop Shadow
-       * @see https://tailwindcss.com/docs/drop-shadow
-       */
-      'drop-shadow': [{
-        'drop-shadow': [
-        // Deprecated since Tailwind CSS v4.0.0
-        '', 'none', themeDropShadow, isArbitraryVariableShadow, isArbitraryShadow]
-      }],
-      /**
-       * Drop Shadow Color
-       * @see https://tailwindcss.com/docs/filter-drop-shadow#setting-the-shadow-color
-       */
-      'drop-shadow-color': [{
-        'drop-shadow': scaleColor()
-      }],
-      /**
-       * Grayscale
-       * @see https://tailwindcss.com/docs/grayscale
-       */
-      grayscale: [{
-        grayscale: ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Hue Rotate
-       * @see https://tailwindcss.com/docs/hue-rotate
-       */
-      'hue-rotate': [{
-        'hue-rotate': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Invert
-       * @see https://tailwindcss.com/docs/invert
-       */
-      invert: [{
-        invert: ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Saturate
-       * @see https://tailwindcss.com/docs/saturate
-       */
-      saturate: [{
-        saturate: [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Sepia
-       * @see https://tailwindcss.com/docs/sepia
-       */
-      sepia: [{
-        sepia: ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Filter
-       * @see https://tailwindcss.com/docs/backdrop-filter
-       */
-      'backdrop-filter': [{
-        'backdrop-filter': [
-        // Deprecated since Tailwind CSS v3.0.0
-        '', 'none', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Blur
-       * @see https://tailwindcss.com/docs/backdrop-blur
-       */
-      'backdrop-blur': [{
-        'backdrop-blur': scaleBlur()
-      }],
-      /**
-       * Backdrop Brightness
-       * @see https://tailwindcss.com/docs/backdrop-brightness
-       */
-      'backdrop-brightness': [{
-        'backdrop-brightness': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Contrast
-       * @see https://tailwindcss.com/docs/backdrop-contrast
-       */
-      'backdrop-contrast': [{
-        'backdrop-contrast': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Grayscale
-       * @see https://tailwindcss.com/docs/backdrop-grayscale
-       */
-      'backdrop-grayscale': [{
-        'backdrop-grayscale': ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Hue Rotate
-       * @see https://tailwindcss.com/docs/backdrop-hue-rotate
-       */
-      'backdrop-hue-rotate': [{
-        'backdrop-hue-rotate': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Invert
-       * @see https://tailwindcss.com/docs/backdrop-invert
-       */
-      'backdrop-invert': [{
-        'backdrop-invert': ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Opacity
-       * @see https://tailwindcss.com/docs/backdrop-opacity
-       */
-      'backdrop-opacity': [{
-        'backdrop-opacity': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Saturate
-       * @see https://tailwindcss.com/docs/backdrop-saturate
-       */
-      'backdrop-saturate': [{
-        'backdrop-saturate': [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Backdrop Sepia
-       * @see https://tailwindcss.com/docs/backdrop-sepia
-       */
-      'backdrop-sepia': [{
-        'backdrop-sepia': ['', isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      // --------------
-      // --- Tables ---
-      // --------------
-      /**
-       * Border Collapse
-       * @see https://tailwindcss.com/docs/border-collapse
-       */
-      'border-collapse': [{
-        border: ['collapse', 'separate']
-      }],
-      /**
-       * Border Spacing
-       * @see https://tailwindcss.com/docs/border-spacing
-       */
-      'border-spacing': [{
-        'border-spacing': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Border Spacing X
-       * @see https://tailwindcss.com/docs/border-spacing
-       */
-      'border-spacing-x': [{
-        'border-spacing-x': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Border Spacing Y
-       * @see https://tailwindcss.com/docs/border-spacing
-       */
-      'border-spacing-y': [{
-        'border-spacing-y': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Table Layout
-       * @see https://tailwindcss.com/docs/table-layout
-       */
-      'table-layout': [{
-        table: ['auto', 'fixed']
-      }],
-      /**
-       * Caption Side
-       * @see https://tailwindcss.com/docs/caption-side
-       */
-      caption: [{
-        caption: ['top', 'bottom']
-      }],
-      // ---------------------------------
-      // --- Transitions and Animation ---
-      // ---------------------------------
-      /**
-       * Transition Property
-       * @see https://tailwindcss.com/docs/transition-property
-       */
-      transition: [{
-        transition: ['', 'all', 'colors', 'opacity', 'shadow', 'transform', 'none', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Transition Behavior
-       * @see https://tailwindcss.com/docs/transition-behavior
-       */
-      'transition-behavior': [{
-        transition: ['normal', 'discrete']
-      }],
-      /**
-       * Transition Duration
-       * @see https://tailwindcss.com/docs/transition-duration
-       */
-      duration: [{
-        duration: [isNumber, 'initial', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Transition Timing Function
-       * @see https://tailwindcss.com/docs/transition-timing-function
-       */
-      ease: [{
-        ease: ['linear', 'initial', themeEase, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Transition Delay
-       * @see https://tailwindcss.com/docs/transition-delay
-       */
-      delay: [{
-        delay: [isNumber, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Animation
-       * @see https://tailwindcss.com/docs/animation
-       */
-      animate: [{
-        animate: ['none', themeAnimate, isArbitraryVariable, isArbitraryValue]
-      }],
-      // ------------------
-      // --- Transforms ---
-      // ------------------
-      /**
-       * Backface Visibility
-       * @see https://tailwindcss.com/docs/backface-visibility
-       */
-      backface: [{
-        backface: ['hidden', 'visible']
-      }],
-      /**
-       * Perspective
-       * @see https://tailwindcss.com/docs/perspective
-       */
-      perspective: [{
-        perspective: [themePerspective, isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Perspective Origin
-       * @see https://tailwindcss.com/docs/perspective-origin
-       */
-      'perspective-origin': [{
-        'perspective-origin': scalePositionWithArbitrary()
-      }],
-      /**
-       * Rotate
-       * @see https://tailwindcss.com/docs/rotate
-       */
-      rotate: [{
-        rotate: scaleRotate()
-      }],
-      /**
-       * Rotate X
-       * @see https://tailwindcss.com/docs/rotate
-       */
-      'rotate-x': [{
-        'rotate-x': scaleRotate()
-      }],
-      /**
-       * Rotate Y
-       * @see https://tailwindcss.com/docs/rotate
-       */
-      'rotate-y': [{
-        'rotate-y': scaleRotate()
-      }],
-      /**
-       * Rotate Z
-       * @see https://tailwindcss.com/docs/rotate
-       */
-      'rotate-z': [{
-        'rotate-z': scaleRotate()
-      }],
-      /**
-       * Scale
-       * @see https://tailwindcss.com/docs/scale
-       */
-      scale: [{
-        scale: scaleScale()
-      }],
-      /**
-       * Scale X
-       * @see https://tailwindcss.com/docs/scale
-       */
-      'scale-x': [{
-        'scale-x': scaleScale()
-      }],
-      /**
-       * Scale Y
-       * @see https://tailwindcss.com/docs/scale
-       */
-      'scale-y': [{
-        'scale-y': scaleScale()
-      }],
-      /**
-       * Scale Z
-       * @see https://tailwindcss.com/docs/scale
-       */
-      'scale-z': [{
-        'scale-z': scaleScale()
-      }],
-      /**
-       * Scale 3D
-       * @see https://tailwindcss.com/docs/scale
-       */
-      'scale-3d': ['scale-3d'],
-      /**
-       * Skew
-       * @see https://tailwindcss.com/docs/skew
-       */
-      skew: [{
-        skew: scaleSkew()
-      }],
-      /**
-       * Skew X
-       * @see https://tailwindcss.com/docs/skew
-       */
-      'skew-x': [{
-        'skew-x': scaleSkew()
-      }],
-      /**
-       * Skew Y
-       * @see https://tailwindcss.com/docs/skew
-       */
-      'skew-y': [{
-        'skew-y': scaleSkew()
-      }],
-      /**
-       * Transform
-       * @see https://tailwindcss.com/docs/transform
-       */
-      transform: [{
-        transform: [isArbitraryVariable, isArbitraryValue, '', 'none', 'gpu', 'cpu']
-      }],
-      /**
-       * Transform Origin
-       * @see https://tailwindcss.com/docs/transform-origin
-       */
-      'transform-origin': [{
-        origin: scalePositionWithArbitrary()
-      }],
-      /**
-       * Transform Style
-       * @see https://tailwindcss.com/docs/transform-style
-       */
-      'transform-style': [{
-        transform: ['3d', 'flat']
-      }],
-      /**
-       * Translate
-       * @see https://tailwindcss.com/docs/translate
-       */
-      translate: [{
-        translate: scaleTranslate()
-      }],
-      /**
-       * Translate X
-       * @see https://tailwindcss.com/docs/translate
-       */
-      'translate-x': [{
-        'translate-x': scaleTranslate()
-      }],
-      /**
-       * Translate Y
-       * @see https://tailwindcss.com/docs/translate
-       */
-      'translate-y': [{
-        'translate-y': scaleTranslate()
-      }],
-      /**
-       * Translate Z
-       * @see https://tailwindcss.com/docs/translate
-       */
-      'translate-z': [{
-        'translate-z': scaleTranslate()
-      }],
-      /**
-       * Translate None
-       * @see https://tailwindcss.com/docs/translate
-       */
-      'translate-none': ['translate-none'],
-      // ---------------------
-      // --- Interactivity ---
-      // ---------------------
-      /**
-       * Accent Color
-       * @see https://tailwindcss.com/docs/accent-color
-       */
-      accent: [{
-        accent: scaleColor()
-      }],
-      /**
-       * Appearance
-       * @see https://tailwindcss.com/docs/appearance
-       */
-      appearance: [{
-        appearance: ['none', 'auto']
-      }],
-      /**
-       * Caret Color
-       * @see https://tailwindcss.com/docs/just-in-time-mode#caret-color-utilities
-       */
-      'caret-color': [{
-        caret: scaleColor()
-      }],
-      /**
-       * Color Scheme
-       * @see https://tailwindcss.com/docs/color-scheme
-       */
-      'color-scheme': [{
-        scheme: ['normal', 'dark', 'light', 'light-dark', 'only-dark', 'only-light']
-      }],
-      /**
-       * Cursor
-       * @see https://tailwindcss.com/docs/cursor
-       */
-      cursor: [{
-        cursor: ['auto', 'default', 'pointer', 'wait', 'text', 'move', 'help', 'not-allowed', 'none', 'context-menu', 'progress', 'cell', 'crosshair', 'vertical-text', 'alias', 'copy', 'no-drop', 'grab', 'grabbing', 'all-scroll', 'col-resize', 'row-resize', 'n-resize', 'e-resize', 's-resize', 'w-resize', 'ne-resize', 'nw-resize', 'se-resize', 'sw-resize', 'ew-resize', 'ns-resize', 'nesw-resize', 'nwse-resize', 'zoom-in', 'zoom-out', isArbitraryVariable, isArbitraryValue]
-      }],
-      /**
-       * Field Sizing
-       * @see https://tailwindcss.com/docs/field-sizing
-       */
-      'field-sizing': [{
-        'field-sizing': ['fixed', 'content']
-      }],
-      /**
-       * Pointer Events
-       * @see https://tailwindcss.com/docs/pointer-events
-       */
-      'pointer-events': [{
-        'pointer-events': ['auto', 'none']
-      }],
-      /**
-       * Resize
-       * @see https://tailwindcss.com/docs/resize
-       */
-      resize: [{
-        resize: ['none', '', 'y', 'x']
-      }],
-      /**
-       * Scroll Behavior
-       * @see https://tailwindcss.com/docs/scroll-behavior
-       */
-      'scroll-behavior': [{
-        scroll: ['auto', 'smooth']
-      }],
-      /**
-       * Scroll Margin
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-m': [{
-        'scroll-m': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin X
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-mx': [{
-        'scroll-mx': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin Y
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-my': [{
-        'scroll-my': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin Start
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-ms': [{
-        'scroll-ms': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin End
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-me': [{
-        'scroll-me': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin Top
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-mt': [{
-        'scroll-mt': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin Right
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-mr': [{
-        'scroll-mr': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin Bottom
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-mb': [{
-        'scroll-mb': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Margin Left
-       * @see https://tailwindcss.com/docs/scroll-margin
-       */
-      'scroll-ml': [{
-        'scroll-ml': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-p': [{
-        'scroll-p': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding X
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-px': [{
-        'scroll-px': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding Y
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-py': [{
-        'scroll-py': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding Start
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-ps': [{
-        'scroll-ps': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding End
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-pe': [{
-        'scroll-pe': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding Top
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-pt': [{
-        'scroll-pt': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding Right
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-pr': [{
-        'scroll-pr': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding Bottom
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-pb': [{
-        'scroll-pb': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Padding Left
-       * @see https://tailwindcss.com/docs/scroll-padding
-       */
-      'scroll-pl': [{
-        'scroll-pl': scaleUnambiguousSpacing()
-      }],
-      /**
-       * Scroll Snap Align
-       * @see https://tailwindcss.com/docs/scroll-snap-align
-       */
-      'snap-align': [{
-        snap: ['start', 'end', 'center', 'align-none']
-      }],
-      /**
-       * Scroll Snap Stop
-       * @see https://tailwindcss.com/docs/scroll-snap-stop
-       */
-      'snap-stop': [{
-        snap: ['normal', 'always']
-      }],
-      /**
-       * Scroll Snap Type
-       * @see https://tailwindcss.com/docs/scroll-snap-type
-       */
-      'snap-type': [{
-        snap: ['none', 'x', 'y', 'both']
-      }],
-      /**
-       * Scroll Snap Type Strictness
-       * @see https://tailwindcss.com/docs/scroll-snap-type
-       */
-      'snap-strictness': [{
-        snap: ['mandatory', 'proximity']
-      }],
-      /**
-       * Touch Action
-       * @see https://tailwindcss.com/docs/touch-action
-       */
-      touch: [{
-        touch: ['auto', 'none', 'manipulation']
-      }],
-      /**
-       * Touch Action X
-       * @see https://tailwindcss.com/docs/touch-action
-       */
-      'touch-x': [{
-        'touch-pan': ['x', 'left', 'right']
-      }],
-      /**
-       * Touch Action Y
-       * @see https://tailwindcss.com/docs/touch-action
-       */
-      'touch-y': [{
-        'touch-pan': ['y', 'up', 'down']
-      }],
-      /**
-       * Touch Action Pinch Zoom
-       * @see https://tailwindcss.com/docs/touch-action
-       */
-      'touch-pz': ['touch-pinch-zoom'],
-      /**
-       * User Select
-       * @see https://tailwindcss.com/docs/user-select
-       */
-      select: [{
-        select: ['none', 'text', 'all', 'auto']
-      }],
-      /**
-       * Will Change
-       * @see https://tailwindcss.com/docs/will-change
-       */
-      'will-change': [{
-        'will-change': ['auto', 'scroll', 'contents', 'transform', isArbitraryVariable, isArbitraryValue]
-      }],
-      // -----------
-      // --- SVG ---
-      // -----------
-      /**
-       * Fill
-       * @see https://tailwindcss.com/docs/fill
-       */
-      fill: [{
-        fill: ['none', ...scaleColor()]
-      }],
-      /**
-       * Stroke Width
-       * @see https://tailwindcss.com/docs/stroke-width
-       */
-      'stroke-w': [{
-        stroke: [isNumber, isArbitraryVariableLength, isArbitraryLength, isArbitraryNumber]
-      }],
-      /**
-       * Stroke
-       * @see https://tailwindcss.com/docs/stroke
-       */
-      stroke: [{
-        stroke: ['none', ...scaleColor()]
-      }],
-      // ---------------------
-      // --- Accessibility ---
-      // ---------------------
-      /**
-       * Forced Color Adjust
-       * @see https://tailwindcss.com/docs/forced-color-adjust
-       */
-      'forced-color-adjust': [{
-        'forced-color-adjust': ['auto', 'none']
-      }]
-    },
-    conflictingClassGroups: {
-      overflow: ['overflow-x', 'overflow-y'],
-      overscroll: ['overscroll-x', 'overscroll-y'],
-      inset: ['inset-x', 'inset-y', 'start', 'end', 'top', 'right', 'bottom', 'left'],
-      'inset-x': ['right', 'left'],
-      'inset-y': ['top', 'bottom'],
-      flex: ['basis', 'grow', 'shrink'],
-      gap: ['gap-x', 'gap-y'],
-      p: ['px', 'py', 'ps', 'pe', 'pt', 'pr', 'pb', 'pl'],
-      px: ['pr', 'pl'],
-      py: ['pt', 'pb'],
-      m: ['mx', 'my', 'ms', 'me', 'mt', 'mr', 'mb', 'ml'],
-      mx: ['mr', 'ml'],
-      my: ['mt', 'mb'],
-      size: ['w', 'h'],
-      'font-size': ['leading'],
-      'fvn-normal': ['fvn-ordinal', 'fvn-slashed-zero', 'fvn-figure', 'fvn-spacing', 'fvn-fraction'],
-      'fvn-ordinal': ['fvn-normal'],
-      'fvn-slashed-zero': ['fvn-normal'],
-      'fvn-figure': ['fvn-normal'],
-      'fvn-spacing': ['fvn-normal'],
-      'fvn-fraction': ['fvn-normal'],
-      'line-clamp': ['display', 'overflow'],
-      rounded: ['rounded-s', 'rounded-e', 'rounded-t', 'rounded-r', 'rounded-b', 'rounded-l', 'rounded-ss', 'rounded-se', 'rounded-ee', 'rounded-es', 'rounded-tl', 'rounded-tr', 'rounded-br', 'rounded-bl'],
-      'rounded-s': ['rounded-ss', 'rounded-es'],
-      'rounded-e': ['rounded-se', 'rounded-ee'],
-      'rounded-t': ['rounded-tl', 'rounded-tr'],
-      'rounded-r': ['rounded-tr', 'rounded-br'],
-      'rounded-b': ['rounded-br', 'rounded-bl'],
-      'rounded-l': ['rounded-tl', 'rounded-bl'],
-      'border-spacing': ['border-spacing-x', 'border-spacing-y'],
-      'border-w': ['border-w-x', 'border-w-y', 'border-w-s', 'border-w-e', 'border-w-t', 'border-w-r', 'border-w-b', 'border-w-l'],
-      'border-w-x': ['border-w-r', 'border-w-l'],
-      'border-w-y': ['border-w-t', 'border-w-b'],
-      'border-color': ['border-color-x', 'border-color-y', 'border-color-s', 'border-color-e', 'border-color-t', 'border-color-r', 'border-color-b', 'border-color-l'],
-      'border-color-x': ['border-color-r', 'border-color-l'],
-      'border-color-y': ['border-color-t', 'border-color-b'],
-      translate: ['translate-x', 'translate-y', 'translate-none'],
-      'translate-none': ['translate', 'translate-x', 'translate-y', 'translate-z'],
-      'scroll-m': ['scroll-mx', 'scroll-my', 'scroll-ms', 'scroll-me', 'scroll-mt', 'scroll-mr', 'scroll-mb', 'scroll-ml'],
-      'scroll-mx': ['scroll-mr', 'scroll-ml'],
-      'scroll-my': ['scroll-mt', 'scroll-mb'],
-      'scroll-p': ['scroll-px', 'scroll-py', 'scroll-ps', 'scroll-pe', 'scroll-pt', 'scroll-pr', 'scroll-pb', 'scroll-pl'],
-      'scroll-px': ['scroll-pr', 'scroll-pl'],
-      'scroll-py': ['scroll-pt', 'scroll-pb'],
-      touch: ['touch-x', 'touch-y', 'touch-pz'],
-      'touch-x': ['touch'],
-      'touch-y': ['touch'],
-      'touch-pz': ['touch']
-    },
-    conflictingClassGroupModifiers: {
-      'font-size': ['leading']
-    },
-    orderSensitiveModifiers: ['*', '**', 'after', 'backdrop', 'before', 'details-content', 'file', 'first-letter', 'first-line', 'marker', 'placeholder', 'selection']
-  };
-};
-const twMerge = /*#__PURE__*/createTailwindMerge(getDefaultConfig);
-
-function cn(...inputs) {
-    return twMerge(clsx(inputs));
-}
-
-const getFullImageUrl = (imagePath) => {
-    const baseUrl = process.env.NEXT_PUBLIC_AWS_URL;
-    return imagePath ? `${baseUrl}${imagePath}` : null;
-};
-const getInitialsFromEmail = (email) => {
-    if (!email)
-        return "";
-    const localPart = email.split("@")[0]; // "sagar" or "sagar.jadhav"
-    const parts = localPart.split("."); // ["sagar"] or ["sagar", "jadhav"]
-    const firstInitial = parts[0]?.charAt(0).toUpperCase() || "";
-    const lastInitial = parts[1]?.charAt(0).toUpperCase() || "";
-    return lastInitial ? `${firstInitial}${lastInitial}` : `${firstInitial}`;
-};
-
-const apiEndpoints = {
-    auth: {
-        profile: "user/profile"},
-};
-
-// Default configuration
-const defaultConfig = {
-    tokenStorage: {
-        cookieOptions: {
-            secure: true,
-            sameSite: "lax",
-            path: "/",
-        },
-    },
-    redirectOnUnauthorized: "/login",
-    onAuthStateChange: () => { },
-};
-// Initial state
-const initialState = {
-    user: null,
-    token: {
-        access_token: null,
-        expires_at: null,
-        token_type: null,
-    },
-    isAuthenticated: false,
-    isLoading: true,
-    error: null,
-};
-// Auth reducer
-const authReducer = (state, action) => {
-    switch (action.type) {
-        case "SET_LOADING":
-            return { ...state, isLoading: action.payload };
-        case "SET_ERROR":
-            return { ...state, error: action.payload, isLoading: false };
-        case "SET_USER":
-            return {
-                ...state,
-                user: action.payload,
-                isAuthenticated: !!action.payload,
-                error: null,
-            };
-        case "SET_TOKENS":
-            return { ...state, token: action.payload };
-        case "SET_AUTHENTICATED":
-            return { ...state, isAuthenticated: action.payload };
-        case "UPDATE_USER":
-            return {
-                ...state,
-                user: state.user ? { ...state.user, ...action.payload } : null,
-            };
-        case "CLEAR_AUTH":
-            return {
-                ...initialState,
-                isLoading: false,
-            };
-        default:
-            return state;
-    }
-};
-// Create context
-const AuthContext = createContext(undefined);
-const AuthProvider = ({ children, config }) => {
-    const [state, dispatch] = useReducer(authReducer, initialState);
-    const mergedConfig = { ...defaultConfig, ...(config ?? {}) };
-    // Token management
-    const updateToken = useCallback((token) => {
-        setCookieJSON("token", token);
-        dispatch({ type: "SET_TOKENS", payload: token });
-    }, []);
-    const logoutUser = useCallback((callback) => {
-        logoutAuthUser(() => {
-            dispatch({ type: "CLEAR_AUTH" });
-            callback?.();
-        });
-    }, []);
-    const getToken = useCallback(() => {
-        return getAuthToken();
-    }, []);
-    // API request interceptor to add auth token
-    useEffect(() => {
-        ApiInstance.client.addGlobalRequestInterceptor(async (config) => {
-            const token = getAuthToken();
-            if (token?.access_token) {
-                config.headers = {
-                    ...config.headers,
-                    Authorization: `Bearer ${token?.access_token}`,
-                };
-            }
-            return config;
-        });
-        // Response interceptor to handle token refresh
-        ApiInstance.client.addGlobalErrorInterceptor(async (error) => {
-            if (error.status === 401) {
-                try {
-                    logoutUser(() => {
-                        // Redirect to login page or handle unauthorized access
-                    });
-                }
-                catch (refreshError) {
-                    console.error("Token refresh failed:", refreshError);
-                    dispatch({ type: "SET_ERROR", payload: "Session expired. Please log in again." });
-                }
-            }
-            return error;
-        });
-        refreshUser();
-    }, []);
-    // Authentication methods
-    const refreshUser = useCallback(async () => {
-        dispatch({ type: "SET_LOADING", payload: true });
-        dispatch({ type: "SET_ERROR", payload: null });
-        ApiInstance.CORE.get(apiEndpoints.auth.profile)
-            .then((res) => {
-            const user = res.data;
-            dispatch({ type: "SET_USER", payload: user });
-        })
-            .catch((err) => {
-            dispatch({ type: "SET_ERROR", payload: err.message || "Login failed" });
-        })
-            .finally(() => {
-            dispatch({ type: "SET_LOADING", payload: false });
-        });
-    }, []);
-    // Utility methods
-    useCallback(() => {
-        dispatch({ type: "SET_ERROR", payload: null });
-    }, []);
-    // Notify auth state changes
-    useEffect(() => {
-        mergedConfig.onAuthStateChange(state);
-    }, [state, mergedConfig.onAuthStateChange]);
-    const contextValue = {
-        ...state,
-        getToken,
-        updateToken,
-        logout: logoutUser,
-        refreshUser,
-    };
-    return jsx(AuthContext.Provider, { value: contextValue, children: children });
-};
-// Hook to use auth context
-const useAuth = () => {
-    const context = useContext(AuthContext);
-    if (context === undefined) {
-        throw new Error("useAuth must be used within an AuthProvider");
-    }
-    return context;
-};
 
 function ThemeToggle() {
     const { theme, setTheme } = z();

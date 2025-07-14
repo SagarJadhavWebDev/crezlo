@@ -2731,6 +2731,11 @@
       rotate: 180deg;
     }
   }
+  .sidebar-expanded\:bg-red-500 {
+    &:is(.sidebar-expanded *) {
+      background-color: var(--color-red-500);
+    }
+  }
   .lg\:sidebar-expanded\:block {
     @media (width >= 64rem) {
       &:is(.sidebar-expanded *) {
@@ -2749,6 +2754,13 @@
     @media (width >= 64rem) {
       &:is(.sidebar-expanded *) {
         width: calc(var(--spacing) * 64) !important;
+      }
+    }
+  }
+  .lg\:sidebar-expanded\:bg-red-500 {
+    @media (width >= 64rem) {
+      &:is(.sidebar-expanded *) {
+        background-color: var(--color-red-500);
       }
     }
   }

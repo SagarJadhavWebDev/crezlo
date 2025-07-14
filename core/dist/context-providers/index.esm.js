@@ -583,11 +583,11 @@ const useAuth = () => {
 
 const AppContext = createContext({
     sidebarOpen: true,
-    setSidebarOpen: () => false,
+    setSidebarOpen: (value) => { },
     sidebarExpanded: true,
-    setSidebarExpanded: () => false,
+    setSidebarExpanded: (value) => { },
 });
-function AppProvider({ children, }) {
+function AppProvider({ children }) {
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const [sidebarExpanded, setSidebarExpanded] = useState(true);
     return (jsx(AppContext.Provider, { value: {
