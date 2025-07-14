@@ -109,7 +109,7 @@ export default function Sidebar({
           <Logo imageUrl={logoUrl} label={logoLabel} />
         </div>
 
-        <div className="space-y-0">
+        <div className="space-y-0 flex-1">
           {menus?.map((menu, index) => (
             <div key={index}>
               {menu?.name && (
@@ -200,7 +200,7 @@ export default function Sidebar({
         </div>
 
         {/* Expand / collapse button */}
-        <div className={"pt-3 hidden lg:inline-flex 2xl:hidden justify-between items-center  mt-auto"}>
+        <div className={"flex justify-between items-center mb-4"}>
           {sidebarExpanded ? (
             <SidebarLink href={marketPlaceMenu?.href} active={segments?.includes(marketPlaceMenu?.value)}>
               <div className="flex items-center">
@@ -225,26 +225,24 @@ export default function Sidebar({
               </div>
             </SidebarLink>
           ) : null}
-          <div className="w-12 pl-4 pr-3 py-2">
-            <button
-              className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
-              onClick={() => {
-                console.log("SETTING", sidebarExpanded, sidebarOpen);
-                setSidebarExpanded(!sidebarExpanded);
-              }}
+          <button
+            className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
+            onClick={() => {
+              console.log("SETTING", sidebarExpanded, sidebarOpen);
+              setSidebarExpanded(!sidebarExpanded);
+            }}
+          >
+            <span className="sr-only">Expand / collapse sidebar</span>
+            <svg
+              className="shrink-0 fill-current text-gray-400 dark:text-gray-500 sidebar-expanded:rotate-180"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
             >
-              <span className="sr-only">Expand / collapse sidebar</span>
-              <svg
-                className="shrink-0 fill-current text-gray-400 dark:text-gray-500 sidebar-expanded:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-              >
-                <path d="M15 16a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v14a1 1 0 0 1-1 1ZM8.586 7H1a1 1 0 1 0 0 2h7.586l-2.793 2.793a1 1 0 1 0 1.414 1.414l4.5-4.5A.997.997 0 0 0 12 8.01M11.924 7.617a.997.997 0 0 0-.217-.324l-4.5-4.5a1 1 0 0 0-1.414 1.414L8.586 7M12 7.99a.996.996 0 0 0-.076-.373Z" />
-              </svg>
-            </button>
-          </div>
+              <path d="M15 16a1 1 0 0 1-1-1V1a1 1 0 1 1 2 0v14a1 1 0 0 1-1 1ZM8.586 7H1a1 1 0 1 0 0 2h7.586l-2.793 2.793a1 1 0 1 0 1.414 1.414l4.5-4.5A.997.997 0 0 0 12 8.01M11.924 7.617a.997.997 0 0 0-.217-.324l-4.5-4.5a1 1 0 0 0-1.414 1.414L8.586 7M12 7.99a.996.996 0 0 0-.076-.373Z" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

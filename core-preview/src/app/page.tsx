@@ -1,12 +1,13 @@
 "use client";
-import { Sidebar } from "core/components";
+import { Sidebar, AuthHeader } from "core/components";
 import { useAppProvider } from "core/context-providers";
 
 export default function Home() {
   const { sidebarExpanded, setSidebarExpanded, sidebarOpen } = useAppProvider();
   console.log("sidebarExpanded", sidebarExpanded, sidebarOpen);
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex  overflow-y-hidden overflow-x-hidden">
       <Sidebar
         menus={[
           {
@@ -126,6 +127,13 @@ export default function Home() {
           },
         ]}
       />
+
+      <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+        {/*  Site header */}
+        <AuthHeader onSubscriptionClick={() => {}} />
+
+        <main className={`grow [&>*:first-child]:scroll-mt-16 dark:bg-slate-900 bg-[rgb(243 244 246)]`}>{"children"}</main>
+      </div>
     </div>
   );
 }

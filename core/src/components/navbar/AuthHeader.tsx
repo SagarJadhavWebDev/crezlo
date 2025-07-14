@@ -4,12 +4,12 @@ import { useAppProvider } from "../../context-providers";
 import ThemeToggle from "./theme-toggle";
 import DropdownProfile from "./dropdown-profile";
 
-interface HeaderProps {
+interface AuthHeaderProps {
   variant?: "default" | "v2" | "v3";
   items?: ReactNode[] | ReactNode;
   onSubscriptionClick?: () => void;
 }
-export function Header({ variant = "default", items, onSubscriptionClick }: HeaderProps) {
+export function AuthHeader({ variant = "default", items, onSubscriptionClick }: AuthHeaderProps) {
   const { sidebarOpen, setSidebarOpen } = useAppProvider();
 
   return (
