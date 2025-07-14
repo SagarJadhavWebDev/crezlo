@@ -11,11 +11,20 @@ export interface MenuItem {
     subMenu?: SubMenu[];
     badge?: string | number;
 }
+export interface Menu {
+    name?: string;
+    items: MenuItem[];
+}
 interface SidebarProps {
     variant?: "default" | "v2";
-    menuItems: MenuItem[];
+    menus: Menu[];
     logoUrl?: string;
     logoLabel?: string;
+    marketPlaceMenu?: MarketPlaceMenuItem;
 }
-export default function Sidebar({ variant, menuItems, logoLabel, logoUrl, }: SidebarProps): import("react/jsx-runtime").JSX.Element;
+interface MarketPlaceMenuItem {
+    value?: string;
+    href?: string;
+}
+export default function Sidebar({ variant, menus, logoLabel, logoUrl, marketPlaceMenu, }: SidebarProps): import("react/jsx-runtime").JSX.Element;
 export {};

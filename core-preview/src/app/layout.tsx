@@ -10,7 +10,9 @@ export default function RootPreviewLayout({
   return (
     <RootLayout>
       <AppProvider>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          {children}
+          </AuthProvider>
       </AppProvider>
     </RootLayout>
   );
