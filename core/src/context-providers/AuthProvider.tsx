@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, useEffect, useCallback, ReactNode } from "react";
 import { setCookieJSON } from "../utils/cookieManager";
-import { User, AuthToken, AuthState, AuthContextValue, AuthProviderConfig, AuthAction } from "../types/auth";
+import { User, AuthToken, AuthState, AuthContextValue, AuthProviderConfig, AuthAction } from "../types/auth.type";
 import { getAuthToken, logoutAuthUser } from "../utils/auth.utils";
 import { ApiInstance } from "../utils";
 import { envConstants } from "../constants";
@@ -146,6 +146,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     dispatch({ type: "SET_ERROR", payload: null });
     ApiInstance.CORE.get<User>(apiEndpoints.auth.profile + "0197f97e-f8f0-7142-838e-468a1e735d6d")
       .then((res) => {
+        // @ts-ignore
         const user = res?.user;
         dispatch({ type: "SET_USER", payload: user });
       })

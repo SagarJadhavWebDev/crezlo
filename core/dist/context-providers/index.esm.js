@@ -557,6 +557,7 @@ const AuthProvider = ({ children, config }) => {
         dispatch({ type: "SET_ERROR", payload: null });
         ApiInstance.CORE.get(apiEndpoints.auth.profile + "0197f97e-f8f0-7142-838e-468a1e735d6d")
             .then((res) => {
+            // @ts-ignore
             const user = res?.user;
             dispatch({ type: "SET_USER", payload: user });
         })

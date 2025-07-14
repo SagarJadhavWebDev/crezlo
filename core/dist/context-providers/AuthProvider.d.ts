@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { AuthContextValue, AuthProviderConfig } from "../types/auth";
+import { AuthContextValue, AuthProviderConfig } from "../types/auth.type";
 declare const AuthContext: React.Context<AuthContextValue>;
 export interface AuthProviderProps {
     children: ReactNode;

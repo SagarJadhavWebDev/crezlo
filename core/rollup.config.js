@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
-const entries = ["index", "components/index", "hooks/index", "utils/index", "constants/index", "context-providers/index"];
+const entries = ["index", "components/index", "hooks/index", "utils/index", "constants/index", "context-providers/index","types/index"];
 
 const configs = entries.map((entry) => ({
   input: `src/${entry}.ts`,
