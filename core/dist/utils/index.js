@@ -108,20 +108,22 @@ class ApiClient {
                 data = (await response.text());
             }
             // Create response object
-            const apiResponse = {
-                data,
-                status: response.status,
-                statusText: response.statusText,
-                headers: Object.fromEntries(response.headers.entries()),
-            };
+            // const apiResponse: ApiResponse<T> = {
+            //   data,
+            //   status: response.status,
+            //   statusText: response.statusText,
+            //   headers: Object.fromEntries(response.headers.entries()),
+            // };
+            const apiResponse = data;
             // Check if response is successful
             if (!response.ok) {
-                const error = {
-                    message: `Request failed with status ${response.status}`,
-                    status: response.status,
-                    statusText: response.statusText,
-                    data,
-                };
+                // const error: ApiError = {
+                //   message: `Request failed with status ${response.status}`,
+                //   status: response.status,
+                //   statusText: response.statusText,
+                //   data,
+                // };
+                const error = data;
                 throw await this.applyInterceptors("error", error);
             }
             // Apply response interceptors
@@ -169,16 +171,16 @@ class CookieManager {
     config;
     constructor(config = {}) {
         this.config = {
-            defaultPath: '/',
-            defaultSecure: typeof window !== 'undefined' ? window.location.protocol === 'https:' : false,
-            defaultSameSite: 'lax',
+            defaultPath: "/",
+            defaultSecure: typeof window !== "undefined" ? window.location.protocol === "https:" : false,
+            defaultSameSite: "lax",
             ...config,
         };
     }
     // Set a cookie
     set(name, value, options = {}) {
-        if (typeof document === 'undefined') {
-            console.warn('CookieManager: document is not available (SSR environment)');
+        if (typeof document === "undefined") {
+            console.warn("CookieManager: document is not available (SSR environment)");
             return false;
         }
         try {
@@ -186,10 +188,10 @@ class CookieManager {
             let cookieString = `${encodeURIComponent(cookieName)}=${encodeURIComponent(value)}`;
             // Handle expires
             if (options.expires) {
-                if (typeof options.expires === 'number') {
+                if (typeof options.expires === "number") {
                     // Convert days to date
                     const date = new Date();
-                    date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+                    date.setTime(date.getTime() + options.expires * 24 * 60 * 60 * 1000);
                     cookieString += `; expires=${date.toUTCString()}`;
                 }
                 else {
@@ -213,11 +215,11 @@ class CookieManager {
             // Handle secure
             const secure = options.secure ?? this.config.defaultSecure;
             if (secure) {
-                cookieString += '; secure';
+                cookieString += "; secure";
             }
             // Handle httpOnly (note: this can't be set via JavaScript)
             if (options.httpOnly) {
-                console.warn('CookieManager: httpOnly flag cannot be set via JavaScript');
+                console.warn("CookieManager: httpOnly flag cannot be set via JavaScript");
             }
             // Handle sameSite
             const sameSite = options.sameSite ?? this.config.defaultSameSite;
@@ -228,19 +230,19 @@ class CookieManager {
             return true;
         }
         catch (error) {
-            console.error('CookieManager: Error setting cookie', error);
+            console.error("CookieManager: Error setting cookie", error);
             return false;
         }
     }
     // Get a cookie value
     get(name) {
-        if (typeof document === 'undefined') {
+        if (typeof document === "undefined") {
             return null;
         }
         try {
             const cookieName = this.config.prefix ? `${this.config.prefix}${name}` : name;
             const encodedName = encodeURIComponent(cookieName);
-            const cookies = document.cookie.split(';');
+            const cookies = document.cookie.split(";");
             for (let cookie of cookies) {
                 cookie = cookie.trim();
                 if (cookie.startsWith(`${encodedName}=`)) {
@@ -250,7 +252,7 @@ class CookieManager {
             return null;
         }
         catch (error) {
-            console.error('CookieManager: Error getting cookie', error);
+            console.error("CookieManager: Error getting cookie", error);
             return null;
         }
     }
@@ -263,7 +265,7 @@ class CookieManager {
             return JSON.parse(value);
         }
         catch (error) {
-            console.error('CookieManager: Error parsing JSON cookie', error);
+            console.error("CookieManager: Error parsing JSON cookie", error);
             return null;
         }
     }
@@ -274,13 +276,13 @@ class CookieManager {
             return this.set(name, jsonString, options);
         }
         catch (error) {
-            console.error('CookieManager: Error stringifying JSON cookie', error);
+            console.error("CookieManager: Error stringifying JSON cookie", error);
             return false;
         }
     }
     // Remove a cookie
     remove(name, options = {}) {
-        return this.set(name, '', {
+        return this.set(name, "", {
             ...options,
             expires: new Date(0), // Set to past date
             maxAge: 0,
@@ -292,36 +294,34 @@ class CookieManager {
     }
     // Get all cookies as an object
     getAll() {
-        if (typeof document === 'undefined') {
+        if (typeof document === "undefined") {
             return {};
         }
         try {
             const cookies = {};
-            const cookieStrings = document.cookie.split(';');
+            const cookieStrings = document.cookie.split(";");
             for (let cookie of cookieStrings) {
                 cookie = cookie.trim();
-                const [encodedName, ...valueParts] = cookie.split('=');
+                const [encodedName, ...valueParts] = cookie.split("=");
                 if (encodedName && valueParts.length > 0) {
                     const name = decodeURIComponent(encodedName);
-                    const value = decodeURIComponent(valueParts.join('='));
+                    const value = decodeURIComponent(valueParts.join("="));
                     // Remove prefix if it exists
-                    const finalName = this.config.prefix && name.startsWith(this.config.prefix)
-                        ? name.substring(this.config.prefix.length)
-                        : name;
+                    const finalName = this.config.prefix && name.startsWith(this.config.prefix) ? name.substring(this.config.prefix.length) : name;
                     cookies[finalName] = value;
                 }
             }
             return cookies;
         }
         catch (error) {
-            console.error('CookieManager: Error getting all cookies', error);
+            console.error("CookieManager: Error getting all cookies", error);
             return {};
         }
     }
     // Clear all cookies (only those with the same prefix if configured)
     clear(options = {}) {
         const allCookies = this.getAll();
-        Object.keys(allCookies).forEach(name => {
+        Object.keys(allCookies).forEach((name) => {
             this.remove(name, options);
         });
     }
@@ -334,17 +334,17 @@ class CookieManager {
     }
     // Get total cookies size
     getTotalSize() {
-        if (typeof document === 'undefined')
+        if (typeof document === "undefined")
             return 0;
         return new Blob([document.cookie]).size;
     }
     // Check if cookies are enabled
     isEnabled() {
-        if (typeof document === 'undefined')
+        if (typeof document === "undefined")
             return false;
         try {
-            const testCookie = '__cookie_test__';
-            this.set(testCookie, 'test');
+            const testCookie = "__cookie_test__";
+            this.set(testCookie, "test");
             const isEnabled = this.has(testCookie);
             this.remove(testCookie);
             return isEnabled;
@@ -355,7 +355,10 @@ class CookieManager {
     }
 }
 // Default cookie manager instance
-const cookieManager = new CookieManager();
+const cookieManager = new CookieManager({
+    defaultPath: "/",
+    defaultDomain: ".crezlo.local",
+});
 // Utility functions for quick access
 const setCookie = (name, value, options) => {
     return cookieManager.set(name, value, options);
@@ -444,16 +447,18 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
     //       await logout();
     //     }
     //   }
+    console.log("Response received:", error);
     return error;
 });
 ApiClient.addGlobalResponseInterceptor(async (response) => {
     // Handle specific response status codes or data transformations here
+    console.log("Response received:", response.data);
     if (response.status === 401) {
         // Handle unauthorized access, e.g., redirect to login
         console.error("Unauthorized access - redirecting to login");
         // You can implement a redirect or logout logic here
     }
-    return response;
+    return response.data;
 });
 const createClient = (baseURL) => {
     return ApiClient.getInstance({ baseURL });

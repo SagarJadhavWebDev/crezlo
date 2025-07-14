@@ -33,17 +33,19 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
   //       await logout();
   //     }
   //   }
+  console.log("Response received:", error);
   return error;
 });
 
 ApiClient.addGlobalResponseInterceptor(async (response) => {
   // Handle specific response status codes or data transformations here
+  console.log("Response received:", response.data);
   if (response.status === 401) {
     // Handle unauthorized access, e.g., redirect to login
     console.error("Unauthorized access - redirecting to login");
     // You can implement a redirect or logout logic here
   }
-  return response;
+  return response.data;
 });
 
 const createApiMethods = (client: ApiClient) => ({

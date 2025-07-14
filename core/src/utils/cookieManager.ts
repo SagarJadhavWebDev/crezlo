@@ -5,14 +5,14 @@ export interface CookieOptions {
   path?: string;
   secure?: boolean;
   httpOnly?: boolean;
-  sameSite?: 'strict' | 'lax' | 'none';
+  sameSite?: "strict" | "lax" | "none";
 }
 
 export interface CookieManagerConfig {
   defaultPath?: string;
   defaultDomain?: string;
   defaultSecure?: boolean;
-  defaultSameSite?: 'strict' | 'lax' | 'none';
+  defaultSameSite?: "strict" | "lax" | "none";
   prefix?: string; // Prefix for all cookie names
 }
 
@@ -21,17 +21,17 @@ export class CookieManager {
 
   constructor(config: CookieManagerConfig = {}) {
     this.config = {
-      defaultPath: '/',
-      defaultSecure: typeof window !== 'undefined' ? window.location.protocol === 'https:' : false,
-      defaultSameSite: 'lax',
+      defaultPath: "/",
+      defaultSecure: typeof window !== "undefined" ? window.location.protocol === "https:" : false,
+      defaultSameSite: "lax",
       ...config,
     };
   }
 
   // Set a cookie
   set(name: string, value: string, options: CookieOptions = {}): boolean {
-    if (typeof document === 'undefined') {
-      console.warn('CookieManager: document is not available (SSR environment)');
+    if (typeof document === "undefined") {
+      console.warn("CookieManager: document is not available (SSR environment)");
       return false;
     }
 
@@ -41,10 +41,10 @@ export class CookieManager {
 
       // Handle expires
       if (options.expires) {
-        if (typeof options.expires === 'number') {
+        if (typeof options.expires === "number") {
           // Convert days to date
           const date = new Date();
-          date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+          date.setTime(date.getTime() + options.expires * 24 * 60 * 60 * 1000);
           cookieString += `; expires=${date.toUTCString()}`;
         } else {
           cookieString += `; expires=${options.expires.toUTCString()}`;
@@ -71,12 +71,12 @@ export class CookieManager {
       // Handle secure
       const secure = options.secure ?? this.config.defaultSecure;
       if (secure) {
-        cookieString += '; secure';
+        cookieString += "; secure";
       }
 
       // Handle httpOnly (note: this can't be set via JavaScript)
       if (options.httpOnly) {
-        console.warn('CookieManager: httpOnly flag cannot be set via JavaScript');
+        console.warn("CookieManager: httpOnly flag cannot be set via JavaScript");
       }
 
       // Handle sameSite
@@ -88,21 +88,21 @@ export class CookieManager {
       document.cookie = cookieString;
       return true;
     } catch (error) {
-      console.error('CookieManager: Error setting cookie', error);
+      console.error("CookieManager: Error setting cookie", error);
       return false;
     }
   }
 
   // Get a cookie value
   get(name: string): string | null {
-    if (typeof document === 'undefined') {
+    if (typeof document === "undefined") {
       return null;
     }
 
     try {
       const cookieName = this.config.prefix ? `${this.config.prefix}${name}` : name;
       const encodedName = encodeURIComponent(cookieName);
-      const cookies = document.cookie.split(';');
+      const cookies = document.cookie.split(";");
 
       for (let cookie of cookies) {
         cookie = cookie.trim();
@@ -113,7 +113,7 @@ export class CookieManager {
 
       return null;
     } catch (error) {
-      console.error('CookieManager: Error getting cookie', error);
+      console.error("CookieManager: Error getting cookie", error);
       return null;
     }
   }
@@ -126,7 +126,7 @@ export class CookieManager {
     try {
       return JSON.parse(value);
     } catch (error) {
-      console.error('CookieManager: Error parsing JSON cookie', error);
+      console.error("CookieManager: Error parsing JSON cookie", error);
       return null;
     }
   }
@@ -137,14 +137,14 @@ export class CookieManager {
       const jsonString = JSON.stringify(value);
       return this.set(name, jsonString, options);
     } catch (error) {
-      console.error('CookieManager: Error stringifying JSON cookie', error);
+      console.error("CookieManager: Error stringifying JSON cookie", error);
       return false;
     }
   }
 
   // Remove a cookie
-  remove(name: string, options: Pick<CookieOptions, 'path' | 'domain'> = {}): boolean {
-    return this.set(name, '', {
+  remove(name: string, options: Pick<CookieOptions, "path" | "domain"> = {}): boolean {
+    return this.set(name, "", {
       ...options,
       expires: new Date(0), // Set to past date
       maxAge: 0,
@@ -158,43 +158,41 @@ export class CookieManager {
 
   // Get all cookies as an object
   getAll(): Record<string, string> {
-    if (typeof document === 'undefined') {
+    if (typeof document === "undefined") {
       return {};
     }
 
     try {
       const cookies: Record<string, string> = {};
-      const cookieStrings = document.cookie.split(';');
+      const cookieStrings = document.cookie.split(";");
 
       for (let cookie of cookieStrings) {
         cookie = cookie.trim();
-        const [encodedName, ...valueParts] = cookie.split('=');
-        
+        const [encodedName, ...valueParts] = cookie.split("=");
+
         if (encodedName && valueParts.length > 0) {
           const name = decodeURIComponent(encodedName);
-          const value = decodeURIComponent(valueParts.join('='));
-          
+          const value = decodeURIComponent(valueParts.join("="));
+
           // Remove prefix if it exists
-          const finalName = this.config.prefix && name.startsWith(this.config.prefix)
-            ? name.substring(this.config.prefix.length)
-            : name;
-            
+          const finalName = this.config.prefix && name.startsWith(this.config.prefix) ? name.substring(this.config.prefix.length) : name;
+
           cookies[finalName] = value;
         }
       }
 
       return cookies;
     } catch (error) {
-      console.error('CookieManager: Error getting all cookies', error);
+      console.error("CookieManager: Error getting all cookies", error);
       return {};
     }
   }
 
   // Clear all cookies (only those with the same prefix if configured)
-  clear(options: Pick<CookieOptions, 'path' | 'domain'> = {}): void {
+  clear(options: Pick<CookieOptions, "path" | "domain"> = {}): void {
     const allCookies = this.getAll();
-    
-    Object.keys(allCookies).forEach(name => {
+
+    Object.keys(allCookies).forEach((name) => {
       this.remove(name, options);
     });
   }
@@ -203,24 +201,24 @@ export class CookieManager {
   getSize(name: string): number {
     const value = this.get(name);
     if (value === null) return 0;
-    
+
     return new Blob([value]).size;
   }
 
   // Get total cookies size
   getTotalSize(): number {
-    if (typeof document === 'undefined') return 0;
-    
+    if (typeof document === "undefined") return 0;
+
     return new Blob([document.cookie]).size;
   }
 
   // Check if cookies are enabled
   isEnabled(): boolean {
-    if (typeof document === 'undefined') return false;
-    
+    if (typeof document === "undefined") return false;
+
     try {
-      const testCookie = '__cookie_test__';
-      this.set(testCookie, 'test');
+      const testCookie = "__cookie_test__";
+      this.set(testCookie, "test");
       const isEnabled = this.has(testCookie);
       this.remove(testCookie);
       return isEnabled;
@@ -231,7 +229,10 @@ export class CookieManager {
 }
 
 // Default cookie manager instance
-export const cookieManager = new CookieManager();
+export const cookieManager = new CookieManager({
+  defaultPath: "/",
+  defaultDomain: ".crezlo.local",
+});
 
 // Utility functions for quick access
 export const setCookie = (name: string, value: string, options?: CookieOptions): boolean => {
@@ -250,7 +251,7 @@ export const setCookieJSON = (name: string, value: any, options?: CookieOptions)
   return cookieManager.setJSON(name, value, options);
 };
 
-export const removeCookie = (name: string, options?: Pick<CookieOptions, 'path' | 'domain'>): boolean => {
+export const removeCookie = (name: string, options?: Pick<CookieOptions, "path" | "domain">): boolean => {
   return cookieManager.remove(name, options);
 };
 
@@ -262,7 +263,7 @@ export const getAllCookies = (): Record<string, string> => {
   return cookieManager.getAll();
 };
 
-export const clearAllCookies = (options?: Pick<CookieOptions, 'path' | 'domain'>): void => {
+export const clearAllCookies = (options?: Pick<CookieOptions, "path" | "domain">): void => {
   return cookieManager.clear(options);
 };
 
@@ -274,4 +275,3 @@ export const isCookiesEnabled = (): boolean => {
 export const createCookieManager = (config: CookieManagerConfig): CookieManager => {
   return new CookieManager(config);
 };
-

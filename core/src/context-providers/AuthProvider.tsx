@@ -135,11 +135,18 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
   // Authentication methods
   const refreshUser = useCallback(async () => {
+    // setCookieJSON("token", {
+    //   token_type: "Bearer",
+    //   access_token:
+    //     "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjg1MTE0MWY2ODc2ZGY0ZTk3N2YzZDQ3OWQ3Y2JkNjlhOWFlMWRlNjI2NmI0NWM4ZDM3NzkwMzBlNmQ5NzU1ZTZmMjhhODRiNGFmOTIzYzgiLCJpYXQiOjE3NTI0ODcxNzMuOTcyMDU3LCJuYmYiOjE3NTI0ODcxNzMuOTcyMDYsImV4cCI6MTc1NTA3OTE3My45NDA5MTUsInN1YiI6IjAxOTdmOTdlLWY4ZjAtNzE0Mi04MzhlLTQ2OGExZTczNWQ2ZCIsInNjb3BlcyI6W10sInBheWxvYWQiOnsiYWNjb3VudElkIjoiMDE5N2Y5ODAtNTdiMC03MzQ1LTk1NjYtNGY4YzBmMWQ1MTQ4Iiwic2hvcnRDb2RlIjoiRG9JOW1rZFVuVUUrQW91K29aekdxMlJ0ZERST0wwbFplU3N6ZDFSeVZsUTJURk16YzNGek4xUldVVkphU1ZOT2VtUnZTamRwTDFVd1JGVTkifX0.ooczmBYP8AAqxAbkhjTtte5_6JkEptvtVtHdZ6ww36Dm4rULeqL-RZa7_dCL6HLBQKn2NMm0AKlKQlWzCNEl6u3IG81ZJIe1P3hBcZUpnRb7RyOcEMuVKDl56ZJ6ipthAJ9BQ9L5a4MC3RFnb1oH8GrIMHxBemDYS3Fj47aFZNOlToT4xddeBtdwE6nLTgYphFg3ueR1noIJ56431PEYo09yl8bparUA4ptll_moi4HDRQf0CTYwFZXsJubcXa5tT-e9L8G_WW26JuyaN-RbXi9OJtVbA33vvED-4ddM5-JQr_mo_Ph5Mzywm-u1PFpTgKXvG8h_3z_Ko7gaetJ4WKqBCaLhna7Z_DabUr7WQGKprpWd7Bm_tQoVxu2CdBfJoLR7jCbq7pMYV0M7ZtvpFApxYXsciDhJ57aD0VPfVy194uatrUsMc7oo7tHtcTYehxh8QjD4-xsanG8-5t4oMcCFuk_KY2-ONKiQJ-5REf5E7ktORs4qUDW8_7NBDasWzerGIL_WYZpnLPFIRrotX5jwa_vHg077N0D6hGZm0IJ7TneihRF87BLdTqW4oSxbtyT14iOsK8GQLo9FkQTPbxFWoxpVPKtsPGAPXm0WSHlCgxBCBqJrdc1K2V2IzFmQf5dgfddqX5cRHV3FfbJioXqagBK53Lc2ElW3CCobT-c",
+    //   expires_at: "2025-08-13T09:59:33.000000Z",
+    // });
+    // return;
     dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_ERROR", payload: null });
-    ApiInstance.CORE.get(apiEndpoints.auth.profile)
+    ApiInstance.CORE.get<User>(apiEndpoints.auth.profile + "0197f97e-f8f0-7142-838e-468a1e735d6d")
       .then((res) => {
-        const user: User = res.data;
+        const user = res?.user;
         dispatch({ type: "SET_USER", payload: user });
       })
       .catch((err) => {

@@ -5,13 +5,13 @@ export interface CookieOptions {
     path?: string;
     secure?: boolean;
     httpOnly?: boolean;
-    sameSite?: 'strict' | 'lax' | 'none';
+    sameSite?: "strict" | "lax" | "none";
 }
 export interface CookieManagerConfig {
     defaultPath?: string;
     defaultDomain?: string;
     defaultSecure?: boolean;
-    defaultSameSite?: 'strict' | 'lax' | 'none';
+    defaultSameSite?: "strict" | "lax" | "none";
     prefix?: string;
 }
 export declare class CookieManager {
@@ -21,10 +21,10 @@ export declare class CookieManager {
     get(name: string): string | null;
     getJSON<T = any>(name: string): T | null;
     setJSON(name: string, value: any, options?: CookieOptions): boolean;
-    remove(name: string, options?: Pick<CookieOptions, 'path' | 'domain'>): boolean;
+    remove(name: string, options?: Pick<CookieOptions, "path" | "domain">): boolean;
     has(name: string): boolean;
     getAll(): Record<string, string>;
-    clear(options?: Pick<CookieOptions, 'path' | 'domain'>): void;
+    clear(options?: Pick<CookieOptions, "path" | "domain">): void;
     getSize(name: string): number;
     getTotalSize(): number;
     isEnabled(): boolean;

@@ -168,21 +168,23 @@ export class ApiClient {
       }
 
       // Create response object
-      const apiResponse: ApiResponse<T> = {
-        data,
-        status: response.status,
-        statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries()),
-      };
+      // const apiResponse: ApiResponse<T> = {
+      //   data,
+      //   status: response.status,
+      //   statusText: response.statusText,
+      //   headers: Object.fromEntries(response.headers.entries()),
+      // };
+      const apiResponse: ApiResponse<T> = data as ApiResponse<T>;
 
       // Check if response is successful
       if (!response.ok) {
-        const error: ApiError = {
-          message: `Request failed with status ${response.status}`,
-          status: response.status,
-          statusText: response.statusText,
-          data,
-        };
+        // const error: ApiError = {
+        //   message: `Request failed with status ${response.status}`,
+        //   status: response.status,
+        //   statusText: response.statusText,
+        //   data,
+        // };
+        const error: ApiError = data as ApiError;
 
         throw await this.applyInterceptors("error", error);
       }

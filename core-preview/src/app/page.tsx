@@ -1,11 +1,12 @@
 "use client";
 import { Sidebar, AuthHeader } from "core/components";
-import { useAppProvider } from "core/context-providers";
+import { useAppProvider, useAuth } from "core/context-providers";
 
 export default function Home() {
   const { sidebarExpanded, setSidebarExpanded, sidebarOpen } = useAppProvider();
-  console.log("sidebarExpanded", sidebarExpanded, sidebarOpen);
-  
+  const { refreshUser } = useAuth();
+  console.log("USER:", useAuth());
+
   return (
     <div className="flex  overflow-y-hidden overflow-x-hidden">
       <Sidebar
@@ -132,7 +133,14 @@ export default function Home() {
         {/*  Site header */}
         <AuthHeader onSubscriptionClick={() => {}} />
 
-        <main className={`grow [&>*:first-child]:scroll-mt-16 dark:bg-slate-900 bg-[rgb(243 244 246)]`}>{"children"}</main>
+        <main
+          className={`grow [&>*:first-child]:scroll-mt-16 dark:bg-slate-900 bg-[rgb(243 244 246)]`}
+          onClick={() => {
+            refreshUser();
+          }}
+        >
+          {"children"}
+        </main>
       </div>
     </div>
   );

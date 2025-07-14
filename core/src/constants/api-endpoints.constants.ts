@@ -1,6 +1,6 @@
 export const apiEndpoints = {
   auth: {
-    profile: "user/profile",
+    profile: "user/profile/",
     logout: "auth/logout/",
   },
 };
