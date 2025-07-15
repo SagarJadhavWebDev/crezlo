@@ -50,7 +50,7 @@ jobs:
         # if git ls-remote --exit-code --heads origin dist; then
         #   git checkout dist
         # else
-          git checkout --orphan release/$VERSION
+          git checkout --orphan release/${VERSION}
         # fi
         # Remove all contents except .git
          # find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
@@ -85,7 +85,7 @@ jobs:
         ls -la
         rm -rf core
 
-    - name: Commit and push to release/$VERSION
+    - name: Commit and push to release/${VERSION}
       run: |
         git add .
         if git diff --staged --quiet; then
@@ -93,9 +93,9 @@ jobs:
           exit 0
         fi
         git commit -m "Release ${{ steps.get_version.outputs.version }}"
-        git push origin release/$VERSION --force
+        git push origin release/${VERSION} --force
 
-    - name: Tag release/$VERSION branch with version
+    - name: Tag release/${VERSION} branch with version
       run: |
         VERSION=${{ steps.get_version.outputs.version }}
         git tag -f "$VERSION"
