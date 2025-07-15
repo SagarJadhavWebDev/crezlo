@@ -55,24 +55,7 @@ jobs:
         find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
 
     - name: Copy core/dist to root (improved)
-      run: |
-        # Check if core/dist exists and has content
-        if [ ! -d "core/dist" ]; then
-          echo "Error: core/dist directory does not exist"
-          exit 1
-        fi
-        
-        # Count files in core/dist
-        file_count=$(find core/dist -type f | wc -l)
-        if [ "$file_count" -eq 0 ]; then
-          echo "Error: core/dist directory is empty (no files found)"
-          echo "Directory contents:"
-          ls -la core/dist/
-          exit 1
-        fi
-        
-        echo "Found $file_count files in core/dist"
-        
+      run: |        
         # Copy files using a more robust method
         cd core/dist
         cp -r . ../../
