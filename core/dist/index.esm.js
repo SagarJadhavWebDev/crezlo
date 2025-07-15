@@ -113,7 +113,7 @@ class CookieManager {
             return true;
         }
         catch (error) {
-            console.error("CookieManager: Error setting cookie:", error);
+            console.error("CookieManager: Error setting cookie", error);
             return false;
         }
     }
@@ -3687,20 +3687,12 @@ var navigation$1 = {exports: {}};
 
 var appRouterContext_sharedRuntime = {};
 
-var _interop_require_default = {};
+var _interop_require_default$1 = {};
 
-var hasRequired_interop_require_default;
-
-function require_interop_require_default () {
-	if (hasRequired_interop_require_default) return _interop_require_default;
-	hasRequired_interop_require_default = 1;
-
-	function _interop_require_default$1(obj) {
-	    return obj && obj.__esModule ? obj : { default: obj };
-	}
-	_interop_require_default._ = _interop_require_default$1;
-	return _interop_require_default;
+function _interop_require_default(obj) {
+    return obj && obj.__esModule ? obj : { default: obj };
 }
+_interop_require_default$1._ = _interop_require_default;
 
 (function (exports) {
 	'use client';
@@ -3730,7 +3722,7 @@ function require_interop_require_default () {
 	        return TemplateContext;
 	    }
 	});
-	const _interop_require_default = require_interop_require_default();
+	const _interop_require_default = _interop_require_default$1;
 	const _react = /*#__PURE__*/ _interop_require_default._(React__default);
 	const AppRouterContext = _react.default.createContext(null);
 	const LayoutRouterContext = _react.default.createContext(null);
@@ -8239,7 +8231,7 @@ function requireRouterContext_sharedRuntime () {
 		        return RouterContext;
 		    }
 		});
-		const _interop_require_default = require_interop_require_default();
+		const _interop_require_default = _interop_require_default$1;
 		const _react = /*#__PURE__*/ _interop_require_default._(React__default);
 		const RouterContext = _react.default.createContext(null);
 		if (process.env.NODE_ENV !== 'production') {

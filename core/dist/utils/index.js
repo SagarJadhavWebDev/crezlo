@@ -244,7 +244,7 @@ class CookieManager {
             return true;
         }
         catch (error) {
-            console.error("CookieManager: Error setting cookie:", error);
+            console.error("CookieManager: Error setting cookie", error);
             return false;
         }
     }
