@@ -53,8 +53,9 @@ jobs:
           git checkout --orphan dist
         fi
         # Remove all contents except .git
-        # find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
-          find . -mindepth 1 ! -name "core" ! -path "./core/*" ! -name ".git" ! -path "./.git/*" -exec rm -rf {} + 2>/dev/null || true
+         find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
+         git pull origin main
+         find . -mindepth 1 ! -name "core" ! -path "./core/*" ! -name ".git" ! -path "./.git/*" -exec rm -rf {} + 2>/dev/null || true
 
     - name: Copy core/dist to root (improved)
       run: |        
@@ -82,6 +83,7 @@ jobs:
         
         echo "Files copied successfully. Current directory contents:"
         ls -la
+        rm -rf core
 
     - name: Commit and push to dist
       run: |
