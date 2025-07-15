@@ -9,7 +9,6 @@ on:
 jobs:
   release-to-dist:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -22,7 +21,6 @@ jobs:
       run: |
         COMMIT_MSG="${{ github.event.head_commit.message }}"
         echo "Commit message: $COMMIT_MSG"
-
         if [[ "$COMMIT_MSG" =~ ^release:\ (v[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
           VERSION="${BASH_REMATCH[1]}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
@@ -31,6 +29,15 @@ jobs:
           echo "Not a release commit. Exiting."
           exit 1
         fi
+
+    - name: Debug - Check core/dist contents
+      run: |
+        echo "Checking if core/dist directory exists:"
+        ls -la core/
+        echo "Contents of core/dist:"
+        ls -la core/dist/ || echo "Directory is empty or inaccessible"
+        echo "File count in core/dist:"
+        find core/dist -type f | wc -l
 
     - name: Configure Git
       run: |
@@ -44,18 +51,43 @@ jobs:
         else
           git checkout --orphan dist
         fi
+        # Remove all contents except .git
+        find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
 
-        # Remove all contents
-        git rm -rf . > /dev/null 2>&1 || true
-        rm -rf * .[^.]* || true
-
-    - name: Copy core/dist to root
+    - name: Copy core/dist to root (improved)
       run: |
-        cp -r core/dist/* .
+        # Check if core/dist exists and has content
+        if [ ! -d "core/dist" ]; then
+          echo "Error: core/dist directory does not exist"
+          exit 1
+        fi
+        
+        # Count files in core/dist
+        file_count=$(find core/dist -type f | wc -l)
+        if [ "$file_count" -eq 0 ]; then
+          echo "Error: core/dist directory is empty (no files found)"
+          echo "Directory contents:"
+          ls -la core/dist/
+          exit 1
+        fi
+        
+        echo "Found $file_count files in core/dist"
+        
+        # Copy files using a more robust method
+        cd core/dist
+        cp -r . ../../
+        cd ../../
+        
+        echo "Files copied successfully. Current directory contents:"
+        ls -la
 
     - name: Commit and push to dist
       run: |
         git add .
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
         git commit -m "Release ${{ steps.get_version.outputs.version }}"
         git push origin dist --force
 
