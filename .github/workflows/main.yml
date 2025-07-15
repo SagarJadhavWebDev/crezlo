@@ -47,10 +47,13 @@ jobs:
 
     - name: Switch to dist branch and clean
       run: |
+        # Create or switch to the release branch
+        BRANCH_NAME="release/${{ steps.get_version.outputs.version }}"
+        echo "Creating/switching to branch: $BRANCH_NAME"
         # if git ls-remote --exit-code --heads origin dist; then
         #   git checkout dist
         # else
-          git checkout --orphan release/${VERSION}
+           git checkout --orphan "$BRANCH_NAME"
         # fi
         # Remove all contents except .git
          # find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
@@ -85,17 +88,19 @@ jobs:
         ls -la
         rm -rf core
 
-    - name: Commit and push to release/${VERSION}
+    - name: Commit and push to release
       run: |
         git add .
         if git diff --staged --quiet; then
           echo "No changes to commit"
           exit 0
         fi
-        git commit -m "Release ${{ steps.get_version.outputs.version }}"
-        git push origin release/${VERSION} --force
+        VERSION="${{ steps.get_version.outputs.version }}"
+        BRANCH_NAME="release/$VERSION"
+        git commit -m "Release $VERSION"
+        git push origin "$BRANCH_NAME" --force
 
-    - name: Tag release/${VERSION} branch with version
+    - name: Tag release branch with version
       run: |
         VERSION=${{ steps.get_version.outputs.version }}
         git tag -f "$VERSION"
