@@ -47,14 +47,14 @@ jobs:
 
     - name: Switch to dist branch and clean
       run: |
-        if git ls-remote --exit-code --heads origin dist; then
-          git checkout dist
-        else
-          git checkout --orphan dist
-        fi
+        # if git ls-remote --exit-code --heads origin dist; then
+        #   git checkout dist
+        # else
+          git checkout --orphan release/$VERSION
+        # fi
         # Remove all contents except .git
-         find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
-         git pull origin main
+         # find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
+         # git pull origin main
          find . -mindepth 1 ! -name "core" ! -path "./core/*" ! -name ".git" ! -path "./.git/*" -exec rm -rf {} + 2>/dev/null || true
 
     - name: Copy core/dist to root (improved)
@@ -85,7 +85,7 @@ jobs:
         ls -la
         rm -rf core
 
-    - name: Commit and push to dist
+    - name: Commit and push to release/$VERSION
       run: |
         git add .
         if git diff --staged --quiet; then
@@ -93,9 +93,9 @@ jobs:
           exit 0
         fi
         git commit -m "Release ${{ steps.get_version.outputs.version }}"
-        git push origin dist --force
+        git push origin release/$VERSION --force
 
-    - name: Tag dist branch with version
+    - name: Tag release/$VERSION branch with version
       run: |
         VERSION=${{ steps.get_version.outputs.version }}
         git tag -f "$VERSION"
