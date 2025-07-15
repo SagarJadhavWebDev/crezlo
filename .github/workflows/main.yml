@@ -1,206 +1,65 @@
-name: Build and Deploy to Dist Branch
+name: Copy Dist to Dist Branch
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
     paths:
       - 'core/**'
 
 jobs:
-  # Check if this is a release commit
-  check-release:
+  release-to-dist:
+    if: startsWith(github.event.head_commit.message, 'release: v')
     runs-on: ubuntu-latest
-    outputs:
-      is_release: ${{ steps.check.outputs.is_release }}
-      version: ${{ steps.check.outputs.version }}
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Check if release commit
-      id: check
-      run: |
-        COMMIT_MSG="${{ github.event.head_commit.message }}"
-        echo "Commit message: $COMMIT_MSG"
-        
-        if [[ "$COMMIT_MSG" =~ ^release:\ v[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
-          VERSION=$(echo "$COMMIT_MSG" | sed -n 's/^release: \(v[0-9]\+\.[0-9]\+\.[0-9]\+\).*$/\1/p')
-          echo "is_release=true" >> $GITHUB_OUTPUT
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Release detected: $VERSION"
-        else
-          echo "is_release=false" >> $GITHUB_OUTPUT
-          echo "version=" >> $GITHUB_OUTPUT
-          echo "Regular commit detected"
-        fi
 
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    needs: check-release
-    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Check for package-lock.json
-      id: check-lockfile
+
+    - name: Extract version from commit message
+      id: get_version
       run: |
-        if [ -f "core/package-lock.json" ]; then
-          echo "has_lockfile=true" >> $GITHUB_OUTPUT
-          echo "Package-lock.json found"
+        COMMIT_MSG="${{ github.event.head_commit.message }}"
+        if [[ "$COMMIT_MSG" =~ ^release:\ (v[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
+          VERSION="${BASH_REMATCH[1]}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Release version: $VERSION"
         else
-          echo "has_lockfile=false" >> $GITHUB_OUTPUT
-          echo "Package-lock.json not found"
-        fi
-    
-    - name: Setup Node.js (with cache)
-      if: steps.check-lockfile.outputs.has_lockfile == 'true'
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: 'core/package-lock.json'
-    
-    - name: Setup Node.js (without cache)
-      if: steps.check-lockfile.outputs.has_lockfile == 'false'
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-    
-    - name: Install dependencies
-      run: |
-        cd core
-        if [ -f "package-lock.json" ]; then
-          npm ci
-        else
-          npm install
-        fi
-    
-    - name: Update package version (if release)
-      if: needs.check-release.outputs.is_release == 'true'
-      run: |
-        cd core
-        VERSION="${{ needs.check-release.outputs.version }}"
-        npm version $VERSION --no-git-tag-version
-        echo "Updated package.json to version: $VERSION"
-    
-    - name: Build project
-      run: |
-        cd core
-        npm run build
-    
-    - name: Verify dist folder exists
-      run: |
-        if [ ! -d "core/dist" ]; then
-          echo "Error: dist folder not found in core directory"
+          echo "Invalid release format. Skipping..."
           exit 1
         fi
-    
+
     - name: Configure Git
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-    
-    - name: Create or switch to dist branch
+
+    - name: Switch to dist branch and clean
       run: |
-        git checkout -B dist
-        git reset --hard HEAD
-    
-    - name: Clear dist branch (keep only .git)
-      run: |
-        find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
-    
-    - name: Copy dist folder contents to root
+        if git ls-remote --exit-code --heads origin dist; then
+          git checkout dist
+        else
+          git checkout --orphan dist
+        fi
+
+        # Remove everything from branch
+        git rm -rf . > /dev/null 2>&1 || true
+        rm -rf * .[^.]* || true
+
+    - name: Copy core/dist to root
       run: |
         cp -r core/dist/* .
-        cp core/package.json .
-        if [ -f "core/README.md" ]; then
-          cp core/README.md .
-        fi
-        if [ -f "core/LICENSE" ]; then
-          cp core/LICENSE .
-        fi
-    
-    - name: Create .gitignore for dist branch
-      run: |
-        echo "node_modules/" > .gitignore
-        echo "*.log" >> .gitignore
-        echo ".env" >> .gitignore
-    
-    - name: Commit changes
+
+    - name: Commit and push to dist
       run: |
         git add .
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-          exit 0
-        fi
-        
-        if [ "${{ needs.check-release.outputs.is_release }}" = "true" ]; then
-          git commit -m "Release ${{ needs.check-release.outputs.version }} - $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-        else
-          git commit -m "Deploy dist: $(date -u +%Y-%m-%dT%H:%M:%SZ) - ${{ github.sha }}"
-        fi
-    
-    - name: Push to dist branch
-      run: |
+        git commit -m "Release ${{ steps.get_version.outputs.version }}"
         git push origin dist --force
-    
-    - name: Create release tag on dist branch
-      if: needs.check-release.outputs.is_release == 'true'
-      run: |
-        VERSION="${{ needs.check-release.outputs.version }}"
-        git tag -f $VERSION
-        git push origin $VERSION --force
-        echo "Created release tag: $VERSION"
 
-  # Create development tags for non-release commits
-  create-dev-tag:
-    runs-on: ubuntu-latest
-    needs: [check-release, build-and-deploy]
-    if: needs.check-release.outputs.is_release == 'false'
-    
-    steps:
-    - name: Checkout dist branch
-      uses: actions/checkout@v4
-      with:
-        ref: dist
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Create development tag
+    - name: Tag dist branch with version
       run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        
-        # Create a dev tag with timestamp
-        DEV_TAG="dev-$(date -u +%Y%m%d-%H%M%S)"
-        git tag $DEV_TAG
-        git push origin $DEV_TAG
-        echo "Created development tag: $DEV_TAG"
-
-  # Create GitHub release for release commits
-  create-github-release:
-    runs-on: ubuntu-latest
-    needs: [check-release, build-and-deploy]
-    if: needs.check-release.outputs.is_release == 'true'
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Create GitHub Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ needs.check-release.outputs.version }}
-        release_name: Release ${{ needs.check-release.outputs.version }}
-        body: |
-          Release ${{ needs.check-release.outputs.version }}
-          
-          Commit: ${{ github.sha }}
-          Generated automatically from commit message.
-        draft: false
-        prerelease: false
+        VERSION=${{ steps.get_version.outputs.version }}
+        git tag -f "$VERSION"
+        git push origin "$VERSION" --force
