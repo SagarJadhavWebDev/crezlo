@@ -54,7 +54,7 @@ jobs:
         fi
         # Remove all contents except .git
         # find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} + 2>/dev/null || true
-          find . -mindepth 1 ! -name "core" ! -path "./core/*" -exec rm -rf {} + 2>/dev/null || true
+          find . -mindepth 1 ! -name "core" ! -path "./core/*" ! -name ".git" ! -path "./.git/*" -exec rm -rf {} + 2>/dev/null || true
 
     - name: Copy core/dist to root (improved)
       run: |        
