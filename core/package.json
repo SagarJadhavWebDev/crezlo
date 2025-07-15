@@ -8,8 +8,6 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "README.md",
-    "tsconfig.build.json",
     "postcss.config.cjs",
     "tsconfig.json",
     "rollup.config.js"
@@ -52,8 +50,8 @@
     }
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css & rollup -c && tsc -p tsconfig.build.json ",
-    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"rollup -c -w\" \"tsc -p tsconfig.build.json --watch\"",
+    "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css && tsc -p tsconfig.json && rollup -c ",
+    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"tsc -p tsconfig.json --watch\" \"rollup -c -w\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

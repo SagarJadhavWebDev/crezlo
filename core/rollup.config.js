@@ -30,7 +30,8 @@ const configs = entries.map((entry) => ({
     commonjs(),
     typescript({
       tsconfig: "./tsconfig.json",
-      // declaration: true,
+      declaration: false,
+      noEmit: true 
       // declarationDir: "dist",
     }),
     postcss({

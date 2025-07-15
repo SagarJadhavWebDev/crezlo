@@ -17,10 +17,14 @@
     "jsx": "react-jsx",
     // "declaration": true,
     // "declarationDir": "dist",
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "src",
+    
   },
-  "include": ["src/**/*"],
+  "include": ["src"],
   "baseUrl": "./src",
   "paths": {},
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
+  "exclude": ["node_modules", "dist"]
 }
