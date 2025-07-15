@@ -45,17 +45,39 @@ jobs:
         fetch-depth: 0
         token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Setup Node.js
+    - name: Check for package-lock.json
+      id: check-lockfile
+      run: |
+        if [ -f "core/package-lock.json" ]; then
+          echo "has_lockfile=true" >> $GITHUB_OUTPUT
+          echo "Package-lock.json found"
+        else
+          echo "has_lockfile=false" >> $GITHUB_OUTPUT
+          echo "Package-lock.json not found"
+        fi
+    
+    - name: Setup Node.js (with cache)
+      if: steps.check-lockfile.outputs.has_lockfile == 'true'
       uses: actions/setup-node@v4
       with:
         node-version: '18'
         cache: 'npm'
         cache-dependency-path: 'core/package-lock.json'
     
+    - name: Setup Node.js (without cache)
+      if: steps.check-lockfile.outputs.has_lockfile == 'false'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
     - name: Install dependencies
       run: |
         cd core
-        npm ci
+        if [ -f "package-lock.json" ]; then
+          npm ci
+        else
+          npm install
+        fi
     
     - name: Update package version (if release)
       if: needs.check-release.outputs.is_release == 'true'
