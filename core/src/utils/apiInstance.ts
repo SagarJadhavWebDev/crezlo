@@ -7,10 +7,6 @@ type BaseUrlType = keyof typeof envConstants.BASE_API_URL;
 
 const baseUrls: Record<BaseUrlType, string> = envConstants.BASE_API_URL;
 
-const apiClient = ApiClient.getInstance({
-  baseURL: baseUrls.CORE,
-});
-
 // REQUEST INTERCEPTOR
 ApiClient.addGlobalRequestInterceptor(async (config) => {
   const token = getCookieJSON<AuthToken | null>("token");
@@ -33,7 +29,7 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
   //       await logout();
   //     }
   //   }
-  console.log("Response received:", error);
+  console.log("Error received:", error);
   return error;
 });
 

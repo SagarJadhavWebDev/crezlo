@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect, useCallback, ReactNode } from "react";
-import { setCookieJSON } from "../utils/cookieManager";
+import { cookieManager, setCookie, setCookieJSON } from "../utils/cookieManager";
 import { User, AuthToken, AuthState, AuthContextValue, AuthProviderConfig, AuthAction } from "../types/auth.type";
 import { getAuthToken, logoutAuthUser } from "../utils/auth.utils";
 import { ApiInstance } from "../utils";
@@ -135,16 +135,20 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
   // Authentication methods
   const refreshUser = useCallback(async () => {
-    // setCookieJSON("token", {
-    //   token_type: "Bearer",
-    //   access_token:
-    //     "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjg1MTE0MWY2ODc2ZGY0ZTk3N2YzZDQ3OWQ3Y2JkNjlhOWFlMWRlNjI2NmI0NWM4ZDM3NzkwMzBlNmQ5NzU1ZTZmMjhhODRiNGFmOTIzYzgiLCJpYXQiOjE3NTI0ODcxNzMuOTcyMDU3LCJuYmYiOjE3NTI0ODcxNzMuOTcyMDYsImV4cCI6MTc1NTA3OTE3My45NDA5MTUsInN1YiI6IjAxOTdmOTdlLWY4ZjAtNzE0Mi04MzhlLTQ2OGExZTczNWQ2ZCIsInNjb3BlcyI6W10sInBheWxvYWQiOnsiYWNjb3VudElkIjoiMDE5N2Y5ODAtNTdiMC03MzQ1LTk1NjYtNGY4YzBmMWQ1MTQ4Iiwic2hvcnRDb2RlIjoiRG9JOW1rZFVuVUUrQW91K29aekdxMlJ0ZERST0wwbFplU3N6ZDFSeVZsUTJURk16YzNGek4xUldVVkphU1ZOT2VtUnZTamRwTDFVd1JGVTkifX0.ooczmBYP8AAqxAbkhjTtte5_6JkEptvtVtHdZ6ww36Dm4rULeqL-RZa7_dCL6HLBQKn2NMm0AKlKQlWzCNEl6u3IG81ZJIe1P3hBcZUpnRb7RyOcEMuVKDl56ZJ6ipthAJ9BQ9L5a4MC3RFnb1oH8GrIMHxBemDYS3Fj47aFZNOlToT4xddeBtdwE6nLTgYphFg3ueR1noIJ56431PEYo09yl8bparUA4ptll_moi4HDRQf0CTYwFZXsJubcXa5tT-e9L8G_WW26JuyaN-RbXi9OJtVbA33vvED-4ddM5-JQr_mo_Ph5Mzywm-u1PFpTgKXvG8h_3z_Ko7gaetJ4WKqBCaLhna7Z_DabUr7WQGKprpWd7Bm_tQoVxu2CdBfJoLR7jCbq7pMYV0M7ZtvpFApxYXsciDhJ57aD0VPfVy194uatrUsMc7oo7tHtcTYehxh8QjD4-xsanG8-5t4oMcCFuk_KY2-ONKiQJ-5REf5E7ktORs4qUDW8_7NBDasWzerGIL_WYZpnLPFIRrotX5jwa_vHg077N0D6hGZm0IJ7TneihRF87BLdTqW4oSxbtyT14iOsK8GQLo9FkQTPbxFWoxpVPKtsPGAPXm0WSHlCgxBCBqJrdc1K2V2IzFmQf5dgfddqX5cRHV3FfbJioXqagBK53Lc2ElW3CCobT-c",
-    //   expires_at: "2025-08-13T09:59:33.000000Z",
-    // });
+    // setCookieJSON(
+    //   "token",
+    //   {
+    //     token_type: "Bearer",
+    //     access_token:
+    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWIzZTI5MTM1OThjMWYwNzRhYTg5MTUyNTMxYWI5NjM2MzE5OWQ4YzUzNjdmZWUzYmJhODJhNWZhNjlhZTZiYjZhNWEyMGQyNTg3YTI0YmMiLCJpYXQiOjE3NTI1NjQwMTcuNzkyODk1LCJuYmYiOjE3NTI1NjQwMTcuNzkyODk4LCJleHAiOjE3NTUxNTYwMTcuNzYyNjI3LCJzdWIiOiIwMTk4MDhmMi03N2RmLTcwMTMtYTgwMC03YWFiNmM1YzNmMjIiLCJzY29wZXMiOltdLCJwYXlsb2FkIjp7ImFjY291bnRJZCI6IjAxOTgwOGYyLWUyYWUtNzFmNi04MzNiLThkMGIyZjgyOWYyNSIsInNob3J0Q29kZSI6ImZDNk1EVGxnbE16dWFFSndpdTd0KzA1RE1raHJaWFJRUW5oUlprbzFTV3cxUnk5SVQwdEJkRlpTYTJOdU5EZENibHBWZVVjeWJWSlROekE5In19.LzbFBLbd69l7NFf7MLweLU2pXsUJQ7YHN-M6kd2K27SdfwpArIuzX97L5VpAsMkBIdk9scmIZhytldP2joOnR_17-gvCTnzfNXTF1uZ7Otrix0DW-Dlx2yCiSKqiZYff7-V5XaiAcEhAji7gbBmrI0kxicVPvt_h00Rt277eVMVGzirhYNQ3zDyzqkwi-NwUDrXLDbVP4Uujsm3DSQxrziLEhW_l9TmNdbFmIzkwgNcxXFPyuG9Pd5WGQAEp_xEhwnbGdVB1hoZ2jexDTwSDlMvAKHibJY_goGzmA9i42UyaJMD5QuJHruR-Mk1pQrxPyxYOJZ8MBAOv4cxYmi0T_WAGBNmXnc9fpawYkXRzMIveUT1bRB7gq3HxoTz0sGbNgcRvmvW6gtKEvPQMJRkc2T5HyIINuTk5Ocv93ueQvDmHkqXhC8chLGsG00HnxlzwlYDorv_vApMtBI6OXyG5PuUj6P-_YHHZTImv7A4yrj-SRRMV4b3Pqrwwor1S7Y-kBK0zIFuifkw0xnxgziiUtOuSw419U_WOR4WMZWKXQ7tqjADq2fySlOvsFGbRy2YanaKwdzEYgN8baBB9jwWTZZI3AFYQSCEPyQUOxEouTOgaRXxriHP2pokDgnG2I_cM9OBpZWN1TcndsWFaK0ofwvSSwDCzDKBYZz7aTQ9U5G0",
+    //     expires_at: "2025-08-13T09:59:33.000000Z",
+    //   },
+    //   { expires: new Date("2025-08-13T09:59:33.000000Z") }
+    // );
     // return;
     dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_ERROR", payload: null });
-    ApiInstance.CORE.get<User>(apiEndpoints.auth.profile + "0197f97e-f8f0-7142-838e-468a1e735d6d")
+    ApiInstance.CORE.get<User>(apiEndpoints.auth.profile)
       .then((res) => {
         // @ts-ignore
         const user = res?.user;

@@ -177,7 +177,7 @@ export class ApiClient {
       const apiResponse: ApiResponse<T> = data as ApiResponse<T>;
 
       // Check if response is successful
-      if (!response.ok) {
+      if (!response.ok || response.status < 200 || response.status >= 300) {
         // const error: ApiError = {
         //   message: `Request failed with status ${response.status}`,
         //   status: response.status,

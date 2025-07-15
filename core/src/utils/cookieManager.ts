@@ -1,3 +1,5 @@
+import { envConstants } from "../constants";
+
 export interface CookieOptions {
   expires?: Date | number; // Date object or days from now
   maxAge?: number; // seconds
@@ -23,13 +25,13 @@ export class CookieManager {
     this.config = {
       defaultPath: "/",
       defaultSecure: typeof window !== "undefined" ? window.location.protocol === "https:" : false,
-      defaultSameSite: "lax",
+      defaultDomain: `.${envConstants.APP_DOMAIN}`,
       ...config,
     };
   }
 
   // Set a cookie
-  set(name: string, value: string, options: CookieOptions = {}): boolean {
+  set(name: string, value: string, options: CookieOptions = { expires: 1000 }): boolean {
     if (typeof document === "undefined") {
       console.warn("CookieManager: document is not available (SSR environment)");
       return false;
@@ -84,7 +86,7 @@ export class CookieManager {
       if (sameSite) {
         cookieString += `; samesite=${sameSite}`;
       }
-
+      console.log("Setting cookie:", cookieString);
       document.cookie = cookieString;
       return true;
     } catch (error) {
@@ -229,10 +231,7 @@ export class CookieManager {
 }
 
 // Default cookie manager instance
-export const cookieManager = new CookieManager({
-  defaultPath: "/",
-  defaultDomain: ".crezlo.local",
-});
+export const cookieManager = new CookieManager();
 
 // Utility functions for quick access
 export const setCookie = (name: string, value: string, options?: CookieOptions): boolean => {

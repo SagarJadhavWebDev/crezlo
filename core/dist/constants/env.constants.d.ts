@@ -1,4 +1,5 @@
 export declare const envConstants: {
+    APP_DOMAIN: string;
     BASE_API_URL: {
         CORE: string;
         CONTENT: string;

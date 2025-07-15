@@ -1,6 +1,7 @@
 'use strict';
 
 const envConstants = {
+    APP_DOMAIN: process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_APP_DOMAIN : "crezlo.local",
     BASE_API_URL: {
         CORE: process.env.NEXT_PUBLIC_API_URL_CORE,
         CONTENT: process.env.NEXT_PUBLIC_API_URL_CONTENT,

@@ -114,7 +114,7 @@ class ApiClient {
             // };
             const apiResponse = data;
             // Check if response is successful
-            if (!response.ok) {
+            if (!response.ok || response.status < 200 || response.status >= 300) {
                 // const error: ApiError = {
                 //   message: `Request failed with status ${response.status}`,
                 //   status: response.status,
@@ -165,18 +165,31 @@ const apiCall = async (url, config = {}) => {
     return client.request(url, requestConfig);
 };
 
+const envConstants = {
+    APP_DOMAIN: process.env.NODE_ENV === "production" ? process.env.NEXT_PUBLIC_APP_DOMAIN : "crezlo.local",
+    BASE_API_URL: {
+        CORE: process.env.NEXT_PUBLIC_API_URL_CORE,
+        CONTENT: process.env.NEXT_PUBLIC_API_URL_CONTENT,
+        CHAT: process.env.NEXT_PUBLIC_API_URL_CHAT,
+        GENAGENT: process.env.NEXT_PUBLIC_API_GENAGENT_URL,
+        WEBSITE_BUILDER: process.env.NEXT_PUBLIC_WEBSITE_BUILDER_URL,
+        CHANNEL_BUILDER: process.env.NEXT_PUBLIC_CHANNEL_BUILDERL_URL,
+        FINANCE: process.env.NEXT_PUBLIC_FINANCE_URL,
+    },
+};
+
 class CookieManager {
     config;
     constructor(config = {}) {
         this.config = {
             defaultPath: "/",
             defaultSecure: typeof window !== "undefined" ? window.location.protocol === "https:" : false,
-            defaultSameSite: "lax",
+            defaultDomain: `.${envConstants.APP_DOMAIN}`,
             ...config,
         };
     }
     // Set a cookie
-    set(name, value, options = {}) {
+    set(name, value, options = { expires: 1000 }) {
         if (typeof document === "undefined") {
             console.warn("CookieManager: document is not available (SSR environment)");
             return false;
@@ -224,6 +237,7 @@ class CookieManager {
             if (sameSite) {
                 cookieString += `; samesite=${sameSite}`;
             }
+            console.log("Setting cookie:", cookieString);
             document.cookie = cookieString;
             return true;
         }
@@ -353,10 +367,7 @@ class CookieManager {
     }
 }
 // Default cookie manager instance
-const cookieManager = new CookieManager({
-    defaultPath: "/",
-    defaultDomain: ".crezlo.local",
-});
+const cookieManager = new CookieManager();
 // Utility functions for quick access
 const setCookie = (name, value, options) => {
     return cookieManager.set(name, value, options);
@@ -408,22 +419,7 @@ const useWindowWidth = () => {
     return windowWidth;
 };
 
-const envConstants = {
-    BASE_API_URL: {
-        CORE: process.env.NEXT_PUBLIC_API_URL_CORE,
-        CONTENT: process.env.NEXT_PUBLIC_API_URL_CONTENT,
-        CHAT: process.env.NEXT_PUBLIC_API_URL_CHAT,
-        GENAGENT: process.env.NEXT_PUBLIC_API_GENAGENT_URL,
-        WEBSITE_BUILDER: process.env.NEXT_PUBLIC_WEBSITE_BUILDER_URL,
-        CHANNEL_BUILDER: process.env.NEXT_PUBLIC_CHANNEL_BUILDERL_URL,
-        FINANCE: process.env.NEXT_PUBLIC_FINANCE_URL,
-    },
-};
-
 const baseUrls = envConstants.BASE_API_URL;
-ApiClient.getInstance({
-    baseURL: baseUrls.CORE,
-});
 // REQUEST INTERCEPTOR
 ApiClient.addGlobalRequestInterceptor(async (config) => {
     const token = getCookieJSON("token");
@@ -445,7 +441,7 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
     //       await logout();
     //     }
     //   }
-    console.log("Response received:", error);
+    console.log("Error received:", error);
     return error;
 });
 ApiClient.addGlobalResponseInterceptor(async (response) => {
