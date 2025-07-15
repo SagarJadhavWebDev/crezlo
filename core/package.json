@@ -11,7 +11,8 @@
     "README.md",
     "tsconfig.build.json",
     "postcss.config.cjs",
-    "tsconfig.json"
+    "tsconfig.json",
+    "rollup.config.js"
   ],
   "exports": {
     ".": {
