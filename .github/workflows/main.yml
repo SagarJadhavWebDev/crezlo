@@ -1,0 +1,69 @@
+name: Publish core dist
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'core/**'
+
+jobs:
+  publish-core-dist:
+    runs-on: ubuntu-latest
+    name: Build and Publish Core Dist
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for tagging
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd core
+          npm ci
+
+      - name: Build core package
+        run: |
+          cd core
+          npm run build
+
+      - name: Prepare dist content
+        run: |
+          mkdir dist-to-publish
+          cp -r core/dist dist-to-publish/
+      
+      - name: Switch to core-dist branch (or create it)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git fetch origin core-dist || echo "core-dist does not exist yet"
+          git switch --orphan core-dist-temp
+          git rm -rf .
+          mkdir -p core/dist
+          cp -r dist-to-publish/dist/* core/dist/
+          git add core/dist
+          git commit -m "chore: publish core dist for $(date +'%Y-%m-%d %H:%M:%S')"
+          git branch -M core-dist
+          git push -f origin core-dist
+
+      - name: Create tag (if release: vX.Y.Z is in commit message)
+        if: startsWith(github.event.head_commit.message, 'release:')
+        run: |
+          VERSION=$(echo "${{ github.event.head_commit.message }}" | sed -n 's/release:\s*//p')
+          git tag "$VERSION"
+          git push origin "$VERSION"
+
+      - name: Create GitHub Release (optional)
+        if: startsWith(github.event.head_commit.message, 'release:')
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.event.head_commit.message }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
