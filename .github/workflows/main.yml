@@ -5,7 +5,8 @@ on:
     branches: [main, master]
     paths:
       - 'core/**'
-
+permissions:
+  contents: write
 jobs:
   release-to-dist:
     runs-on: ubuntu-latest
