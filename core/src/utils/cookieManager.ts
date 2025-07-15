@@ -90,7 +90,7 @@ export class CookieManager {
       document.cookie = cookieString;
       return true;
     } catch (error) {
-      console.error("CookieManager: Error setting cookie", error);
+      console.error("CookieManager: Error setting cookie:", error);
       return false;
     }
   }
