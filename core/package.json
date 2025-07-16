@@ -52,6 +52,28 @@
       "types": "./dist/types/index.d.ts"
     }
   },
+  "typesVersions": {
+    "*": {
+      "components": [
+        "./dist/components/index.d.ts"
+      ],
+      "hooks": [
+        "./dist/hooks/index.d.ts"
+      ],
+      "utils": [
+        "./dist/utils/index.d.ts"
+      ],
+      "constants": [
+        "./dist/constants/index.d.ts"
+      ],
+      "types": [
+        "./dist/types/index.d.ts"
+      ],
+      "context-providers": [
+        "./dist/context-providers/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css && tsc -p tsconfig.build.json && rollup -c ",
     "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"tsc -p tsconfig.build.json --watch\" \"rollup -c -w\" ",
