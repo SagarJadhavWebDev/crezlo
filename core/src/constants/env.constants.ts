@@ -1,11 +1,11 @@
 const APP_HTTP = process.env.NODE_ENV === "production" ? "https://" : "http://";
 const APP_DOMAIN = process.env.NEXT_PUBLIC_APP_DOMAIN;
-const ACCOUNT = process.env.NEXT_PUBLIC_APP_NAME_ACCOUNT || "Account";
-const FINANCE = process.env.NEXT_PUBLIC_APP_NAME_FINANCE || "Finance";
-const VR = process.env.NEXT_PUBLIC_APP_NAME_VR || "VR";
-const COMMUNITY = process.env.NEXT_PUBLIC_APP_NAME_COMMUNITY || "Community";
-const WEBSITE = process.env.NEXT_PUBLIC_APP_NAME_WEBSITE || "Website";
-const GENAGENT = process.env.NEXT_PUBLIC_APP_NAME_GENAGENT || "GenAgent";
+const ACCOUNT = process.env.NEXT_PUBLIC_APP_URL_ACCOUNT || "accounts";
+const FINANCE = process.env.NEXT_PUBLIC_APP_URL_FINANCE || "finance";
+const VR = process.env.NEXT_PUBLIC_APP_URL_VR || "virtualtour";
+const COMMUNITY = process.env.NEXT_PUBLIC_APP_URL_COMMUNITY || "community";
+const WEBSITE = process.env.NEXT_PUBLIC_APP_URL_WEBSITE || "website";
+const GENAGENT = process.env.NEXT_PUBLIC_APP_URL_GENAGENT || "genagent";
 export const envConstants = {
   APP_DOMAIN: process.env.NODE_ENV === "production" ? APP_DOMAIN : "crezlo.local",
   APP_NAME: {

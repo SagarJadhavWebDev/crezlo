@@ -7,12 +7,12 @@ require('tailwind-merge');
 
 const APP_HTTP = process.env.NODE_ENV === "production" ? "https://" : "http://";
 const APP_DOMAIN = process.env.NEXT_PUBLIC_APP_DOMAIN;
-const ACCOUNT = process.env.NEXT_PUBLIC_APP_NAME_ACCOUNT || "Account";
-process.env.NEXT_PUBLIC_APP_NAME_FINANCE || "Finance";
-process.env.NEXT_PUBLIC_APP_NAME_VR || "VR";
-process.env.NEXT_PUBLIC_APP_NAME_COMMUNITY || "Community";
-process.env.NEXT_PUBLIC_APP_NAME_WEBSITE || "Website";
-process.env.NEXT_PUBLIC_APP_NAME_GENAGENT || "GenAgent";
+const ACCOUNT = process.env.NEXT_PUBLIC_APP_URL_ACCOUNT || "accounts";
+process.env.NEXT_PUBLIC_APP_URL_FINANCE || "finance";
+process.env.NEXT_PUBLIC_APP_URL_VR || "virtualtour";
+process.env.NEXT_PUBLIC_APP_URL_COMMUNITY || "community";
+process.env.NEXT_PUBLIC_APP_URL_WEBSITE || "website";
+process.env.NEXT_PUBLIC_APP_URL_GENAGENT || "genagent";
 const envConstants = {
     APP_DOMAIN: process.env.NODE_ENV === "production" ? APP_DOMAIN : "crezlo.local",
     APP_NAME: {
@@ -264,7 +264,7 @@ class ApiClient {
     static getInstance(config) {
         const key = config.baseURL;
         if (!key)
-            throw new Error("ApiClient config must have an 'id' or 'baseURL' to use as key");
+            return undefined;
         if (!ApiClient.instances.has(key)) {
             ApiClient.instances.set(key, new ApiClient(config));
         }

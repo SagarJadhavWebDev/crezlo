@@ -58,10 +58,10 @@ export class ApiClient {
   }
 
   // Singleton per unique key (e.g., baseURL or custom ID)
-  static getInstance(config: ApiClientConfig): ApiClient {
+  static getInstance(config: ApiClientConfig): ApiClient | undefined {
     const key = config.baseURL;
-    if (!key) throw new Error("ApiClient config must have an 'id' or 'baseURL' to use as key");
-
+    if (!key) return undefined;
+    
     if (!ApiClient.instances.has(key)) {
       ApiClient.instances.set(key, new ApiClient(config));
     }

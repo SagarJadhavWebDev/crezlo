@@ -2,179 +2,14 @@ import require$$0, { useState, useEffect } from 'react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-const GlobalInterceptors = {
-    request: [],
-    response: [],
-    error: [],
-};
-class ApiClient {
-    static instances = new Map();
-    config;
-    localInterceptors;
-    constructor(config) {
-        this.config = config;
-        this.localInterceptors = {
-            request: [],
-            response: [],
-            error: [],
-        };
-    }
-    // Singleton per unique key (e.g., baseURL or custom ID)
-    static getInstance(config) {
-        const key = config.baseURL;
-        if (!key)
-            throw new Error("ApiClient config must have an 'id' or 'baseURL' to use as key");
-        if (!ApiClient.instances.has(key)) {
-            ApiClient.instances.set(key, new ApiClient(config));
-        }
-        return ApiClient.instances.get(key);
-    }
-    static addGlobalRequestInterceptor(interceptor) {
-        GlobalInterceptors.request.push(interceptor);
-    }
-    static addGlobalResponseInterceptor(interceptor) {
-        GlobalInterceptors.response.push(interceptor);
-    }
-    static addGlobalErrorInterceptor(interceptor) {
-        GlobalInterceptors.error.push(interceptor);
-    }
-    // Local (instance-level) interceptors
-    addRequestInterceptor(interceptor) {
-        this.localInterceptors.request.push(interceptor);
-    }
-    addResponseInterceptor(interceptor) {
-        this.localInterceptors.response.push(interceptor);
-    }
-    addErrorInterceptor(interceptor) {
-        this.localInterceptors.error.push(interceptor);
-    }
-    async applyInterceptors(type, input) {
-        const all = [...GlobalInterceptors[type], ...this.localInterceptors[type]];
-        let result = input;
-        for (const fn of all) {
-            result = (await fn(result));
-        }
-        return result;
-    }
-    // Build URL with query parameters
-    buildURL(endpoint, params) {
-        const url = new URL(endpoint, this.config.baseURL);
-        if (params) {
-            Object.entries(params).forEach(([key, value]) => {
-                url.searchParams.append(key, String(value));
-            });
-        }
-        return url.toString();
-    }
-    // Main request method
-    async request(endpoint, config = {}) {
-        try {
-            // Apply request interceptors
-            const modifiedConfig = await this.applyInterceptors("request", config);
-            // Build URL
-            const url = this.buildURL(endpoint, modifiedConfig.params);
-            // Prepare headers
-            const headers = {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                ...this.config.headers,
-                ...modifiedConfig.headers,
-            };
-            // Prepare fetch options
-            const fetchOptions = {
-                method: modifiedConfig.method || "GET",
-                headers,
-                credentials: modifiedConfig.withCredentials ?? this.config.withCredentials ? "include" : "same-origin",
-            };
-            // Add body for non-GET requests
-            if (modifiedConfig.body && modifiedConfig.method !== "GET") {
-                fetchOptions.body = typeof modifiedConfig.body === "string" ? modifiedConfig.body : JSON.stringify(modifiedConfig.body);
-            }
-            // Set up timeout
-            const timeout = modifiedConfig.timeout || this.config.timeout || 10000;
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), timeout);
-            fetchOptions.signal = controller.signal;
-            // Make the request
-            const response = await fetch(url, fetchOptions);
-            clearTimeout(timeoutId);
-            // Parse response
-            let data;
-            const contentType = response.headers.get("content-type");
-            if (contentType && contentType.includes("application/json")) {
-                data = await response.json();
-            }
-            else {
-                data = (await response.text());
-            }
-            // Create response object
-            // const apiResponse: ApiResponse<T> = {
-            //   data,
-            //   status: response.status,
-            //   statusText: response.statusText,
-            //   headers: Object.fromEntries(response.headers.entries()),
-            // };
-            const apiResponse = data;
-            // Check if response is successful
-            if (!response.ok || response.status < 200 || response.status >= 300) {
-                // const error: ApiError = {
-                //   message: `Request failed with status ${response.status}`,
-                //   status: response.status,
-                //   statusText: response.statusText,
-                //   data,
-                // };
-                const error = data;
-                throw await this.applyInterceptors("error", error);
-            }
-            // Apply response interceptors
-            return await this.applyInterceptors("response", apiResponse);
-        }
-        catch (error) {
-            if (error instanceof Error) {
-                const apiError = {
-                    message: error.message,
-                };
-                throw await this.applyInterceptors("error", apiError);
-            }
-            throw error;
-        }
-    }
-    // Convenience methods
-    async get(endpoint, config) {
-        return this.request(endpoint, { ...config, method: "GET" });
-    }
-    async post(endpoint, data, config) {
-        return this.request(endpoint, { ...config, method: "POST", body: data });
-    }
-    async put(endpoint, data, config) {
-        return this.request(endpoint, { ...config, method: "PUT", body: data });
-    }
-    async patch(endpoint, data, config) {
-        return this.request(endpoint, { ...config, method: "PATCH", body: data });
-    }
-    async delete(endpoint, config) {
-        return this.request(endpoint, { ...config, method: "DELETE" });
-    }
-}
-// Create a default API client instance
-const createApiClient = (config) => {
-    return ApiClient.getInstance(config);
-};
-// Utility function for quick API calls without creating a client
-const apiCall = async (url, config = {}) => {
-    const { baseURL = "", ...requestConfig } = config;
-    const client = ApiClient.getInstance({ baseURL });
-    return client.request(url, requestConfig);
-};
-
 process.env.NODE_ENV === "production" ? "https://" : "http://";
 const APP_DOMAIN = process.env.NEXT_PUBLIC_APP_DOMAIN;
-process.env.NEXT_PUBLIC_APP_NAME_ACCOUNT || "Account";
-process.env.NEXT_PUBLIC_APP_NAME_FINANCE || "Finance";
-process.env.NEXT_PUBLIC_APP_NAME_VR || "VR";
-process.env.NEXT_PUBLIC_APP_NAME_COMMUNITY || "Community";
-process.env.NEXT_PUBLIC_APP_NAME_WEBSITE || "Website";
-process.env.NEXT_PUBLIC_APP_NAME_GENAGENT || "GenAgent";
+process.env.NEXT_PUBLIC_APP_URL_ACCOUNT || "accounts";
+process.env.NEXT_PUBLIC_APP_URL_FINANCE || "finance";
+process.env.NEXT_PUBLIC_APP_URL_VR || "virtualtour";
+process.env.NEXT_PUBLIC_APP_URL_COMMUNITY || "community";
+process.env.NEXT_PUBLIC_APP_URL_WEBSITE || "website";
+process.env.NEXT_PUBLIC_APP_URL_GENAGENT || "genagent";
 const envConstants = {
     APP_DOMAIN: process.env.NODE_ENV === "production" ? APP_DOMAIN : "crezlo.local",
     SUBSCRIPTION_TYPE: process.env.NEXT_PUBLIC_SUBSCRIPTION_TYPE,
@@ -429,6 +264,161 @@ const useWindowWidth = () => {
     }, []); // Empty array ensures effect is only run on mount and unmount
     return windowWidth;
 };
+
+const GlobalInterceptors = {
+    request: [],
+    response: [],
+    error: [],
+};
+class ApiClient {
+    static instances = new Map();
+    config;
+    localInterceptors;
+    constructor(config) {
+        this.config = config;
+        this.localInterceptors = {
+            request: [],
+            response: [],
+            error: [],
+        };
+    }
+    // Singleton per unique key (e.g., baseURL or custom ID)
+    static getInstance(config) {
+        const key = config.baseURL;
+        if (!key)
+            return undefined;
+        if (!ApiClient.instances.has(key)) {
+            ApiClient.instances.set(key, new ApiClient(config));
+        }
+        return ApiClient.instances.get(key);
+    }
+    static addGlobalRequestInterceptor(interceptor) {
+        GlobalInterceptors.request.push(interceptor);
+    }
+    static addGlobalResponseInterceptor(interceptor) {
+        GlobalInterceptors.response.push(interceptor);
+    }
+    static addGlobalErrorInterceptor(interceptor) {
+        GlobalInterceptors.error.push(interceptor);
+    }
+    // Local (instance-level) interceptors
+    addRequestInterceptor(interceptor) {
+        this.localInterceptors.request.push(interceptor);
+    }
+    addResponseInterceptor(interceptor) {
+        this.localInterceptors.response.push(interceptor);
+    }
+    addErrorInterceptor(interceptor) {
+        this.localInterceptors.error.push(interceptor);
+    }
+    async applyInterceptors(type, input) {
+        const all = [...GlobalInterceptors[type], ...this.localInterceptors[type]];
+        let result = input;
+        for (const fn of all) {
+            result = (await fn(result));
+        }
+        return result;
+    }
+    // Build URL with query parameters
+    buildURL(endpoint, params) {
+        const url = new URL(endpoint, this.config.baseURL);
+        if (params) {
+            Object.entries(params).forEach(([key, value]) => {
+                url.searchParams.append(key, String(value));
+            });
+        }
+        return url.toString();
+    }
+    // Main request method
+    async request(endpoint, config = {}) {
+        try {
+            // Apply request interceptors
+            const modifiedConfig = await this.applyInterceptors("request", config);
+            // Build URL
+            const url = this.buildURL(endpoint, modifiedConfig.params);
+            // Prepare headers
+            const headers = {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                ...this.config.headers,
+                ...modifiedConfig.headers,
+            };
+            // Prepare fetch options
+            const fetchOptions = {
+                method: modifiedConfig.method || "GET",
+                headers,
+                credentials: modifiedConfig.withCredentials ?? this.config.withCredentials ? "include" : "same-origin",
+            };
+            // Add body for non-GET requests
+            if (modifiedConfig.body && modifiedConfig.method !== "GET") {
+                fetchOptions.body = typeof modifiedConfig.body === "string" ? modifiedConfig.body : JSON.stringify(modifiedConfig.body);
+            }
+            // Set up timeout
+            const timeout = modifiedConfig.timeout || this.config.timeout || 10000;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), timeout);
+            fetchOptions.signal = controller.signal;
+            // Make the request
+            const response = await fetch(url, fetchOptions);
+            clearTimeout(timeoutId);
+            // Parse response
+            let data;
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.includes("application/json")) {
+                data = await response.json();
+            }
+            else {
+                data = (await response.text());
+            }
+            // Create response object
+            // const apiResponse: ApiResponse<T> = {
+            //   data,
+            //   status: response.status,
+            //   statusText: response.statusText,
+            //   headers: Object.fromEntries(response.headers.entries()),
+            // };
+            const apiResponse = data;
+            // Check if response is successful
+            if (!response.ok || response.status < 200 || response.status >= 300) {
+                // const error: ApiError = {
+                //   message: `Request failed with status ${response.status}`,
+                //   status: response.status,
+                //   statusText: response.statusText,
+                //   data,
+                // };
+                const error = data;
+                throw await this.applyInterceptors("error", error);
+            }
+            // Apply response interceptors
+            return await this.applyInterceptors("response", apiResponse);
+        }
+        catch (error) {
+            if (error instanceof Error) {
+                const apiError = {
+                    message: error.message,
+                };
+                throw await this.applyInterceptors("error", apiError);
+            }
+            throw error;
+        }
+    }
+    // Convenience methods
+    async get(endpoint, config) {
+        return this.request(endpoint, { ...config, method: "GET" });
+    }
+    async post(endpoint, data, config) {
+        return this.request(endpoint, { ...config, method: "POST", body: data });
+    }
+    async put(endpoint, data, config) {
+        return this.request(endpoint, { ...config, method: "PUT", body: data });
+    }
+    async patch(endpoint, data, config) {
+        return this.request(endpoint, { ...config, method: "PATCH", body: data });
+    }
+    async delete(endpoint, config) {
+        return this.request(endpoint, { ...config, method: "DELETE" });
+    }
+}
 
 const baseUrls = envConstants.BASE_API_URL;
 // REQUEST INTERCEPTOR
@@ -3617,5 +3607,5 @@ cookies$2.cookies;
 headers$1.headers;
 draftMode.draftMode;
 
-export { ApiClient, ApiInstance, CookieManager, apiCall, clearAllCookies, cn, cookieManager, createApiClient, createCookieManager, getAllCookies, getAuthToken, getCookie, getCookieJSON, getFullImageUrl, getInitialsFromEmail, hasCookie, isCookiesEnabled, logoutAuthUser, removeCookie, setCookie, setCookieJSON, useWindowWidth };
+export { ApiInstance, CookieManager, clearAllCookies, cn, cookieManager, createCookieManager, getAllCookies, getAuthToken, getCookie, getCookieJSON, getFullImageUrl, getInitialsFromEmail, hasCookie, isCookiesEnabled, logoutAuthUser, removeCookie, setCookie, setCookieJSON, useWindowWidth };
 //# sourceMappingURL=index.esm.js.map

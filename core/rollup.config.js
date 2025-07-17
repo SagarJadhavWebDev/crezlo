@@ -47,7 +47,8 @@ const configs = entries.map((entry) => ({
     }),
   ],
   watch: {
-    include: "src/**"
+    include: "src/**",
+    chokidar: false
   },
   external: [...Object.keys(pkg.dependencies),...Object.keys(pkg.peerDependencies),...Object.keys(pkg.devDependencies),/^@radix-ui\/.*/],
 }));
