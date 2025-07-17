@@ -30,7 +30,7 @@ export declare class ApiClient {
     private config;
     private localInterceptors;
     private constructor();
-    static getInstance(config: ApiClientConfig): ApiClient;
+    static getInstance(config: ApiClientConfig): ApiClient | undefined;
     static addGlobalRequestInterceptor(interceptor: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>): void;
     static addGlobalResponseInterceptor(interceptor: (response: ApiResponse) => ApiResponse | Promise<ApiResponse>): void;
     static addGlobalErrorInterceptor(interceptor: (error: ApiError) => ApiError | Promise<ApiError>): void;

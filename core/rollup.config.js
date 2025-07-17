@@ -5,7 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import pkg from "./package.json" with { type: "json" };
 
-const entries = ["index", "components/index", "hooks/index", "utils/index", "constants/index", "context-providers/index", "types/index"];
+const entries = ["index", "context-providers/index","components/index", "hooks/index", "utils/index", "constants/index", "types/index"];
 
 const configs = entries.map((entry) => ({
   input: `src/${entry}.ts`,
@@ -48,7 +48,7 @@ const configs = entries.map((entry) => ({
   ],
   watch: {
     include: "src/**",
-    chokidar: false
+    // chokidar: false
   },
   external: [...Object.keys(pkg.dependencies),...Object.keys(pkg.peerDependencies),...Object.keys(pkg.devDependencies),/^@radix-ui\/.*/],
 }));

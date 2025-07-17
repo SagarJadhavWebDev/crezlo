@@ -261,6 +261,7 @@ class ApiClient {
     // Singleton per unique key (e.g., baseURL or custom ID)
     static getInstance(config) {
         const key = config.baseURL;
+        console.log("ApiClient getInstance", key);
         if (!key)
             return undefined;
         if (!ApiClient.instances.has(key)) {
