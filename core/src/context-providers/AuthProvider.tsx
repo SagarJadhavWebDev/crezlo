@@ -109,7 +109,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       if (domain !== envConstants.APP_NAME.ACCOUNT) {
         redirectUrl = `?redirect_url=${window.location.href}`;
       }
-      window.location.href = envConstants.APP_URL.ACCOUNT + `/login` + redirectUrl;
+      console.log("Redirecting to login", domain, envConstants.APP_URL.ACCOUNT + `/login` + redirectUrl);
+      // window.location.href = envConstants.APP_URL.ACCOUNT + `/login` + redirectUrl;
     }
     return token;
   }, []);
@@ -147,17 +148,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
   // Authentication methods
   const refreshUser = useCallback(async () => {
-    // setCookieJSON(
-    //   "token",
-    //   {
-    //     token_type: "Bearer",
-    //     access_token:
-    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWIzZTI5MTM1OThjMWYwNzRhYTg5MTUyNTMxYWI5NjM2MzE5OWQ4YzUzNjdmZWUzYmJhODJhNWZhNjlhZTZiYjZhNWEyMGQyNTg3YTI0YmMiLCJpYXQiOjE3NTI1NjQwMTcuNzkyODk1LCJuYmYiOjE3NTI1NjQwMTcuNzkyODk4LCJleHAiOjE3NTUxNTYwMTcuNzYyNjI3LCJzdWIiOiIwMTk4MDhmMi03N2RmLTcwMTMtYTgwMC03YWFiNmM1YzNmMjIiLCJzY29wZXMiOltdLCJwYXlsb2FkIjp7ImFjY291bnRJZCI6IjAxOTgwOGYyLWUyYWUtNzFmNi04MzNiLThkMGIyZjgyOWYyNSIsInNob3J0Q29kZSI6ImZDNk1EVGxnbE16dWFFSndpdTd0KzA1RE1raHJaWFJRUW5oUlprbzFTV3cxUnk5SVQwdEJkRlpTYTJOdU5EZENibHBWZVVjeWJWSlROekE5In19.LzbFBLbd69l7NFf7MLweLU2pXsUJQ7YHN-M6kd2K27SdfwpArIuzX97L5VpAsMkBIdk9scmIZhytldP2joOnR_17-gvCTnzfNXTF1uZ7Otrix0DW-Dlx2yCiSKqiZYff7-V5XaiAcEhAji7gbBmrI0kxicVPvt_h00Rt277eVMVGzirhYNQ3zDyzqkwi-NwUDrXLDbVP4Uujsm3DSQxrziLEhW_l9TmNdbFmIzkwgNcxXFPyuG9Pd5WGQAEp_xEhwnbGdVB1hoZ2jexDTwSDlMvAKHibJY_goGzmA9i42UyaJMD5QuJHruR-Mk1pQrxPyxYOJZ8MBAOv4cxYmi0T_WAGBNmXnc9fpawYkXRzMIveUT1bRB7gq3HxoTz0sGbNgcRvmvW6gtKEvPQMJRkc2T5HyIINuTk5Ocv93ueQvDmHkqXhC8chLGsG00HnxlzwlYDorv_vApMtBI6OXyG5PuUj6P-_YHHZTImv7A4yrj-SRRMV4b3Pqrwwor1S7Y-kBK0zIFuifkw0xnxgziiUtOuSw419U_WOR4WMZWKXQ7tqjADq2fySlOvsFGbRy2YanaKwdzEYgN8baBB9jwWTZZI3AFYQSCEPyQUOxEouTOgaRXxriHP2pokDgnG2I_cM9OBpZWN1TcndsWFaK0ofwvSSwDCzDKBYZz7aTQ9U5G0",
-    //     expires_at: "2025-08-13T09:59:33.000000Z",
-    //   },
-    //   { expires: new Date("2025-08-13T09:59:33.000000Z") }
-    // );
-    // return;
     dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_ERROR", payload: null });
     ApiInstance.CORE.get<User>(apiEndpoints.auth.profile)

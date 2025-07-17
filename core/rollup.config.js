@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import {visualizer} from 'rollup-plugin-visualizer';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import preserveUseClientDirective from 'rollup-plugin-preserve-use-client';
 
 import pkg from "./package.json" with { type: "json" };
