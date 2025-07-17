@@ -1,5 +1,8 @@
-import { headers } from "next/headers";
 const getSSRSubDomain = async () => {
+  if (typeof window !== "undefined") {
+    throw new Error("getSSRSubDomain can only be used server-side");
+  }
+  const { headers } = require("next/headers"); // dynamic import for safety
   const headersList = headers();
   const hostname = (await headersList).get("host") || ""; // e.g., 68073386e6f27.crezlo.site
   if (process.env.NODE_ENV === "production" ? hostname?.includes("crezlo.site") : hostname?.includes("localhost")) {

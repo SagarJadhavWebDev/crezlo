@@ -1,2 +1,2 @@
-declare const getSSRSubDomain: () => Promise<string>;
+declare const getSSRSubDomain: () => Promise<any>;
 export default getSSRSubDomain;

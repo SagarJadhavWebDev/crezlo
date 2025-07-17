@@ -3,47 +3,40 @@
   "version": "2.0.0",
   "type": "module",
   "description": "A comprehensive React component library with TypeScript, Tailwind CSS, and theme support for reusable UI components",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "src/index.ts",
   "types": "dist/index.d.ts",
   "files": [
+    "dist",
     "src"
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js",
+      "import": "./src/index.ts",
       "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json",
     "./components": {
-      "import": "./dist/components/index.esm.js",
-      "require": "./dist/components/index.js",
+      "import": "./src/components/index.ts",
       "types": "./dist/components/index.d.ts"
     },
     "./hooks": {
-      "import": "./dist/hooks/index.esm.js",
-      "require": "./dist/hooks/index.js",
+      "import": "./src/hooks/index.ts",
       "types": "./dist/hooks/index.d.ts"
     },
     "./utils": {
-      "import": "./dist/utils/index.esm.js",
-      "require": "./dist/utils/index.js",
+      "import": "./src/utils/index.ts",
       "types": "./dist/utils/index.d.ts"
     },
     "./context-providers": {
-      "import": "./dist/context-providers/index.esm.js",
-      "require": "./dist/context-providers/index.js",
+      "import": "./src/context-providers/index.ts",
       "types": "./dist/context-providers/index.d.ts"
     },
     "./constants": {
-      "import": "./dist/constants/index.esm.js",
-      "require": "./dist/constants/index.js",
+      "import": "./src/constants/index.ts",
       "types": "./dist/constants/index.d.ts"
     },
     "./types": {
-      "import": "./dist/types/index.esm.js",
-      "require": "./dist/types/index.js",
+      "import": "./src/types/index.ts",
       "types": "./dist/types/index.d.ts"
     },
     "./styles.css": {
@@ -74,7 +67,7 @@
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css && tsc -p tsconfig.json && rollup -c ",
-    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"tsc -p tsconfig.json --watch\" \"rollup -c -w\" ",
+    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"tsc -p tsconfig.json --watch\"",
     "dev:rollup": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
