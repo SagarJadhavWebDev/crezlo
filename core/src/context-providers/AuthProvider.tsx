@@ -1,3 +1,4 @@
+"use client";
 import React, { createContext, useContext, useReducer, useEffect, useCallback, ReactNode } from "react";
 import { cookieManager, setCookie, setCookieJSON } from "../utils/cookieManager";
 import { User, AuthToken, AuthState, AuthContextValue, AuthProviderConfig, AuthAction } from "../types/auth.type";

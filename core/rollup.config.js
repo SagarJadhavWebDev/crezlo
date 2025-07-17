@@ -3,6 +3,10 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import {visualizer} from 'rollup-plugin-visualizer';
+import { terser } from 'rollup-plugin-terser';
+import preserveUseClientDirective from 'rollup-plugin-preserve-use-client';
+
 import pkg from "./package.json" with { type: "json" };
 
 const entries = ["index", "context-providers/index","components/index", "hooks/index", "utils/index", "constants/index", "types/index"];
@@ -34,6 +38,12 @@ const configs = entries.map((entry) => ({
       declaration: false,
       noEmit: true,
       // declarationDir: "dist",
+    }),
+    terser({compress:{directives:false}}),
+    preserveUseClientDirective(),
+    visualizer({
+      filename: `visualiser/'${entry}.html'`,
+      open: false,
     }),
     postcss({
       config: {
