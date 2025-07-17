@@ -105,12 +105,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     console.log("AuthProvider getToken", window.location.href, token);
     if (!token?.access_token) {
       const domain = getSubDomain();
-      let redirectUrl = ``;
+      console.log("Redirecting to login", domain);
       if (domain !== envConstants.APP_NAME.ACCOUNT) {
-        redirectUrl = `?redirect_url=${window.location.href}`;
+        window.location.assign(envConstants.APP_URL.ACCOUNT + `/login` + `?redirect_url=${window.location.href}`);
+      }else{
+        window.location.pathname = "/login";
       }
-      console.log("Redirecting to login", domain, envConstants.APP_URL.ACCOUNT + `/login` + redirectUrl);
-      // window.location.href = envConstants.APP_URL.ACCOUNT + `/login` + redirectUrl;
     }
     return token;
   }, []);
