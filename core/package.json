@@ -7,12 +7,7 @@
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
-    "src",
-    "dist",
-    "postcss.config.cjs",
-    "tsconfig.json",
-    "rollup.config.js",
-    "tsconfig.build.json"
+    "dist"
   ],
   "exports": {
     ".": {
@@ -50,6 +45,9 @@
       "import": "./dist/types/index.esm.js",
       "require": "./dist/types/index.js",
       "types": "./dist/types/index.d.ts"
+    },
+    "./styles.css": {
+      "default": "./dist/index.css"
     }
   },
   "typesVersions": {
@@ -77,6 +75,7 @@
   "scripts": {
     "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css && tsc -p tsconfig.json && rollup -c ",
     "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"tsc -p tsconfig.json --watch\" \"rollup -c -w\" ",
+    "dev:rollup": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

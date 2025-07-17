@@ -92,7 +92,7 @@ export default function Sidebar({
         } ${variant === "v2" ? "border-r border-gray-200 dark:border-gray-700/60" : "rounded-r-2xl shadow-xs"} `}
       >
         {/* Sidebar header */}
-        <div className="flex justify-center mb-5 pr-3 sm:px-2">
+        <div className="flex justify-center mb-5 sm:px-2">
           {/* Close button */}
           <button
             className="lg:hidden text-gray-500 hover:text-gray-400"

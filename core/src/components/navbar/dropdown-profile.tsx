@@ -1,16 +1,16 @@
 "use client";
 import { Menu, MenuButton, MenuItems, MenuItem, Transition } from "@headlessui/react";
+import { useAuth } from "../../context-providers";
+import { FallBackAvatar } from "../common";
 
 export default function DropdownProfile({ align }: { align?: "left" | "right" }) {
+  const auth = useAuth();
+  const user = auth?.user;
   return (
     <Menu as="div" className="relative inline-flex">
       <MenuButton className="inline-flex justify-center items-center group">
-        {/* <FallBackAvatar
-          email={user?.email_id}
-          profilePicture={user?.avatar?.url}
-          size={40}
-        /> */}
-        drop
+        {/* @ts-ignore */}
+        <FallBackAvatar email={user?.email ?? "User"} profilePicture={user?.avatar?.url ?? "/"} size={40} />
       </MenuButton>
       <Transition
         as="div"

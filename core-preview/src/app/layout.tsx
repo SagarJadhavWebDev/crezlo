@@ -1,6 +1,7 @@
 "use client";
 import { RootLayout } from "crezlo-core/components";
-import "@core/dist/index.css";
+import { AuthProvider } from "crezlo-core/context-providers";
+import "crezlo-core/styles.css";
 export default function RootPreviewLayout({
   children,
 }: Readonly<{
@@ -9,9 +10,7 @@ export default function RootPreviewLayout({
   return (
     <RootLayout>
       {/* <AppProvider> */}
-        <AuthProvider>
-          {children}
-          </AuthProvider>
+      <AuthProvider>{children}</AuthProvider>
       {/* </AppProvider> */}
     </RootLayout>
   );

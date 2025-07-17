@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-
+export * from './useQueryParams';
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
   const [storedValue, setStoredValue] = useState<T>(() => {

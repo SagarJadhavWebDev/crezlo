@@ -3,8 +3,9 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import pkg from "./package.json" with { type: "json" };
 
-const entries = ["index", "components/index", "hooks/index", "utils/index", "constants/index", "context-providers/index","types/index"];
+const entries = ["index", "components/index", "hooks/index", "utils/index", "constants/index", "context-providers/index", "types/index"];
 
 const configs = entries.map((entry) => ({
   input: `src/${entry}.ts`,
@@ -31,7 +32,7 @@ const configs = entries.map((entry) => ({
     typescript({
       tsconfig: "./tsconfig.json",
       declaration: false,
-      noEmit: true 
+      noEmit: true,
       // declarationDir: "dist",
     }),
     postcss({
@@ -46,8 +47,8 @@ const configs = entries.map((entry) => ({
     }),
   ],
   watch: {
-    include: "src/**",
+    include: "src/**"
   },
-  external: ["react", "react-dom"],
+  external: [...Object.keys(pkg.dependencies),...Object.keys(pkg.peerDependencies),...Object.keys(pkg.devDependencies),/^@radix-ui\/.*/],
 }));
 export default configs;

@@ -5,6 +5,7 @@ import { getAuthToken, logoutAuthUser } from "../utils/auth.utils";
 import { ApiInstance } from "../utils";
 import { envConstants } from "../constants";
 import { apiEndpoints } from "../constants/api-endpoints.constants";
+import getSubDomain from "../utils/getSubDomain";
 
 // Default configuration
 const defaultConfig: Required<AuthProviderConfig> = {
@@ -99,13 +100,23 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
   }, []);
 
   const getToken = useCallback(() => {
-    return getAuthToken();
+    const token = getAuthToken();
+    console.log("AuthProvider getToken", window.location.href, token);
+    if (!token?.access_token) {
+      const domain = getSubDomain();
+      let redirectUrl = ``;
+      if (domain !== envConstants.APP_NAME.ACCOUNT) {
+        redirectUrl = `?redirect_url=${window.location.href}`;
+      }
+      window.location.href = envConstants.APP_URL.ACCOUNT + `/login` + redirectUrl;
+    }
+    return token;
   }, []);
 
   // API request interceptor to add auth token
   useEffect(() => {
     ApiInstance.client.addGlobalRequestInterceptor(async (config) => {
-      const token = getAuthToken();
+      const token = getToken();
       if (token?.access_token) {
         config.headers = {
           ...config.headers,
@@ -186,9 +197,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 // Hook to use auth context
 export const useAuth = (): AuthContextValue => {
   const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
+  // if (context === undefined) {
+  //   throw new Error("useAuth must be used within an AuthProvider");
+  // }
   return context;
 };
 
