@@ -5,3 +5,5 @@ export * as ShadCn from "./ui";
 export * from "./data-table";
 export * from "./form";
 export * from "./common";
+export * from "./modals";
+export * from "./cards";

@@ -1,0 +1,10 @@
+.CrezloPreview {
+  position: relative;
+  height: 100%;
+}
+
+.CrezloPreview-frame {
+  border: none;
+  height: 100%;
+  width: 100%;
+}

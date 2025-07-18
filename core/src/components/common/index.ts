@@ -9,3 +9,5 @@ export * from "./Badge";
 export * from "./EditMenu";
 export * from "./ToggleSwitch";
 export * from "./Tooltip";
+export * from "./PaginationNumeric";
+export * from "./Loader";

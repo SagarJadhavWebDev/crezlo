@@ -39,6 +39,7 @@ export interface AuthState {
     error: string | null;
 }
 export interface AuthContextValue extends AuthState {
+    setUser: (user: User) => void;
     logout: (callback?: () => void) => void;
     getToken: () => AuthToken | null;
     updateToken: (token: AuthToken) => void;

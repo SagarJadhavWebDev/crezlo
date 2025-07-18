@@ -1,7 +1,7 @@
 import * as React from "react";
 import { type VariantProps } from "class-variance-authority";
 declare const buttonVariants: (props?: {
-    variant?: "link" | "default" | "secondary" | "ghost" | "destructive" | "outline";
+    variant?: "link" | "outline" | "secondary" | "default" | "ghost" | "destructive";
     size?: "default" | "icon" | "sm" | "lg";
 } & import("class-variance-authority/types").ClassProp) => string;
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {

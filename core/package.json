@@ -39,6 +39,10 @@
       "import": "./src/types/index.ts",
       "types": "./dist/types/index.d.ts"
     },
+    "./builder": {
+      "import": "./src/builder/index.ts",
+      "types": "./dist/builder/index.d.ts"
+    },
     "./styles.css": {
       "default": "./dist/index.css"
     }
@@ -59,6 +63,9 @@
       ],
       "types": [
         "./dist/types/index.d.ts"
+      ],
+      "builder": [
+        "./dist/builder/index.d.ts"
       ],
       "context-providers": [
         "./dist/context-providers/index.d.ts"
@@ -95,13 +102,18 @@
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.1",
+    "@types/classnames": "^2.3.4",
+    "@types/flat": "^5.0.5",
     "@types/lodash": "^4.17.20",
     "@types/node": "^22.10.2",
+    "@types/object-hash": "^3.0.6",
     "@types/react": "^18.3.17",
     "@types/react-day-picker": "^5.3.0",
     "@types/react-dom": "^18.3.5",
     "@types/recharts": "^2.0.1",
+    "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.20",
+    "fast-deep-equal": "^3.1.3",
     "lodash": "^4.17.21",
     "postcss": "^8.5.6",
     "rollup": "^4.28.1",
@@ -113,19 +125,31 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@dnd-kit/abstract": "^0.1.20",
+    "@dnd-kit/collision": "^0.1.20",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/dom": "^0.1.20",
+    "@dnd-kit/geometry": "^0.1.20",
+    "@dnd-kit/react": "^0.1.20",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/state": "^0.1.20",
     "@headlessui/react": "^2.2.4",
     "@rollup/plugin-alias": "^5.1.1",
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.1.11",
     "class-variance-authority": "^0.7.1",
+    "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "concurrently": "^9.2.0",
+    "css-box-model": "^1.2.1",
     "embla-carousel-react": "^8.6.0",
+    "flat": "^6.0.1",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.525.0",
     "next-themes": "^0.4.6",
+    "object-hash": "^3.0.0",
     "radix-ui": "^1.4.2",
     "react-day-picker": "^9.8.0",
     "react-hook-form": "^7.60.0",
@@ -136,6 +160,9 @@
     "rollup-plugin-visualizer": "^6.0.3",
     "sonner": "^2.0.6",
     "tailwind-merge": "^3.3.1",
-    "vaul": "^1.1.2"
+    "use-debounce": "^10.0.5",
+    "uuid": "^11.1.0",
+    "vaul": "^1.1.2",
+    "zustand": "^5.0.6"
   }
 }

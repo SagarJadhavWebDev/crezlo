@@ -151,11 +151,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
   const refreshUser = useCallback(async () => {
     dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_ERROR", payload: null });
-    ApiInstance.CORE.get<User>(apiEndpoints.auth.profile)
+    ApiInstance.CORE.get<{ seller: User }>(apiEndpoints.auth.profile)
       .then((res) => {
         // @ts-ignore
-        const user = res?.user;
-        dispatch({ type: "SET_USER", payload: user });
+        const user = res?.data?.seller;
+        setUser(user);
       })
       .catch((err) => {
         dispatch({ type: "SET_ERROR", payload: err.message || "Login failed" });
@@ -163,6 +163,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       .finally(() => {
         dispatch({ type: "SET_LOADING", payload: false });
       });
+  }, []);
+
+  // Set User
+  const setUser = useCallback((user: User) => {
+    dispatch({ type: "UPDATE_USER", payload: user });
   }, []);
 
   // Utility methods
@@ -177,6 +182,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
   const contextValue: AuthContextValue = {
     ...state,
+    setUser,
     getToken,
     updateToken,
     logout: logoutUser,
