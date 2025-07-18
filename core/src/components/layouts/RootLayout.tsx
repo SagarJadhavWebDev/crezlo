@@ -10,7 +10,7 @@ export default function RootLayout({ children, headers }: { children: React.Reac
         <div className="flex flex-col h-[100vh]">
           <ThemeProvider attribute="class" disableTransitionOnChange>
             <AppProvider>{children}</AppProvider>
-            <Toaster />
+            <Toaster richColors={true} expand={true} />
           </ThemeProvider>
         </div>
       </body>
