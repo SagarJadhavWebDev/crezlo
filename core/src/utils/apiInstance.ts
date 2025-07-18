@@ -1,47 +1,28 @@
+import { toast } from "sonner";
 import { envConstants } from "../constants";
-import { AuthToken } from "../types";
 import { ApiClient } from "./apiClient";
-import { getCookieJSON } from "./cookieManager";
 
 type BaseUrlType = keyof typeof envConstants.BASE_API_URL;
 
 const baseUrls: Record<BaseUrlType, string> = envConstants.BASE_API_URL;
 
-// REQUEST INTERCEPTOR
-ApiClient.addGlobalRequestInterceptor(async (config) => {
-  const token = getCookieJSON<AuthToken | null>("token");
-  if (token?.access_token) {
-    config.headers = {
-      ...config.headers,
-      Authorization: `Bearer ${token.access_token}`,
-    };
-  }
-  return config;
-});
+// REQUEST INTERCEPTOR Already applied in AuthProvider
 
 // RESPONSE INTERCEPTOR
 ApiClient.addGlobalErrorInterceptor(async (error) => {
-  //   if (error.status === 401 && mergedConfig.autoRefresh) {
-  //     try {
-  //       await refreshToken();
-  //       // Retry the original request would need to be implemented here
-  //     } catch (refreshError) {
-  //       await logout();
-  //     }
-  //   }
-  console.log("Error received:", error);
+  console.log("❌ API ERROR:", error);
+  if (error?.message) {
+    toast.success(error.message);
+  }
   return error;
 });
 
 ApiClient.addGlobalResponseInterceptor(async (response) => {
-  // Handle specific response status codes or data transformations here
-  console.log("Response received:", response.data);
-  if (response.status === 401) {
-    // Handle unauthorized access, e.g., redirect to login
-    console.error("Unauthorized access - redirecting to login");
-    // You can implement a redirect or logout logic here
+  console.log("✅ Response received:", response);
+  if (response?.message) {
+    toast.success(response.message);
   }
-  return response.data;
+  return response;
 });
 
 const createApiMethods = (client: ApiClient) => ({

@@ -6,17 +6,20 @@ export interface ApiClientConfig {
 }
 
 export interface ApiResponse<T = any> {
-  data: T;
-  status: number;
-  statusText: string;
+  data?: T;
+  status_code: number;
+  success?: boolean;
+  code: string;
+  message?: string;
   headers: Record<string, string>;
 }
 
 export interface ApiError {
-  message: string;
-  status?: number;
-  statusText?: string;
   data?: any;
+  status_code: number;
+  success?: boolean;
+  code: string;
+  message?: string;
 }
 
 export type RequestMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
@@ -62,7 +65,7 @@ export class ApiClient {
     const key = config.baseURL;
     console.log("ApiClient getInstance", key);
     if (!key) return undefined;
-    
+
     if (!ApiClient.instances.has(key)) {
       ApiClient.instances.set(key, new ApiClient(config));
     }
@@ -196,6 +199,8 @@ export class ApiClient {
       if (error instanceof Error) {
         const apiError: ApiError = {
           message: error.message,
+          code: "REQUEST_ERROR",
+          status_code: 500,
         };
 
         throw await this.applyInterceptors("error", apiError);

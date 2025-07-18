@@ -5,16 +5,19 @@ export interface ApiClientConfig {
     withCredentials?: boolean;
 }
 export interface ApiResponse<T = any> {
-    data: T;
-    status: number;
-    statusText: string;
+    data?: T;
+    status_code: number;
+    success?: boolean;
+    code: string;
+    message?: string;
     headers: Record<string, string>;
 }
 export interface ApiError {
-    message: string;
-    status?: number;
-    statusText?: string;
     data?: any;
+    status_code: number;
+    success?: boolean;
+    code: string;
+    message?: string;
 }
 export type RequestMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 export interface RequestConfig {
