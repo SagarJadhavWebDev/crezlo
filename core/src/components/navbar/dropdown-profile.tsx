@@ -2,6 +2,7 @@
 import { Menu, MenuButton, MenuItems, MenuItem, Transition } from "@headlessui/react";
 import { useAuth } from "../../context-providers";
 import { FallBackAvatar } from "../common";
+import { envConstants } from "../../constants";
 
 export default function DropdownProfile({ align }: { align?: "left" | "right" }) {
   const auth = useAuth();
@@ -10,7 +11,7 @@ export default function DropdownProfile({ align }: { align?: "left" | "right" })
     <Menu as="div" className="relative inline-flex">
       <MenuButton className="inline-flex justify-center items-center group">
         {/* @ts-ignore */}
-        <FallBackAvatar email={user?.email ?? "User"} profilePicture={user?.avatar?.url ?? "/"} size={40} />
+        <FallBackAvatar email={user?.email_id ?? "User"} profilePicture={user?.avatar?.url ?? "/"} size={40} />
       </MenuButton>
       <Transition
         as="div"
@@ -25,9 +26,26 @@ export default function DropdownProfile({ align }: { align?: "left" | "right" })
         leaveTo="opacity-0"
       >
         <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200 dark:border-gray-700/60">
-          <div className="font-medium text-gray-800 dark:text-gray-100">{"Acme Inc."}</div>
+          {user?.name && <div className="font-medium text-gray-800 dark:text-gray-100">{user?.name}</div>}
+          <div className="text-xs text-gray-500 dark:text-gray-400 italic">{user?.email_id}</div>
         </div>
         <MenuItems as="ul" className="focus:outline-none">
+          <MenuItem
+            onClick={() => {
+              window.location.assign(envConstants.APP_URL.ACCOUNT);
+            }}
+            as="li"
+          >
+            {({ active }) => (
+              <span
+                className={`font-medium cursor-pointer text-sm flex items-center py-1 px-3 ${
+                  active ? "text-violet-600 dark:text-violet-400" : "text-violet-500"
+                }`}
+              >
+                My Account
+              </span>
+            )}
+          </MenuItem>
           <MenuItem
             onClick={() => {
               auth?.logout(() => {

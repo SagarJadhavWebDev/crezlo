@@ -1,5 +1,5 @@
 "use client";
-import { Sidebar, AuthHeader } from "crezlo-core/components";
+import { Sidebar, AuthHeader, Loader } from "crezlo-core/components";
 import { useAppProvider, useAuth } from "crezlo-core/context-providers";
 
 export default function Home() {
@@ -139,7 +139,7 @@ export default function Home() {
             refreshUser();
           }}
         >
-          {"children"}
+          <Loader size={50}/>
         </main>
       </div>
     </div>

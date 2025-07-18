@@ -2,8 +2,8 @@ import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "ghost" | "danger" | "success" | "secondary_danger";
-  size?: "sm" | "md" | "lg";
+  variant?: "primary" | "secondary" | "black" | "option" | "ghost" | "danger" | "success" | "secondary_danger";
+  size?: "xs" | "sm" | "md" | "lg";
   fullWidth?: boolean;
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
@@ -16,12 +16,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     // const baseClasses ="inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-violet-500 disabled:opacity-50 disabled:pointer-events-none";
-    const baseClasses =
-      "font-medium text-sm inline-flex items-center justify-center border border-transparent rounded-lg leading-5 shadow-sm transition";
+    const baseClasses = "";
     const variantClasses = {
-      primary: "bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white",
-      secondary:
-        "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700",
+      primary: "btn-primary",
+      secondary: "btn-secondary",
+      black: "btn-black",
+      option: "btn-option",
       ghost: "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200",
       danger: "bg-rose-600 text-white hover:bg-rose-700 dark:bg-rose-700 dark:hover:bg-rose-800",
       secondary_danger:
@@ -30,9 +30,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const sizeClasses = {
-      sm: "text-sm py-1.5 px-3",
-      md: "text-base py-2 px-4",
-      lg: "text-lg py-2.5 px-6",
+      xs: "btn-xs",
+      sm: "btn-sm",
+      md: "btn",
+      lg: "btn-lg",
     };
 
     const widthClass = fullWidth ? "w-full" : "";

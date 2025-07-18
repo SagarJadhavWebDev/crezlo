@@ -44,10 +44,10 @@ export function AuthHeader({ variant = "default", items, onSubscriptionClick }: 
                 <rect x="4" y="17" width="16" height="2" />
               </svg>
             </button>
-            {items}
+            
           </div>
 
-          <div className="flex-1"></div>
+          <div className="flex-1 flex flex-row items-center justify-start gap-3">{items}</div>
 
           <div className="flex items-center space-x-3">
             {onSubscriptionClick && (
