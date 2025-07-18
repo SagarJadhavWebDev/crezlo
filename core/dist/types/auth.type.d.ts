@@ -36,6 +36,7 @@ export interface AuthProviderConfig {
         };
     };
     redirectOnUnauthorized?: string;
+    isAccountDomain?: boolean;
     onAuthStateChange?: (state: AuthState) => void;
 }
 export type AuthAction = {
