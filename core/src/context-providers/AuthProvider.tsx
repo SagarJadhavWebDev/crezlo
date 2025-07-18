@@ -103,10 +103,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
   const getToken = useCallback(() => {
     const token = getAuthToken();
-    console.log("AuthProvider getToken", window.location.href, token);
     if (!token?.access_token) {
       const domain = getSubDomain();
-      console.log("Redirecting to login", domain);
       if (!mergedConfig?.isAccountDomain) {
         window.location.assign(mergedConfig.redirectOnUnauthorized + `?redirect_url=${window.location.href}`);
       } else {
@@ -153,7 +151,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     dispatch({ type: "SET_ERROR", payload: null });
     ApiInstance.CORE.get<{ seller: User }>(apiEndpoints.auth.profile)
       .then((res) => {
-        // @ts-ignore
         const user = res?.data?.seller;
         setUser(user);
       })
@@ -167,7 +164,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
   // Set User
   const setUser = useCallback((user: User) => {
-    dispatch({ type: "UPDATE_USER", payload: user });
+    dispatch({ type: "SET_USER", payload: user });
   }, []);
 
   // Utility methods
@@ -187,6 +184,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     updateToken,
     logout: logoutUser,
     refreshUser,
+    config:mergedConfig,
   };
 
   return <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>;

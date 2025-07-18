@@ -6,7 +6,6 @@ import { FallBackAvatar } from "../common";
 export default function DropdownProfile({ align }: { align?: "left" | "right" }) {
   const auth = useAuth();
   const user = auth?.user;
-  console.log("AUTH:", user);
   return (
     <Menu as="div" className="relative inline-flex">
       <MenuButton className="inline-flex justify-center items-center group">
@@ -29,7 +28,14 @@ export default function DropdownProfile({ align }: { align?: "left" | "right" })
           <div className="font-medium text-gray-800 dark:text-gray-100">{"Acme Inc."}</div>
         </div>
         <MenuItems as="ul" className="focus:outline-none">
-          <MenuItem onClick={() => {}} as="li">
+          <MenuItem
+            onClick={() => {
+              auth?.logout(() => {
+                window.location.assign(auth?.config?.redirectOnUnauthorized);
+              });
+            }}
+            as="li"
+          >
             {({ active }) => (
               <span
                 className={`font-medium cursor-pointer text-sm flex items-center py-1 px-3 ${

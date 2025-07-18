@@ -48,7 +48,6 @@ export default function Sidebar({
 }: SidebarProps) {
   const sidebar = useRef<HTMLDivElement>(null);
   const { sidebarOpen, setSidebarOpen, sidebarExpanded, setSidebarExpanded } = useAppProvider();
-  console.log("sidebarExpanded", sidebarExpanded, sidebarOpen);
   const segments = useSelectedLayoutSegments();
   const breakpoint = useWindowWidth();
   const expandOnly = !sidebarExpanded && breakpoint && breakpoint >= 1024 && breakpoint < 1536;
@@ -228,7 +227,6 @@ export default function Sidebar({
             <button
               className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
               onClick={() => {
-                console.log("SETTING", sidebarExpanded, sidebarOpen);
                 setSidebarExpanded(!sidebarExpanded);
               }}
             >

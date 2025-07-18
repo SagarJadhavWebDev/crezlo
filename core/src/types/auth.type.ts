@@ -47,6 +47,7 @@ export interface AuthContextValue extends AuthState {
   getToken: () => AuthToken | null;
   updateToken: (token: AuthToken) => void;
   refreshUser: () => void;
+  config?: AuthProviderConfig;
 }
 
 export interface AuthProviderConfig {
