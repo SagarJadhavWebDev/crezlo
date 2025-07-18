@@ -1,11 +1,29 @@
+export interface UserAvatar {
+    image_path?: string;
+    storage: "backblaze";
+    mediamanager_used: boolean;
+}
 export interface User {
-    id: string | number;
-    email: string;
+    id?: string;
     name?: string;
-    avatar?: string;
-    metadata?: Record<string, any>;
-    createdAt?: string | Date;
-    updatedAt?: string | Date;
+    dob?: string;
+    gender?: string;
+    country?: string;
+    email_id?: string;
+    is_email_verified?: boolean;
+    mobile_code?: string;
+    mobile?: string;
+    is_phone_number_verified?: boolean;
+    avatar?: UserAvatar;
+    settings_meta?: any;
+    stats_meta?: any;
+    is_staff?: boolean;
+    status?: string;
+    created_by?: string;
+    updated_by?: string;
+    last_login_at?: string;
+    created_at?: string;
+    updated_at?: string;
 }
 export interface AuthToken {
     access_token: string;

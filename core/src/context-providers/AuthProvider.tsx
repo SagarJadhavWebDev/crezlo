@@ -131,7 +131,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
 
     // Response interceptor to handle token refresh
     ApiInstance.client.addGlobalErrorInterceptor(async (error) => {
-      if (error.status === 401) {
+      if (error.status_code === 401) {
         try {
           logoutUser(() => {
             // Redirect to login page or handle unauthorized access
