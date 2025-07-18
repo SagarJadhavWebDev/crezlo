@@ -6,6 +6,7 @@ import { FallBackAvatar } from "../common";
 export default function DropdownProfile({ align }: { align?: "left" | "right" }) {
   const auth = useAuth();
   const user = auth?.user;
+  console.log("AUTH:", user);
   return (
     <Menu as="div" className="relative inline-flex">
       <MenuButton className="inline-flex justify-center items-center group">

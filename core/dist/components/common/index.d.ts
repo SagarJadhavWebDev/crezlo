@@ -12,5 +12,5 @@ export * from "./Tooltip";
 export * from "./PaginationNumeric";
 export * from "./Loader";
 export * from "./MultiSelectDropdown";
-export * from "./SelectDropDown";
+export * from "./SelectDropdown";
 export * from "./InlineEditableInput";
