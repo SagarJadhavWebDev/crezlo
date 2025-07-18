@@ -1,0 +1,86 @@
+:root {
+  /*
+   * Color palette
+   */
+
+  --crezlo-color-rose-01: #4a001c;
+  --crezlo-color-rose-02: #670833;
+  --crezlo-color-rose-03: #87114c;
+  --crezlo-color-rose-04: #a81a66;
+  --crezlo-color-rose-05: #bc5089;
+  --crezlo-color-rose-06: #cc7ca5;
+  --crezlo-color-rose-07: #d89aba;
+  --crezlo-color-rose-08: #e3b8cf;
+  --crezlo-color-rose-09: #efd6e3;
+  --crezlo-color-rose-10: #f6eaf1;
+  --crezlo-color-rose-11: #faf4f8;
+  --crezlo-color-rose-12: #fef8fc;
+
+  --crezlo-color-azure-01: #00175d;
+  --crezlo-color-azure-02: #002c77;
+  --crezlo-color-azure-03: #014292;
+  --crezlo-color-azure-04: #0158ad;
+  --crezlo-color-azure-05: #3479be;
+  --crezlo-color-azure-06: #6499cf;
+  --crezlo-color-azure-07: #88b0da;
+  --crezlo-color-azure-08: #abc7e5;
+  --crezlo-color-azure-09: #cfdff0;
+  --crezlo-color-azure-10: #e7eef7;
+  --crezlo-color-azure-11: #f3f6fb;
+  --crezlo-color-azure-12: #f7faff;
+
+  --crezlo-color-green-01: #002000;
+  --crezlo-color-green-02: #043604;
+  --crezlo-color-green-03: #084e08;
+  --crezlo-color-green-04: #0c680c;
+  --crezlo-color-green-05: #1d882f;
+  --crezlo-color-green-06: #2faa53;
+  --crezlo-color-green-07: #56c16f;
+  --crezlo-color-green-08: #7dd78b;
+  --crezlo-color-green-09: #b8e8bf;
+  --crezlo-color-green-10: #ddf3e0;
+  --crezlo-color-green-11: #eff8f0;
+  --crezlo-color-green-12: #f3fcf4;
+
+  --crezlo-color-yellow-01: #211000;
+  --crezlo-color-yellow-02: #362700;
+  --crezlo-color-yellow-03: #4c4000;
+  --crezlo-color-yellow-04: #645a00;
+  --crezlo-color-yellow-05: #877614;
+  --crezlo-color-yellow-06: #ab9429;
+  --crezlo-color-yellow-07: #bfac4e;
+  --crezlo-color-yellow-08: #d4c474;
+  --crezlo-color-yellow-09: #e6deb1;
+  --crezlo-color-yellow-10: #f3efd9;
+  --crezlo-color-yellow-11: #f9f7ed;
+  --crezlo-color-yellow-12: #fcfaf0;
+
+  --crezlo-color-red-01: #4c0000;
+  --crezlo-color-red-02: #6a0a10;
+  --crezlo-color-red-03: #8a1422;
+  --crezlo-color-red-04: #ac1f35;
+  --crezlo-color-red-05: #bf5366;
+  --crezlo-color-red-06: #ce7e8e;
+  --crezlo-color-red-07: #d99ca8;
+  --crezlo-color-red-08: #e4b9c2;
+  --crezlo-color-red-09: #efd7db;
+  --crezlo-color-red-10: #f6eaec;
+  --crezlo-color-red-11: #faf4f5;
+  --crezlo-color-red-12: #fff9fa;
+
+  --crezlo-color-grey-01: #181818;
+  --crezlo-color-grey-02: #292929;
+  --crezlo-color-grey-03: #404040;
+  --crezlo-color-grey-04: #5a5a5a;
+  --crezlo-color-grey-05: #767676;
+  --crezlo-color-grey-06: #949494;
+  --crezlo-color-grey-07: #ababab;
+  --crezlo-color-grey-08: #c3c3c3;
+  --crezlo-color-grey-09: #dcdcdc;
+  --crezlo-color-grey-10: #efefef;
+  --crezlo-color-grey-11: #f5f5f5;
+  --crezlo-color-grey-12: #fafafa;
+
+  --crezlo-color-black: #000000;
+  --crezlo-color-white: #ffffff;
+}
