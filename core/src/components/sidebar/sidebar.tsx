@@ -1,11 +1,14 @@
 import { useSelectedLayoutSegments } from "next/navigation";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import SidebarLink from "./sidebar-link";
 import SidebarLinkGroup from "./sidebar-link-group";
 import Link from "next/link";
 import { useWindowWidth } from "../../utils/use-window-width";
 import Logo from "./logo";
 import { useAppProvider } from "../../context-providers/AppProvider";
+import { ApiInstance } from "../../utils";
+import useSWR from "swr";
+import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "../ui/drawer";
 
 interface SubMenu {
   label: string;
@@ -108,12 +111,12 @@ export default function Sidebar({
           <Logo imageUrl={logoUrl} label={logoLabel} />
         </div>
 
-        <div className="space-y-0 flex-1">
+        <div className="space-y-6 flex-1">
           {menus?.map((menu, index) => (
             <div key={index}>
               {menu?.name && (
                 <h3 className="text-xs uppercase text-gray-400 dark:text-gray-500 font-semibold pl-3">
-                  <span className="hidden lg:block lg:sidebar-expanded:hidden text-center w-6" aria-hidden="true">
+                  <span className="lg:block lg:sidebar-expanded:hidden text-center w-6" aria-hidden="true">
                     •••
                   </span>
                   <span className="lg:hidden lg:sidebar-expanded:block">{menu?.name}</span>
@@ -200,31 +203,8 @@ export default function Sidebar({
 
         {/* Expand / collapse button */}
         <div className={"flex justify-between items-center mb-4"}>
-          {sidebarExpanded ? (
-            <SidebarLink href={marketPlaceMenu?.href} active={segments?.includes(marketPlaceMenu?.value)}>
-              <div className="flex items-center">
-                <svg
-                  className={`shrink-0 fill-current ${
-                    segments?.includes(marketPlaceMenu?.value) ? "text-violet-500" : "text-gray-400 dark:text-gray-500"
-                  }`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z" />
-                </svg>
-                <span
-                  className={`text-md font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200 ${
-                    segments?.includes(marketPlaceMenu?.value) ? "text-indigo-500" : ""
-                  }`}
-                >
-                  Market Place
-                </span>
-              </div>
-            </SidebarLink>
-          ) : null}
-          <div className="pl-4 pr-3 py-2">
+          {sidebarExpanded ? <MarketPlaceDrawer /> : null}
+          <div className="flex justify-center items-center p-2 px-4">
             <button
               className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
               onClick={() => {
@@ -248,3 +228,43 @@ export default function Sidebar({
     </div>
   );
 }
+
+const MarketPlaceDrawer = () => {
+  const { data, isLoading, error } = useSWR("plugins/list", ApiInstance.CORE.get);
+  return (
+    <Drawer direction="right">
+      <DrawerTrigger asChild>
+        <SidebarLink href={"#"} active={false}>
+          <div className="flex items-center">
+            <svg
+              className={`shrink-0 fill-current ${"text-gray-400 dark:text-gray-500"}`}
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z" />
+            </svg>
+            <span className={`text-md font-medium ml-4 lg:opacity-0 lg:sidebar-expanded:opacity-100 duration-200 ${"text-indigo-500"}`}>
+              Market Place
+            </span>
+          </div>
+        </SidebarLink>
+      </DrawerTrigger>
+
+      <DrawerContent
+        // =======>  Edit drawer className
+        className="  left-auto  right-4 top-2 bottom-2 fixed z-50  outline-none w-[310px] flex  bg-transparent border-none mt-0 "
+      >
+        {/* =====> Edit DrawerContent first child className  */}
+        <div className="bg-zinc-50 h-full w-full grow p-5 flex flex-col rounded-[16px]">
+          <DrawerHeader>
+            <DrawerTitle>Move Goal</DrawerTitle>
+            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+          </DrawerHeader>
+          <DrawerFooter></DrawerFooter>
+        </div>
+      </DrawerContent>
+    </Drawer>
+  );
+};

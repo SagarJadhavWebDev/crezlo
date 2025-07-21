@@ -11,7 +11,7 @@ export default function DropdownProfile({ align }: { align?: "left" | "right" })
     <Menu as="div" className="relative inline-flex">
       <MenuButton className="inline-flex justify-center items-center group">
         {/* @ts-ignore */}
-        <FallBackAvatar email={user?.email_id ?? "User"} profilePicture={user?.avatar?.url ?? "/"} size={40} />
+        <FallBackAvatar email={user?.email_id ?? "User"} profilePicture={user?.avatar?.url} size={40} />
       </MenuButton>
       <Transition
         as="div"
