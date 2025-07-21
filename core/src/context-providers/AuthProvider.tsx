@@ -91,6 +91,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
   // Token management
   const updateToken = useCallback((token: AuthToken) => {
     setCookieJSON("token", token);
+    setCookie("auth", token?.access_token);
     dispatch({ type: "SET_TOKENS", payload: token });
   }, []);
 
@@ -184,7 +185,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     updateToken,
     logout: logoutUser,
     refreshUser,
-    config:mergedConfig,
+    config: mergedConfig,
   };
 
   return <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>;

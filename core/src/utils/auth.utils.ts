@@ -11,5 +11,6 @@ export const getAuthToken = (): AuthToken | null => {
 
 export const logoutAuthUser = (callback?: () => void): void => {
   removeCookie("token");
+  removeCookie("auth");
   callback?.();
 };

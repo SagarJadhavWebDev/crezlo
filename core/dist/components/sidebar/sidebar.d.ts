@@ -10,6 +10,7 @@ export interface MenuItem {
     icon?: React.ReactNode;
     subMenu?: SubMenu[];
     badge?: string | number;
+    className?: string;
 }
 export interface Menu {
     name?: string;

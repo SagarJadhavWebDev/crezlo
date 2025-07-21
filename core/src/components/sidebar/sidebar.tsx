@@ -20,6 +20,7 @@ export interface MenuItem {
   icon?: React.ReactNode;
   subMenu?: SubMenu[];
   badge?: string | number;
+  className?: string;
 }
 
 export interface Menu {
@@ -132,7 +133,7 @@ export default function Sidebar({
                             <Wrapper
                               {...(item?.href ? { href: item?.href } : {})}
                               // href="#0"
-                              className={`block cursor-pointer text-gray-800 dark:text-gray-100 truncate transition ${
+                              className={`block cursor-pointer text-gray-800 dark:text-gray-100 truncate transition ${item.className} ${
                                 isMenuActive ? "" : "hover:text-gray-900 dark:hover:text-white"
                               }`}
                               onClick={(e) => {
