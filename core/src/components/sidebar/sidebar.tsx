@@ -230,7 +230,6 @@ export default function Sidebar({
 }
 
 const MarketPlaceDrawer = () => {
-  const { data, isLoading, error } = useSWR("plugins/list", ApiInstance.CORE.get);
   return (
     <Drawer direction="right">
       <DrawerTrigger asChild>
