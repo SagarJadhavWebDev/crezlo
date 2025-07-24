@@ -1,0 +1,78 @@
+.CrezloCanvas {
+  background: var(--crezlo-color-grey-11);
+  display: flex;
+  grid-area: editor;
+  flex-direction: column;
+  padding: var(--crezlo-space-px);
+  overflow: auto;
+}
+
+@media (min-width: 1198px) {
+  .CrezloCanvas {
+    padding: calc(var(--crezlo-space-px) * 1.5);
+    padding-top: var(--crezlo-space-px);
+  }
+
+  .CrezloCanvas:not(.CrezloCanvas:has(.CrezloCanvas-controls)) {
+    padding-top: calc(var(--crezlo-space-px) * 1.5);
+  }
+}
+
+.CrezloCanvas-inner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-width: 358px;
+  position: relative;
+  width: 100%;
+}
+
+.CrezloCanvas-root {
+  background: white;
+  border: 1px solid var(--crezlo-color-grey-09);
+  box-sizing: content-box;
+  min-width: 321px;
+  position: absolute;
+  pointer-events: none;
+  transform-origin: top;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+@media (min-width: 1198px) {
+  .CrezloCanvas-root {
+    min-width: unset;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .CrezloCanvas-root {
+    transition: none !important;
+  }
+}
+
+.CrezloCanvas--ready .CrezloCanvas-root {
+  pointer-events: unset;
+  opacity: 1;
+}
+
+.CrezloCanvas-loader {
+  align-items: center;
+  color: var(--crezlo-color-grey-06);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  transition: opacity 250ms ease-out;
+  opacity: 0;
+}
+
+.CrezloCanvas--showLoader .CrezloCanvas-loader {
+  opacity: 1;
+}
+
+.CrezloCanvas--showLoader.CrezloCanvas--ready .CrezloCanvas-loader {
+  opacity: 0;
+  height: 0;
+  transition: none;
+}

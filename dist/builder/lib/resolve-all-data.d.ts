@@ -1,0 +1,2 @@
+import { ComponentData, Config, Data, DefaultComponentProps, DefaultRootFieldProps, Metadata } from "../types";
+export declare function resolveAllData<Props extends DefaultComponentProps = DefaultComponentProps, RootProps extends Record<string, any> = DefaultRootFieldProps>(data: Partial<Data>, config: Config, metadata?: Metadata, onResolveStart?: (item: ComponentData) => void, onResolveEnd?: (item: ComponentData) => void): Promise<Data<Props, RootProps>>;
