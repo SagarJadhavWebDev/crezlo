@@ -1,0 +1,46 @@
+.CrezloFields {
+  position: relative;
+  font-family: var(--crezlo-font-family);
+}
+
+.CrezloFields--isLoading {
+  min-height: 48px; /* Ensure there is sufficient room for loader if no fields */
+}
+
+.CrezloFields-loadingOverlay {
+  background: var(--crezlo-color-white);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: all;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+
+.CrezloFields-loadingOverlayInner {
+  display: flex;
+  padding: 16px;
+  position: sticky;
+  top: 0;
+}
+
+.CrezloFields-field * {
+  box-sizing: border-box;
+}
+
+.CrezloFields--wrapFields .CrezloFields-field {
+  color: var(--crezlo-color-grey-04);
+  padding: 16px;
+  padding-bottom: 12px;
+  display: block;
+}
+
+.CrezloFields--wrapFields .CrezloFields-field + .CrezloFields-field {
+  border-top: 1px solid var(--crezlo-color-grey-09);
+  margin-top: 8px;
+}
