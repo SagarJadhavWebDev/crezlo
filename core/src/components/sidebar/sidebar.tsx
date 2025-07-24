@@ -203,7 +203,7 @@ export default function Sidebar({
 
         {/* Expand / collapse button */}
         <div className={"flex justify-between items-center mb-4"}>
-          {sidebarExpanded ? <MarketPlaceDrawer /> : null}
+          {sidebarExpanded ? <MarketPlaceDrawer /> : <></>}
           <div className="flex justify-center items-center p-2 px-4">
             <button
               className="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400"
