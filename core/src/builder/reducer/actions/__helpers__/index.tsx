@@ -1,9 +1,18 @@
-import { Config, Data, Slot, UiState } from "../../../types";
+import { CrezloAction, createReducer } from "../../../reducer";
+import { ComponentData, Config, Data, Slot, UiState } from "../../../types";
+import { generateId } from "../../../lib/generate-id";
 import {
   createAppStore,
   defaultAppState as _defaultAppState,
 } from "../../../store";
 import { PrivateAppState } from "../../../types/Internal";
+import { stripSlots } from "../../../lib/data/strip-slots";
+import { Reducer } from "react";
+import { flattenNode } from "../../../lib/data/flatten-node";
+
+jest.mock("../../../lib/generate-id");
+
+const mockedGenerateId = generateId as jest.MockedFunction<typeof generateId>;
 
 type Props = {
   Comp: {
@@ -85,7 +94,84 @@ const config: UserConfig = {
   },
 };
 
+export const expectIndexed = (
+  state: PrivateAppState,
+  item: ComponentData | undefined,
+  path: string[],
+  index: number,
+  _config: Config = config
+) => {
+  if (!item) return;
 
+  const zoneCompound = path[path.length - 1];
 
+  expect(state.indexes.zones[zoneCompound].contentIds[index]).toEqual(
+    item.props.id
+  );
+  expect(state.indexes.nodes[item.props.id].data).toEqual(item);
+  expect(state.indexes.nodes[item.props.id].flatData).toEqual(
+    flattenNode(item, _config)
+  );
+  expect(state.indexes.nodes[item.props.id].path).toEqual(path);
+};
 
+export const executeSequenceFactory =
+  (reducer: Reducer<any, any>) =>
+  <UserData extends Data>(
+    initialState: PrivateAppState<UserData>,
+    actions: ((currentState: PrivateAppState<UserData>) => CrezloAction)[]
+  ) => {
+    let currentState: PrivateAppState<UserData> = initialState;
 
+    actions.forEach((actionFn) => {
+      const action = actionFn(currentState);
+
+      currentState = reducer(currentState, action) as PrivateAppState<UserData>;
+    });
+
+    return currentState;
+  };
+
+export const testSetup = () => {
+  let _reducer = createReducer({ appStore: appStore.getState() });
+
+  const beforeEachFn = () => {
+    const newStore = {
+      ...appStore.getInitialState(),
+      config,
+    };
+
+    appStore.setState(newStore, true);
+
+    _reducer = createReducer({ appStore: newStore });
+
+    let counter = 0;
+
+    mockedGenerateId.mockImplementation(() => `mockId-${counter++}`);
+  };
+
+  beforeEach(beforeEachFn);
+
+  const executeSequence = (
+    initialState: PrivateAppState<UserData>,
+    actions: ((currentState: PrivateAppState<UserData>) => CrezloAction)[]
+  ) => {
+    let currentState: PrivateAppState<UserData> = initialState;
+
+    actions.forEach((actionFn) => {
+      const action = actionFn(currentState);
+
+      currentState = _reducer(
+        currentState,
+        action
+      ) as PrivateAppState<UserData>;
+    });
+
+    return currentState;
+  };
+
+  const reducer = (state: PrivateAppState, action: CrezloAction) =>
+    _reducer(state, action);
+
+  return { reducer, executeSequence, config };
+};

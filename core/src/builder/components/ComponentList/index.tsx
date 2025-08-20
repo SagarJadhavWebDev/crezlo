@@ -84,7 +84,6 @@ const ComponentList = ({
               return (
                 <ComponentListItem
                   key={componentKey}
-                  // @ts-ignore
                   preview={config.components?.[componentKey]?.["preview"] ? config.components[componentKey]["preview"]['displayPreview'] : componentKey}
                   label={
                     config.components?.[componentKey]?.["label"] ?? componentKey

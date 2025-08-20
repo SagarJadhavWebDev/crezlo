@@ -1,5 +1,6 @@
+
 import { InputHTMLAttributes, forwardRef } from "react";
-import {Tooltip} from "./Tooltip";
+import { Tooltip } from "./Tooltip";
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;

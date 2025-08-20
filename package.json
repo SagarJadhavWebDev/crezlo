@@ -2,18 +2,26 @@
   "name": "crezlo",
   "version": "1.0.0",
   "main": "index.js",
-  "private":true,
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build --workspace=core",
     "core-dev": "npm run dev --workspace=core",
     "dev:rollup": "npm run dev:rollup --workspace=core",
     "dev": "npm run dev --workspace=core-preview",
-    "release":"${npm_package_version}"
+    "release": "${npm_package_version}"
   },
-  "workspaces":["core","core-preview"],
+  "workspaces": [
+    "core",
+    "core-preview"
+  ],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.864.0",
+    "react-error-boundary": "^6.0.0",
+    "react-select": "^5.10.2",
+    "react-window": "^1.8.11"
+  }
 }
-

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TableSkeleton: React.FC<{ columns: number; rows?: number }> = ({ columns, rows = 5 }) => {
+const TableSkeleton: React.FC<{ columns: number; rows?: number }> = ({ columns, rows = 5 }) => {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-sm rounded-xl">
       <header className="px-5 py-4">
@@ -40,3 +40,4 @@ export const TableSkeleton: React.FC<{ columns: number; rows?: number }> = ({ co
   );
 };
 
+export default TableSkeleton;

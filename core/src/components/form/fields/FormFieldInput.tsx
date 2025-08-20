@@ -2,7 +2,7 @@
 
 import { FieldValues, useFormContext } from "react-hook-form";
 import { Input, InputProps } from "../../common";
-import { FieldValidation, NestedKeyOf } from "../../../types/form.type";
+import { FieldValidation, NestedKeyOf } from "../../../types";
 import { useValidationRules } from "../hooks/useValidationRules";
 import { get } from "lodash";
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../common";
 import { IPagination } from "../../types";
 
 interface PaginationProps {
@@ -7,7 +8,7 @@ interface PaginationProps {
   onPerPageChange?: (perPage: number) => void;
 }
 
-export const Pagination: React.FC<PaginationProps> = ({ pagination, onPageChange, onPerPageChange }) => {
+const Pagination: React.FC<PaginationProps> = ({ pagination, onPageChange, onPerPageChange }) => {
   const isFirst = pagination.current_page <= 1;
   const isLast = pagination.current_page >= pagination.total_pages;
   return (
@@ -76,3 +77,4 @@ export const Pagination: React.FC<PaginationProps> = ({ pagination, onPageChange
   );
 };
 
+export default Pagination;

@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../common";
 import { useSelectedItems } from "./selected-items-context";
 

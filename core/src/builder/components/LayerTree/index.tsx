@@ -77,8 +77,8 @@ const Layer = ({
   });
 
   const componentConfig: ComponentConfig | undefined =
-    config.components[nodeData.data.type];
-  const label = componentConfig?.["label"] ?? nodeData.data.type.toString();
+    config?.components?.[nodeData?.data?.type];
+  const label = componentConfig?.["label"] ?? nodeData?.data?.type.toString();
 
   return (
     <li
@@ -141,8 +141,8 @@ const Layer = ({
           )}
           <div className={getClassNameLayer("title")}>
             <div className={getClassNameLayer("icon")}>
-              {nodeData.data.type === "Text" ||
-              nodeData.data.type === "Heading" ? (
+              {nodeData?.data?.type === "Text" ||
+              nodeData?.data?.type === "Heading" ? (
                 <Type size="16" />
               ) : (
                 <LayoutGrid size="16" />

@@ -6,6 +6,11 @@ import { generateId } from "../../lib/generate-id";
 import { useDragListener } from "../DragDropContext";
 import { useSafeId } from "../../lib/use-safe-id";
 import { useDraggable, useDroppable } from "@dnd-kit/react";
+import { useAppStore } from "@/builder/store";
+import { useSlots } from "@/builder/lib/use-slots";
+import { DropZonePure, DropZoneRenderPure } from "../DropZone";
+import { SlotRenderPure } from "../SlotRender";
+// import { DropZoneRender } from "../ServerRender";
 
 const getClassName = getClassNameFactory("Drawer", styles);
 const getClassNameItem = getClassNameFactory("DrawerItem", styles);
@@ -21,18 +26,20 @@ export const DrawerItemInner = ({
   children?: (props: { children: ReactNode; name: string }) => ReactElement;
   name: string;
   label?: string;
-  preview? :string;
+  preview?: string;
   dragRef?: Ref<any>;
   isDragDisabled?: boolean;
 }) => {
+  const config = useAppStore((s) => s.config);
   const CustomInner = useMemo(
-    () =>
-      children ||
-      (({ children }: { children: ReactNode; name: string }) => (
-        <div className={getClassNameItem("default")}>{children}</div>
-      )),
+    () => children || (({ children }: { children: ReactNode; name: string }) => <div className={getClassNameItem("default")}>{children}</div>),
     [children]
   );
+
+  // WIP MUDASSIR RENDER PREVIEWS
+  // const propsWithSlots = useSlots(config, { type: name, props: config.components?.[name]?.defaultProps }, (slotProps) => (
+  //   <SlotRenderPure {...slotProps} config={config} metadata={{}} />
+  // ));
   return (
     <div
       className={getClassNameItem({ disabled: isDragDisabled })}
@@ -45,6 +52,9 @@ export const DrawerItemInner = ({
         <div className={getClassNameItem("draggableWrapper")}>
           <div className={getClassNameItem("draggable")}>
             {preview ? <div className={getClassNameItem("name")}><img src={preview ?? name} width={220} height={150} /></div> : <div className={getClassNameItem("name")}>{label ?? name}</div> }
+            {/* <div className={getClassNameItem("name")}>
+              {config?.components?.[name]?.render?.({ ...propsWithSlots, crezlo: { ...propsWithSlots.crezlo, dragRef: dragRef } })}
+            </div> */}
             <div className={getClassNameItem("icon")}>
               <DragIcon />
             </div>
@@ -71,7 +81,7 @@ const DrawerItemDraggable = ({
   children?: (props: { children: ReactNode; name: string }) => ReactElement;
   name: string;
   label?: string;
-  preview? :string;
+  preview?: string;
   id: string;
   isDragDisabled?: boolean;
 }) => {
@@ -90,13 +100,7 @@ const DrawerItemDraggable = ({
         </DrawerItemInner>
       </div>
       <div className={getClassName("draggableFg")}>
-        <DrawerItemInner
-          name={name}
-          label={label}
-          preview={preview}
-          dragRef={ref}
-          isDragDisabled={isDragDisabled}
-        >
+        <DrawerItemInner name={name} label={label} preview={preview} dragRef={ref} isDragDisabled={isDragDisabled}>
           {children}
         </DrawerItemInner>
       </div>
@@ -117,7 +121,7 @@ const DrawerItem = ({
   children?: (props: { children: ReactNode; name: string }) => ReactElement;
   id?: string;
   label?: string;
-  preview? :string;
+  preview?: string;
   index?: number; // TODO deprecate
   isDragDisabled?: boolean;
 }) => {
@@ -125,9 +129,7 @@ const DrawerItem = ({
   const [dynamicId, setDynamicId] = useState(generateId(resolvedId));
 
   if (typeof index !== "undefined") {
-    console.error(
-      "Warning: The `index` prop on Drawer.Item is deprecated and no longer required."
-    );
+    console.error("Warning: The `index` prop on Drawer.Item is deprecated and no longer required.");
   }
 
   useDragListener(
@@ -140,13 +142,7 @@ const DrawerItem = ({
 
   return (
     <div key={dynamicId}>
-      <DrawerItemDraggable
-        name={name}
-        label={label}
-        preview={preview}
-        id={dynamicId}
-        isDragDisabled={isDragDisabled}
-      >
+      <DrawerItemDraggable name={name} label={label} preview={preview} id={dynamicId} isDragDisabled={isDragDisabled}>
         {children}
       </DrawerItemDraggable>
     </div>
@@ -163,15 +159,11 @@ export const Drawer = ({
   direction?: "vertical" | "horizontal"; // TODO deprecate
 }) => {
   if (droppableId) {
-    console.error(
-      "Warning: The `droppableId` prop on Drawer is deprecated and no longer required."
-    );
+    console.error("Warning: The `droppableId` prop on Drawer is deprecated and no longer required.");
   }
 
   if (direction) {
-    console.error(
-      "Warning: The `direction` prop on Drawer is deprecated and no longer required to achieve multi-directional dragging."
-    );
+    console.error("Warning: The `direction` prop on Drawer is deprecated and no longer required to achieve multi-directional dragging.");
   }
 
   const id = useSafeId();
@@ -183,13 +175,7 @@ export const Drawer = ({
   });
 
   return (
-    <div
-      className={getClassName()}
-      ref={ref}
-      data-crezlo-dnd={id}
-      data-crezlo-drawer
-      data-crezlo-dnd-void
-    >
+    <div className={getClassName()} ref={ref} data-crezlo-dnd={id} data-crezlo-drawer data-crezlo-dnd-void>
       {children}
     </div>
   );

@@ -203,16 +203,16 @@ const CopyHostStyles = ({
 
     Promise.all(
       collectedStyles.map(async (styleNode, i) => {
-        if (styleNode.nodeName === "LINK") {
-          const linkHref = (styleNode as HTMLLinkElement).href;
+        // if (styleNode.nodeName === "LINK") {
+        //   const linkHref = (styleNode as HTMLLinkElement).href;
 
-          // Don't process link elements with identical hrefs more than once
-          if (hrefs.indexOf(linkHref) > -1) {
-            return;
-          }
+        //   // Don't process link elements with identical hrefs more than once
+        //   if (hrefs.indexOf(linkHref) > -1) {
+        //     return;
+        //   }
 
-          hrefs.push(linkHref);
-        }
+        //   hrefs.push(linkHref);
+        // }
 
         const mirror = await mirrorEl(styleNode);
 

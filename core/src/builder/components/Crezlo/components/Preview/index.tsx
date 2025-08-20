@@ -146,6 +146,8 @@ export const Preview = ({ id = "crezlo-preview" }: { id?: string }) => {
           data-rfd-iframe
           onReady={() => {
             setStatus("READY");
+            // MUDASSIR TO ADD EVENT ON LOAD
+              iframe?.onLoad?.(ref?.current);
           }}
           onNotReady={() => {
             setStatus("MOUNTED");

@@ -52,6 +52,7 @@ export const SlotRender = forwardRef<HTMLDivElement, SlotRenderProps>(
     { className, style, content, config, metadata },
     ref
   ) {
+    
     return (
       <div className={className} style={style} ref={ref}>
         {content.map((item) => {

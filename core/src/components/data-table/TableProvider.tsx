@@ -19,13 +19,14 @@ export interface ITableQueryParams {
   [key: string]: any;
 }
 
-interface TableState {
+export interface TableState {
   current_page: number;
   per_page: number;
   sort_by?: string;
   sort_dir?: SortDirection;
-  filters: Record<string, FilterValue>;
+  filters?: Record<string, FilterValue>;
   customParams?: Record<string, string>;
+  
 }
 
 type TableAction = { type: "SET_STATE"; payload: Partial<TableState> } | { type: "RESET_FILTERS" };
@@ -109,33 +110,41 @@ export function TableProvider({ children, customKeys = [] }: { children: React.R
   const updateState = useCallback(
     (patch: Partial<TableState>) => {
       const next = { ...state, ...patch };
-      const params = new URLSearchParams();
-
+  
+      // Start with existing query params
+      const params = new URLSearchParams(window.location.search);
+  
       params.set("page", next.current_page.toString());
       params.set("per_page", next.per_page.toString());
-
+  
       if (next.sort_by) {
         params.set("sort_by", next.sort_by);
         if (next.sort_dir) {
           params.set("sort_dir", next.sort_dir);
         }
+      } else {
+        params.delete("sort_by");
+        params.delete("sort_dir");
       }
-
+  
       if (Object.keys(next.filters || {}).length > 0) {
         params.set("filters", JSON.stringify(next.filters));
+      } else {
+        params.delete("filters");
       }
-
+  
       if (next.customParams) {
         for (const [key, value] of Object.entries(next.customParams)) {
           params.set(key, value);
         }
       }
-
+  
       router.replace(`${pathname}?${params.toString()}`);
       dispatch({ type: "SET_STATE", payload: patch });
     },
     [router, pathname, state]
   );
+  
 
   const resetFilters = useCallback(() => {
     dispatch({ type: "RESET_FILTERS" });

@@ -14,3 +14,12 @@ export const getInitialsFromEmail = (email) => {
 
   return lastInitial ? `${firstInitial}${lastInitial}` : `${firstInitial}`;
 };
+
+
+export const getIframeDocument = () => {
+  const iframe = document.getElementById("preview-frame");
+  if (iframe) {
+    return iframe?.contentDocument || iframe?.contentWindow?.document;
+  }
+  return document;
+};

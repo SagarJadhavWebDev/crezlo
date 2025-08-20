@@ -16,6 +16,7 @@ export type Permissions = {
 export type IframeConfig = {
   enabled?: boolean;
   waitForStyles?: boolean;
+  onLoad?:(iframe:HTMLIFrameElement | null)=>void
 };
 
 export type OnAction<UserData extends Data = Data> = (

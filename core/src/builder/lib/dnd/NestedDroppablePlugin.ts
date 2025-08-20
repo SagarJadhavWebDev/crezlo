@@ -211,6 +211,7 @@ export const findDeepestCandidate = (
     filteredCandidates.reverse();
 
     const primaryCandidate = filteredCandidates[0];
+     if (!primaryCandidate) return { zone: null, area: null }; //MUDASSIR for fix: address error when using disallow on a slot in root
     const primaryCandidateData = primaryCandidate.data as
       | ComponentDndData
       | DropZoneDndData;

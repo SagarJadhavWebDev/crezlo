@@ -22,7 +22,6 @@ export function useSlots<T extends ComponentData | RootData>(
           readOnly?.[propPath] || readOnly?.[wildcardPath] || forceReadOnly;
 
         const render = isReadOnly ? renderSlotRender : renderSlotEdit;
-
         const Slot = (dzProps: DropZoneProps) =>
           render({
             allow: field?.type === "slot" ? field.allow : [],

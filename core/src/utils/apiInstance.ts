@@ -12,7 +12,7 @@ const baseUrls: Record<BaseUrlType, string> = envConstants.BASE_API_URL;
 ApiClient.addGlobalErrorInterceptor(async (error) => {
   console.log("❌ API ERROR:", error);
   if (error?.message) {
-    toast.success(error.message);
+    toast.error(error.message);
   }
   return error;
 });

@@ -25,26 +25,26 @@ import type {
   Config,
   Data,
   Metadata,
-} from "../../types";
+} from "@builder/types";
 
-import { SidebarSection } from "../../components/SidebarSection";
+import { SidebarSection } from "@builder/components/SidebarSection";
 
-import { CrezloAction } from "../../reducer";
-import getClassNameFactory from "../../lib/get-class-name-factory";
+import { CrezloAction } from "@builder/reducer";
+import getClassNameFactory from "@builder/lib/get-class-name-factory";
 import {
   createAppStore,
   defaultAppState,
   useAppStore,
   appStoreContext,
   AppStore,
-} from "../../store";
+} from "@builder/store";
 import styles from "./styles.module.css";
 import { Fields } from "./components/Fields";
 import { Components } from "./components/Components";
 import { Preview } from "./components/Preview";
 import { Outline } from "./components/Outline";
 import { Canvas } from "./components/Canvas";
-import { defaultViewports } from "../../components/ViewportControls/default-viewports";
+import { defaultViewports } from "@builder/components/ViewportControls/default-viewports";
 import { Viewports } from "../../types";
 import { DragDropContext } from "../DragDropContext";
 import { useLoadedOverrides } from "../../lib/use-loaded-overrides";
@@ -63,6 +63,7 @@ import { walkAppState } from "../../lib/data/walk-app-state";
 import { PrivateAppState } from "../../types/Internal";
 import fdeq from "fast-deep-equal";
 import { Header } from "./components/Header";
+import { LeftSidebarSection } from "./components/LeftSidebarSection";
 
 const getClassName = getClassNameFactory("Crezlo", styles);
 const getLayoutClassName = getClassNameFactory("CrezloLayout", styles);
@@ -96,6 +97,7 @@ type CrezloProps<
   permissions?: Partial<Permissions>;
   plugins?: Plugin[];
   pageOptions?: ReactNode;
+  leftSidebarTabs?:{key:string,title:ReactNode,body:ReactNode}[];
   overrides?: Partial<Overrides>;
   renderHeader?: (props: {
     children: ReactNode;
@@ -479,12 +481,7 @@ function CrezloLayout<
               <div className={getLayoutClassName("inner")}>
                 <Header />
                 <div className={getLayoutClassName("leftSideBar")}>
-                  <SidebarSection title="Components" noBorderTop>
-                    <Components />
-                  </SidebarSection>
-                  <SidebarSection title="Outline">
-                    <Outline />
-                  </SidebarSection>
+                  <LeftSidebarSection/>
                 </div>
                 <Canvas />
                 <div className={getLayoutClassName("rightSideBar")}>
