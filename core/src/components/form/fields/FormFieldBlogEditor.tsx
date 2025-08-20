@@ -1,3 +1,4 @@
+"use client";
 import { Controller, FieldValues, useFormContext } from "react-hook-form";
 import { FieldValidation, NestedKeyOf } from "../../../types";
 import { useValidationRules } from "../hooks/useValidationRules";
@@ -5,9 +6,6 @@ import {
   BlogFormEditor,
   BlogFormEditorProps,
 } from "./components/BlogFormEditor";
-import { useState } from "react";
-import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
-import { LexicalEditor } from "lexical";
 
 interface FormFieldBlogEditorProps<T extends FieldValues>
   extends Omit<BlogFormEditorProps, "onChange"> {

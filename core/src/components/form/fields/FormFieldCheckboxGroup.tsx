@@ -1,3 +1,4 @@
+"use client";
 import { Controller, FieldValues, useFormContext } from "react-hook-form";
 import { FieldValidation, NestedKeyOf } from "../../../types";
 import { useValidationRules } from "../hooks/useValidationRules";

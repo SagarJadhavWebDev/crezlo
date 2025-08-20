@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import { FormFieldWrapper } from "./FormFieldWrapper";
 import Select, { Props } from "react-select";
 
-export type MultiSelectDropDownProps = Props & {
+export type MultiSelectDropDownProps = Partial<Props> & {
   label?: string;
   tooltip?: string;
   supportingText?: string;
@@ -11,7 +11,6 @@ export type MultiSelectDropDownProps = Props & {
   required?: boolean;
   renderSupportingText?: React.ReactNode;
 };
-
 
 export const MultiSelectDropDown = forwardRef<Props, MultiSelectDropDownProps>(
   (
