@@ -4,6 +4,7 @@ export interface ColumnDef<T> {
     id: string;
     header: string | ReactNode;
     sortable?: boolean;
+    [key: string]: any;
 }
 export type FilterCondition = "contains" | "equals" | "startsWith" | "endsWith" | "greaterThan" | "lessThan";
 interface DataTableProps<K extends string, T> {
@@ -21,8 +22,9 @@ interface DataTableProps<K extends string, T> {
     onBackClick?: () => void;
     backLabel?: string;
     createButtonLabel?: string;
+    hideHeadingBar?: boolean;
 }
-export declare function DataTable<K extends string, T extends {
+declare function DataTable<K extends string, T extends {
     id: string | number;
-}>({ title, columns, data, renderRow, resourceKey, isLoading, isError, renderTopRightActions, renderSearch, onCreate, renderGroupingFilter, onBackClick, backLabel, createButtonLabel, }: DataTableProps<K, T>): import("react/jsx-runtime").JSX.Element;
-export {};
+}>({ title, columns, data, renderRow, resourceKey, isLoading, isError, renderTopRightActions, renderSearch, onCreate, renderGroupingFilter, onBackClick, backLabel, createButtonLabel, hideHeadingBar, }: DataTableProps<K, T>): import("react/jsx-runtime").JSX.Element;
+export default DataTable;

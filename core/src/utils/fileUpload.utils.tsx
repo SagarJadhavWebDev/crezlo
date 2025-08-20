@@ -10,19 +10,14 @@ import {
   PutObjectCommand, // Added for deleteFile
 } from "@aws-sdk/client-s3";
 import { createHash } from "crypto";
+import { envConstants } from "../constants";
 
 // Environment variables
-const ACCOUNT_ID = process.env.NEXT_PUBLIC_R2_ACCOUNT_ID;
-const S3_BUCKET = process.env.NEXT_PUBLIC_AWS_S3_PUBLIC_BUCKET;
-const ACCESS_KEY = process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID;
-const SECRET_KEY = process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY;
+const ACCOUNT_ID = envConstants.R2.ACCOUNT_ID;
+const S3_BUCKET = envConstants.R2.BUCKET;
+const ACCESS_KEY = envConstants.R2.KEY_ID;
+const SECRET_KEY = envConstants.R2.SECRET_KEY;
 
-// Validate environment variables
-if (!ACCOUNT_ID || !S3_BUCKET || !ACCESS_KEY || !SECRET_KEY) {
-  throw new Error(
-    "Missing required environment variables for R2 configuration"
-  );
-}
 const input = {
   // PutBucketCorsRequest
   Bucket: S3_BUCKET, // required
@@ -39,7 +34,7 @@ const input = {
   },
 };
 // Hash the secret access key
-const hashedSecretKey =  createHash("sha256").update(SECRET_KEY).digest("hex");
+const hashedSecretKey = createHash("sha256").update(SECRET_KEY).digest("hex");
 
 // Configure S3 client for Cloudflare R2
 const s3Client = new S3Client({
@@ -47,15 +42,11 @@ const s3Client = new S3Client({
   region: "auto", // Cloudflare R2 doesn't use regions, but required by SDK
   credentials: {
     accessKeyId: ACCESS_KEY,
-    secretAccessKey: SECRET_KEY// hashedSecretKey,
+    secretAccessKey: SECRET_KEY, // hashedSecretKey,
   },
   signatureVersion: "v4",
 });
-console.log(
-  "s3Client  Data",
-  s3Client.config.endpoint,
-  s3Client.config.credentials
-);
+console.log("s3Client  Data", s3Client.config.endpoint, s3Client.config.credentials);
 
 const CHUNK_SIZE = 5 * 1024 * 1024; // 5MB per chunk
 
@@ -87,30 +78,18 @@ export const uploadFileInChunks = async (
 ): Promise<string> => {
   const chunks = createChunks(file);
   console.log("Starting upload to bucket:", S3_BUCKET);
-  const uploadId = await initiateMultipartUpload(
-    fileName,
-    fileType,
-    folderName,
-  file
-  );
+  const uploadId = await initiateMultipartUpload(fileName, fileType, folderName, file);
   const uploadPromises = chunks.map((chunk, index) =>
-    uploadChunk(uploadId, chunk, index + 1, fileName, folderName).then(
-      (part) => {
-        const progress = Math.round(((index + 1) / chunks.length) * 100);
-        setProgress({ [uniqueFileKey]: progress });
-        return part;
-      }
-    )
+    uploadChunk(uploadId, chunk, index + 1, fileName, folderName).then((part) => {
+      const progress = Math.round(((index + 1) / chunks.length) * 100);
+      setProgress({ [uniqueFileKey]: progress });
+      return part;
+    })
   );
 
   try {
     const parts = await Promise.all(uploadPromises);
-    const result = await completeMultipartUpload(
-      uploadId,
-      parts,
-      fileName,
-      folderName
-    );
+    const result = await completeMultipartUpload(uploadId, parts, fileName, folderName);
     setProgress({ [uniqueFileKey]: 100 });
     return result;
   } catch (error) {
@@ -121,12 +100,7 @@ export const uploadFileInChunks = async (
 };
 
 // Initiate multipart upload
-const initiateMultipartUpload = async (
-  fileName: string,
-  fileType: string,
-  folderName: string,
-  file: any
-): Promise<string> => {
+const initiateMultipartUpload = async (fileName: string, fileType: string, folderName: string, file: any): Promise<string> => {
   const chunkArrayBuffer = await file.arrayBuffer();
   const chunkUint8Array = new Uint8Array(chunkArrayBuffer);
   // const commandNew = new PutObjectCommand({
@@ -149,14 +123,14 @@ const initiateMultipartUpload = async (
     Bucket: S3_BUCKET,
     Key: `${folderName}${fileName}`,
     ContentType: fileType,
-    ACL:"public-read",
+    ACL: "public-read",
     ...input.CORSConfiguration,
   });
   console.log("command", command);
   try {
     const response = await s3Client.send(command);
     if (!response.UploadId) {
-      throw new Error('UploadId not returned from R2');
+      throw new Error("UploadId not returned from R2");
     }
     console.log("Upload initiated with ID:", response);
     return response.UploadId;
@@ -232,11 +206,7 @@ const completeMultipartUpload = async (
 };
 
 // Abort multipart upload
-const abortMultipartUpload = async (
-  uploadId: string,
-  fileName: string,
-  folderName: string
-): Promise<void> => {
+const abortMultipartUpload = async (uploadId: string, fileName: string, folderName: string): Promise<void> => {
   const command = new AbortMultipartUploadCommand({
     Bucket: S3_BUCKET,
     Key: `${folderName}${fileName}`,
@@ -254,10 +224,7 @@ const abortMultipartUpload = async (
 };
 
 // Delete file
-export const deleteFile = async (
-  filepath: string,
-  onProgress?: (progress: any) => void
-): Promise<{ ETag?: string }> => {
+export const deleteFile = async (filepath: string, onProgress?: (progress: any) => void): Promise<{ ETag?: string }> => {
   const command = new DeleteObjectCommand({
     Bucket: S3_BUCKET,
     Key: filepath,

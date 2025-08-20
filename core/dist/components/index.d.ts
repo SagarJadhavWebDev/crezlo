@@ -7,3 +7,5 @@ export * from "./form";
 export * from "./common";
 export * from "./modals";
 export * from "./cards";
+export * from "./fonts";
+export * from "./editor";

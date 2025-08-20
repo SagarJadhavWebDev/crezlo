@@ -5,5 +5,5 @@ interface PaginationProps {
     onPageChange: (page: number) => void;
     onPerPageChange?: (perPage: number) => void;
 }
-export declare const Pagination: React.FC<PaginationProps>;
-export {};
+declare const Pagination: React.FC<PaginationProps>;
+export default Pagination;

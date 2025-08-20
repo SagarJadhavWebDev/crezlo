@@ -1,5 +1,7 @@
-import { Config, Data, Slot, UiState } from "../../../types";
+import { CrezloAction } from "../../../reducer";
+import { ComponentData, Config, Data, Slot, UiState } from "../../../types";
 import { PrivateAppState } from "../../../types/Internal";
+import { Reducer } from "react";
 type Props = {
     Comp: {
         prop: string;
@@ -37,4 +39,11 @@ export declare const appStore: import("zustand").UseBoundStore<Omit<import("zust
         }): () => void;
     };
 }>;
+export declare const expectIndexed: (state: PrivateAppState, item: ComponentData | undefined, path: string[], index: number, _config?: Config) => void;
+export declare const executeSequenceFactory: (reducer: Reducer<any, any>) => <UserData extends Data>(initialState: PrivateAppState<UserData>, actions: ((currentState: PrivateAppState<UserData>) => CrezloAction)[]) => PrivateAppState<UserData>;
+export declare const testSetup: () => {
+    reducer: (state: PrivateAppState, action: CrezloAction) => PrivateAppState<Data>;
+    executeSequence: (initialState: PrivateAppState<UserData>, actions: ((currentState: PrivateAppState<UserData>) => CrezloAction)[]) => PrivateAppState<UserData>;
+    config: UserConfig;
+};
 export {};

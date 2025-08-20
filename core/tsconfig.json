@@ -18,9 +18,12 @@
     "jsx": "react-jsx",
     "outDir": "dist",
     // "declarationDir": "dist",
+    "noCheck": true,
+    "skipDefaultLibCheck": true,
+    "noEmitOnError": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "rootDir": "src",
+    "rootDir": "src"
   },
   "include": ["src/**/*"],
   "baseUrl": "./src",

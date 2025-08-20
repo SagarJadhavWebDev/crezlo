@@ -12,12 +12,12 @@ export interface ITableQueryParams {
     sort_dir?: SortDirection;
     [key: string]: any;
 }
-interface TableState {
+export interface TableState {
     current_page: number;
     per_page: number;
     sort_by?: string;
     sort_dir?: SortDirection;
-    filters: Record<string, FilterValue>;
+    filters?: Record<string, FilterValue>;
     customParams?: Record<string, string>;
 }
 interface TableContextType {

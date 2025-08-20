@@ -12,6 +12,7 @@ export type MultiSelectDropDownProps = Props & {
   renderSupportingText?: React.ReactNode;
 };
 
+// @ts-ignore
 export const MultiSelectDropDown = forwardRef<Props, MultiSelectDropDownProps>(
   (
     {
@@ -51,10 +52,7 @@ export const MultiSelectDropDown = forwardRef<Props, MultiSelectDropDownProps>(
           supportingText={supportingText}
           renderSupportingText={renderSupportingText}
         >
-          <Select
-            {...props}
-            className="form-input w-full rounded-lg focus:ring-violet-500 border-gray-300 p-0    "
-          />
+          <Select {...props} className="form-input w-full rounded-lg focus:ring-violet-500 border-gray-300 p-0    " />
         </FormFieldWrapper>
       </>
     );

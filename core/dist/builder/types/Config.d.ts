@@ -7,7 +7,7 @@ import { DefaultComponentProps } from "./Props";
 import { Permissions } from "./API";
 import { DropZoneProps } from "../components/DropZone/types";
 import { WithDeepSlots } from "./Internal";
-type SlotComponent = (props?: Omit<DropZoneProps, "zone">) => ReactNode;
+export type SlotComponent = (props?: Omit<DropZoneProps, "zone">) => ReactNode;
 export type CrezloComponent<Props> = (props: WithId<WithCrezloProps<{
     [K in keyof Props]: WithDeepSlots<Props[K], SlotComponent>;
 }>>) => JSX.Element;

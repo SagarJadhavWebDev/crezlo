@@ -3,6 +3,7 @@ import { getCookieJSON, removeCookie } from "./cookieManager";
 
 export const getAuthToken = (): AuthToken | null => {
   const token = getCookieJSON("token");
+  console.log("TOKEN:", token);
   if (token?.access_token) {
     return token;
   }

@@ -102,7 +102,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     });
   }, []);
 
-  const getToken = useCallback(() => {
+  const getToken = () => {
     const token = getAuthToken();
     if (!token?.access_token) {
       const domain = getSubDomain();
@@ -113,7 +113,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       }
     }
     return token;
-  }, []);
+  };
 
   // API request interceptor to add auth token
   useEffect(() => {
@@ -142,6 +142,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       }
       return error;
     });
+
 
     refreshUser();
   }, []);

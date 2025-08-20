@@ -1,6 +1,6 @@
 import { FieldValues } from "react-hook-form";
 import { InputProps } from "../../common";
-import { FieldValidation, NestedKeyOf } from "../../../types/form.type";
+import { FieldValidation, NestedKeyOf } from "../../../types";
 interface FormFieldInputProps<T extends FieldValues> extends InputProps {
     name: NestedKeyOf<T>;
     required?: boolean;

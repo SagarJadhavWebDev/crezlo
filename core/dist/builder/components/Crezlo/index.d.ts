@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from "react";
-import type { UiState, IframeConfig, OnAction, Overrides, Permissions, Plugin, InitialHistory, UserGenerics, Config, Data, Metadata } from "../../types";
-import { CrezloAction } from "../../reducer";
+import type { UiState, IframeConfig, OnAction, Overrides, Permissions, Plugin, InitialHistory, UserGenerics, Config, Data, Metadata } from "@builder/types";
+import { CrezloAction } from "@builder/reducer";
 import { Viewports } from "../../types";
 type CrezloProps<UserConfig extends Config = Config, G extends UserGenerics<UserConfig> = UserGenerics<UserConfig>> = {
     children?: ReactNode;
@@ -13,6 +13,11 @@ type CrezloProps<UserConfig extends Config = Config, G extends UserGenerics<User
     permissions?: Partial<Permissions>;
     plugins?: Plugin[];
     pageOptions?: ReactNode;
+    leftSidebarTabs?: {
+        key: string;
+        title: ReactNode;
+        body: ReactNode;
+    }[];
     overrides?: Partial<Overrides>;
     renderHeader?: (props: {
         children: ReactNode;
@@ -34,7 +39,7 @@ type CrezloProps<UserConfig extends Config = Config, G extends UserGenerics<User
     metadata?: Metadata;
     className?: string;
 };
-export declare const usePropsContext: () => CrezloProps<Config, UserGenerics<Config>>;
+export declare const usePropsContext: () => CrezloProps<Config, UserGenerics<UserConfig>>;
 export declare function Crezlo<UserConfig extends Config = Config, G extends UserGenerics<UserConfig> = UserGenerics<UserConfig>>(props: CrezloProps<UserConfig>): import("react/jsx-runtime").JSX.Element;
 export declare namespace Crezlo {
     var Components: () => import("react/jsx-runtime").JSX.Element;

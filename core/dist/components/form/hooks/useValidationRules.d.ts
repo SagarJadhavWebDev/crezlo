@@ -1,5 +1,5 @@
-import { FieldValidation } from "../../../types/form.type";
 import { FieldValues } from "react-hook-form";
+import { FieldValidation } from "../../../types/form.type";
 export declare function useValidationRules<T extends FieldValues>(validation?: FieldValidation<T>): {
     required?: undefined;
     pattern?: undefined;
