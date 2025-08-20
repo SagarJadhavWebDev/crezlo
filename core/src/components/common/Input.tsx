@@ -1,4 +1,5 @@
 
+"use client";
 import { InputHTMLAttributes, forwardRef } from "react";
 import { Tooltip } from "./Tooltip";
 

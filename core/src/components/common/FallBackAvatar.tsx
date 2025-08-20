@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { getFullImageUrl, getInitialsFromEmail } from "../../utils";
 interface FallBackAvatarProps {

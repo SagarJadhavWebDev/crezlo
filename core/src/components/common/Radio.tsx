@@ -1,3 +1,4 @@
+"use client";
 import { InputHTMLAttributes, forwardRef } from "react";
 
 type RadioProps = InputHTMLAttributes<HTMLInputElement> & {

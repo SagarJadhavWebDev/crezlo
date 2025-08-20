@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
 import debounce from "lodash/debounce";
 import { InputProps , Input} from "./Input";

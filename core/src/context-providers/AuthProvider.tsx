@@ -100,47 +100,13 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       callback?.();
     });
   }, []);
-
-  const getToken = useCallback(() => {
-    const token = getAuthToken();
-    if (!token?.access_token) {
-      if (!mergedConfig?.isAccountDomain) {
-        window.location.assign(mergedConfig.redirectOnUnauthorized + `?redirect_url=${window.location.href}`);
-      } else {
-        window.location.pathname = "/login";
-      }
-    }
-    return token;
-  }, []);
-
+  
   // API request interceptor to add auth token
   useLayoutEffect(() => {
-    ApiInstance.client.addGlobalRequestInterceptor(async (config) => {
-      const token = getToken();
-      if (token?.access_token) {
-        config.headers = {
-          ...config.headers,
-          Authorization: `Bearer ${token?.access_token}`,
-        };
-      }
-      return config;
-    });
-
-    // Response interceptor to handle token refresh
-    ApiInstance.client.addGlobalErrorInterceptor(async (error) => {
-      if (error.status_code === 401) {
-        try {
-          logoutUser(() => {
-            // Redirect to login page or handle unauthorized access
-          });
-        } catch (refreshError) {
-          console.error("Token refresh failed:", refreshError);
-          dispatch({ type: "SET_ERROR", payload: "Session expired. Please log in again." });
-        }
-      }
-      return error;
-    });
-
+    const token = getAuthToken();
+    if (!token?.access_token) {
+       dispatch({ type: "SET_TOKENS", payload: token });
+    }
     refreshUser();
   }, []);
 
@@ -179,7 +145,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
   const contextValue: AuthContextValue = {
     ...state,
     setUser,
-    getToken,
     updateToken,
     logout: logoutUser,
     refreshUser,

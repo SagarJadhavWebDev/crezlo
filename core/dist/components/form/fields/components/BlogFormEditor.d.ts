@@ -7,4 +7,4 @@ export type BlogFormEditorProps = {
 export declare const BlogFormEditor: import("react").ForwardRefExoticComponent<{
     value?: string;
     onChange: (value: string) => void;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> & Omit<FormFieldWrapperProps, "children"> & import("react").RefAttributes<HTMLInputElement>>;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> & Omit<FormFieldWrapperProps, "children"> & import("react").RefAttributes<HTMLInputElement>>;

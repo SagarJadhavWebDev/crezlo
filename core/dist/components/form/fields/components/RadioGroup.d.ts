@@ -26,4 +26,4 @@ export declare const RadioGroup: import("react").ForwardRefExoticComponent<{
     options: RadioOption[];
     value?: string;
     onChange?: (value: string) => void;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> & import("react").RefAttributes<HTMLInputElement>>;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> & import("react").RefAttributes<HTMLInputElement>>;
