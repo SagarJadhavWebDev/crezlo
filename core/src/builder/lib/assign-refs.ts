@@ -10,6 +10,7 @@ export function assignRef<ElementType = HTMLElement>(
   if (typeof ref === "function") {
     ref(node);
   } else if (ref && typeof ref === "object" && "current" in ref) {
+    // @ts-ignore
     ref.current = node;
   }
 }

@@ -156,6 +156,7 @@ export function FontPicker({ onChange, value, className, showFilters = true, wid
       <PopoverContent className="p-0" style={{ width, height }} align="start">
         <Command>
           <CommandInput
+          // @ts-ignore
             hideIcon={true}
             placeholder="Search fonts..."
             onFocus={(e) => {

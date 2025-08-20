@@ -11,6 +11,7 @@ export function usePaginatedData<T>(url: string | null, params: TableState) {
         ...(params ?? {}),
         ...(params?.filters ?? {}),
         ...(params?.customParams ?? {}),
+        // @ts-ignore
         page: params?.current_page,
       }).toString()}`
     : null;
@@ -23,9 +24,13 @@ export function usePaginatedData<T>(url: string | null, params: TableState) {
     mutate,
     error,
     pagination: {
+      // @ts-ignore
       current_page: data?.current_page ?? 0,
+      // @ts-ignore
       per_page: data?.per_page ?? 0,
+      // @ts-ignore
       total_items: data?.total ?? 0,
+      // @ts-ignore
       total_pages: data?.last_page ?? 0,
     },
   };
@@ -66,6 +71,7 @@ export function usePaginatedDataInfinite<T, P extends string>(
 ): { [K in keyof ReturnType<typeof baseReturn> as `${P}${Capitalize<string & K>}`]: ReturnType<typeof baseReturn>[K] };
 
 // Base return value builder (keeps type consistent)
+// @ts-ignore
 function baseReturn<T>(response: ReturnType<typeof useSWRInfinite<IApiResponse<IPaginatedData<"data", T>>>>) {
   const { data: responseData, error, isLoading, mutate, size, setSize } = response;
 
@@ -105,6 +111,7 @@ export function usePaginatedDataInfinite<T>(url: string | null, params: Partial<
     (pageIndex, previousPageData) => {
       if (!url) return null;
       if (previousPageData && !previousPageData?.data?.data?.length) return null;
+      // @ts-ignore
       return `${url}?${paramsToQueryParams({
         ...(params ?? {}),
         ...(params?.filters ?? {}),

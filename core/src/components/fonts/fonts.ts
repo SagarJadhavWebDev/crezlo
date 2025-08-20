@@ -1,16 +1,7 @@
 import { getIframeDocument } from "../../utils";
+import { GoogleFont } from "./google-font.types";
 import { googleFonts } from "./google-fonts";
 
-export interface GoogleFont {
-  family: string;
-  variants: string[];
-  subsets: string[];
-  version: string;
-  lastModified: string;
-  files: Record<string, string>;
-  category: string;
-  kind: string;
-}
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_FONTS_API_KEY;
 const API_URL = "https://www.googleapis.com/webfonts/v1/webfonts";

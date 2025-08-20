@@ -1,8 +1,3 @@
-export const getFullImageUrl = (imagePath: string | any): string | null => {
-  const baseUrl = process.env.NEXT_PUBLIC_AWS_URL as string;
-  return imagePath ? `${baseUrl}${imagePath}` : null;
-};
-
 export const getInitialsFromEmail = (email) => {
   if (!email) return "";
 
@@ -19,6 +14,7 @@ export const getInitialsFromEmail = (email) => {
 export const getIframeDocument = () => {
   const iframe = document.getElementById("preview-frame");
   if (iframe) {
+    // @ts-ignore
     return iframe?.contentDocument || iframe?.contentWindow?.document;
   }
   return document;

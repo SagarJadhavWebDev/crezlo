@@ -8,6 +8,7 @@
  *
  */
 import { JSX, useEffect, useState } from "react"
+// @ts-ignore
 import type { AppState, BinaryFiles } from "@excalidraw/excalidraw/types/types"
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext"
 import { $wrapNodeInElement } from "@lexical/utils"

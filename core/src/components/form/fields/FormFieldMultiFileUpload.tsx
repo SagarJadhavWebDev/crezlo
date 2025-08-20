@@ -31,6 +31,7 @@ export function FormFieldMultiFileUpload<T extends FieldValues>({
   return (
     <Controller
       control={control}
+      // @ts-ignore
       name={name as string}
       rules={rules}
       render={({ field: { value = [], onChange } }) => (

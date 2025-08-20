@@ -1,12 +1,11 @@
 "use client";
-import React, { createContext, useContext, useReducer, useEffect, useCallback, ReactNode } from "react";
-import { cookieManager, setCookie, setCookieJSON } from "../utils/cookieManager";
+import React, { createContext, useContext, useReducer, useEffect, useCallback, ReactNode, useLayoutEffect } from "react";
+import { setCookie, setCookieJSON } from "../utils/cookieManager";
 import { User, AuthToken, AuthState, AuthContextValue, AuthProviderConfig, AuthAction } from "../types/auth.type";
 import { getAuthToken, logoutAuthUser } from "../utils/auth.utils";
 import { ApiInstance } from "../utils";
 import { envConstants } from "../constants";
 import { apiEndpoints } from "../constants/api-endpoints.constants";
-import getSubDomain from "../utils/getSubDomain";
 
 // Default configuration
 const defaultConfig: Required<AuthProviderConfig> = {
@@ -102,10 +101,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
     });
   }, []);
 
-  const getToken = () => {
+  const getToken = useCallback(() => {
     const token = getAuthToken();
     if (!token?.access_token) {
-      const domain = getSubDomain();
       if (!mergedConfig?.isAccountDomain) {
         window.location.assign(mergedConfig.redirectOnUnauthorized + `?redirect_url=${window.location.href}`);
       } else {
@@ -113,10 +111,10 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       }
     }
     return token;
-  };
+  }, []);
 
   // API request interceptor to add auth token
-  useEffect(() => {
+  useLayoutEffect(() => {
     ApiInstance.client.addGlobalRequestInterceptor(async (config) => {
       const token = getToken();
       if (token?.access_token) {
@@ -142,7 +140,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       }
       return error;
     });
-
 
     refreshUser();
   }, []);

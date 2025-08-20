@@ -25,26 +25,26 @@ import type {
   Config,
   Data,
   Metadata,
-} from "@builder/types";
+} from "../../types";
 
-import { SidebarSection } from "@builder/components/SidebarSection";
+import { SidebarSection } from "../../components/SidebarSection";
 
-import { CrezloAction } from "@builder/reducer";
-import getClassNameFactory from "@builder/lib/get-class-name-factory";
+import { CrezloAction } from "../../reducer";
+import getClassNameFactory from "../../lib/get-class-name-factory";
 import {
   createAppStore,
   defaultAppState,
   useAppStore,
   appStoreContext,
   AppStore,
-} from "@builder/store";
+} from "../../store";
 import styles from "./styles.module.css";
 import { Fields } from "./components/Fields";
 import { Components } from "./components/Components";
 import { Preview } from "./components/Preview";
 import { Outline } from "./components/Outline";
 import { Canvas } from "./components/Canvas";
-import { defaultViewports } from "@builder/components/ViewportControls/default-viewports";
+import { defaultViewports } from "../../components/ViewportControls/default-viewports";
 import { Viewports } from "../../types";
 import { DragDropContext } from "../DragDropContext";
 import { useLoadedOverrides } from "../../lib/use-loaded-overrides";

@@ -6,8 +6,8 @@ import { generateId } from "../../lib/generate-id";
 import { useDragListener } from "../DragDropContext";
 import { useSafeId } from "../../lib/use-safe-id";
 import { useDraggable, useDroppable } from "@dnd-kit/react";
-import { useAppStore } from "@/builder/store";
-import { useSlots } from "@/builder/lib/use-slots";
+import { useAppStore } from "../../store";
+import { useSlots } from "../../lib/use-slots";
 import { DropZonePure, DropZoneRenderPure } from "../DropZone";
 import { SlotRenderPure } from "../SlotRender";
 // import { DropZoneRender } from "../ServerRender";
@@ -51,7 +51,13 @@ export const DrawerItemInner = ({
       <CustomInner name={name}>
         <div className={getClassNameItem("draggableWrapper")}>
           <div className={getClassNameItem("draggable")}>
-            {preview ? <div className={getClassNameItem("name")}><img src={preview ?? name} width={220} height={150} /></div> : <div className={getClassNameItem("name")}>{label ?? name}</div> }
+            {preview ? (
+              <div className={getClassNameItem("name")}>
+                <img src={preview ?? name} width={220} height={150} />
+              </div>
+            ) : (
+              <div className={getClassNameItem("name")}>{label ?? name}</div>
+            )}
             {/* <div className={getClassNameItem("name")}>
               {config?.components?.[name]?.render?.({ ...propsWithSlots, crezlo: { ...propsWithSlots.crezlo, dragRef: dragRef } })}
             </div> */}

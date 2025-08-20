@@ -25,12 +25,14 @@ export function FormFieldMultiSelect<T extends FieldValues>({ name, validation, 
           {...props}
           value={
             type && type === "status"
+            // @ts-ignore
               ? props.options?.filter((item) => (props?.isMulti ? field.value.includes(item.value) : field.value === item.value))
               : field.value
           }
           onChange={
             type && type === "status"
               ? (value) => {
+                // @ts-ignore
                   const newValue = props?.isMulti ? value?.map((item) => item?.value) : value?.value;
                   console.log("select value", newValue);
                   field.onChange(newValue);

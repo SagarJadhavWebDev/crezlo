@@ -12,7 +12,7 @@ export type MultiSelectDropDownProps = Props & {
   renderSupportingText?: React.ReactNode;
 };
 
-// @ts-ignore
+
 export const MultiSelectDropDown = forwardRef<Props, MultiSelectDropDownProps>(
   (
     {

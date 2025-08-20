@@ -1,12 +1,18 @@
 "use client";
 import { Sidebar, AuthHeader, Loader } from "crezlo-core/components";
 import { useAppProvider, useAuth } from "crezlo-core/context-providers";
+import { ApiInstance, getFullImageUrl } from "crezlo-core/utils";
+import { useEffect } from "react";
 
 export default function Home() {
   const { sidebarExpanded, setSidebarExpanded, sidebarOpen } = useAppProvider();
   const { refreshUser } = useAuth();
   console.log("USER:", useAuth());
+  useEffect(() => {
+    console.log("CALLING PAGE")
 
+    ApiInstance.CORE.get("websites/list?entity_type=website&status=enabled&page=1");
+  }, []);
   return (
     <div className="flex  overflow-y-hidden overflow-x-hidden">
       <Sidebar
@@ -127,6 +133,7 @@ export default function Home() {
             ],
           },
         ]}
+        logoUrl={getFullImageUrl("24-jul-2025/v1.png")}
       />
 
       <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
@@ -139,7 +146,7 @@ export default function Home() {
             refreshUser();
           }}
         >
-          <Loader size={50}/>
+          <Loader size={50} />
         </main>
       </div>
     </div>

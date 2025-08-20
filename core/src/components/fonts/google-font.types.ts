@@ -7,4 +7,6 @@ export interface GoogleFont {
   files: Record<string, string>;
   category: string;
   kind: string;
+  menu?: string;
+  colorCapabilities?: string[];
 }

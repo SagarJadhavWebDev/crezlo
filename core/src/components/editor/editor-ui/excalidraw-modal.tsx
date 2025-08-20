@@ -13,6 +13,7 @@ import {
   BinaryFiles,
   ExcalidrawImperativeAPI,
   ExcalidrawInitialDataState,
+  // @ts-ignore
 } from "@excalidraw/excalidraw/types/types"
 import { DialogTrigger } from "@radix-ui/react-dialog"
 

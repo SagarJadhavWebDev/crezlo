@@ -1,9 +1,8 @@
 import { Components } from "../../components/Components";
-import { SidebarSection } from "@builder/components/SidebarSection";
-import React from "react";
+import { SidebarSection } from "../../../SidebarSection";
 import { Outline } from "../Outline";
 import { usePropsContext } from "../..";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/[websiteId]/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../../../components/ui";
 import { BookCopy } from "lucide-react";
 
 export const LeftSidebarSection = () => {
@@ -32,7 +31,9 @@ export const LeftSidebarSection = () => {
           </>
         </TabsContent>
         {leftSidebarTabs.map((i) => (
-          <TabsContent className="bg-white" value={i.key}>{i.body}</TabsContent>
+          <TabsContent className="bg-white" value={i.key}>
+            {i.body}
+          </TabsContent>
         ))}
       </div>
     </Tabs>

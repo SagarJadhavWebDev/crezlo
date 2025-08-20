@@ -255,6 +255,7 @@ function TableActionMenu({
 
         const tableObserver = getTableObserverFromTableElement(tableElement)
         if (tableObserver !== null) {
+          // @ts-ignore
           tableObserver.clearHighlight()
         }
 

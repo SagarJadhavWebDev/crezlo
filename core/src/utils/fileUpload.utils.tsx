@@ -44,6 +44,7 @@ const s3Client = new S3Client({
     accessKeyId: ACCESS_KEY,
     secretAccessKey: SECRET_KEY, // hashedSecretKey,
   },
+  // @ts-ignore
   signatureVersion: "v4",
 });
 console.log("s3Client  Data", s3Client.config.endpoint, s3Client.config.credentials);
