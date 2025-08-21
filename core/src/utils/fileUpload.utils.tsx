@@ -47,7 +47,6 @@ const s3Client = new S3Client({
   // @ts-ignore
   signatureVersion: "v4",
 });
-console.log("s3Client  Data", s3Client.config.endpoint, s3Client.config.credentials);
 
 const CHUNK_SIZE = 5 * 1024 * 1024; // 5MB per chunk
 

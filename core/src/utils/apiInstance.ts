@@ -12,7 +12,9 @@ const baseUrls: Record<BaseUrlType, string> = envConstants.BASE_API_URL;
 
 // RESPONSE INTERCEPTOR
 ApiClient.addGlobalErrorInterceptor(async (error) => {
-  console.log("❌ API ERROR:", error);
+  if (!envConstants.IS_PRODUCTION) {
+    console.log("❌ API ERROR:", error);
+  }
   if (error?.message) {
     toast.error(error.message);
   }
@@ -20,7 +22,9 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
 });
 
 ApiClient.addGlobalResponseInterceptor(async (response) => {
-  console.log("✅ Response received:", response);
+  if (!envConstants.IS_PRODUCTION) {
+    console.log("✅ Response received:", response);
+  }
   if (response?.message) {
     toast.success(response.message);
   }

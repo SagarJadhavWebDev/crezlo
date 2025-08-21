@@ -3,4 +3,7 @@ export declare const apiEndpoints: {
         profile: string;
         logout: string;
     };
+    apps: {
+        list: string;
+    };
 };
