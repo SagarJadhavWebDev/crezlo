@@ -1,0 +1,62 @@
+.CrezloHeader {
+  background: var(--crezlo-color-white);
+  border-bottom: 1px solid var(--crezlo-color-grey-09);
+  color: var(--crezlo-color-black);
+  grid-area: header;
+  position: relative;
+  max-width: 100vw;
+}
+
+.CrezloHeader-inner {
+  align-items: end;
+  display: grid;
+  gap: var(--crezlo-space-px);
+  grid-template-areas: "left middle right";
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto;
+  padding: var(--crezlo-space-px);
+}
+
+.CrezloHeader-toggle {
+  color: var(--crezlo-color-grey-05);
+  display: flex;
+  margin-inline-start: -4px;
+  padding-top: 2px;
+}
+
+.CrezloHeader--rightSideBarVisible .CrezloHeader-rightSideBarToggle,
+.CrezloHeader--leftSideBarVisible .CrezloHeader-leftSideBarToggle {
+  color: var(--crezlo-color-black);
+}
+
+.CrezloHeader-title {
+  align-self: center;
+}
+
+.CrezloHeader-path {
+  font-family: var(--crezlo-font-family-monospaced);
+  font-size: var(--crezlo-font-size-xxs);
+  font-weight: normal;
+  word-break: break-all;
+}
+
+.CrezloHeader-tools {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.CrezloHeader-menuButton {
+  color: var(--crezlo-color-grey-05);
+  margin-inline-start: -4px;
+}
+
+.CrezloHeader--menuOpen .CrezloHeader-menuButton {
+  color: var(--crezlo-color-black);
+}
+
+@media (min-width: 638px) {
+  .CrezloHeader-menuButton {
+    display: none;
+  }
+}
