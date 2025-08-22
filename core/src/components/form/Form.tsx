@@ -16,6 +16,8 @@ import {
   FieldValues,
 } from 'react-hook-form';
 
+export type { UseFormReturn };
+
 interface FormProps<T extends FieldValues> {
   children: (methods: UseFormReturn<T>) => ReactNode;
   onSubmit: SubmitHandler<T>;

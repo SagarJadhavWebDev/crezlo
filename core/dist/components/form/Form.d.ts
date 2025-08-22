@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { SubmitHandler, UseFormProps, UseFormReturn, FieldValues } from 'react-hook-form';
+export type { UseFormReturn };
 interface FormProps<T extends FieldValues> {
     children: (methods: UseFormReturn<T>) => ReactNode;
     onSubmit: SubmitHandler<T>;
@@ -10,4 +11,3 @@ declare function InnerForm<T extends FieldValues>({ children, onSubmit, options,
 export declare const Form: <T extends FieldValues>(props: FormProps<T> & {
     ref?: React.Ref<UseFormReturn<T>>;
 }) => ReturnType<typeof InnerForm>;
-export {};

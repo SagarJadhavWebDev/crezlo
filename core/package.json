@@ -44,7 +44,7 @@
       "types": "./dist/builder/index.d.ts"
     },
     "./styles.css": {
-      "default": "./dist/index.css"
+      "default": "./src/styles/index.css"
     }
   },
   "typesVersions": {
@@ -73,8 +73,8 @@
     }
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/styles/index.css -o ./dist/index.css && tsc -p tsconfig.json && rollup -c ",
-    "dev": "concurrently \"tailwindcss -i ./src/styles/index.css -o ./dist/index.css --watch\" \"tsc -p tsconfig.json --watch\"",
+    "build": "tsc -p tsconfig.json && rollup -c ",
+    "dev": "tsc -p tsconfig.json --watch",
     "dev:rollup": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,5 +1,4 @@
 import { ThemeProvider } from "next-themes";
-import "../../styles/index.css";
 import { AppProvider } from "../../context-providers";
 import { Toaster } from "sonner";
 import { SWRConfig } from "swr";
