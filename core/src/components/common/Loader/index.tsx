@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import "./styles.module.css";
+import styles from "./styles.module.css";
 import { useTheme } from "next-themes";
 
 export const Loader = ({
@@ -13,7 +13,7 @@ export const Loader = ({
   const { theme } = useTheme();
   return (
     <span
-      className={"Loader"}
+      className={styles.Loader}
       style={{
         width: size,
         height: size,

@@ -2,8 +2,8 @@ import { ReactNode } from "react";
 import { IPagination } from "../../types";
 interface PluginLayoutProps<T> {
     title: string;
-    buttonLabel: string;
-    buttonClick: () => void;
+    buttonLabel?: string;
+    buttonClick?: () => void;
     loading: boolean;
     data: T[];
     pagination?: IPagination;

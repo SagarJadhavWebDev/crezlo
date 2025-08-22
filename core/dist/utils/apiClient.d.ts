@@ -1,3 +1,4 @@
+import { ResponseCodeEnum } from "./enums";
 export interface ApiClientConfig {
     baseURL: string;
     timeout?: number;
@@ -8,7 +9,7 @@ export interface ApiResponse<T = any> {
     data?: T;
     status_code: number;
     success?: boolean;
-    code: string;
+    code: ResponseCodeEnum | string;
     message?: string;
     headers: Record<string, string>;
 }
@@ -16,7 +17,7 @@ export interface ApiError {
     data?: any;
     status_code: number;
     success?: boolean;
-    code: string;
+    code: ResponseCodeEnum | string;
     message?: string;
 }
 export type RequestMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";

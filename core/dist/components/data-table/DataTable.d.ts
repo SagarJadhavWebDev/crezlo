@@ -24,7 +24,7 @@ interface DataTableProps<K extends string, T> {
     createButtonLabel?: string;
     hideHeadingBar?: boolean;
 }
-declare function DataTable<K extends string, T extends {
+export declare function DataTable<K extends string, T extends {
     id: string | number;
 }>({ title, columns, data, renderRow, resourceKey, isLoading, isError, renderTopRightActions, renderSearch, onCreate, renderGroupingFilter, onBackClick, backLabel, createButtonLabel, hideHeadingBar, }: DataTableProps<K, T>): import("react/jsx-runtime").JSX.Element;
-export default DataTable;
+export {};

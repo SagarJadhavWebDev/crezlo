@@ -47,7 +47,7 @@ interface DataTableProps<K extends string, T> {
   createButtonLabel?: string;
   hideHeadingBar?: boolean;
 }
-function DataTable<K extends string, T extends { id: string | number }>({
+export function DataTable<K extends string, T extends { id: string | number }>({
   title,
   columns,
   data,
@@ -263,4 +263,3 @@ function DataTable<K extends string, T extends { id: string | number }>({
   );
 }
 
-export default DataTable;

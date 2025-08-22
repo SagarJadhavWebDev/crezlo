@@ -66,3 +66,17 @@ Note: Rollup is skipped hence no use of rollup
 5. import global.css in layout file
 
 <!-- STEPS WHILE CONSUMING END-->
+
+
+<!-- STEP useSWR START -->
+
+<!-- IF YOU WANT TO USE useSWR hook wrap it with below code  in root layout-->
+ <!-- <SWRConfig
+              value={{
+                revalidateIfStale: false,
+                revalidateOnFocus: false,
+                revalidateOnReconnect: false,
+                fetcher: (url: string) => ApiInstance.CORE.get(url),
+              }}
+            > -->
+<!-- STEP useSWR END -->

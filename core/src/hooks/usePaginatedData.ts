@@ -1,37 +1,70 @@
 import { paramsToQueryParams } from "../utils";
 import { useCallback, useMemo } from "react";
-import useSWR from "swr";
-import useSWRInfinite from "swr/infinite";
+import useSWR, { SWRConfiguration } from "swr";
+import useSWRInfinite, { SWRInfiniteConfiguration } from "swr/infinite";
 import { TableState } from "../components";
 import { IApiResponse, IPaginatedData } from "../types";
 
-export function usePaginatedData<T>(url: string | null, params: TableState) {
-  const endpoint = url
-    ? `${url}?${paramsToQueryParams({
-        ...(params ?? {}),
-        ...(params?.filters ?? {}),
-        ...(params?.customParams ?? {}),
-        // @ts-ignore
-        page: params?.current_page,
-      }).toString()}`
-    : null;
-  const { data: response, error, isLoading, mutate } = useSWR<IApiResponse<IPaginatedData<"data", T>>>(endpoint);
-  const data = response?.data?.data;
+function buildEndpoint(url: string | null, params?: Record<string, any>): string | null {
+  if (!url) return null;
+  const hasLeadingSlash = url.startsWith("/");
+
+  // Use dummy base so URL works with relative paths
+  const dummyBase = "http://dummy";
+  const parsedUrl = new URL(url, dummyBase);
+
+  // Preserve existing query params
+  const searchParams = new URLSearchParams(parsedUrl.search);
+
+  // Convert extra params into query params
+  const newParams = paramsToQueryParams({
+    ...(params ?? {}),
+    ...(params?.filters ?? {}),
+    ...(params?.customParams ?? {}),
+    // @ts-ignore
+    page: params?.current_page,
+  });
+
+  // Merge (override if key exists)
+  for (const [key, value] of newParams.entries()) {
+    if (value != null) searchParams.set(key, value);
+  }
+
+  // Return only pathname + query (relative URL)
+  const query = searchParams.toString();
+  const pathname = hasLeadingSlash ? parsedUrl.pathname : parsedUrl.pathname.slice(1);
+  return `${pathname}${query ? `?${query}` : ""}`;
+}
+
+export function usePaginatedData<T, K extends string = "data">(
+  url: string | null,
+  params: TableState,
+  fetcher?: (key: string) => Promise<IApiResponse<IPaginatedData<K, T>>>,
+  config?: SWRConfiguration<IApiResponse<IPaginatedData<K, T>>>,
+  dataKey?: K
+) {
+  const endpoint = buildEndpoint(url, params);
+
+  const { data: response, error, isLoading, mutate } = useSWR<IApiResponse<IPaginatedData<K, T>>>(endpoint, fetcher, config);
+  const payload = response?.data;
+  // @ts-ignore
+  const items = (payload?.[dataKey ?? "data"] as T[]) ?? [];
+
   return {
-    data: data ?? ([] as T[]),
+    data: items ?? ([] as T[]),
     isLoading,
     isError: !!error,
     mutate,
     error,
     pagination: {
       // @ts-ignore
-      current_page: data?.current_page ?? 0,
+      current_page: payload?.pagination?.current_page ?? payload?.meta?.current_page ?? 0,
       // @ts-ignore
-      per_page: data?.per_page ?? 0,
+      per_page: payload?.pagination?.per_page ?? payload?.meta?.per_page ?? 0,
       // @ts-ignore
-      total_items: data?.total ?? 0,
+      total_items: payload?.pagination?.total_items ?? payload?.meta?.total ?? 0,
       // @ts-ignore
-      total_pages: data?.last_page ?? 0,
+      total_pages: payload?.pagination?.total_pages ?? payload?.meta?.last_page ?? 0,
     },
   };
 }
@@ -45,48 +78,39 @@ export function addPrefix(obj: Record<string, any>, prefix?: string) {
 }
 
 // Hook overloads
-export function usePaginatedDataInfinite<T>(
-  url: string | null,
-  params: Partial<TableState>
-): {
-  data: T[];
-  isLoading: boolean;
-  isError: boolean;
-  mutate: any;
-  error: unknown;
-  pagination: {
-    current_page: number;
-    per_page: number;
-    total_items: number;
-    total_pages: number;
-  } | null;
-  setCurrentPage: (size: number) => void;
-  size: number;
-};
-
-export function usePaginatedDataInfinite<T, P extends string>(
+// Overloads
+export function usePaginatedDataInfinite<T, K extends string = "data">(
   url: string | null,
   params: Partial<TableState>,
-  prefix: P
-): { [K in keyof ReturnType<typeof baseReturn> as `${P}${Capitalize<string & K>}`]: ReturnType<typeof baseReturn>[K] };
+  config?: SWRInfiniteConfiguration,
+  dataKey?: K
+): ReturnType<typeof baseReturn<T, K>>;
 
-// Base return value builder (keeps type consistent)
+export function usePaginatedDataInfinite<T, P extends string, L extends string = "data">(
+  url: string | null,
+  params: Partial<TableState>,
+  prefix: P,
+  config?: SWRInfiniteConfiguration,
+  dataKey?: L
+): { [K in keyof ReturnType<typeof baseReturn<T, L>> as `${P}${Capitalize<string & K>}`]: ReturnType<typeof baseReturn<T, L>>[K] };
+
+// Base return
 // @ts-ignore
-function baseReturn<T>(response: ReturnType<typeof useSWRInfinite<IApiResponse<IPaginatedData<"data", T>>>>) {
+function baseReturn<T, K extends string = "data">(response: ReturnType<typeof useSWRInfinite<IApiResponse<IPaginatedData<K, T>>>>, dataKey?: K) {
   const { data: responseData, error, isLoading, mutate, size, setSize } = response;
 
   const { data, pagination } = useMemo(() => {
-    console.log("baseReturn", responseData, error, isLoading);
     if (responseData) {
-      const flatData = [...responseData?.flatMap((res) => res?.data)];
+      const flatData = [...responseData.flatMap((res) => res?.data)];
       const lastFlatData = flatData[flatData.length - 1];
       return {
-        data: flatData?.flatMap((d) => d?.data) ?? [],
+        // @ts-ignore
+        data: flatData.flatMap((d) => d?.[dataKey ?? "data"]) ?? [],
         pagination: {
-          current_page: lastFlatData?.meta.current_page ?? 0,
-          per_page: lastFlatData?.meta.per_page ?? 0,
-          total_items: lastFlatData?.meta.total ?? 0,
-          total_pages: lastFlatData?.meta.last_page ?? 0,
+          current_page: lastFlatData?.pagination?.current_page ?? lastFlatData?.meta?.current_page ?? 0,
+          per_page: lastFlatData?.pagination?.per_page ?? lastFlatData?.meta?.per_page ?? 0,
+          total_items: lastFlatData?.pagination?.total_items ?? lastFlatData?.meta?.total ?? 0,
+          total_pages: lastFlatData?.pagination?.total_pages ?? lastFlatData?.meta?.last_page ?? 0,
         },
       };
     }
@@ -106,27 +130,29 @@ function baseReturn<T>(response: ReturnType<typeof useSWRInfinite<IApiResponse<I
 }
 
 // Implementation
-export function usePaginatedDataInfinite<T>(url: string | null, params: Partial<TableState>, prefix?: string) {
+export function usePaginatedDataInfinite<T, P extends string = never, K extends string = "data">(
+  url: string | null,
+  params: Partial<TableState>,
+  prefixOrConfig?: P | SWRInfiniteConfiguration,
+  maybeConfig?: SWRInfiniteConfiguration,
+  dataKey?: K
+) {
+  const prefix = typeof prefixOrConfig === "string" ? prefixOrConfig : undefined;
+  const config = (typeof prefixOrConfig === "object" ? prefixOrConfig : maybeConfig) ?? {};
+
   const getKey = useCallback(
-    (pageIndex, previousPageData) => {
+    (pageIndex: number, previousPageData: any) => {
       if (!url) return null;
       if (previousPageData && !previousPageData?.data?.data?.length) return null;
-      // @ts-ignore
-      return `${url}?${paramsToQueryParams({
-        ...(params ?? {}),
-        ...(params?.filters ?? {}),
-        ...(params?.customParams ?? {}),
-        page: pageIndex + 1,
-      }).toString()}`;
+
+      return buildEndpoint(url, { ...params, current_page: pageIndex + 1 });
     },
     [url, params]
   );
 
-  const swr = useSWRInfinite<IApiResponse<IPaginatedData<"data", T>>>(getKey, {
-    keepPreviousData: true,
-  });
+  const swr = useSWRInfinite<IApiResponse<IPaginatedData<K, T>>>(getKey, config);
 
-  const returnValue = baseReturn<T>(swr);
+  const returnValue = baseReturn<T, K>(swr, dataKey);
 
   return prefix ? addPrefix(returnValue, prefix) : returnValue;
 }

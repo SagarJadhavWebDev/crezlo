@@ -3,6 +3,8 @@ import { envConstants } from "../constants";
 import { ApiClient } from "./apiClient";
 import { getAuthToken, logoutAuthUser } from "./auth.utils";
 import getSubDomain from "./getSubDomain";
+import { toggleUpgardeModal } from "./common.utils";
+import { ResponseCodeEnum } from "./enums";
 
 type BaseUrlType = keyof typeof envConstants.BASE_API_URL;
 
@@ -15,6 +17,9 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
   if (!envConstants.IS_PRODUCTION) {
     console.log("❌ API ERROR:", error);
   }
+  if (error.code === ResponseCodeEnum.PLAN_IN_ACTIVE) {
+    toggleUpgardeModal();
+  }
   if (error?.message) {
     toast.error(error.message);
   }
@@ -25,6 +30,7 @@ ApiClient.addGlobalResponseInterceptor(async (response) => {
   if (!envConstants.IS_PRODUCTION) {
     console.log("✅ Response received:", response);
   }
+
   if (response?.message) {
     toast.success(response.message);
   }

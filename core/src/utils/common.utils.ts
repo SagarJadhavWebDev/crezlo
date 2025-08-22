@@ -1,3 +1,5 @@
+import { getCookie, setCookie } from "./cookieManager";
+
 export const getInitialsFromEmail = (email) => {
   if (!email) return "";
 
@@ -10,7 +12,6 @@ export const getInitialsFromEmail = (email) => {
   return lastInitial ? `${firstInitial}${lastInitial}` : `${firstInitial}`;
 };
 
-
 export const getIframeDocument = () => {
   const iframe = document.getElementById("preview-frame");
   if (iframe) {
@@ -18,4 +19,13 @@ export const getIframeDocument = () => {
     return iframe?.contentDocument || iframe?.contentWindow?.document;
   }
   return document;
+};
+
+export const toggleUpgardeModal = () => {
+  const isOpen = getCookie("upgrade_modal") === "true";
+  if (isOpen) {
+    setCookie("upgrade_modal", "false");
+  } else {
+    setCookie("upgrade_modal", "true");
+  }
 };
