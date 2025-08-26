@@ -67,7 +67,6 @@ Note: Rollup is skipped hence no use of rollup
 
 <!-- STEPS WHILE CONSUMING END-->
 
-
 <!-- STEP useSWR START -->
 
 <!-- IF YOU WANT TO USE useSWR hook wrap it with below code  in root layout-->
@@ -80,3 +79,15 @@ Note: Rollup is skipped hence no use of rollup
               }}
             > -->
 <!-- STEP useSWR END -->
+
+6. For protecting routes in sub projects add below code in middleware.ts/js
+<!-- const token = request.cookies.get("token")?.value;
+
+if (!token) {
+// Redirect to external domain login page
+const loginUrl = new URL(envConstants.APP_URL.ACCOUNT + "/login");
+loginUrl.searchParams.set("redirect_url",envConstants.APP_URL.WEBSITE);
+
+    return NextResponse.redirect(loginUrl);
+
+} -->
