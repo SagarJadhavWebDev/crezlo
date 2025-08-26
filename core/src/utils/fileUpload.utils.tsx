@@ -4,12 +4,8 @@ import {
   UploadPartCommand,
   CompleteMultipartUploadCommand,
   AbortMultipartUploadCommand,
-  PutBucketCorsCommandInput,
   DeleteObjectCommand,
-  PutBucketCorsCommand,
-  PutObjectCommand, // Added for deleteFile
 } from "@aws-sdk/client-s3";
-import { createHash } from "crypto";
 import { envConstants } from "../constants";
 
 // Environment variables
@@ -33,8 +29,6 @@ const input = {
     ],
   },
 };
-// Hash the secret access key
-const hashedSecretKey = createHash("sha256").update(SECRET_KEY).digest("hex");
 
 // Configure S3 client for Cloudflare R2
 const s3Client = new S3Client({
@@ -55,7 +49,6 @@ const createChunks = (file: File): Blob[] => {
   if (!(file instanceof File)) {
     throw new Error("Invalid file object provided");
   }
-  console.log("File size:", file.size, "Chunk size:", CHUNK_SIZE);
   const chunks: Blob[] = [];
   let currentByte = 0;
 
@@ -64,7 +57,6 @@ const createChunks = (file: File): Blob[] => {
     chunks.push(chunk);
     currentByte += CHUNK_SIZE;
   }
-  console.log("Total chunks created:", chunks.length);
   return chunks;
 };
 
@@ -101,24 +93,7 @@ export const uploadFileInChunks = async (
 
 // Initiate multipart upload
 const initiateMultipartUpload = async (fileName: string, fileType: string, folderName: string, file: any): Promise<string> => {
-  const chunkArrayBuffer = await file.arrayBuffer();
-  const chunkUint8Array = new Uint8Array(chunkArrayBuffer);
-  // const commandNew = new PutObjectCommand({
-  //   Bucket: S3_BUCKET,
-  //   Key: `${folderName}${fileName}`,
-  //   Body: chunkUint8Array,
-  //   // CORSConfiguration: {
-  //   //   CORSRules: [
-  //   //     {
-  //   //       AllowedHeaders: ["content-type"],
-  //   //       AllowedMethods: ["PUT", "POST", "HEAD", "GET"],
-  //   //       AllowedOrigins: ["*"],
-  //   //       ExposeHeaders: [],
-  //   //       MaxAgeSeconds: 3000,
-  //   //     },
-  //   //   ],
-  //   // },
-  // });
+  
   const command = new CreateMultipartUploadCommand({
     Bucket: S3_BUCKET,
     Key: `${folderName}${fileName}`,
@@ -126,13 +101,11 @@ const initiateMultipartUpload = async (fileName: string, fileType: string, folde
     ACL: "public-read",
     ...input.CORSConfiguration,
   });
-  console.log("command", command);
   try {
     const response = await s3Client.send(command);
     if (!response.UploadId) {
       throw new Error("UploadId not returned from R2");
     }
-    console.log("Upload initiated with ID:", response);
     return response.UploadId;
   } catch (error) {
     console.error("Failed to initiate multipart upload:", error);
@@ -165,7 +138,6 @@ const uploadChunk = async (
     if (!response.ETag) {
       throw new Error(`No ETag returned for part ${partNumber}`);
     }
-    console.log(`Uploaded part ${partNumber}:`, response.ETag);
     return {
       ETag: response.ETag,
       PartNumber: partNumber,
@@ -197,7 +169,6 @@ const completeMultipartUpload = async (
     if (!response.Key) {
       throw new Error("No Key returned after completing upload");
     }
-    console.log("Upload completed successfully. Key:", response.Key);
     return response.Key;
   } catch (error) {
     console.error("Failed to complete multipart upload:", error);
@@ -216,7 +187,6 @@ const abortMultipartUpload = async (uploadId: string, fileName: string, folderNa
 
   try {
     await s3Client.send(command);
-    console.log("Multipart upload aborted successfully:", uploadId);
   } catch (error) {
     console.error("Failed to abort multipart upload:", error);
     throw error;
@@ -233,7 +203,6 @@ export const deleteFile = async (filepath: string, onProgress?: (progress: any) 
 
   try {
     const response = await s3Client.send(command);
-    console.log("File deleted successfully:", filepath);
     // Optionally call onProgress if provided
     if (onProgress) {
       onProgress({ loaded: 1, total: 1 });
