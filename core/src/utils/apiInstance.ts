@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 import { envConstants } from "../constants";
 import { ApiClient } from "./apiClient";
-import { getAuthToken, logoutAuthUser } from "./auth.utils";
+import { getAuthToken, logoutAuthUser, redirectOnUnauthorized } from "./auth.utils";
 import getSubDomain from "./getSubDomain";
 import { toggleUpgardeModal } from "./common.utils";
 import { ResponseCodeEnum } from "./enums";
@@ -54,12 +54,7 @@ ApiClient.addGlobalErrorInterceptor(async (error) => {
     try {
       logoutAuthUser(() => {
         // Redirect to login page or handle unauthorized access
-        const domain = getSubDomain();
-        if (envConstants.APP_NAME.ACCOUNT === domain) {
-          window.location.assign(envConstants.APP_URL.ACCOUNT + `?redirect_url=${window.location.href}`);
-        } else {
-          window.location.pathname = "/login";
-        }
+        redirectOnUnauthorized();
       });
     } catch (refreshError) {
       console.error("Token refresh failed:", refreshError);

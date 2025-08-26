@@ -3,6 +3,8 @@ import { Menu, MenuButton, MenuItems, MenuItem, Transition } from "@headlessui/r
 import { useAuth } from "../../context-providers";
 import { FallBackAvatar } from "../common";
 import { envConstants } from "../../constants";
+import getSubDomain from "../../utils/getSubDomain";
+import { redirectOnUnauthorized } from "../../utils";
 
 export default function DropdownProfile({ align }: { align?: "left" | "right" }) {
   const auth = useAuth();
@@ -49,7 +51,7 @@ export default function DropdownProfile({ align }: { align?: "left" | "right" })
           <MenuItem
             onClick={() => {
               auth?.logout(() => {
-                window.location.assign(auth?.config?.redirectOnUnauthorized);
+                redirectOnUnauthorized();
               });
             }}
             as="li"
