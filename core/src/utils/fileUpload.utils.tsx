@@ -93,7 +93,6 @@ export const uploadFileInChunks = async (
 
 // Initiate multipart upload
 const initiateMultipartUpload = async (fileName: string, fileType: string, folderName: string, file: any): Promise<string> => {
-  
   const command = new CreateMultipartUploadCommand({
     Bucket: S3_BUCKET,
     Key: `${folderName}${fileName}`,
