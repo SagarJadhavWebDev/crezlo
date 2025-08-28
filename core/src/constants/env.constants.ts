@@ -37,8 +37,12 @@ const env = {
   NEXT_PUBLIC_R2_PUBLIC_URL: process.env.NEXT_PUBLIC_R2_PUBLIC_URL,
 
   // ---- Buyers ----
+  // website
   NEXT_PUBLIC_BUYER_WEBSITE_PREVIEW_DEFAULT_DOMAIN: process.env.NEXT_PUBLIC_BUYER_WEBSITE_PREVIEW_DEFAULT_DOMAIN,
   NEXT_PUBLIC_BUYER_WEBSITE_API_DEFAULT_DOMAIN: process.env.NEXT_PUBLIC_BUYER_WEBSITE_API_DEFAULT_DOMAIN,
+  // channel
+  NEXT_PUBLIC_BUYER_CHANNEL_PREVIEW_DEFAULT_DOMAIN: process.env.NEXT_PUBLIC_BUYER_CHANNEL_PREVIEW_DEFAULT_DOMAIN,
+  NEXT_PUBLIC_BUYER_CHANNEL_API_DEFAULT_DOMAIN: process.env.NEXT_PUBLIC_BUYER_CHANNEL_API_DEFAULT_DOMAIN,
 };
 
 // --- Constants ---
@@ -86,6 +90,10 @@ export const envConstants = {
     WEBSITE: {
       PREVIEW_DEFAULT_DOMAIN: env.NEXT_PUBLIC_BUYER_WEBSITE_PREVIEW_DEFAULT_DOMAIN, // to preview the current site being build like abc.crezlo.site
       API_DEFAULT_DOMAIN: env.NEXT_PUBLIC_BUYER_WEBSITE_API_DEFAULT_DOMAIN, //to append while getting website like abc.chq.com
+    },
+    CHANNEL: {
+      PREVIEW_DEFAULT_DOMAIN: env.NEXT_PUBLIC_BUYER_CHANNEL_PREVIEW_DEFAULT_DOMAIN, // to preview the current site being build like abc.crezlo.channel
+      API_DEFAULT_DOMAIN: env.NEXT_PUBLIC_BUYER_CHANNEL_API_DEFAULT_DOMAIN, //to append while getting website like abc.chq.com
     },
   },
 };

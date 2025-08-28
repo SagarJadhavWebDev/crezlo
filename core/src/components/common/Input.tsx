@@ -1,7 +1,7 @@
-
 "use client";
 import { InputHTMLAttributes, forwardRef } from "react";
 import { Tooltip } from "./Tooltip";
+import { FormFieldError } from "../form";
 
 export type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -81,9 +81,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
           <input
             ref={ref}
-            className={`form-input w-full rounded-lg focus:ring-violet-500 border-gray-300 ${sizeClasses[inputSize]} ${prefix ? "pl-10" : icon ? "pl-9" : ""} ${
-              suffix ? "pr-8" : ""
-            } ${stateClasses} ${className}`}
+            className={`form-input w-full rounded-lg focus:ring-violet-500 border-gray-300 ${sizeClasses[inputSize]} ${
+              prefix ? "pl-10" : icon ? "pl-9" : ""
+            } ${suffix ? "pr-8" : ""} ${stateClasses} ${className}`}
             disabled={disabled}
             {...props}
           />
@@ -110,7 +110,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
         </div>
         {renderSupportingText && renderSupportingText}
-        {error && <div className="text-xs font-medium mt-1 text-red-500">{error}</div>}
+        {error && <FormFieldError error={error} />}
         {success && <div className="text-xs font-medium mt-1 text-green-500">{success}</div>}
         {supportingText && !error && !success && <div className="text-xs font-medium mt-1 text-gray-500">{supportingText}</div>}
       </div>

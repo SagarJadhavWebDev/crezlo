@@ -1,6 +1,8 @@
+"use client";
 
 import React from "react";
 import { Tooltip } from "../../../common";
+import { FormFieldError } from "./FormFieldError";
 
 export type FormFieldWrapperProps = {
   label?: string;
@@ -44,11 +46,9 @@ export const FormFieldWrapper: React.FC<FormFieldWrapperProps> = ({
       {children}
 
       {renderSupportingText && renderSupportingText}
-      {error && <div className="text-xs font-medium mt-1 text-red-500">{error}</div>}
+      {error && <FormFieldError error={error} />}
       {success && <div className="text-xs font-medium mt-1 text-green-500">{success}</div>}
-      {supportingText && !error && !success && (
-        <div className="text-xs font-medium mt-1 text-gray-500">{supportingText}</div>
-      )}
+      {supportingText && !error && !success && <div className="text-xs font-medium mt-1 text-gray-500">{supportingText}</div>}
     </div>
   );
 };

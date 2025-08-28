@@ -294,7 +294,7 @@ export function Plugins({}) {
           dynamicOptionsFn={DynamicTablePickerPlugin}
         />
 
-        <ContextMenuPlugin />
+        {/* <ContextMenuPlugin /> */}
         <DragDropPastePlugin />
         <EmojiPickerPlugin />
 

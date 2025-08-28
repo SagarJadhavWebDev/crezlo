@@ -1,3 +1,4 @@
+"use client";
 import { nanoid } from "nanoid";
 import { InputHTMLAttributes, forwardRef, useState } from "react";
 import { Tooltip } from "../../../common";

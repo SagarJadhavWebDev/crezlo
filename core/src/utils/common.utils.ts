@@ -1,3 +1,4 @@
+import { isEmpty } from "lodash";
 import { getCookie, setCookie } from "./cookieManager";
 
 export const getInitialsFromEmail = (email) => {
@@ -29,3 +30,10 @@ export const toggleUpgardeModal = () => {
     setCookie("upgrade_modal", "true");
   }
 };
+
+export const getUserName = (profile: any) => {
+  const localPart = profile?.email_id?.split("@")[0]; // "sagar" or "sagar.jadhav"
+  const name = localPart?.split("."); // ["sagar"] or ["sagar", "jadhav"]
+  return isEmpty(profile?.name) ? name?.toString() : profile?.name;
+};
+

@@ -1,3 +1,4 @@
+"use client";
 import { FormFieldWrapper } from "./FormFieldWrapper";
 import { forwardRef, TextareaHTMLAttributes } from "react";
 

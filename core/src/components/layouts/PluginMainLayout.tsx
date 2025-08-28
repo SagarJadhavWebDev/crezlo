@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { Loader } from "../common";
+import { ArrowLeft } from "lucide-react";
+import { cn } from "../../utils";
 
 interface PluginMainLayoutProps {
   title: string;
@@ -8,8 +10,9 @@ interface PluginMainLayoutProps {
   loading: boolean;
   children: ReactNode;
   secondaryButtoon?: ReactNode;
+  onBackClick?: () => void;
 }
-export function PluginMainLayout({ title, buttonClick, buttonLabel, loading, children, secondaryButtoon }: PluginMainLayoutProps) {
+export function PluginMainLayout({ title, buttonClick, buttonLabel, loading, children, secondaryButtoon, onBackClick }: PluginMainLayoutProps) {
   return (
     <div className="flex h-[100dvh] overflow-hidden">
       <div className="relative flex flex-col flex-1  overflow-y-auto overflow-x-hidden">
@@ -20,7 +23,16 @@ export function PluginMainLayout({ title, buttonClick, buttonLabel, loading, chi
                 <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto">
                   <div className="mt-4">
                     <div className="sm:flex sm:justify-between sm:items-center mb-8">
-                      <div className="mb-4 sm:mb-0">
+                      <div className={cn("mb-4 sm:mb-0 flex flex-row items-center", onBackClick && "gap-2")}>
+                        {onBackClick && (
+                          <ArrowLeft
+                            className="cursor-pointer hover:opacity-80"
+                            onClick={() => {
+                              onBackClick?.();
+                            }}
+                            focusable="false"
+                          />
+                        )}
                         <h1 className="text-2xl capitalize md:text-3xl text-gray-800 dark:text-gray-100 font-bold">{title}</h1>
                       </div>
 

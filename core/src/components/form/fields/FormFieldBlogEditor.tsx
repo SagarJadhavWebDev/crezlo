@@ -18,7 +18,7 @@ export function FormFieldBlogEditor<T extends FieldValues>({
   validation,
   ...props
 }: FormFieldBlogEditorProps<T>) {
-  const { control, setError, clearErrors } = useFormContext();
+  const { control } = useFormContext();
   const baseRules = useValidationRules<T>(validation);
 
   const rules = {

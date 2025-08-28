@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  InitialConfigType,
-  LexicalComposer,
-} from "@lexical/react/LexicalComposer";
+import { InitialConfigType, LexicalComposer } from "@lexical/react/LexicalComposer";
 import { FloatingLinkContext } from "../context/floating-link-context";
 import { SharedAutocompleteContext } from "../context/shared-autocomplete-context";
 import { nodes } from "./nodes";
@@ -13,6 +10,7 @@ import { blogEditorTheme } from "../themes/blog-editor-theme";
 import { OnChangePlugin } from "@lexical/react/LexicalOnChangePlugin";
 import { EditorState, SerializedEditorState } from "lexical";
 import { TooltipProvider } from "../../ui";
+import { cn } from "../../../utils";
 const editorConfig: InitialConfigType = {
   namespace: "BlogEditor",
   theme: blogEditorTheme,
@@ -27,36 +25,32 @@ export function BlogEditor({
   onHtmlChanged,
   onChange,
   onSerializedChange,
+  className,
 }: {
   initialHtml?: string;
   onHtmlChanged: (html: string) => void;
   onChange?: (editorState: EditorState) => void;
   onSerializedChange?: (editorSerializedState: SerializedEditorState) => void;
+  className?: string;
 }) {
-  
   return (
-    <div className="bg-background overflow-hidden rounded-lg border shadow">
+    <div className={cn("bg-white dark:bg-gray-900/30 text-gray-800 dark:text-gray-100 overflow-hidden rounded-lg border shadow", className)}>
       <LexicalComposer
         initialConfig={{
           ...editorConfig,
         }}
-   
       >
         <TooltipProvider>
           <SharedAutocompleteContext>
-            <FloatingLinkContext >
-              <Plugins  />
-              <HtmlPlugin
-                initialHtml={initialHtml}
-                onHtmlChanged={onHtmlChanged}
-              />
+            <FloatingLinkContext>
+              <Plugins />
+              <HtmlPlugin initialHtml={initialHtml} onHtmlChanged={onHtmlChanged} />
               <OnChangePlugin
                 ignoreSelectionChange={true}
                 onChange={(editorState) => {
                   onChange?.(editorState);
                   onSerializedChange?.(editorState.toJSON());
                 }}
-
               />
             </FloatingLinkContext>
           </SharedAutocompleteContext>

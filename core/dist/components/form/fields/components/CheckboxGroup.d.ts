@@ -26,4 +26,4 @@ export declare const CheckboxGroup: import("react").ForwardRefExoticComponent<{
     options: CheckboxOption[];
     value?: string[];
     onChange?: (value: string[]) => void;
-} & Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> & import("react").RefAttributes<HTMLInputElement>>;
+} & Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> & import("react").RefAttributes<HTMLInputElement>>;

@@ -1,3 +1,4 @@
+"use client";
 import { InputHTMLAttributes, useRef, useState } from "react";
 import { X, RotateCcw } from "lucide-react";
 import { FormFieldWrapper } from "./FormFieldWrapper";

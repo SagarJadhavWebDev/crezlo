@@ -10,6 +10,7 @@ interface PluginLayoutProps<T> {
     children: (item: T) => ReactNode;
     handlePageChange?: (page: number) => void;
     layoutClasses?: string;
+    onBackClick?: () => void;
 }
-export declare function PluginLayout<T>({ title, buttonClick, buttonLabel, loading, data, pagination, children, handlePageChange, layoutClasses, }: PluginLayoutProps<T>): import("react/jsx-runtime").JSX.Element;
+export declare function PluginLayout<T>({ title, buttonClick, buttonLabel, loading, data, pagination, children, handlePageChange, layoutClasses, onBackClick, }: PluginLayoutProps<T>): import("react/jsx-runtime").JSX.Element;
 export {};

@@ -280,7 +280,11 @@ export default function Sidebar({
 }
 
 const MarketPlaceModal = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (value: boolean) => void }) => {
-  const { data, isLoading, error } = useSWR("plugins/list?tag=market_place", (url: string) => ApiInstance.CORE.get(url));
+  const { data, isLoading, error } = useSWR("plugins/list?tag=market_place", (url: string) => ApiInstance.CORE.get(url), {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+  });
   function getPluginImagePath(plugin) {
     const fallbackMap = {
       blog: "c-blog.png",

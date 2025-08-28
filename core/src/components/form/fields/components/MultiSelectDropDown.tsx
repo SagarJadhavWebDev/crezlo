@@ -1,3 +1,4 @@
+"use client";
 import { forwardRef } from "react";
 import { FormFieldWrapper } from "./FormFieldWrapper";
 import Select, { Props } from "react-select";

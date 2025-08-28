@@ -39,6 +39,10 @@ export declare const envConstants: {
             PREVIEW_DEFAULT_DOMAIN: string;
             API_DEFAULT_DOMAIN: string;
         };
+        CHANNEL: {
+            PREVIEW_DEFAULT_DOMAIN: string;
+            API_DEFAULT_DOMAIN: string;
+        };
     };
 };
 export declare function validateEnv(): void;
