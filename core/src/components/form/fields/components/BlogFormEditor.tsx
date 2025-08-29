@@ -15,6 +15,7 @@ export const BlogFormEditor = forwardRef<HTMLInputElement, BlogFormEditorProps>(
   return (
     <FormFieldWrapper {...props}>
       <StopEventsWrapper>
+        {/* @ts-ignore */}
         <BlogEditor onHtmlChanged={onChange} initialHtml={value} className={editorClassName} />
       </StopEventsWrapper>
     </FormFieldWrapper>

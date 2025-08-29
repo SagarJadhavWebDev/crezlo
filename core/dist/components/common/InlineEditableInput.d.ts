@@ -7,6 +7,7 @@ type InlineEditableInputProps = Omit<InputProps, "value" | "onChange"> & {
     debounceMs?: number;
     renderDisplayValue?: (val: string) => React.ReactNode;
     isInputValid?: boolean;
+    textClasesName?: string;
 };
-export declare const InlineEditableInput: ({ value, onChange, debounceMs, renderDisplayValue, className, onSave, onCancel, isInputValid, ...inputProps }: InlineEditableInputProps) => import("react/jsx-runtime").JSX.Element;
+export declare const InlineEditableInput: ({ value, onChange, debounceMs, renderDisplayValue, className, onSave, onCancel, isInputValid, textClasesName, ...inputProps }: InlineEditableInputProps) => import("react/jsx-runtime").JSX.Element;
 export {};

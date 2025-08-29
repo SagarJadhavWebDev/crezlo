@@ -1,7 +1,8 @@
 "use client";
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
 import debounce from "lodash/debounce";
-import { InputProps , Input} from "./Input";
+import { InputProps, Input } from "./Input";
+import { cn } from "../../utils";
 
 type InlineEditableInputProps = Omit<InputProps, "value" | "onChange"> & {
   value: string;
@@ -11,6 +12,7 @@ type InlineEditableInputProps = Omit<InputProps, "value" | "onChange"> & {
   debounceMs?: number;
   renderDisplayValue?: (val: string) => React.ReactNode;
   isInputValid?: boolean;
+  textClasesName?: string;
 };
 
 export const InlineEditableInput = ({
@@ -22,6 +24,7 @@ export const InlineEditableInput = ({
   onSave,
   onCancel,
   isInputValid = true,
+  textClasesName,
   ...inputProps
 }: InlineEditableInputProps) => {
   const [editing, setEditing] = useState(false);
@@ -44,9 +47,9 @@ export const InlineEditableInput = ({
     debouncedChange(val);
   };
 
-  const exitEditMode = (callSave:boolean) => {
+  const exitEditMode = (callSave: boolean) => {
     console.log("exitEditMode", isInputValid);
-    if(!isInputValid) return;
+    if (!isInputValid) return;
     setEditing(false);
     debouncedChange.flush();
     if (callSave) {
@@ -87,7 +90,7 @@ export const InlineEditableInput = ({
   }
 
   return (
-    <div className="inline-flex items-center min-h-[36px]" onClick={() => setEditing(true)}>
+    <div className={cn("inline-flex items-center min-h-[36px]", textClasesName)} onClick={() => setEditing(true)}>
       {renderDisplayValue ? (
         renderDisplayValue(value)
       ) : value ? (

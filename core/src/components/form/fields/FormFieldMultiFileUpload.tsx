@@ -38,13 +38,14 @@ export function FormFieldMultiFileUpload<T extends FieldValues>({
         <MultiFileUploader
           required={required}
           error={error?.message as string}
-          onUpload={async (file, onProgress) => {
+          initialFiles={value}
+          onUpload={async (file, onProgress, id) => {
             const uniqueKey = `${file.name}-${Date.now()}`;
             try {
               const url = await uploadFileInChunks(file, file.name, file.type, uniqueKey, (progressMap) => {
                 onProgress(progressMap[uniqueKey]);
               });
-              onChange([...(value || []), { name: file.name, url }]);
+              onChange([...(value || []), { id: id, name: file.name, size: file.size, type: file.type, lastModified: file.lastModified, url }]);
             } catch (err) {
               throw err;
             }

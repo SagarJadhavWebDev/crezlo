@@ -1,5 +1,5 @@
 "use client";
-import { InputHTMLAttributes, useRef, useState } from "react";
+import { InputHTMLAttributes, useEffect, useRef, useState } from "react";
 import { X, RotateCcw } from "lucide-react";
 import { FormFieldWrapper } from "./FormFieldWrapper";
 
@@ -8,19 +8,18 @@ type FileItem = {
   file: File;
   progress: number;
   status: "pending" | "uploading" | "success" | "error";
+  size: number;
 };
 
-export type MultiFileUploaderProps   = {
+export type MultiFileUploaderProps = {
   label?: string;
   tooltip?: string;
   supportingText?: string;
   error?: string;
   success?: string;
   required?: boolean;
-  onUpload?: (
-    file: File,
-    onProgress: (progress: number) => void
-  ) => Promise<void>;
+  onUpload?: (file: File, onProgress: (progress: number) => void, id: string) => Promise<void>;
+  initialFiles?: { id: string; name: string; size: string; type: string; lastModified: string; url: string }[];
 } & InputHTMLAttributes<HTMLInputElement>;
 
 export function MultiFileUploader({
@@ -31,6 +30,7 @@ export function MultiFileUploader({
   success,
   required,
   onUpload,
+  initialFiles,
   ...props
 }: MultiFileUploaderProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -42,6 +42,7 @@ export function MultiFileUploader({
       file,
       progress: 0,
       status: "pending" as const,
+      size: file.size,
     }));
 
     setFiles((prev) => [...prev, ...newFiles]);
@@ -50,28 +51,20 @@ export function MultiFileUploader({
   };
 
   const uploadFile = async (fileItem: FileItem) => {
-    setFiles((prev) =>
-      prev.map((f) =>
-        f.id === fileItem.id ? { ...f, status: "uploading", progress: 0 } : f
-      )
-    );
+    setFiles((prev) => prev.map((f) => (f.id === fileItem.id ? { ...f, status: "uploading", progress: 0 } : f)));
 
     try {
-      await onUpload?.(fileItem.file, (progress) => {
-        setFiles((prev) =>
-          prev.map((f) => (f.id === fileItem.id ? { ...f, progress } : f))
-        );
-      });
+      await onUpload?.(
+        fileItem.file,
+        (progress) => {
+          setFiles((prev) => prev.map((f) => (f.id === fileItem.id ? { ...f, progress } : f)));
+        },
+        fileItem.id
+      );
 
-      setFiles((prev) =>
-        prev.map((f) =>
-          f.id === fileItem.id ? { ...f, status: "success", progress: 100 } : f
-        )
-      );
+      setFiles((prev) => prev.map((f) => (f.id === fileItem.id ? { ...f, status: "success", progress: 100 } : f)));
     } catch (err) {
-      setFiles((prev) =>
-        prev.map((f) => (f.id === fileItem.id ? { ...f, status: "error" } : f))
-      );
+      setFiles((prev) => prev.map((f) => (f.id === fileItem.id ? { ...f, status: "error" } : f)));
     }
   };
 
@@ -83,24 +76,31 @@ export function MultiFileUploader({
     uploadFile(fileItem);
   };
 
+  useEffect(() => {
+    if (!initialFiles?.length) return;
+
+    setFiles((prev) => {
+      const prevIds = new Set(prev.map((f) => f?.id));
+      const incoming = initialFiles
+        .filter((f) => !prevIds.has(f?.id))
+        .map((f) => ({
+          id: f?.id,
+          file: new File([], f?.name, {
+            type: f?.type,
+            lastModified: Number(f.lastModified ?? "0"),
+          }),
+          size: Number(f?.size ?? "0"),
+          progress: 100,
+          status: "success" as const,
+        }));
+      return [...prev, ...incoming];
+    });
+  }, [initialFiles]);
+
   return (
-    <FormFieldWrapper
-      label={label}
-      tooltip={tooltip}
-      required={required}
-      error={error}
-      success={success}
-      supportingText={supportingText}
-    >
-      <div className="space-y-2">
-        <input
-          type="file"
-         
-          ref={fileInputRef}
-          onChange={handleFilesAdded}
-          className="hidden"
-          {...props}
-        />
+    <FormFieldWrapper label={label} tooltip={tooltip} required={required} error={error} success={success} supportingText={supportingText}>
+      <div className="">
+        <input type="file" ref={fileInputRef} onChange={handleFilesAdded} className="hidden" {...props} />
         <input
           //   type="file"
           onClick={() => fileInputRef.current?.click()}
@@ -109,33 +109,21 @@ export function MultiFileUploader({
           readOnly={true}
         />
 
-        <ul className="space-y-1">
+        <ul className="space-y-1 [&>*:first-child]:mt-2 ">
           {files.map((fileItem) => (
-            <li
-              key={fileItem.id}
-              className="bg-gray-100 dark:bg-gray-800 p-1 px-2 rounded-md flex items-center justify-between"
-            >
+            <li key={fileItem.id} className="bg-gray-100 dark:bg-gray-800 p-1 px-2 rounded-md flex items-center justify-between">
               <div className="flex-1 pr-4">
                 <div className="font-medium text-sm">{fileItem.file.name}</div>
-                <div className="text-xs text-gray-500">
-                  {(fileItem.file.size / 1024).toFixed(2)} KB
-                </div>
+                <div className="text-xs text-gray-500">{((fileItem?.size ?? fileItem.file.size) / 1024).toFixed(2)} KB</div>
 
                 {fileItem.status === "uploading" && (
                   <div className="w-full h-1.5 bg-gray-300 rounded mt-2">
-                    <div
-                      className={`h-1.5 rounded ${"bg-indigo-500"}`}
-                      style={{ width: `${fileItem.progress}%` }}
-                    />
+                    <div className={`h-1.5 rounded ${"bg-indigo-500"}`} style={{ width: `${fileItem.progress}%` }} />
                   </div>
                 )}
                 <div
                   className={`text-xs mt-1 text-gray-500  ${
-                    fileItem.status === "error"
-                      ? "text-red-500"
-                      : fileItem.status === "success"
-                      ? "text-green-500"
-                      : "text-indigo-400"
+                    fileItem.status === "error" ? "text-red-500" : fileItem.status === "success" ? "text-green-500" : "text-indigo-400"
                   }
                           `}
                 >
@@ -147,17 +135,11 @@ export function MultiFileUploader({
 
               <div className="flex items-center gap-2">
                 {fileItem.status === "error" && (
-                  <button
-                    className="text-yellow-500 hover:text-yellow-600"
-                    onClick={() => handleRetry(fileItem)}
-                  >
+                  <button className="text-yellow-500 hover:text-yellow-600" onClick={() => handleRetry(fileItem)}>
                     <RotateCcw size={16} />
                   </button>
                 )}
-                <button
-                  className="text-red-500 hover:text-red-600"
-                  onClick={() => handleRemove(fileItem.id)}
-                >
+                <button className="text-red-500 hover:text-red-600" onClick={() => handleRemove(fileItem.id)}>
                   <X size={16} />
                 </button>
               </div>

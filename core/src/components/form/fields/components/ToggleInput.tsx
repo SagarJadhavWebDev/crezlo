@@ -1,7 +1,8 @@
 "use client";
 import { nanoid } from "nanoid";
-import { InputHTMLAttributes, forwardRef, useState } from "react";
+import { InputHTMLAttributes, forwardRef, useEffect, useState } from "react";
 import { Tooltip } from "../../../common";
+import { FormFieldError } from "./FormFieldError";
 
 export type ToggleInputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -57,6 +58,11 @@ export const ToggleInput = forwardRef<HTMLInputElement, ToggleInputProps>(
         onCheckChange?.(newValue);
       }
     };
+
+    useEffect(() => {
+      setChecked(props.checked);
+    }, [props.checked]);
+
     return (
       <div className="w-full">
         <div className="flex w-full justify-between">
@@ -98,7 +104,7 @@ export const ToggleInput = forwardRef<HTMLInputElement, ToggleInputProps>(
         </div>
 
         {renderSupportingText && renderSupportingText}
-        {error && <div className="text-xs font-medium mt-1 text-red-500">{error}</div>}
+         {error && <FormFieldError error={error} />}
         {success && <div className="text-xs font-medium mt-1 text-green-500">{success}</div>}
         {supportingText && !error && !success && <div className="text-xs font-medium mt-1 text-gray-500">{supportingText}</div>}
       </div>

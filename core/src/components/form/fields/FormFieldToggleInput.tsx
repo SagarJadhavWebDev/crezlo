@@ -27,7 +27,7 @@ export function FormFieldToggleInput<T extends FieldValues>({ name, required, va
           checked={!!field.value}
           onCheckChange={(checked: boolean) => field.onChange(checked)}
           error={fieldState.error?.message}
-          defaultChecked={field.value ?? props?.defaultValue}
+          defaultChecked={!!props?.defaultValue}
         />
       )}
     />
