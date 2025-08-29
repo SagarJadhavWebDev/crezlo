@@ -1,8 +1,8 @@
 import { EditorState, SerializedEditorState } from "lexical";
-export declare function BlogEditor({ initialHtml, onHtmlChanged, onChange, onSerializedChange, className, }: {
+export declare const BlogEditor: import("react").ForwardRefExoticComponent<{
     initialHtml?: string;
     onHtmlChanged: (html: string) => void;
     onChange?: (editorState: EditorState) => void;
     onSerializedChange?: (editorSerializedState: SerializedEditorState) => void;
     className?: string;
-}): import("react/jsx-runtime").JSX.Element;
+} & import("react").RefAttributes<unknown>>;
