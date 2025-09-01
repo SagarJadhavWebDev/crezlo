@@ -100,12 +100,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
       callback?.();
     });
   }, []);
-  
+
   // API request interceptor to add auth token
   useLayoutEffect(() => {
     const token = getAuthToken();
     if (!token?.access_token) {
-       dispatch({ type: "SET_TOKENS", payload: token });
+      dispatch({ type: "SET_TOKENS", payload: token });
     }
     refreshUser();
   }, []);
@@ -114,9 +114,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children, config }) 
   const refreshUser = useCallback(async () => {
     dispatch({ type: "SET_LOADING", payload: true });
     dispatch({ type: "SET_ERROR", payload: null });
-    ApiInstance.CORE.get<{ seller: User }>(apiEndpoints.auth.profile)
+    ApiInstance.CORE.get<User>(apiEndpoints.auth.profile)
       .then((res) => {
-        const user = res?.data?.seller;
+        const user = res?.data;
         setUser(user);
       })
       .catch((err) => {
