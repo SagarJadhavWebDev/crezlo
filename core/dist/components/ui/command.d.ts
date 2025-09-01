@@ -20,11 +20,11 @@ declare const Command: React.ForwardRefExoticComponent<Omit<{
 interface CommandDialogProps extends DialogProps {
 }
 declare const CommandDialog: ({ children, ...props }: CommandDialogProps) => import("react/jsx-runtime").JSX.Element;
-declare const CommandInput: React.ForwardRefExoticComponent<Omit<Omit<Pick<Pick<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, keyof React.InputHTMLAttributes<HTMLInputElement> | "key"> & {
+declare const CommandInput: React.ForwardRefExoticComponent<Omit<Omit<Pick<Pick<React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, "key" | keyof React.InputHTMLAttributes<HTMLInputElement>> & {
     ref?: React.Ref<HTMLInputElement>;
 } & {
     asChild?: boolean;
-}, keyof React.InputHTMLAttributes<HTMLInputElement> | "key" | "asChild">, "value" | "onChange" | "type"> & {
+}, "key" | "asChild" | keyof React.InputHTMLAttributes<HTMLInputElement>>, "type" | "value" | "onChange"> & {
     value?: string;
     onValueChange?: (search: string) => void;
 } & React.RefAttributes<HTMLInputElement>, "ref"> & React.RefAttributes<HTMLInputElement>>;

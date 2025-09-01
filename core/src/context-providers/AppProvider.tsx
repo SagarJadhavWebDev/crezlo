@@ -1,6 +1,7 @@
 "use client";
-import { createContext, Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { validateEnv } from "../constants";
+import { ThemeProvider } from "next-themes";
 
 interface ContextProps {
   sidebarOpen: boolean;
@@ -19,9 +20,9 @@ const AppContext = createContext<ContextProps>({
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [sidebarExpanded, setSidebarExpanded] = useState<boolean>(true);
-  useEffect(()=>{
-    validateEnv()
-  },[])
+  useEffect(() => {
+    validateEnv();
+  }, []);
   return (
     <AppContext.Provider
       value={{
@@ -31,7 +32,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         setSidebarExpanded,
       }}
     >
-      {children}
+      <ThemeProvider attribute="class" disableTransitionOnChange>
+        {children}
+      </ThemeProvider>
     </AppContext.Provider>
   );
 }

@@ -1,4 +1,3 @@
-import { ThemeProvider } from "next-themes";
 import { AppProvider } from "../../context-providers";
 import { Toaster } from "sonner";
 export default function RootLayout({ children, headers }: { children: React.ReactNode; headers?: React.ReactNode | React.ReactNode[] }) {
@@ -15,10 +14,8 @@ export default function RootLayout({ children, headers }: { children: React.Reac
       </head>
       <body className="font-reddit antialiased bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400" cz-shortcut-listen="true">
         <div className="flex flex-col h-[100vh]">
-          <ThemeProvider attribute="class" disableTransitionOnChange>
-            <AppProvider>{children}</AppProvider>
-            <Toaster richColors={true} expand={true} />
-          </ThemeProvider>
+          <AppProvider>{children}</AppProvider>
+          <Toaster richColors={true} expand={true} />
         </div>
       </body>
     </html>

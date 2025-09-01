@@ -9,5 +9,5 @@ type DragDropContextProps = {
     children: ReactNode;
     disableAutoScroll?: boolean;
 };
-export declare const DragDropContext: ({ children, disableAutoScroll, }: DragDropContextProps) => string | number | bigint | boolean | import("react/jsx-runtime").JSX.Element | Iterable<ReactNode> | Promise<import("react").AwaitedReactNode>;
+export declare const DragDropContext: ({ children, disableAutoScroll, }: DragDropContextProps) => string | number | bigint | boolean | Iterable<ReactNode> | Promise<import("react").AwaitedReactNode> | import("react/jsx-runtime").JSX.Element;
 export {};

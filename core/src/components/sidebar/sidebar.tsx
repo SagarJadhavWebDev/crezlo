@@ -347,7 +347,7 @@ const MarketPlaceModal = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: (
   };
 
   // @ts-ignore
-  const plugins = data?.data?.plugin_list?.plugins || [];
+  const plugins = data?.data?.data || [];
   return (
     <ModalBlank isOpen={isOpen} setIsOpen={setIsOpen} className="w-full m-2 h-auto max-w-full lg:max-w-4xl bg-gray-100 dark:bg-[#151D2C]">
       {error && <div className="w-full h-auto flex items-center justify-center">{error?.message}</div>}
