@@ -1,0 +1,42 @@
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+import { validateEnv } from "../constants";
+import { ThemeProvider } from "next-themes";
+
+interface ContextProps {
+  sidebarOpen: boolean;
+  setSidebarOpen: (value: boolean) => void;
+  sidebarExpanded: boolean;
+  setSidebarExpanded: (value: boolean) => void;
+}
+
+const AppContext = createContext<ContextProps>({
+  sidebarOpen: true,
+  setSidebarOpen: (value: boolean) => {},
+  sidebarExpanded: true,
+  setSidebarExpanded: (value: boolean) => {},
+});
+
+export function AppProvider({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
+  const [sidebarExpanded, setSidebarExpanded] = useState<boolean>(true);
+  useEffect(() => {
+    validateEnv();
+  }, []);
+  return (
+    <AppContext.Provider
+      value={{
+        sidebarOpen,
+        setSidebarOpen,
+        sidebarExpanded,
+        setSidebarExpanded,
+      }}
+    >
+      <ThemeProvider attribute="class" disableTransitionOnChange>
+        {children}
+      </ThemeProvider>
+    </AppContext.Provider>
+  );
+}
+
+export const useAppProvider = () => useContext(AppContext);
