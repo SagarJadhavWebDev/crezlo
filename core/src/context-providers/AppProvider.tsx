@@ -21,7 +21,9 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
   const [sidebarExpanded, setSidebarExpanded] = useState<boolean>(true);
   useEffect(() => {
-    validateEnv();
+    if (process.env.NEXT_PUBLIC_VALIDATE_ENV !== "false") {
+      validateEnv();
+    }
   }, []);
   return (
     <AppContext.Provider

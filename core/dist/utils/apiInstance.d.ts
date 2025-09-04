@@ -10,10 +10,10 @@ declare const createApiMethods: (client: ApiClient) => {
     del: <T = any>(endpoint: string, config?: Omit<import("./apiClient").RequestConfig, "method">) => Promise<import("./apiClient").ApiResponse<T>>;
 };
 declare const extendedClient: {
-    addGlobalRequestInterceptor: typeof ApiClient.addGlobalRequestInterceptor;
-    addGlobalResponseInterceptor: typeof ApiClient.addGlobalResponseInterceptor;
-    addGlobalErrorInterceptor: typeof ApiClient.addGlobalErrorInterceptor;
-    getInstance: typeof ApiClient.getInstance;
+    addGlobalRequestInterceptor: any;
+    addGlobalResponseInterceptor: any;
+    addGlobalErrorInterceptor: any;
+    getInstance: any;
 };
 type ApiServiceMap = Record<BaseUrlType, ReturnType<typeof createApiMethods>>;
 declare const ApiInstance: ApiServiceMap & {

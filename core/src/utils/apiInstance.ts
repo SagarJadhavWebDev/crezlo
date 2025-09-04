@@ -10,10 +10,15 @@ type BaseUrlType = keyof typeof envConstants.BASE_API_URL;
 
 const baseUrls: Record<BaseUrlType, string> = envConstants.BASE_API_URL;
 
+const disableErrorInterceptor = process.env.NEXT_PUBLIC_CORE_DISABLE_ERROR_INTERCEPTOR === "true";
+const disableRequestInterceptor = process.env.NEXT_PUBLIC_CORE_DISABLE_REQUEST_INTERCEPTOR === "true";
 // REQUEST INTERCEPTOR Already applied in AuthProvider
 
 // RESPONSE INTERCEPTOR
 ApiClient.addGlobalErrorInterceptor(async (error) => {
+  if (disableErrorInterceptor) {
+    return error;
+  }
   if (!envConstants.IS_PRODUCTION) {
     console.log("❌ API ERROR:", error);
   }
@@ -38,6 +43,9 @@ ApiClient.addGlobalResponseInterceptor(async (response) => {
 });
 
 ApiClient.addGlobalRequestInterceptor(async (config) => {
+  if (disableRequestInterceptor) {
+    return config;
+  }
   const token = getAuthToken();
   if (token?.access_token) {
     config.headers = {
@@ -50,6 +58,9 @@ ApiClient.addGlobalRequestInterceptor(async (config) => {
 
 // Response interceptor to handle token refresh
 ApiClient.addGlobalErrorInterceptor(async (error) => {
+  if (disableErrorInterceptor) {
+    return error;
+  }
   if (error.status_code === 401) {
     try {
       logoutAuthUser(() => {
@@ -77,10 +88,10 @@ const createClient = (baseURL: string): ApiClient => {
 };
 
 const extendedClient = {
-  addGlobalRequestInterceptor: ApiClient.addGlobalRequestInterceptor,
-  addGlobalResponseInterceptor: ApiClient.addGlobalResponseInterceptor,
-  addGlobalErrorInterceptor: ApiClient.addGlobalErrorInterceptor,
-  getInstance: ApiClient.getInstance,
+  addGlobalRequestInterceptor: ApiClient.addGlobalRequestInterceptor.bind(ApiClient),
+  addGlobalResponseInterceptor: ApiClient.addGlobalResponseInterceptor.bind(ApiClient),
+  addGlobalErrorInterceptor: ApiClient.addGlobalErrorInterceptor.bind(ApiClient),
+  getInstance: ApiClient.getInstance.bind(ApiClient),
 };
 
 type ApiServiceMap = Record<BaseUrlType, ReturnType<typeof createApiMethods>>;
